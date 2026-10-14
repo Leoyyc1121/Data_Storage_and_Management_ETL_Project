@@ -1,0 +1,64 @@
+# Python
+__pycache__/
+*.py[cod]
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.venv/
+venv/
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Airflow local state
+airflow.db
+airflow.cfg
+standalone_admin_password.txt
+logs/
+
+# Local databases and exports
+*.db
+*.sqlite
+*.sqlite3
+*.dump
+
+# Large or generated datasets
+data/raw/*
+data/staging/*
+data/integration/*
+data/target/*
+!data/raw/.gitkeep
+!data/staging/.gitkeep
+!data/integration/.gitkeep
+!data/target/.gitkeep
+
+# Scrapy generated files
+.scrapy/
+httpcache/
+
+# IDE and operating-system files
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# Microsoft Office temporary files
+~$*.docx
+~$*.xlsx
+~$*.pptx
+
+# Course assignment document (kept locally, not published)
+Data_Storage_and_Management_ETL_Assignment_English.docx
+
+# Temporary render and build files
+*.tmp
+*.log
+*.pdf
+rendered/
+build/
+dist/
