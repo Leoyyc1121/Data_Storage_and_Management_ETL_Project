@@ -1,0 +1,10 @@
+2026-10-14 20:00:22,639 INFO Verifying source SHA-256 before processing
+2026-10-14 20:00:34,776 INFO batch=1 read=2500 valid=2500 quarantined=0 offset=2954284
+2026-10-14 20:00:34,938 INFO batch=2 read=5000 valid=5000 quarantined=0 offset=5884542
+2026-10-14 20:00:35,113 INFO batch=3 read=7500 valid=7500 quarantined=0 offset=8652613
+2026-10-14 20:00:35,274 INFO batch=4 read=10000 valid=10000 quarantined=0 offset=11824028
+2026-10-14 20:00:35,441 INFO batch=5 read=12500 valid=12500 quarantined=0 offset=14554307
+2026-10-14 20:00:35,626 INFO batch=6 read=15000 valid=15000 quarantined=0 offset=17344623
+2026-10-14 20:00:35,820 INFO batch=7 read=17500 valid=17500 quarantined=0 offset=20091853
+2026-10-14 20:00:35,992 INFO batch=8 read=20000 valid=20000 quarantined=0 offset=23290490
+2026-10-14 20:00:36,009 INFO status=complete full_dataset=False read=20000 products=584 users=16310

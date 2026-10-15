@@ -1,0 +1,15 @@
+{
+  "verified_at": "2026-10-14T11:44:11.981450+00:00",
+  "run_dir": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task1\\sample_20k",
+  "status": "passed",
+  "run_status": "complete",
+  "scope": "sample",
+  "records": 20000,
+  "valid": 20000,
+  "quarantined": 0,
+  "raw_locators_checked": 24,
+  "ordered_records_fingerprint": "28bbf580e4a5818858171e8d3472b3bc638a2f69e3f48e0d68c17e6c3728c286",
+  "all_output_file_checksums_verified": true,
+  "all_record_sequences_and_ids_verified": true,
+  "raw_locator_scope": "First, middle and last row of every batch; not every raw record"
+}

@@ -1,0 +1,17 @@
+{
+  "observed_on": "2026-10-14",
+  "status": "passed",
+  "scope": "Completed full run invoked again with --resume; committed source and output hashes verified and existing results reused",
+  "run_name": "full_v2",
+  "parser_version": "1.2.0",
+  "source_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+  "before_records": 7911684,
+  "after_records": 7911684,
+  "before_parquet_parts": 317,
+  "after_parquet_parts": 317,
+  "product_user_valid_and_quarantine_counts_unchanged": true,
+  "ordered_records_fingerprint_unchanged": true,
+  "run_id_unchanged": true,
+  "independent_full_reextraction_performed": false,
+  "evidence": "reports/task1/full_v2.log: Already complete; verified committed files, no duplicate output created; before/after statistics and partition counts checked in PowerShell"
+}

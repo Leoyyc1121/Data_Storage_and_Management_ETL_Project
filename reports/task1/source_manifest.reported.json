@@ -1,0 +1,23 @@
+{
+  "manifest_version": "1",
+  "observed_at": "2026-10-14T11:49:35.880345+00:00",
+  "dataset": "Stanford SNAP Amazon movie reviews",
+  "source_url": "https://snap.stanford.edu/data/movies.txt.gz",
+  "download_method": null,
+  "downloaded_at": null,
+  "downloaded_on": "2026-10-14",
+  "download_time_precision": "date",
+  "reported_evidence": "数据存储与管理_ETL项目报告.docx section 4.2; user-entered download details",
+  "reported_archive_size": "3243938 KB",
+  "download_evidence_note": "Missing historical information remains null; observed_at is not download time.",
+  "source_file": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\movies.txt",
+    "file_name": "movies.txt",
+    "file_size_bytes": 9332887470,
+    "sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+    "observed_mtime_ns": 1362461317000000000
+  },
+  "archive_file": null,
+  "archive_to_text_verified": false,
+  "record_id_basis": "SHA256(uncompressed_file_sha256 + ':' + one_based_record_sequence)"
+}

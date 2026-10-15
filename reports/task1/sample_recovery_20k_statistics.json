@@ -1,0 +1,63 @@
+{
+  "source_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+  "parser_version": "1.1.0",
+  "rule_version": "task1-preserve-raw-v2",
+  "batch_size": 2500,
+  "max_records": 20000,
+  "encoding_policy": "unresolved",
+  "run_id": "01ce751c1c214e9caa165667148ad2f5",
+  "started_at": "2026-10-14T11:40:23.223998+00:00",
+  "status": "complete",
+  "next_byte": 23290490,
+  "next_line": 180001,
+  "records_read": 20000,
+  "valid_records": 20000,
+  "quarantined_records": 0,
+  "batch_count": 8,
+  "records_with_quality_issues": 119,
+  "empty_user_records": 0,
+  "quality_issue_counts": {
+    "invalid_utf8": 119
+  },
+  "quarantine_reason_counts": {},
+  "peak_memory_bytes": 87203840,
+  "processing_seconds": 2.7881306000053883,
+  "sessions": [
+    {
+      "started_at": "2026-10-14T11:40:23.229006+00:00",
+      "ended_at": "2026-10-14T11:40:23.417112+00:00",
+      "processing_seconds": 0.18890209996607155,
+      "interrupted": true
+    },
+    {
+      "started_at": "2026-10-14T11:41:21.399895+00:00",
+      "ended_at": "2026-10-14T11:41:23.998454+00:00",
+      "processing_seconds": 2.5992285000393167,
+      "interrupted": false
+    }
+  ],
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "pyarrow": "26.0.0",
+    "psutil": "7.2.2",
+    "platform": "win32"
+  },
+  "finished_at": "2026-10-14T11:41:23.999437+00:00",
+  "is_full_dataset": false,
+  "counts_reconcile": true,
+  "distinct_products_all_parsed": 584,
+  "distinct_products_valid_records": 584,
+  "distinct_users_all_parsed": 16310,
+  "distinct_users_valid_records": 16310,
+  "official_reference_from_assignment": {
+    "reviews": 7911684,
+    "products": 253059,
+    "users": 889176
+  },
+  "difference_from_official": null,
+  "ordered_records_fingerprint": "28bbf580e4a5818858171e8d3472b3bc638a2f69e3f48e0d68c17e6c3728c286",
+  "fingerprint_note": "Compare only with the same source hash, parser/rules and batch size. Covers ordered IDs and raw record hashes.",
+  "generated_size_bytes": 15026581,
+  "count_semantics": "All parsed distinct counts include recoverable first values from quarantined rows; valid counts exclude quarantined rows. Users exclude NULL/empty/whitespace-only IDs. No deduplication.",
+  "verification_scope": "Counts and checkpoints; entity loading and full-project acceptance are separate tasks."
+}

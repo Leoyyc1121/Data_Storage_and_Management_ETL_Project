@@ -1,0 +1,63 @@
+{
+  "source_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+  "parser_version": "1.2.0",
+  "rule_version": "task1-preserve-raw-v3",
+  "batch_size": 25000,
+  "max_records": null,
+  "encoding_policy": "unresolved",
+  "run_id": "dcfcd8aea4c74a38b632cbb9a3c3127e",
+  "started_at": "2026-10-14T11:58:39.684265+00:00",
+  "status": "complete",
+  "next_byte": 9332887470,
+  "next_line": 71205216,
+  "records_read": 7911684,
+  "valid_records": 7911684,
+  "quarantined_records": 0,
+  "batch_count": 317,
+  "records_with_quality_issues": 62174,
+  "empty_user_records": 0,
+  "quality_issue_counts": {
+    "invalid_utf8": 62085,
+    "helpful_votes_exceed_total": 43,
+    "multiline_text_field": 46
+  },
+  "quarantine_reason_counts": {},
+  "peak_memory_bytes": 322334720,
+  "processing_seconds": 639.1075218999758,
+  "sessions": [
+    {
+      "started_at": "2026-10-14T11:58:39.690263+00:00",
+      "ended_at": "2026-10-14T12:09:18.797713+00:00",
+      "processing_seconds": 639.1075218999758,
+      "interrupted": false
+    }
+  ],
+  "environment": {
+    "python": "3.11.9 (tags/v3.11.9:de54cf5, Apr  2 2024, 10:12:12) [MSC v.1938 64 bit (AMD64)]",
+    "pyarrow": "26.0.0",
+    "psutil": "7.2.2",
+    "platform": "win32"
+  },
+  "finished_at": "2026-10-14T12:09:18.797713+00:00",
+  "is_full_dataset": true,
+  "counts_reconcile": true,
+  "distinct_products_all_parsed": 253059,
+  "distinct_products_valid_records": 253059,
+  "distinct_users_all_parsed": 889176,
+  "distinct_users_valid_records": 889176,
+  "official_reference_from_assignment": {
+    "reviews": 7911684,
+    "products": 253059,
+    "users": 889176
+  },
+  "difference_from_official": {
+    "reviews": 0,
+    "products": 0,
+    "users": 0
+  },
+  "ordered_records_fingerprint": "d72a04c3550e29b05c8a03c7a92dc788d4e71e9ef5fbf16876fe6b84bbbdd17c",
+  "fingerprint_note": "Compare only with the same source hash, parser/rules and batch size. Covers ordered IDs and raw record hashes.",
+  "generated_size_bytes": 4262657827,
+  "count_semantics": "All parsed distinct counts include recoverable first values from quarantined rows; valid counts exclude quarantined rows. Users exclude NULL/empty/whitespace-only IDs. No deduplication.",
+  "verification_scope": "Counts and checkpoints; entity loading and full-project acceptance are separate tasks."
+}

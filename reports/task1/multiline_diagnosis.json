@@ -1,0 +1,10 @@
+{
+  "verified_at": "2026-10-14T11:57:29.535698+00:00",
+  "scope": "all 58 first-pass quarantined fragments only",
+  "original_fragments": 58,
+  "reconstructed_reviews": 46,
+  "quarantined_after_fix": 0,
+  "multiline_reviews": 46,
+  "review_count_overstatement_explained": 12,
+  "parser_version": "1.2.0"
+}

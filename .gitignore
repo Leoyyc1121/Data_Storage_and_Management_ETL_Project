@@ -62,3 +62,8 @@ Data_Storage_and_Management_ETL_Assignment_English.docx
 rendered/
 build/
 dist/
+
+# Small Task 1 execution evidence; other logs remain local
+!reports/task1/full_v2.log
+!reports/task1/sample_v2_20k.log
+!reports/task1/sample_recovery_v2_20k.log
