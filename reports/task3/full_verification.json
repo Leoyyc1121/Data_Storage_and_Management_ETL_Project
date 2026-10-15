@@ -1,0 +1,19 @@
+{
+  "verified_at": "2026-10-15T11:33:14.502327+00:00",
+  "status": "passed",
+  "products": 253059,
+  "candidate_records": 88660,
+  "missing_asins": 0,
+  "extra_asins": 0,
+  "review_reference_mismatches": 0,
+  "review_references_retained": 7911684,
+  "raw_candidate_evidence_replayed": 88660,
+  "all_classification_and_field_candidates_match_raw_replay": true,
+  "all_product_decisions_replayed": 253059,
+  "no_metadata_products_retained_unresolved": 179246,
+  "identity_conflicting_products_unresolved": 4,
+  "classification_counts_reconcile": true,
+  "all_exported_fields_match_checkpoint": true,
+  "acquisition_denominator_is_all_products": true,
+  "scope": "Full integrity, provenance, deterministic decision/field replay and count verification. NOT independent manually labeled accuracy, entity matching or target loading evaluation."
+}

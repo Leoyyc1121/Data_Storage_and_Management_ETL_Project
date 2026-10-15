@@ -1,0 +1,49 @@
+{
+  "verified_at": "2026-10-15 11:17:33 UTC",
+  "status": "passed",
+  "scope": "Actual full Task3 v2 input, intentional interruption after one committed2000-product batch, then same-directory resume. Full ASIN/candidate verification succeeds. Not final target loading.",
+  "interrupted_execution": {
+    "run_id": "f7f6eb91fb3e4ebdb2bcefa1a4bb0cf0",
+    "started_at": "2026-10-15T11:13:16.304015+00:00",
+    "finished_at": "2026-10-15T11:13:16.613449+00:00",
+    "status": "interrupted",
+    "inserted_products": 2000,
+    "inserted_candidates": 224,
+    "elapsed_seconds": 0.36000000000012733,
+    "updated_products": 0,
+    "deleted_reviews": 0,
+    "merged_entities": 0,
+    "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8"
+  },
+  "interrupted_counts": {
+    "products": 2000,
+    "candidates": 224,
+    "review_references": 57284
+  },
+  "resumed_execution": {
+    "run_id": "55fa8bf710dd446ba37fbc2fd4af487d",
+    "started_at": "2026-10-15T11:13:56.905186+00:00",
+    "finished_at": "2026-10-15T11:16:14.952791+00:00",
+    "status": "complete",
+    "inserted_products": 251059,
+    "inserted_candidates": 88436,
+    "elapsed_seconds": 138.0630000000001,
+    "updated_products": 0,
+    "deleted_reviews": 0,
+    "merged_entities": 0,
+    "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8"
+  },
+  "final_counts": {
+    "products": 253059,
+    "candidates": 88660,
+    "review_references": 7911684
+  },
+  "checks": {
+    "committed_plus_resumed_products_equal_full": true,
+    "committed_plus_resumed_candidates_equal_full": true,
+    "no_missing_or_extra_asins": true,
+    "all_review_references_retained": true,
+    "all_source_candidates_replayed": true
+  },
+  "exit_code_note": "Python CLI defines interrupted return130; PowerShell execution wrapper reported nonzero1. Interrupted state and committed rows were directly read; success was not claimed at interruption."
+}

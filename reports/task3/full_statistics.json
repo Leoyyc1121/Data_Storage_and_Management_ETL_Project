@@ -1,0 +1,383 @@
+{
+  "observed_at": "2026-10-15T11:17:07.758705+00:00",
+  "status": "complete",
+  "engine_version": "1.1.0",
+  "rule_version": "task3-conservative-content-v2",
+  "input_registration": {
+    "task2_manifest_sha256": "d4c4bdf56cb2c58f8dbd247e926bf62c147a676d42dc0486491fa4f23aca4efa",
+    "metadata_sha256": "2ee1f41f8aede45eb43390f68efd1fbe968f22e8c5139ae67c3410ab7fe14e70",
+    "task2_source_fingerprint": "e10c81f1ee201711b0d90fc57a54a8d18fd251b367c7460c0987fc800e6a8a47",
+    "rule_file_sha256": "d26480d4b9dc3e1e72eeae8c0ea049c58302f2a28f8fbfa6833e40e9e9dec95c",
+    "engine_version": "1.1.0",
+    "engine_source_sha256": "421254c30e72b489face0f527b97e6413a659186ba2aadc5ce53ec44b99c9a5f",
+    "products": 253059,
+    "reviews": 7911684
+  },
+  "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8",
+  "products": 253059,
+  "total_target_products": 253059,
+  "classification_counts": {
+    "movie": 2955,
+    "non_movie": 2232,
+    "compilation": 137,
+    "television_series": 1143,
+    "concert": 308,
+    "other_content": 7,
+    "awaiting_confirmation": 246277
+  },
+  "identified_movie_products": 2955,
+  "identification_coverage_all_products": 0.0116771187746731,
+  "unresolved_rate_all_products": 0.9731999257090244,
+  "review_references_retained": 7911684,
+  "review_policy": "All Task1 review records and Task2 ASIN references retained. No movie_id, review deletion, review copying or entity merging in Task3.",
+  "reason_counts": {
+    "candidate_consensus": 6782,
+    "inner_asin_conflict": 4,
+    "insufficient_or_ambiguous_evidence": 67027,
+    "no_available_product_metadata": 179246
+  },
+  "classification_candidate_records": 88660,
+  "acquisition": {
+    "denominator_all_products": 253059,
+    "statuses": {
+      "success": 0,
+      "not_found": 0,
+      "restricted_access": 0,
+      "timeout": 0,
+      "parsing_failure": 0,
+      "not_collected": 253059,
+      "network_error": 0,
+      "http_error": 0
+    },
+    "live_success": 0,
+    "authorized_html_snapshot_success": 0,
+    "page_success_rate": 0.0,
+    "third_party_matched_products": 73813,
+    "third_party_coverage": 0.29168296721317954,
+    "third_party_is_page_success": false
+  },
+  "field_coverage": {
+    "scope": "Candidate availability per product, NOT selected/verified final movie-work field coverage. Multiple candidates counted at most once per ASIN/field; conflicts remain candidates.",
+    "all_product_denominator": 253059,
+    "identified_movie_product_denominator": 2955,
+    "fields": {
+      "title": {
+        "available_all_products": 73813,
+        "missing_all_products": 179246,
+        "coverage_all_products": 0.29168296721317954,
+        "available_movie_products": 2955,
+        "missing_movie_products": 0,
+        "coverage_movie_products": 1.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "original_title": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "genres": {
+        "available_all_products": 33538,
+        "missing_all_products": 219521,
+        "coverage_all_products": 0.13253035853299033,
+        "available_movie_products": 1247,
+        "missing_movie_products": 1708,
+        "coverage_movie_products": 0.42199661590524534,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "directors": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "starring": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "cast": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "release_date": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "release_year": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "medium": {
+        "available_all_products": 16331,
+        "missing_all_products": 236728,
+        "coverage_all_products": 0.06453435760040149,
+        "available_movie_products": 536,
+        "missing_movie_products": 2419,
+        "coverage_movie_products": 0.18138747884940778,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "language": {
+        "available_all_products": 52477,
+        "missing_all_products": 200582,
+        "coverage_all_products": 0.2073706131771642,
+        "available_movie_products": 1618,
+        "missing_movie_products": 1337,
+        "coverage_movie_products": 0.5475465313028764,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "subtitles": {
+        "available_all_products": 16766,
+        "missing_all_products": 236293,
+        "coverage_all_products": 0.06625332432357671,
+        "available_movie_products": 853,
+        "missing_movie_products": 2102,
+        "coverage_movie_products": 0.28866328257191204,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "region_code": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "cut": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "distributor": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      },
+      "product_release_date": {
+        "available_all_products": 0,
+        "missing_all_products": 253059,
+        "coverage_all_products": 0.0,
+        "available_movie_products": 0,
+        "missing_movie_products": 2955,
+        "coverage_movie_products": 0.0,
+        "inferred_final_values": 0,
+        "verified_final_work_values": 0
+      }
+    },
+    "movie_work_coverage": null,
+    "movie_work_coverage_missing_reason": "Task4 work identity and Task5/6/7 role/date/selection steps not implemented"
+  },
+  "outputs": {
+    "products": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\product_classification.parquet",
+      "rows": 253059,
+      "file_size_bytes": 14240606,
+      "sha256": "f942982010337eae4afd4235f6d3f64b529a43d3c36c62ed4af4ba69d520b0f5",
+      "ordered_rows_sha256": "956697a90a95b751d5b48eee1c970fd30803269e4f260e8eff98024c4ab0dbf0"
+    },
+    "candidates": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\classification_evidence.parquet",
+      "rows": 88660,
+      "file_size_bytes": 16228406,
+      "sha256": "56d4aab5ee187960665df4943edf81fd795bfaaa6a44a3beacb4c5f4b67e1cfe",
+      "ordered_rows_sha256": "6f0c451b72629f97233fb63eea3a2889bee1a01a31d4e5a9de86019c9e0a43c8"
+    }
+  },
+  "examples": {
+    "movie": [
+      {
+        "asin": "0005019222",
+        "label": "movie",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:10d521d6384c52f5cd8483bc14a14dd4a266853f952f9a874641a548388baf44\"]"
+      },
+      {
+        "asin": "0005019281",
+        "label": "movie",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:2a46e8b07d28b4aae67daccfe61fe21f79499beb036c81af997051e4ed330d58\"]"
+      },
+      {
+        "asin": "0005059836",
+        "label": "movie",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:c05f961757e80b8c6c3fc0300e29babf317870ffbf7b351463608c35b903892c\"]"
+      }
+    ],
+    "non_movie": [
+      {
+        "asin": "0001517791",
+        "label": "non_movie",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:0e1cdb09319e041925711e688abf1dfd9edb8416c974ca013ff4b9eeee554ad3\"]"
+      },
+      {
+        "asin": "0006588204",
+        "label": "non_movie",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:fca0e3bc725b154b5f57dc311c447e1b571e6eaadc1fd127c3d47e488d399c85\"]"
+      },
+      {
+        "asin": "0615212050",
+        "label": "non_movie",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:99a253a7e2c127de7e2e4b4cac9de1e5601e5abd2b9784f119cc09049c6b8d27\"]"
+      }
+    ],
+    "compilation": [
+      {
+        "asin": "B00005AWQL",
+        "label": "compilation",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:9b15941c696cad7172ceb5b75e48da42b75082aff0ee5a2a57e2992d0627494a\",\"meta:b902aab1c807aa1a16cc544093349f96ec5c42873bd24e3f99f73720f555cc88\"]"
+      },
+      {
+        "asin": "B00005B2ZM",
+        "label": "compilation",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:1521b6e15e2e668300c7aeea8531112e3cfda9dbbee2714d2057ccfcd37114c7\",\"meta:2c50f9fa43e5aa03a8b5a25eab48bfeaba9f57c1ca1b6f72cfedefb132461d67\"]"
+      },
+      {
+        "asin": "B00005B7BW",
+        "label": "compilation",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:6c8cf4748915df400b7e46ae651c9d8e7caedd94ca4cb688890cd44a234a925d\",\"meta:b7211781bcb204e56b38111b1ee0cb3b7287eaa75b18cd392f03894fbafc7623\"]"
+      }
+    ],
+    "television_series": [
+      {
+        "asin": "076700941X",
+        "label": "television_series",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:1808c116a71a00ad95fb385df98aaa98d362fbc383b6acac7bd858ff5cc1a849\"]"
+      },
+      {
+        "asin": "0767020731",
+        "label": "television_series",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:a78dc13a08da20858f0b63527451c54ae324bef7381645a5a5f237dc0d19298c\"]"
+      },
+      {
+        "asin": "0788606344",
+        "label": "television_series",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:1270c37f5ffea42fa49c7a2d5e039accb8210b163d3731e5ccecf1e0aa6794d2\"]"
+      }
+    ],
+    "concert": [
+      {
+        "asin": "6300164497",
+        "label": "concert",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:57440ce652b18d3e1ab8ba18b83de1af1b30ac3ff64ac2286560d1c1bb7aa2d4\"]"
+      },
+      {
+        "asin": "6300217515",
+        "label": "concert",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:e3548c8fce5d9ff064d4dc742d8ec2fc6b776bba50098c8e0e6cbd3a3768f3ab\"]"
+      },
+      {
+        "asin": "6301771524",
+        "label": "concert",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:f3261e4b3d95448e0e067e9f1c84d70bbfd7cfa19e5d4e9ce4db59501b07ec20\"]"
+      }
+    ],
+    "other_content": [
+      {
+        "asin": "6301009096",
+        "label": "other_content",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:33867d8a7a386e8a62ff218168637503aa20d090076af6cbccfc0536931613d8\"]"
+      },
+      {
+        "asin": "6301882342",
+        "label": "other_content",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:04fbd9a8b7cea93ed428a94c72b9835fdd4d39ad4ead7b7df6ced1540da02fd4\"]"
+      },
+      {
+        "asin": "B00006FDBZ",
+        "label": "other_content",
+        "reason": "candidate_consensus",
+        "evidence_ids": "[\"meta:91ce9f103c157cecc81c971784e33fc64a02135196b65804e6c28f6b2afa9689\",\"meta:a86ac3c251624be687143032e4fb747fd9a5ffcbe9e7fad21e01b4d4c5dfa85e\"]"
+      }
+    ],
+    "awaiting_confirmation": [
+      {
+        "asin": "0001489305",
+        "label": "awaiting_confirmation",
+        "reason": "no_available_product_metadata",
+        "evidence_ids": "[]"
+      },
+      {
+        "asin": "0001501348",
+        "label": "awaiting_confirmation",
+        "reason": "no_available_product_metadata",
+        "evidence_ids": "[]"
+      },
+      {
+        "asin": "0001516035",
+        "label": "awaiting_confirmation",
+        "reason": "no_available_product_metadata",
+        "evidence_ids": "[]"
+      }
+    ]
+  },
+  "examples_note": "Deterministic actual-source examples for inspection, not independently manually labeled evaluation data or accuracy estimates.",
+  "limits": [
+    "Rules conservative; no manually measured classification accuracy.",
+    "Movie label is a source-supported product classification, not a resolved movie work.",
+    "Unknown and conflicting records retained; no final credits/dates invented."
+  ],
+  "checkpoint_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\classification.sqlite3"
+}

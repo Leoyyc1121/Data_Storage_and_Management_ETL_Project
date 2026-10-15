@@ -1,0 +1,13 @@
+{
+  "run_id": "69613a1608c449e9a4813dd5c7fd48b9",
+  "started_at": "2026-10-15T11:16:58.650290+00:00",
+  "finished_at": "2026-10-15T11:18:16.986849+00:00",
+  "status": "complete",
+  "inserted_products": 0,
+  "inserted_candidates": 0,
+  "elapsed_seconds": 78.35899999999992,
+  "updated_products": 0,
+  "deleted_reviews": 0,
+  "merged_entities": 0,
+  "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8"
+}

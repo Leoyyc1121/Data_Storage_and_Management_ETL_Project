@@ -1,0 +1,84 @@
+{
+  "verified_at": "2026-10-15T11:18:16.986849+00:00",
+  "status": "passed",
+  "scope": "Actual full v2 offline classification repeated; checkpoint decisions reused, all candidate and classification rows reverified. Not final target-database loading.",
+  "before": {
+    "run_id": "55fa8bf710dd446ba37fbc2fd4af487d",
+    "status": "complete",
+    "products": 253059,
+    "candidates": 88660,
+    "review_references": 7911684,
+    "classification_counts": {
+      "movie": 2955,
+      "non_movie": 2232,
+      "compilation": 137,
+      "television_series": 1143,
+      "concert": 308,
+      "other_content": 7,
+      "awaiting_confirmation": 246277
+    },
+    "outputs": {
+      "products": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\product_classification.parquet",
+        "rows": 253059,
+        "file_size_bytes": 14240606,
+        "sha256": "f942982010337eae4afd4235f6d3f64b529a43d3c36c62ed4af4ba69d520b0f5",
+        "ordered_rows_sha256": "956697a90a95b751d5b48eee1c970fd30803269e4f260e8eff98024c4ab0dbf0"
+      },
+      "candidates": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\classification_evidence.parquet",
+        "rows": 88660,
+        "file_size_bytes": 16228406,
+        "sha256": "56d4aab5ee187960665df4943edf81fd795bfaaa6a44a3beacb4c5f4b67e1cfe",
+        "ordered_rows_sha256": "6f0c451b72629f97233fb63eea3a2889bee1a01a31d4e5a9de86019c9e0a43c8"
+      }
+    },
+    "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8",
+    "verification_status": "passed",
+    "inserted_products": 251059,
+    "inserted_candidates": 88436
+  },
+  "after": {
+    "run_id": "69613a1608c449e9a4813dd5c7fd48b9",
+    "status": "complete",
+    "products": 253059,
+    "candidates": 88660,
+    "review_references": 7911684,
+    "classification_counts": {
+      "movie": 2955,
+      "non_movie": 2232,
+      "compilation": 137,
+      "television_series": 1143,
+      "concert": 308,
+      "other_content": 7,
+      "awaiting_confirmation": 246277
+    },
+    "outputs": {
+      "products": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\product_classification.parquet",
+        "rows": 253059,
+        "file_size_bytes": 14240606,
+        "sha256": "f942982010337eae4afd4235f6d3f64b529a43d3c36c62ed4af4ba69d520b0f5",
+        "ordered_rows_sha256": "956697a90a95b751d5b48eee1c970fd30803269e4f260e8eff98024c4ab0dbf0"
+      },
+      "candidates": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\classification_evidence.parquet",
+        "rows": 88660,
+        "file_size_bytes": 16228406,
+        "sha256": "56d4aab5ee187960665df4943edf81fd795bfaaa6a44a3beacb4c5f4b67e1cfe",
+        "ordered_rows_sha256": "6f0c451b72629f97233fb63eea3a2889bee1a01a31d4e5a9de86019c9e0a43c8"
+      }
+    },
+    "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8",
+    "verification_status": "passed",
+    "inserted_products": 0,
+    "inserted_candidates": 0
+  },
+  "checks": {
+    "counts_and_statuses_same": true,
+    "all_output_hashes_same": true,
+    "input_fingerprint_same": true,
+    "zero_inserted_on_repeat": true,
+    "full_verification_passed": true
+  }
+}

@@ -82,3 +82,6 @@ dist/
 # Small Task 2 execution evidence; raw archives and local databases stay ignored
 !reports/task2/execution.log
 !reports/task2/metadata_execution.log
+
+# Small Task 3 execution evidence; decisions/SQLite/Parquet stay local
+!reports/task3/execution.log

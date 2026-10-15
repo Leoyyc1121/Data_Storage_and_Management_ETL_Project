@@ -1,0 +1,39 @@
+{
+  "version": "task3-conservative-content-v2",
+  "labels": ["movie", "non_movie", "compilation", "television_series", "concert", "other_content", "awaiting_confirmation"],
+  "movie_categories": ["Movies", "Foreign Films", "Feature Films"],
+  "television_categories": ["TV Shows", "Television Series"],
+  "genre_mapping": {
+    "Action & Adventure": ["action", "adventure"],
+    "Drama": ["drama"], "Comedy": ["comedy"],
+    "Documentary": ["documentary"], "Horror": ["horror"],
+    "Mystery & Suspense": ["mystery", "thriller"],
+    "Science Fiction": ["science_fiction"], "Fantasy": ["fantasy"],
+    "Science Fiction & Fantasy": ["science_fiction", "fantasy"],
+    "Animation": ["animation"], "Western": ["western"],
+    "Romance": ["romance"], "War": ["war"], "Musicals": ["musical"]
+  },
+  "patterns": {
+    "movie_description": "\\b(?:this (?:film|movie)|a (?:feature[- ]length|documentary) film)\\b",
+    "television_title": "\\b(?:season (?:[0-9]+|one|two|three|four|five|six|seven|eight|nine|ten)|(?:complete|first|second|third|fourth|fifth|final) season|complete (?:first|second|third|fourth|fifth) season)\\b",
+    "television_description": "\\b(?:television series|tv series|episodes? of|[0-9]+ episodes|all episodes|sitcom|sketches from|television show)\\b",
+    "television_program_title": "\\b(?:saturday night live|spongebob squarepants|sesame street)\\b",
+    "compilation_title": "\\b(?:(?:[2-9]|[1-9][0-9]+|two|three|four|five|six|seven|eight|nine|ten)[- ](?:movies?|films?)(?:\\b|[- ])|(?:double|triple) feature)\\b",
+    "compilation_description": "\\b(?:collection|set) of (?:[2-9]|[1-9][0-9]+|two|three|four|five|six|seven|eight|nine|ten) (?:films|movies)\\b",
+    "concert_title": "\\b(?:in concert|live at|live in|live from|concert performance)\\b",
+    "concert_description": "\\b(?:this concert|concert performance|recorded live (?:at|in)|live concert)\\b",
+    "workout": "\\b(?:workout|aerobics?|exercise routine|fitness training|yoga instruction)\\b",
+    "instruction": "\\b(?:instructional|tutorial|learn to (?:play|dance)|teaches you|step[- ]by[- ]step instruction)\\b",
+    "music_video_title": "\\b(?:music videos?|video hits)\\b",
+    "music_video_description": "\\A(?:a music video[.!]?\\s*$|(?:this|the) (?:dvd|video|collection) (?:contains|presents) (?:[a-z0-9]+ )?music videos?\\b)"
+  },
+  "policy": {
+    "dvd_or_bluray_title_is_movie_evidence": false,
+    "generic_movies_tv_category_is_movie_evidence": false,
+    "genre_alone_is_movie_evidence": false,
+    "boxed_sets_alone_is_compilation_evidence": false,
+    "all_candidates_must_agree": true,
+    "conflicting_nonempty_titles_are_unresolved": true,
+    "inner_asin_conflict_is_unresolved": true
+  }
+}

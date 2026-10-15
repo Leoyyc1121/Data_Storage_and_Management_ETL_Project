@@ -1,0 +1,7 @@
+{
+  "task2_config": "config/task2.example.json",
+  "rules_file": "config/task3.rules.json",
+  "work_dir": "data/staging/task3/full_v2",
+  "report_dir": "reports/task3",
+  "batch_size": 2000
+}
