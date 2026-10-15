@@ -1,0 +1,33 @@
+{
+  "verified_at": "2026-10-15T10:56:56.353773+00:00",
+  "status": "passed",
+  "products": 253059,
+  "missing_asins": 0,
+  "extra_asins": 0,
+  "per_asin_review_count_mismatches": 0,
+  "all_exported_fields_match_checkpoint": true,
+  "all_asins_unique": true,
+  "status_counts_reconcile": true,
+  "attempt_journal_reconciles": true,
+  "policy_denied_urls_checked": 0,
+  "successful_page_evidence_checked": 0,
+  "policy_pending_urls_checked": 253059,
+  "unique_evidence_files_read": 1,
+  "unique_snapshots_hashed": 1,
+  "product_attempts": 0,
+  "manifest_sha256": "d4c4bdf56cb2c58f8dbd247e926bf62c147a676d42dc0486491fa4f23aca4efa",
+  "ordered_rows_sha256": "dc6df1d67923f4021a96c5dcf02ac2b2c7f5ee771d159e9416a5da64d2dfda3b",
+  "scope": "Complete Task 2 manifest, exact Task 1 ASIN membership and per-ASIN counts, all exported fields and referenced final raw evidence. Zero successful pages is not full page acquisition.",
+  "third_party_metadata": {
+    "verified_at": "2026-10-15T10:57:01.381597+00:00",
+    "status": "passed",
+    "matched_asins": 73813,
+    "matched_records": 88660,
+    "all_matched_raw_locators_checked": 88660,
+    "all_exported_fields_match_checkpoint": true,
+    "source_archive_hashes_verified": true,
+    "identity_conflict_records": 6,
+    "identity_conflicts_preserved_and_flagged": true,
+    "counts_as_successful_product_pages": false
+  }
+}

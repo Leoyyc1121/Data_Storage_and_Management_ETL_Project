@@ -1,0 +1,12 @@
+{
+  "verified_at": "2026-10-15T10:56:39.428933+00:00",
+  "status": "passed",
+  "matched_asins": 73813,
+  "matched_records": 88660,
+  "all_matched_raw_locators_checked": 88660,
+  "all_exported_fields_match_checkpoint": true,
+  "source_archive_hashes_verified": true,
+  "identity_conflict_records": 6,
+  "identity_conflicts_preserved_and_flagged": true,
+  "counts_as_successful_product_pages": false
+}

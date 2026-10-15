@@ -1,0 +1,13 @@
+{
+  "source_id": "ucsd_amazon_2018_movies_tv",
+  "publisher_page": "https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/",
+  "publisher_reference": "reports/task2/ucsd_source_reference.json",
+  "download_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_v2/metaFiles2/meta_Movies_and_TV.json.gz",
+  "archive_name": "meta_Movies_and_TV.json.gz",
+  "format": "jsonl_gzip",
+  "publisher_reported_products": 203970,
+  "citation": "Jianmo Ni, Jiacheng Li, Julian McAuley. Justifying recommendations using distantly-labeled reviews and fine-grained aspects. EMNLP 2019.",
+  "max_archive_bytes": 536870912,
+  "max_decompressed_bytes": 5368709120,
+  "max_record_bytes": 8388608
+}

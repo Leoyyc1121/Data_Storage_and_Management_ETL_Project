@@ -78,3 +78,7 @@ dist/
 !reports/task1/full_v2.log
 !reports/task1/sample_v2_20k.log
 !reports/task1/sample_recovery_v2_20k.log
+
+# Small Task 2 execution evidence; raw archives and local databases stay ignored
+!reports/task2/execution.log
+!reports/task2/metadata_execution.log

@@ -1,0 +1,63 @@
+{
+  "observed_at": "2026-10-15T10:56:45.664864+00:00",
+  "collector_version": "1.1.0",
+  "identity_rule": "task2-body-asin-and-product-v1",
+  "source_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+  "source_run_id": "dcfcd8aea4c74a38b632cbb9a3c3127e",
+  "source_fingerprint": "e10c81f1ee201711b0d90fc57a54a8d18fd251b367c7460c0987fc800e6a8a47",
+  "source_records": 7911684,
+  "reviews_with_product_id": 7911684,
+  "distinct_asins": 253059,
+  "official_reference_asins": 253059,
+  "difference_from_official": 0,
+  "statuses": {
+    "success": 0,
+    "not_found": 0,
+    "restricted_access": 0,
+    "timeout": 0,
+    "parsing_failure": 0,
+    "not_collected": 253059,
+    "network_error": 0,
+    "http_error": 0
+  },
+  "reason_counts": {
+    "robots_unavailable_or_unparseable_fail_closed": 253059
+  },
+  "status_counts_reconcile": true,
+  "attempts_total": 0,
+  "live_product_attempts": 0,
+  "successful_live": 0,
+  "successful_authorized_snapshots": 0,
+  "success_rate_all_products": 0.0,
+  "live_success_rate_all_products": 0.0,
+  "offline_success_rate_all_products": 0.0,
+  "policy_denied_without_product_request": 0,
+  "policy_pending_without_product_request": 253059,
+  "pending_attempts": 0,
+  "product_manifest": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task2\\full\\product_manifest.parquet",
+    "file_size_bytes": 12205020,
+    "sha256": "d4c4bdf56cb2c58f8dbd247e926bf62c147a676d42dc0486491fa4f23aca4efa",
+    "rows": 253059,
+    "ordered_rows_sha256": "dc6df1d67923f4021a96c5dcf02ac2b2c7f5ee771d159e9416a5da64d2dfda3b"
+  },
+  "raw_evidence_location": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2",
+  "checkpoint_location": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task2\\full\\acquisition.sqlite3",
+  "access_stop": null,
+  "scope_note": "A complete manifest is not complete page acquisition. Policy evidence is shared; no HTTP status or acquisition time is invented for unrequested product pages. Test fixtures are excluded.",
+  "recovery_instructions": "Use the same config and source versions. prepare resumes committed input batches; crawl skips completed rows; --retry-failed is explicit and cannot override robots or permission. Rebuild a lost checkpoint in a new work_dir; import permitted snapshots with their provenance manifest.",
+  "third_party_metadata": {
+    "matched_asins": 73813,
+    "matched_records": 88660,
+    "coverage_all_target_products": 0.29168296721317954,
+    "output": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task2\\full\\third_party_product_records.parquet",
+      "file_size_bytes": 62907673,
+      "sha256": "2ee1f41f8aede45eb43390f68efd1fbe968f22e8c5139ae67c3410ab7fe14e70"
+    },
+    "counts_as_successful_product_pages": false,
+    "identity_conflict_records": 6,
+    "identity_conflict_asins": 4,
+    "asins_without_identity_conflicts": 73809
+  }
+}

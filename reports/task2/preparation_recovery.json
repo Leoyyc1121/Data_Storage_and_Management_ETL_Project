@@ -1,0 +1,24 @@
+{
+  "verified_at": "2026-10-15T14:37:00.481809+08:00",
+  "status": "passed",
+  "scope": "Actual Task 2 ASIN-manifest preparation was deliberately interrupted after one committed Task 1 input batch, then resumed. Acquisition interruption is covered by synthetic tests, not by interrupted full live crawling.",
+  "interruption": {
+    "run_id": "ac32bef70ab44dac880b42880c92d090",
+    "exit_code": 130,
+    "input_batches": 1,
+    "products": 702,
+    "review_references": 25000
+  },
+  "resumed": {
+    "committed_input_batches": 317,
+    "products": 253059,
+    "review_references": 7911684,
+    "source_records": 7911684
+  },
+  "validation": {
+    "exact_asin_membership_checked": true,
+    "each_asin_review_count_checked": true,
+    "reference": "reports/task2/full_verification.json"
+  },
+  "note": "During development, unknown/failed robots preflight was corrected from restricted_access to not_collected. Final status semantics do not assert that HTTP 503 proves every product inaccessible."
+}

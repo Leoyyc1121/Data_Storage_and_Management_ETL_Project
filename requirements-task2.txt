@@ -1,0 +1,3 @@
+-r requirements-task1.txt
+protego==0.7.0
+truststore==0.10.5

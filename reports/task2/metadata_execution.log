@@ -1,0 +1,18 @@
+2026-10-15 15:49:11,476 INFO robots preflight transient failure status=None; retry 2 after 3.0s
+2026-10-15 15:49:15,165 INFO robots preflight transient failure status=None; retry 3 after 4.0s
+2026-10-15 15:51:43,595 INFO robots preflight transient failure status=None; retry 2 after 3.0s
+2026-10-15 15:58:42,997 INFO Public metadata archive downloaded 16.0 MiB
+2026-10-15 16:01:36,268 INFO Public metadata archive downloaded 32.0 MiB
+2026-10-15 16:04:39,752 INFO Public metadata archive downloaded 48.0 MiB
+2026-10-15 16:07:25,519 INFO Public metadata archive downloaded 64.0 MiB
+2026-10-15 16:09:50,463 INFO Public metadata archive downloaded 80.0 MiB
+2026-10-15 16:12:33,190 INFO Public metadata archive downloaded 96.0 MiB
+2026-10-15 18:40:22,712 INFO Public metadata records read=25000 matched=16217
+2026-10-15 18:40:24,634 INFO Public metadata records read=50000 matched=33177
+2026-10-15 18:40:26,293 INFO Public metadata records read=75000 matched=49180
+2026-10-15 18:40:27,622 INFO Public metadata records read=100000 matched=61755
+2026-10-15 18:40:28,976 INFO Public metadata records read=125000 matched=73506
+2026-10-15 18:40:30,361 INFO Public metadata records read=150000 matched=83945
+2026-10-15 18:40:31,471 INFO Public metadata records read=175000 matched=88660
+2026-10-15 18:40:32,356 INFO Public metadata records read=200000 matched=88660
+2026-10-15 18:40:39,183 INFO Third-party product metadata matched_asins=73813/253059; this is not product-page acquisition

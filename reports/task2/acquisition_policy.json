@@ -1,0 +1,33 @@
+{
+  "run_id": "4259a1e6d5fc4c29b2aaa4f6bde60b23",
+  "observed_at": "2026-10-15T07:23:49.971496+00:00",
+  "policy": {
+    "url": "https://www.amazon.com/robots.txt",
+    "observed_at": "2026-10-15T07:23:06.609279+00:00",
+    "http_status": 503,
+    "error": null,
+    "truncated": false,
+    "response_headers": {
+      "content-type": "text/html",
+      "date": "Thu, 15 Oct 2026 07:23:05 GMT"
+    },
+    "snapshot_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\policy\\470de24561f8fdb4c965acb40542fe9fad14e1843793a497a3bacd906d05544c.txt",
+    "content_hash": "470de24561f8fdb4c965acb40542fe9fad14e1843793a497a3bacd906d05544c",
+    "user_agent": "CourseMovieETL/1.0 (AI-assisted academic project; ChatGPT-User)",
+    "robots_agent": "ChatGPT-User",
+    "collector_version": "1.1.0",
+    "request_attempt": 3,
+    "rules_usable": false,
+    "evidence_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\policy\\a8383c03b3cb4607942478f02fe9b3d4.json",
+    "attempt_evidence_paths": [
+      "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\policy\\aa3bc5f8ff1449779457f63d39e5b671.json",
+      "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\policy\\f9d8b9fe089b47fc8b2e4977b9b7a901.json",
+      "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\policy\\a8383c03b3cb4607942478f02fe9b3d4.json"
+    ]
+  },
+  "permission_evidence_supplied": false,
+  "processed_products": 0,
+  "network_requests": 3,
+  "stopped_on_access_restriction": false,
+  "note": "Policy rejection is not a product HTTP attempt. Restricted rows may have attempts=0 and NULL HTTP/acquisition fields."
+}

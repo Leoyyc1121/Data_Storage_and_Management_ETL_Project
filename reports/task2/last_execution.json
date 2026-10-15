@@ -1,0 +1,9 @@
+{
+  "run_id": "1dbd923bbf954ab88428b04758c03058",
+  "phase": "export",
+  "status": "complete",
+  "finished_at": "2026-10-15T10:57:01.389605+00:00",
+  "elapsed_seconds": 30.156000000000176,
+  "collector_version": "1.1.0",
+  "config_sha256": "a4921553a6f237c30be365cabb0947a4c5b70e3f0409571549352432aa11446d"
+}

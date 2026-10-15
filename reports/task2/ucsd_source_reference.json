@@ -1,0 +1,13 @@
+{
+  "source_type": "third_party_product_metadata",
+  "publisher": "UCSD McAuley research group",
+  "publisher_page": "https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/",
+  "download_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_v2/metaFiles2/meta_Movies_and_TV.json.gz",
+  "observed_at": "2026-10-15 07:56:07 UTC",
+  "observation_method": "Official publisher page and its Movies and TV metadata hyperlink inspected through the web research tool in this task.",
+  "publisher_reported_products": 203970,
+  "source_description": "2018 Amazon review dataset, Movies and TV product metadata; the publisher explicitly provides this per-category archive for download.",
+  "citation": "Jianmo Ni, Jiacheng Li, Julian McAuley. Justifying recommendations using distantly-labeled reviews and fine-grained aspects. EMNLP 2019.",
+  "scope": "This reference establishes the publisher's offered research download. It is not instructor authorization, not raw HTML product snapshots, and does not authorize crawling Amazon.",
+  "native_publisher_preflight_note": "Native CSE publisher robots request first failed certificate validation, then returned a redirect to a different site's home page after system-trust repair. Its HTML was not crawled by the native collector. Archive-origin robots are checked separately before downloading."
+}

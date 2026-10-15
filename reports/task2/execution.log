@@ -1,0 +1,60 @@
+2026-10-15 14:28:52,647 INFO Stage prepare: validate full Task 1 inputs and build complete ASIN manifest
+2026-10-15 14:28:52,719 WARNING Interrupted; committed batches and per-ASIN attempts are preserved
+2026-10-15 14:29:21,331 INFO Stage prepare: validate full Task 1 inputs and build complete ASIN manifest
+2026-10-15 14:29:22,715 INFO ASIN manifest input batches committed: 26/317
+2026-10-15 14:29:24,464 INFO ASIN manifest input batches committed: 51/317
+2026-10-15 14:29:26,655 INFO ASIN manifest input batches committed: 76/317
+2026-10-15 14:29:29,174 INFO ASIN manifest input batches committed: 101/317
+2026-10-15 14:29:31,807 INFO ASIN manifest input batches committed: 126/317
+2026-10-15 14:29:34,828 INFO ASIN manifest input batches committed: 151/317
+2026-10-15 14:29:37,942 INFO ASIN manifest input batches committed: 176/317
+2026-10-15 14:29:41,237 INFO ASIN manifest input batches committed: 201/317
+2026-10-15 14:29:44,776 INFO ASIN manifest input batches committed: 226/317
+2026-10-15 14:29:48,379 INFO ASIN manifest input batches committed: 251/317
+2026-10-15 14:29:52,156 INFO ASIN manifest input batches committed: 276/317
+2026-10-15 14:29:55,937 INFO ASIN manifest input batches committed: 301/317
+2026-10-15 14:29:58,372 INFO ASIN manifest input batches committed: 317/317
+2026-10-15 14:29:58,382 INFO Stage crawl: policy preflight, bounded acquisition and persistent cache
+2026-10-15 14:30:31,681 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 253059, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 0, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 14:31:44,046 INFO Stage prepare: validate full Task 1 inputs and build complete ASIN manifest
+2026-10-15 14:31:51,733 INFO Stage crawl: policy preflight, bounded acquisition and persistent cache
+2026-10-15 14:32:05,257 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 253059, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 0, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 14:33:32,064 INFO Stage prepare: validate full Task 1 inputs and build complete ASIN manifest
+2026-10-15 14:33:39,456 INFO Stage crawl: policy preflight, bounded acquisition and persistent cache
+2026-10-15 14:34:06,663 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 0, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 253059, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 14:36:27,009 INFO Stage prepare: validate full Task 1 inputs and build complete ASIN manifest
+2026-10-15 14:36:34,573 INFO Stage crawl: policy preflight, bounded acquisition and persistent cache
+2026-10-15 14:36:42,584 INFO Stage export: materialize complete manifest and full-denominator statistics
+2026-10-15 14:36:51,155 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 0, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 253059, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 14:36:51,155 INFO Stage verify: exact ASIN membership, counts and retained evidence
+2026-10-15 15:22:56,643 INFO Stage crawl: policy preflight, bounded acquisition and persistent cache
+2026-10-15 15:22:57,923 INFO robots preflight transient failure status=503; retry 2 after 3.0s
+2026-10-15 15:23:01,742 INFO robots preflight transient failure status=503; retry 3 after 4.0s
+2026-10-15 15:23:49,980 INFO Stage export: materialize complete manifest and full-denominator statistics
+2026-10-15 15:24:11,094 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 0, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 253059, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 15:24:11,095 INFO Stage verify: exact ASIN membership, counts and retained evidence
+2026-10-15 18:41:53,934 INFO Stage public metadata acquisition: preserve research archive and exact-ASIN evidence separately
+2026-10-15 18:42:00,837 INFO Third-party product metadata matched_asins=73813/253059; this is not product-page acquisition
+2026-10-15 18:42:00,846 INFO Stage export: materialize complete manifest and full-denominator statistics
+2026-10-15 18:42:12,651 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 0, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 253059, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 18:42:12,651 INFO Stage verify: exact ASIN membership, counts and retained evidence
+2026-10-15 18:48:21,118 INFO Stage public metadata acquisition: preserve research archive and exact-ASIN evidence separately
+2026-10-15 18:48:27,981 INFO Third-party product metadata matched_asins=73813/253059; this is not product-page acquisition
+2026-10-15 18:48:27,981 INFO Stage export: materialize complete manifest and full-denominator statistics
+2026-10-15 18:48:36,000 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 0, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 253059, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 18:48:36,000 INFO Stage verify: exact ASIN membership, counts and retained evidence
+2026-10-15 18:50:17,450 INFO Stage public metadata acquisition: preserve research archive and exact-ASIN evidence separately
+2026-10-15 18:50:25,632 INFO Third-party product metadata matched_asins=73813/253059; this is not product-page acquisition
+2026-10-15 18:50:25,632 INFO Stage export: materialize complete manifest and full-denominator statistics
+2026-10-15 18:50:33,725 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 0, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 253059, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 18:50:33,725 INFO Stage verify: exact ASIN membership, counts and retained evidence
+2026-10-15 18:55:42,619 INFO Stage public metadata acquisition: preserve research archive and exact-ASIN evidence separately
+2026-10-15 18:55:51,042 INFO Third-party product metadata matched_asins=73813/253059; this is not product-page acquisition
+2026-10-15 18:55:51,042 INFO Stage export: materialize complete manifest and full-denominator statistics
+2026-10-15 18:55:59,356 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 0, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 253059, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 18:55:59,356 INFO Stage verify: exact ASIN membership, counts and retained evidence
+2026-10-15 18:56:31,246 INFO Stage public metadata acquisition: preserve research archive and exact-ASIN evidence separately
+2026-10-15 18:56:39,432 INFO Third-party product metadata matched_asins=73813/253059; this is not product-page acquisition
+2026-10-15 18:56:39,432 INFO Stage export: materialize complete manifest and full-denominator statistics
+2026-10-15 18:56:47,786 INFO Manifest total=253059 statuses={'success': 0, 'not_found': 0, 'restricted_access': 0, 'timeout': 0, 'parsing_failure': 0, 'not_collected': 253059, 'network_error': 0, 'http_error': 0} success_rate=0.0
+2026-10-15 18:56:47,786 INFO Stage verify: exact ASIN membership, counts and retained evidence

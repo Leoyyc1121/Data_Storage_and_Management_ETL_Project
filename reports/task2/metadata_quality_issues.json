@@ -1,0 +1,74 @@
+{
+  "rule_id": "task2-metadata-asin-consistency-v1",
+  "identity_conflict_records": 6,
+  "identity_conflict_asins": 4,
+  "issues": [
+    {
+      "asin": "B000063UYL",
+      "source_id": "ucsd_amazon_2018_movies_tv",
+      "record_sequence": 30021,
+      "archive_sha256": "b7362b6c0bf92a6c47fbbb7855aea2bffd45042f6f10af73bc3afa3d8716c3e9",
+      "byte_start": 34346878,
+      "byte_end": 34351209,
+      "field_name": "details.ASIN: ",
+      "raw_value": "\"B000SUKPLG\"",
+      "issue": "asin_identity_conflict"
+    },
+    {
+      "asin": "B0002US528",
+      "source_id": "ucsd_amazon_2018_movies_tv",
+      "record_sequence": 42746,
+      "archive_sha256": "b7362b6c0bf92a6c47fbbb7855aea2bffd45042f6f10af73bc3afa3d8716c3e9",
+      "byte_start": 53155411,
+      "byte_end": 53158578,
+      "field_name": "details.ASIN: ",
+      "raw_value": "\"156364813X\"",
+      "issue": "asin_identity_conflict"
+    },
+    {
+      "asin": "B000063UYL",
+      "source_id": "ucsd_amazon_2018_movies_tv",
+      "record_sequence": 51948,
+      "archive_sha256": "b7362b6c0bf92a6c47fbbb7855aea2bffd45042f6f10af73bc3afa3d8716c3e9",
+      "byte_start": 66429664,
+      "byte_end": 66433995,
+      "field_name": "details.ASIN: ",
+      "raw_value": "\"B000SUKPLG\"",
+      "issue": "asin_identity_conflict"
+    },
+    {
+      "asin": "B0002US528",
+      "source_id": "ucsd_amazon_2018_movies_tv",
+      "record_sequence": 64673,
+      "archive_sha256": "b7362b6c0bf92a6c47fbbb7855aea2bffd45042f6f10af73bc3afa3d8716c3e9",
+      "byte_start": 85238197,
+      "byte_end": 85241364,
+      "field_name": "details.ASIN: ",
+      "raw_value": "\"156364813X\"",
+      "issue": "asin_identity_conflict"
+    },
+    {
+      "asin": "B000T63TQC",
+      "source_id": "ucsd_amazon_2018_movies_tv",
+      "record_sequence": 100156,
+      "archive_sha256": "b7362b6c0bf92a6c47fbbb7855aea2bffd45042f6f10af73bc3afa3d8716c3e9",
+      "byte_start": 144751577,
+      "byte_end": 144752398,
+      "field_name": "details.ASIN: ",
+      "raw_value": "\"B01M6BCW9M\"",
+      "issue": "asin_identity_conflict"
+    },
+    {
+      "asin": "B0012SANTW",
+      "source_id": "ucsd_amazon_2018_movies_tv",
+      "record_sequence": 108486,
+      "archive_sha256": "b7362b6c0bf92a6c47fbbb7855aea2bffd45042f6f10af73bc3afa3d8716c3e9",
+      "byte_start": 160365913,
+      "byte_end": 160367201,
+      "field_name": "details.ASIN: ",
+      "raw_value": "\"B002B41L0Q\"",
+      "issue": "asin_identity_conflict"
+    }
+  ],
+  "handling": "Raw candidates retained; affected ASINs require confirmation and must not be automatically classified as movies."
+}

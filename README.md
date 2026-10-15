@@ -2,7 +2,7 @@
 
 本项目是“数据存储与管理”课程的 ETL 综合作业，目标是构建一条可复现、可恢复、可审计的数据流水线，将 Stanford SNAP 的 Amazon 电影评论数据与电影、商品版本和人物元数据进行整合，并把最终结果加载到可查询的数据库中。
 
-> 当前状态：任务 1 的全量评论抽取与程序级验证已完成，下载原件证据仍有待补项。任务 2—9 及 Airflow、PostgreSQL 整体运行环境尚未实施；下文总体架构仍为计划方案。实际操作、结果和上传过程统一记录在 [项目实施记录](项目实施记录.md) 中。
+> 当前状态：任务 1 的全量评论抽取与程序级验证已完成，下载原件证据仍有待补项。任务 2 已按指导文档允许的受限替代路径完成：清单覆盖全部 253,059 个 ASIN，公开研究元数据覆盖 73,813 个商品（29.17%）；在线页面和授权 HTML 快照成功数均为 0，不与研究数据混算。代码、配置和小型证据纳入本次 Git 交付，大型数据留在本地并登记哈希及恢复方法。任务 3—9 及 Airflow、PostgreSQL 整体运行环境尚未实施；下文总体架构仍为计划方案。实际操作、结果和上传过程统一记录在 [项目实施记录](项目实施记录.md) 中。
 
 ## 一、项目内容
 
@@ -34,7 +34,7 @@
 | --- | --- | --- |
 | 工作流编排 | Apache Airflow | 管理任务依赖、参数、批次、重试、日志、失败分支和恢复流程 |
 | 数据处理 | Python | 流式解析、清洗、候选生成、实体匹配、统计与质量检查 |
-| 页面采集 | Scrapy | 限速采集、缓存、断点续传、有界重试和响应证据保存 |
+| 页面采集 | 任务 2 已使用 Python urllib + Protego；Scrapy 为可选后续工具 | 单 worker、robots 核验、显式许可检查、限速、缓存、有界重试、恢复和原始证据保存 |
 | 数据库 | PostgreSQL | 保存实体、关系、候选字段、选择结果、血缘、批次和质量问题 |
 | 数据访问 | SQL | 数据核对、质量检查、验收查询和演示查询 |
 | 版本管理 | Git / GitHub | 管理代码、配置模板、数据库脚本和项目文档 |
@@ -125,6 +125,7 @@ Data_Storage_and_Management_ETL_Project/
 ├─ 项目实施记录.md                  # 各任务实际操作、结果、证据及 GitHub 上传记录
 ├─ .gitignore                      # Git 忽略规则
 ├─ requirements-task1.txt           # 已实现的任务 1 固定依赖版本
+├─ requirements-task2.txt           # 已实现的任务 2 固定依赖，复用任务 1 依赖
 ├─ requirements.txt                # Python 依赖及版本
 ├─ docker-compose.yml              # Airflow 与 PostgreSQL 本地运行环境
 ├─ .env.example                    # 环境变量模板，不包含真实密钥
@@ -144,6 +145,7 @@ Data_Storage_and_Management_ETL_Project/
 │  ├─ quality_checks.sql           # 数据质量检查
 │  └─ demo_queries.sql             # 至少 5 个验收查询
 ├─ config/
+│  ├─ task2.example.json            # 已实现的任务 2 参数和安全默认配置
 │  ├─ pipeline.example.yaml        # 流水线参数模板
 │  └─ rules/                       # 匹配和字段选择规则版本
 ├─ tests/
@@ -193,13 +195,57 @@ Data_Storage_and_Management_ETL_Project/
 
 ### 任务 2：商品页面采集
 
-- [ ] 从评论中提取全部不同 ASIN
-- [ ] 建立商品采集清单
-- [ ] 配置 Scrapy 缓存、限速、重试和断点续传
-- [ ] 保存原始响应或授权快照及内容哈希
-- [ ] 区分成功、404、受限、超时、解析失败和未采集等状态
-- [ ] 验证返回页面与目标 ASIN 一致
-- [ ] 统计采集覆盖率并保存失败证据
+- [x] 从全部 317 个任务 1 分片登记 ASIN，并保留源文件哈希、运行 ID、首条评论 ID 和逐商品评论数
+- [x] 建立 253,059 行全量商品清单，包含指导文档要求的 ASIN、原始/最终 URL、状态、HTTP 状态、尝试次数、采集时间、快照位置和内容哈希
+- [x] 使用指导文档允许的可比工具实现缓存、单 worker 限速、有界重试、批次恢复及逐商品恢复
+- [x] 实现原始响应和授权快照保存、SHA-256 校验；本次实际保存的是访问规则预检响应，商品页面分支通过合成测试验证
+- [x] 区分成功、404、受限、超时、解析失败、未采集及其他网络/HTTP 错误；规则未知与缺少许可保持未采集
+- [x] 实现页面正文 ASIN 核验、重定向链和模板签名证据记录，拒绝 HTTP 200 验证码/错误页
+- [x] 完成全量 ASIN/逐商品评论数核对、真实清单中断恢复和重复执行比较；优化后任务 2 共 64 项自动测试通过，连同任务 1 共 82 项
+- [x] 按全部 ASIN 计算覆盖率，分别记录在线与授权快照结果，保留预检失败证据
+- [ ] 取得来源允许访问的真实商品页面或指导文档允许的授权历史快照，形成可供后续任务使用的页面内容
+- [x] 完成公开研究元数据全量导入：203,766 条源记录，匹配 88,660 条候选、73,813 个目标商品；逐条核对原始定位，覆盖率 29.17%，不计页面成功
+- [x] 保留并标记 6 条内外 ASIN 冲突候选（4 个商品），后续不得直接自动确认为电影
+- [x] 按要求文档第 3、4、10、11 节自查；核对结果见 `reports/task2/requirements_audit.json`
+
+任务 2 的流程是 `prepare → crawl → export → verify`，由一个 `run` 命令顺序组织；任何阶段异常都会记录失败，已提交批次和证据保留。它是完整项目中任务 2 的可执行子流程，不代表 Airflow 主 DAG 或数据库加载已经完成。
+
+本次真实结果：清单 253,059 个商品，对应 7,911,684 条评论；成功页面 0，未采集 253,059，商品请求尝试次数 0。实际声明身份下的 `robots.txt` 请求返回 HTTP 503，程序按失效关闭原则停止；同时没有可依据的在线采集许可或授权快照。不能把预检的 503 写成商品 HTTP 状态，也不能声称这些商品全部返回 404 或被永久禁止访问。清单的商品 HTTP 状态、最终 URL、采集时间和页面哈希保持 NULL，并引用共同预检证据。
+
+默认并发为 1，请求间隔至少 3 秒，单次超时 20 秒，每个商品的在线尝试最多 3 次，重定向最多 5 次。重试遵守 `Retry-After`，不缩短服务器要求的等待时间；收到 401/403/429 或验证码页时停止该来源，持久保存停止状态。机器人身份不伪装成浏览器，也不通过改身份绕过限制。robots 允许访问不等同于条款允许；在线商品来源需有实际使用依据。优化版已移除额外的 `live_permission` 布尔开关，不再要求同时满足一个预设关闭的重复开关。
+
+在项目根目录的 PowerShell 执行：
+
+```powershell
+& .\.venv\Scripts\python.exe -m pip install -r requirements-task2.txt
+& .\.venv\Scripts\python.exe src\extract\acquire_products.py run --config config\task2.example.json
+# 可单独重复核验已有结果，不发网络请求。
+& .\.venv\Scripts\python.exe src\quality\verify_task2.py --config config\task2.example.json
+& .\.venv\Scripts\python.exe -m unittest discover -s tests/unit -p test_task2.py -v
+```
+
+直接重跑会核对输入和已提交批次，复用已完成状态；失败项只有显式使用 `--retry-failed` 才进入重处理选择，该参数不绕过 robots、来源条款或持久停止状态。成功预检缓存 1 小时；失败预检仅缓存 30 秒，临时 5xx/网络异常最多尝试 3 次并保存每次响应。可以加 `--refresh-policy` 强制重新核验，但始终使用同一身份，不能忽略禁止规则。规则文件 404/410 与服务器 5xx 分开处理，前者表示没有取得已发布规则，不等于获得条款许可。
+
+### 任务 2 优化版与公开研究输入
+
+优化版为 `1.1.0`，HTTPS 使用 `truststore==0.10.5` 的系统信任库，保持证书校验开启，解决本机 Python 无法构建 UCSD 证书链的问题。新的研究输入入口是 `src/extract/acquire_product_metadata.py`，配置为 `config/task2.metadata.example.json`；提供者为 [UCSD Amazon Review Data 2018](https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/)，只取得官网明确链接的 Movies and TV 元数据 gzip，不抓取 Amazon 受限网页。
+
+研究来源单独保存压缩原件、下载时间、SHA-256、官方来源依据及文件服务器 robots 证据。逐条保留原始 JSON 字节、原始哈希、源档案哈希、记录序号和解压字节起止位置，用 ASIN 精确筛选目标商品，保留重复候选和异常，不提前判断电影实体或选择最终字段。历史页面采集时间未知，不用本次文件下载时间冒充历史时间。
+
+```powershell
+# 明确重新核验原来源，临时故障只作有限重试。
+& .\.venv\Scripts\python.exe src\extract\acquire_products.py crawl --config config\task2.example.json --refresh-policy --max-products 10
+
+# 可将公开研究来源接入同一任务 2 子流程；结果不计为页面成功。
+& .\.venv\Scripts\python.exe src\extract\acquire_products.py run --config config\task2.example.json --metadata-config config\task2.metadata.example.json
+
+# 或单独恢复已开始的研究档案获取与导入。
+& .\.venv\Scripts\python.exe src\extract\acquire_product_metadata.py --config config\task2.example.json --source-config config\task2.metadata.example.json
+```
+
+研究档案不等于 HTML 页面或教师指定快照，指标在 `metadata_statistics.json` 单独报告；不能用它抬高 `success` 或在线采集成功率。研究来源要求引用 Ni、Li、McAuley 的 EMNLP 2019 论文，引用与用途限定已登记。原件完整读至 EOF 并通过 gzip CRC 和原始定位核验；官网标注 203,970 个商品，而本文件实际有 203,766 行，统计口径/文件版本差异尚无确证，不凑数，也不据此声称缺失 204 个目标商品。179,246 个目标商品没有研究元数据，后续须保持待确认。Git 仅提交实现、文档和小型统计/验证证据，不公开原始研究档案或逐商品内容。
+
+清单和检查点位于 `data/staging/task2/full/`，原始预检响应位于 `data/raw/task2/policy/`。`reports/task2/` 保存全量统计、预检记录、核验、测试、中断恢复、重复执行及执行日志。详细字段、快照导入契约、命令和限制见实施记录的任务 2 章节。
 
 ### 任务 3：电影商品识别
 
@@ -275,12 +321,12 @@ Data_Storage_and_Management_ETL_Project/
 
 交付范围仅依据本地指导文档 `Data_Storage_and_Management_ETL_Assignment_English.docx` 第 11 节，并按第 8—10 节细化。文档没有要求把所有工作目录或试验历史上传，也没有指定报告必须采用 Word 格式。当前仓库只保留已形成的交付材料，不代表整个项目已经完成。
 
-| 指导文档要求 | 当前纳入 Git 的材料 | 仍待完成的主要材料 |
+| 指导文档要求 | 当前已形成的材料 | 仍待完成的主要材料 |
 | --- | --- | --- |
-| 项目报告 | `项目实施记录.md`：任务 1 的事实、方法、统计、限制及后续报告素材 | 覆盖全部任务的正式项目报告；当前 Word 草稿不作为正式交付 |
-| 完整实现 | `src/extract/`、`src/quality/`、任务 1 自动测试和固定依赖文件 | 采集、匹配、清洗、血缘、ETL 作业定义与失败分支、数据库模型及加载脚本、配置模板；ER 图和数据字典 |
-| 数据与证据 | 任务 1 最终来源登记、全量统计、结果校验和大数据分片校验清单；数量差异修正的诊断证据 | 全量商品采集清单、后续异常与合并决定、字段血缘、独立评估集及固定离线端到端验收样本 |
-| 演示与复现说明 | 本 README、实施记录中的环境/资源要求和执行命令、任务 1 执行日志及重复执行/恢复比较证据、人员及 AI 辅助记录 | 完整端到端运行说明、目标库幂等加载与恢复证据、规则变更重算演示和至少 5 个可执行结果查询 |
+| 项目报告 | `项目实施记录.md`：任务 1、2 的事实、方法、统计、限制及后续报告素材 | 覆盖全部任务的正式项目报告；当前 Word 草稿不作为正式交付 |
+| 完整实现 | `src/extract/`、`src/quality/`、任务 1、2 自动测试和固定依赖、任务 2 参数模板 | 匹配、清洗、血缘、整体 ETL 作业定义与失败分支、数据库模型及加载脚本、整体配置模板；ER 图和数据字典 |
+| 数据与证据 | 任务 1 最终登记和全量证据；任务 2 全量商品清单、预检失败证据、公开研究原件、统计和校验（大型内容仅登记本地位置/哈希） | 后续异常与合并决定、字段血缘、独立评估集及固定离线端到端验收样本；页面原目标受访问条件限制，未宣称完成全量 HTML 获取 |
+| 演示与复现说明 | 本 README、实施记录中的环境/资源和命令、任务 1、2 日志及恢复/重复执行证据、人员及 AI 辅助记录 | 完整端到端运行说明、目标库幂等加载与恢复证据、规则变更重算演示和至少 5 个可执行结果查询 |
 
 任务 1 的 Git 证据清单如下，其他旧版统计和试验日志仅保留在本地：
 
@@ -301,6 +347,8 @@ Data_Storage_and_Management_ETL_Project/
 - 恢复输入：从来源登记中的 Stanford SNAP 地址取得 `movies.txt.gz`，解压后计算 `movies.txt` 的 SHA-256，核对与登记版本一致；当前尚缺压缩原件实测哈希，不能声称已验证压缩原件。
 - 重建结果：安装 `requirements-task1.txt` 的固定依赖，使用来源登记程序登记当前机器上的输入路径，再按照实施记录的命令，以解析器 `1.2.0`、规则 `task1-preserve-raw-v3`、批大小 `25000` 和编码策略 `unresolved` 运行解析及独立验证。不要直接沿用历史登记中的另一台机器绝对路径。
 - 中断恢复：已有同一运行的分片及 `checkpoint.sqlite3` 时使用 `--resume`；检查点丢失时，在新的运行目录从输入重新解析，不能仅凭 JSON 统计继续旧批次。
+- 任务 2 全量清单：本机 `data/staging/task2/full/product_manifest.parquet`，253,059 行、12,205,020 字节，SHA-256 见 `reports/task2/full_statistics.json`。按任务 2 命令从任务 1 输出重建；历史网络预检快照应另行保留，重新访问不保证得到相同响应。清单和原始响应不直接上传 GitHub，提交统计、校验值和恢复说明。
+- 任务 2 研究输入：本机 `data/raw/task2/third_party/ucsd_amazon_2018_movies_tv/meta_Movies_and_TV.json.gz`，105,021,691 字节；匹配输出 `data/staging/task2/full/third_party_product_records.parquet`，88,660 行、62,907,673 字节。两者 SHA-256、来源 URL、来源依据、时间和本地位置见 `reports/task2/metadata_statistics.json`。先恢复任务 1 与任务 2 全量清单，再运行 `acquire_product_metadata.py` 重取/导入；必须核对原件哈希，来源文件变化时建立新版本运行，不沿用旧检查点。仅重新导出时可运行 `acquire_products.py export --metadata-config config/task2.metadata.example.json`，缓存原件会经过校验，不重新访问网站。
 
 分片 SHA-256 标识本次保存的二进制文件。重新生成的 `run_id` 或 Parquet 运行库不同，文件哈希可能变化；应同时核对输入哈希、规则、记录数和稳定 ID，不能把新运行的二进制差异直接认定为数据错误。任务 1 的抽取测试不替代完整项目的目标库验收。
 
@@ -308,6 +356,7 @@ Data_Storage_and_Management_ETL_Project/
 
 - [Stanford SNAP Amazon Movie Reviews](https://snap.stanford.edu/data/web-Movies.html)
 - [Scrapy Documentation](https://docs.scrapy.org/en/latest/)
+- [Protego robots.txt parser](https://github.com/scrapy/protego)
 - [Apache Airflow Documentation](https://airflow.apache.org/docs/)
 - [IMDb Non-Commercial Datasets](https://datasets.imdbws.com/)
 - [PostgreSQL Documentation](https://www.postgresql.org/docs/)

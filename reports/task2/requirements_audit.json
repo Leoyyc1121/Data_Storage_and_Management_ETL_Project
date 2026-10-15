@@ -1,0 +1,68 @@
+{
+  "audited_at": "2026-10-15 10:59:25 UTC",
+  "reference": "Data_Storage_and_Management_ETL_Assignment_English.docx sections 3,4(Task2),8,10,11",
+  "decision": "meets_task2_restricted_source_alternative_with_disclosed_limits",
+  "not_claimed": "253059 HTML pages obtained; instructor approval; full-project acceptance; target-database loading",
+  "requirements": [
+    {
+      "requirement": "Full distinct-ASIN manifest and candidate URLs",
+      "status": "passed_actual_full_run",
+      "evidence": "253059 ASINs,7911684 review references; no missing/extra ASINs; per-ASIN counts match Task1",
+      "files": "full_statistics.json;full_verification.json"
+    },
+    {
+      "requirement": "Required manifest fields and mutually exclusive statuses",
+      "status": "passed_actual_full_run",
+      "evidence": "All requested columns; unavailable actual product HTTP fields remain NULL; not_collected=253059, successful HTML=0",
+      "files": "full_statistics.json;full_verification.json"
+    },
+    {
+      "requirement": "Comparable collector; resume/cache/rate/bounded retries",
+      "status": "passed_implementation_and_tests",
+      "evidence": "urllib/Protego/truststore single-worker; durable attempts and batches; bounded retries; successful cache; preparation interruption+resume on real input",
+      "files": "test_results.json;preparation_recovery.json;src/extract/acquire_products.py"
+    },
+    {
+      "requirement": "Raw responses or authorized snapshots; HTTP200 challenge rejection; ASIN/redirect/template checks",
+      "status": "passed_implementation_with_live_limit",
+      "evidence": "Raw robots responses preserved. HTML acquisition/snapshot paths covered by synthetic tests, not falsely reported as real acquisitions. No HTML page available this run.",
+      "files": "acquisition_policy.json;test_results.json"
+    },
+    {
+      "requirement": "Respect rules/terms; stop restricted or uncertain access",
+      "status": "passed_actual_source_evidence",
+      "evidence": "Same declared identity; three actual Amazon robots 503 responses; fail-closed without requesting products. Research archive explicitly linked by official publisher; file-server robots404. TLS verification remains enabled.",
+      "files": "acquisition_policy.json;ucsd_source_reference.json;metadata_statistics.json"
+    },
+    {
+      "requirement": "Permitted alternative and actual coverage disclosure",
+      "status": "passed_actual_full_archive",
+      "evidence": "Full203766 JSON records;88660 matched candidate records across73813 targetASINs(29.17%).179246 target products lack metadata. Separate from live0/offlineHTML0. Official203970-products label is not the same count as observed physical rows; unexplained count/version discrepancy retained.",
+      "files": "metadata_statistics.json;full_statistics.json"
+    },
+    {
+      "requirement": "Raw source provenance and anomaly preservation",
+      "status": "passed_actual_full_verification",
+      "evidence": "Archive SHA,size,download time and unknown historical time separate;all88660 raw locators verified;6 conflicting identity records across4 ASINs preserved and flagged",
+      "files": "metadata_verification.json;metadata_quality_issues.json"
+    },
+    {
+      "requirement": "Repeatability and recovery evidence",
+      "status": "passed_stage_scoped",
+      "evidence": "Two cached full runs have identical manifest/metadata hashes,counts/statuses. Real prepare interruption/resume plus synthetic collector/source-import recovery. Not a final target-load test.",
+      "files": "idempotency.json;preparation_recovery.json;test_results.json"
+    },
+    {
+      "requirement": "Submission materials and third-party sharing",
+      "status": "passed_stage_scoped",
+      "evidence": "Implementation,dependencies,config,execution logs,statistics,recovery and AI-use records. Raw archives,per-product content,DBs and Word drafts excluded from public Git; hashes/storage/recovery documented.",
+      "files": "README.md;项目实施记录.md;.gitignore"
+    }
+  ],
+  "limits": [
+    "No live/authorized HTML acquired; unavailable product pages cannot be asserted permanently missing or forbidden.",
+    "Actual permitted research coverage is partial. Four identity-conflicting products must remain unresolved in Task3.",
+    "Only Task2-stage compliance assessed; Airflow/full target schema/loading/Tasks3-9 acceptance not claimed.",
+    "Synthetic tests prove branches, not successful real HTTP acquisitions or full-data classification accuracy."
+  ]
+}

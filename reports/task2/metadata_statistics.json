@@ -1,0 +1,84 @@
+{
+  "observed_at": "2026-10-15T10:56:34.190853+00:00",
+  "source_type": "third_party_product_metadata",
+  "total_target_asins": 253059,
+  "matched_asins": 73813,
+  "unmatched_target_asins": 179246,
+  "matched_records": 88660,
+  "identity_conflict_records": 6,
+  "identity_conflict_asins": 4,
+  "asins_without_identity_conflicts": 73809,
+  "coverage_all_target_products": 0.29168296721317954,
+  "source_states": [
+    {
+      "source_id": "ucsd_amazon_2018_movies_tv",
+      "archive_sha256": "b7362b6c0bf92a6c47fbbb7855aea2bffd45042f6f10af73bc3afa3d8716c3e9",
+      "target_fingerprint": "e10c81f1ee201711b0d90fc57a54a8d18fd251b367c7460c0987fc800e6a8a47",
+      "next_offset": 331981255,
+      "records_read": 203766,
+      "valid_records": 203766,
+      "invalid_records": 0,
+      "matched_records": 88660,
+      "unmatched_records": 115106,
+      "complete": true,
+      "source_registration": {
+        "source_id": "ucsd_amazon_2018_movies_tv",
+        "source_type": "third_party_product_metadata",
+        "publisher_page": "https://cseweb.ucsd.edu/~jmcauley/datasets/amazon_v2/",
+        "publisher_snapshot": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\third_party\\ucsd_amazon_2018_movies_tv\\publisher\\source_reference.json",
+        "publisher_snapshot_sha256": "d5ce19d8ee7e4f31b5dddfb54413bc63293e341be08780a138681cf93cb0d456",
+        "download_url": "https://mcauleylab.ucsd.edu/public_datasets/data/amazon_v2/metaFiles2/meta_Movies_and_TV.json.gz",
+        "publisher_evidence_format": "research_reference_json_not_http_snapshot",
+        "downloaded_at": "2026-10-15T08:13:15.522648+00:00",
+        "archive_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\third_party\\ucsd_amazon_2018_movies_tv\\meta_Movies_and_TV.json.gz",
+        "archive_size_bytes": 105021691,
+        "archive_sha256": "b7362b6c0bf92a6c47fbbb7855aea2bffd45042f6f10af73bc3afa3d8716c3e9",
+        "publisher_robots_evidence": {
+          "observation_method": "Official publisher page and its Movies and TV metadata hyperlink inspected through the web research tool in this task.",
+          "scope": "Publisher reference already observed; no native publisher HTML request is made."
+        },
+        "archive_robots_evidence": {
+          "url": "https://mcauleylab.ucsd.edu/robots.txt",
+          "observed_at": "2026-10-15T07:56:10.333631+00:00",
+          "http_status": 404,
+          "error": null,
+          "error_detail": null,
+          "truncated": false,
+          "response_headers": {
+            "date": "Thu, 15 Oct 2026 07:56:09 GMT",
+            "content-type": "text/html",
+            "last-modified": "Wed, 15 Jan 2025 22:35:26 GMT",
+            "etag": "\"c8c-62bc64b3ce068\""
+          },
+          "snapshot_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\third_party\\ucsd_amazon_2018_movies_tv\\archive_policy\\policy\\4576cf89af83ae7c65f46672ea1b96a1ac6db5126bb1b52238f17f68fb7136df.txt",
+          "content_hash": "4576cf89af83ae7c65f46672ea1b96a1ac6db5126bb1b52238f17f68fb7136df",
+          "user_agent": "CourseMovieETL/1.0 (AI-assisted academic project; ChatGPT-User)",
+          "robots_agent": "ChatGPT-User",
+          "collector_version": "1.1.0",
+          "request_attempt": 1,
+          "rules_usable": true,
+          "evidence_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\third_party\\ucsd_amazon_2018_movies_tv\\archive_policy\\policy\\96e271c7f9954d1385491b654f36c2c1.json",
+          "attempt_evidence_paths": [
+            "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2\\third_party\\ucsd_amazon_2018_movies_tv\\archive_policy\\policy\\96e271c7f9954d1385491b654f36c2c1.json"
+          ]
+        },
+        "citation": "Jianmo Ni, Jiacheng Li, Julian McAuley. Justifying recommendations using distantly-labeled reviews and fine-grained aspects. EMNLP 2019.",
+        "publisher_reported_products": 203970,
+        "access_basis": "The official research publisher explicitly links this archive for download; retain citation. This does not authorize crawling Amazon.",
+        "historical_record_acquisition_time": null,
+        "time_note": "downloaded_at is our file download time, not the original historical product page acquisition time.",
+        "network_requests": 2
+      }
+    }
+  ],
+  "complete_sources": 1,
+  "raw_issue_records": 0,
+  "output": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task2\\full\\third_party_product_records.parquet",
+    "file_size_bytes": 62907673,
+    "sha256": "2ee1f41f8aede45eb43390f68efd1fbe968f22e8c5139ae67c3410ab7fe14e70"
+  },
+  "checkpoint_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task2\\full\\metadata.sqlite3",
+  "counts_as_successful_product_pages": false,
+  "note": "Exact ASIN correspondence to public research metadata. These are NOT raw/authorized HTML product snapshots, verified movie works, or current product data."
+}
