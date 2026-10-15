@@ -55,6 +55,17 @@ desktop.ini
 # Course assignment document (kept locally, not published)
 Data_Storage_and_Management_ETL_Assignment_English.docx
 
+# Unfinished report draft; remove this rule when the final report is ready
+/数据存储与管理_ETL项目报告.docx
+
+# Superseded Task 1 evidence (preserved locally, not part of delivery)
+/reports/task1/full_statistics.json
+/reports/task1/sample_20k_statistics.json
+/reports/task1/sample_recovery_20k_statistics.json
+/reports/task1/sample_recovery_comparison.json
+/reports/task1/sample_verification.json
+/reports/task1/source_manifest.local.json
+
 # Temporary render and build files
 *.tmp
 *.log

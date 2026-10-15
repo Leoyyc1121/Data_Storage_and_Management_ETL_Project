@@ -1,0 +1,2238 @@
+{
+  "manifest_version": "1",
+  "verified_at": "2026-10-15T06:03:24.962764+00:00",
+  "dataset": "Task 1 structured reviews",
+  "run_id": "dcfcd8aea4c74a38b632cbb9a3c3127e",
+  "parser_version": "1.2.0",
+  "rule_version": "task1-preserve-raw-v3",
+  "source_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+  "storage_location": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task1\\full_v2",
+  "repository_relative_location": "data/staging/task1/full_v2",
+  "distribution": "Local storage only; data files are not hosted on GitHub.",
+  "checksum_scope": "Every listed Parquet file was read and its SHA-256 compared with the committed checkpoint. Source file and checkpoint database hashes are not reverified by this export.",
+  "recovery_instructions": "See README.md section 5 and Task 1 reproduction commands in the root implementation record. Obtain movies.txt.gz from the registered source, decompress and verify the source hash, register the current source path, then parse with the pinned versions and recorded parameters. Binary checksums identify this stored run; a new run_id or different Parquet runtime may change binary output checksums.",
+  "file_count": 317,
+  "records": 7911684,
+  "parquet_size_bytes": 4203211510,
+  "files": [
+    {
+      "batch_id": 1,
+      "path": "reviews/part-000001.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13027627,
+      "sha256": "ed141e1da430df8edb1a913bb5926ea8980ae7e240c7179d56a0d848e34f211d"
+    },
+    {
+      "batch_id": 2,
+      "path": "reviews/part-000002.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13264287,
+      "sha256": "9fad2c46daaaad8b9c17ccb14495ba455925adbacc71a5eb5873678f8af8ae32"
+    },
+    {
+      "batch_id": 3,
+      "path": "reviews/part-000003.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13151689,
+      "sha256": "216edda1a8075d3be7cc9c24a303f9aad966ad07c2a82626a861cc5fb931a885"
+    },
+    {
+      "batch_id": 4,
+      "path": "reviews/part-000004.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12962639,
+      "sha256": "83876e96db242eb5d9bfc8e07b52a2e92fbc2c4ce523723f7dbbc418310bdcbe"
+    },
+    {
+      "batch_id": 5,
+      "path": "reviews/part-000005.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13495505,
+      "sha256": "abb4cfbeaf61b069c88a4a16b57df32894204a7cdc8a1f9544f2cda5a5e69268"
+    },
+    {
+      "batch_id": 6,
+      "path": "reviews/part-000006.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13611720,
+      "sha256": "4416005dcd9a7234f9df05b632f20c6ed0dff2a59cf150d7815b85f5e1f69874"
+    },
+    {
+      "batch_id": 7,
+      "path": "reviews/part-000007.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13706358,
+      "sha256": "10321d544aada1f72a2f855e0e4f694e92233a914e61c54961117835f1c0184a"
+    },
+    {
+      "batch_id": 8,
+      "path": "reviews/part-000008.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13416032,
+      "sha256": "858a6b4cf5cc4e993967f9ab7beabe105999651a8c6eca56ec8485e577c3ec0c"
+    },
+    {
+      "batch_id": 9,
+      "path": "reviews/part-000009.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12855584,
+      "sha256": "afbe68bcb6adc50f6131732f1dff88d5661bb4be2b4ac6d0ec84d1d1d0b4e443"
+    },
+    {
+      "batch_id": 10,
+      "path": "reviews/part-000010.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13319168,
+      "sha256": "873d4301b877c2619217f957ea427719dc02db10837d65ec223248f379174b03"
+    },
+    {
+      "batch_id": 11,
+      "path": "reviews/part-000011.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13455007,
+      "sha256": "c4d5177e9956404ef92712da5cfd2cf7b2eb39d7f7c1fdecf4504fa61224d12a"
+    },
+    {
+      "batch_id": 12,
+      "path": "reviews/part-000012.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13311115,
+      "sha256": "05dc94514df1170bd67b3e8552b35aecd3ed646d973416129e50d2b45548a921"
+    },
+    {
+      "batch_id": 13,
+      "path": "reviews/part-000013.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12845686,
+      "sha256": "775e0bae1845cf04bc698d2e2a20bec24610df0d1b07f6c16213f7a4d44506d4"
+    },
+    {
+      "batch_id": 14,
+      "path": "reviews/part-000014.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13276634,
+      "sha256": "556d5b5571633f592d2d551f020a9fdad286f4a27dbf8d867c0b7e18a1f9a626"
+    },
+    {
+      "batch_id": 15,
+      "path": "reviews/part-000015.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13783408,
+      "sha256": "49f8db1fe85814efcf91f63d8b42d1c57cd59604c9aa0505fd3dd74945f1e192"
+    },
+    {
+      "batch_id": 16,
+      "path": "reviews/part-000016.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13592868,
+      "sha256": "47d528f30aa783a775240430d6634557198670d2e375241d10bae95cc73e9d83"
+    },
+    {
+      "batch_id": 17,
+      "path": "reviews/part-000017.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13943484,
+      "sha256": "e8fc422cf43d56bdc4ab1be2eeb7764ada105d5cb2b41a5798fd9ad74438bf42"
+    },
+    {
+      "batch_id": 18,
+      "path": "reviews/part-000018.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13085038,
+      "sha256": "99a4b63543b79cdedbffe2ffa2ecb2209ae8630ed4e102412eb4049d092a6a43"
+    },
+    {
+      "batch_id": 19,
+      "path": "reviews/part-000019.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13142082,
+      "sha256": "7487f05f028a322fe956e3f68f1171d44dbf2aa67c7a37a1bf64473ee20c12c8"
+    },
+    {
+      "batch_id": 20,
+      "path": "reviews/part-000020.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13491713,
+      "sha256": "6da57bc58fac930b31ecfa69999ef19562e2dd4d8aa76faa73412c43fc6ab59f"
+    },
+    {
+      "batch_id": 21,
+      "path": "reviews/part-000021.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13456847,
+      "sha256": "245f68a7fdfdc3f1af77ae5011e72b7ef918235d7b13d7b0107804e4a29825b2"
+    },
+    {
+      "batch_id": 22,
+      "path": "reviews/part-000022.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12975042,
+      "sha256": "ce3ea4b2ada6623047f9e2c88b9e58aa0dcb14fbb9ceca135130fe5cd7c4cd1b"
+    },
+    {
+      "batch_id": 23,
+      "path": "reviews/part-000023.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12924656,
+      "sha256": "8fbb3f9073f62f9daae9480964ffa17ff9c73fc4b775b0fa90393a96bc0d377d"
+    },
+    {
+      "batch_id": 24,
+      "path": "reviews/part-000024.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13726572,
+      "sha256": "7a06261f53dcba74ef39bcb8c7d81d72508b93dbafcb026cd7c8cf5843091565"
+    },
+    {
+      "batch_id": 25,
+      "path": "reviews/part-000025.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13018120,
+      "sha256": "edf5c402842c4b90f17f7dd2e59a79a248cbf14655ad5db5e9c8aadea6275472"
+    },
+    {
+      "batch_id": 26,
+      "path": "reviews/part-000026.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13293542,
+      "sha256": "72d17c36ff6d1d59d0d9ff33dde5139e78a27abbaddc34e2f59e77b8f179123a"
+    },
+    {
+      "batch_id": 27,
+      "path": "reviews/part-000027.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13655445,
+      "sha256": "c5889c125fa135c07b94fad0a0e03d3623d1d79943d4a83300df0a549004c7e9"
+    },
+    {
+      "batch_id": 28,
+      "path": "reviews/part-000028.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13409210,
+      "sha256": "17e06c1e2b7e6f64abc31fad0d33235e6ca96438e7a3f01f3069553b31deb5c4"
+    },
+    {
+      "batch_id": 29,
+      "path": "reviews/part-000029.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13124909,
+      "sha256": "038d39c916df7999e0664cf2239415a033dd2dc528b0b5f4768ef7eb5f6665fd"
+    },
+    {
+      "batch_id": 30,
+      "path": "reviews/part-000030.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13245301,
+      "sha256": "b1846378e40a6012bf1bb2e73dd77a826d5e6c250257e2f44fda5602716a3d15"
+    },
+    {
+      "batch_id": 31,
+      "path": "reviews/part-000031.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12849986,
+      "sha256": "e79791db0f3f2c050df34b55829adbcbe3af266ce4bfd16c9c5c365ad51f7fbf"
+    },
+    {
+      "batch_id": 32,
+      "path": "reviews/part-000032.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13226793,
+      "sha256": "ddf886401f4f3f8cdb1e0df65b57e74b3b8528ee554d2877ffaf9a7ba8762530"
+    },
+    {
+      "batch_id": 33,
+      "path": "reviews/part-000033.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13482156,
+      "sha256": "de3cfa1d326c8195d24f768f423834fd00211b45609f18fe22d6161903a39c91"
+    },
+    {
+      "batch_id": 34,
+      "path": "reviews/part-000034.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13181625,
+      "sha256": "34895ccb1bf513d43da654746bb4a7045f7c4035c6d3468fa2435e30b8f58124"
+    },
+    {
+      "batch_id": 35,
+      "path": "reviews/part-000035.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12576792,
+      "sha256": "55131bc77be234f797e54c43c7c559069e2fb6c45e7e5138c2f3355c1186eba0"
+    },
+    {
+      "batch_id": 36,
+      "path": "reviews/part-000036.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12894605,
+      "sha256": "eb279e26852ed2afa2f2f5df3a11fd8edefda48f0ffc3b32b18d37bf4bf411b3"
+    },
+    {
+      "batch_id": 37,
+      "path": "reviews/part-000037.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13284931,
+      "sha256": "46582a7f5717e5f12f70c40db4b40709597ec0a8dc5daecf59df7e90da43181d"
+    },
+    {
+      "batch_id": 38,
+      "path": "reviews/part-000038.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13584324,
+      "sha256": "c7df9aef035073645d68446af7bea57e90cc6f99825f9cfcd76676225ea133c3"
+    },
+    {
+      "batch_id": 39,
+      "path": "reviews/part-000039.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13591524,
+      "sha256": "b1c66136e1ae6ae6ca6fea54bf59d9a4f890e036cb8150b2be92d6b2b97d5579"
+    },
+    {
+      "batch_id": 40,
+      "path": "reviews/part-000040.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13836944,
+      "sha256": "5afd1bdebe34ac686b11bd7e23bd15345e6ccaea4a309857652cf92c466226fe"
+    },
+    {
+      "batch_id": 41,
+      "path": "reviews/part-000041.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13696818,
+      "sha256": "b66a51ebb0a759e5d06781f6cb4648afa9b67d8afb1d52fd031faf37d5455deb"
+    },
+    {
+      "batch_id": 42,
+      "path": "reviews/part-000042.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13218252,
+      "sha256": "7a98f63951ad53c10edb37494a8019621ad4cfcb7064462093f44e2260d32f73"
+    },
+    {
+      "batch_id": 43,
+      "path": "reviews/part-000043.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13565913,
+      "sha256": "02cd7ca086b060c851147e00ca93e1f16679549b27e3ea4bc061ab77f3187efb"
+    },
+    {
+      "batch_id": 44,
+      "path": "reviews/part-000044.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13297350,
+      "sha256": "5ac945861ad889182f74ca6a380d61fa5c1be8375988791aabca53d25e1414c3"
+    },
+    {
+      "batch_id": 45,
+      "path": "reviews/part-000045.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13522912,
+      "sha256": "0d103bd44c59c7ee7557c5fb495c35a889c2abb80537ea076ac66acd03d1b278"
+    },
+    {
+      "batch_id": 46,
+      "path": "reviews/part-000046.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13311341,
+      "sha256": "4daeac36818ad49f364902149c7e67e9ce6a237f85995adff646bb67edcb4ef3"
+    },
+    {
+      "batch_id": 47,
+      "path": "reviews/part-000047.parquet",
+      "rows": 25000,
+      "file_size_bytes": 14021084,
+      "sha256": "7664786266f26870718d75fe2a4af8d8b6bffb93277a1e42a031f9269a6423b8"
+    },
+    {
+      "batch_id": 48,
+      "path": "reviews/part-000048.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13220319,
+      "sha256": "41714a9389c5f74ab221a1bb0122a69e4d7289cc6664e3be7418efe8b99b20c7"
+    },
+    {
+      "batch_id": 49,
+      "path": "reviews/part-000049.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13529988,
+      "sha256": "d30d643f30e21543f1c6c01d992e0771be4e03ef58822cff95304c5402626ac3"
+    },
+    {
+      "batch_id": 50,
+      "path": "reviews/part-000050.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13515860,
+      "sha256": "08dc5cb42fc052cc83ccb65431f7b3d718ea0da8fe0b7d5c81ee0e61490659c8"
+    },
+    {
+      "batch_id": 51,
+      "path": "reviews/part-000051.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13015903,
+      "sha256": "88b2d7a9b38f0b36109b2976312736694efaae0e08c79bd82da73a4b7df33db0"
+    },
+    {
+      "batch_id": 52,
+      "path": "reviews/part-000052.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12859689,
+      "sha256": "b1c7e29e834785a16eeba6e8f19d029c3c0fcfdc3695ad3bdf1d2e6b7ba1991a"
+    },
+    {
+      "batch_id": 53,
+      "path": "reviews/part-000053.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13350096,
+      "sha256": "c2b886d734b1e4531de8f896de6aeb6a5f6513da3a1cbf308beb9582251fe2e1"
+    },
+    {
+      "batch_id": 54,
+      "path": "reviews/part-000054.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12746947,
+      "sha256": "9fb7f9d071d8db82cae40213575f27bca8ac689a6d1c095f113531652fcd3fe6"
+    },
+    {
+      "batch_id": 55,
+      "path": "reviews/part-000055.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13385947,
+      "sha256": "e5a7057a12a736d51b46f8e007cb0dbe2c656fa615c08db8a4eb5b7314525d29"
+    },
+    {
+      "batch_id": 56,
+      "path": "reviews/part-000056.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13207940,
+      "sha256": "0b038dac756eaf1b2d26d4de7db1089ee95659f292306bcdfb3e09decdef861e"
+    },
+    {
+      "batch_id": 57,
+      "path": "reviews/part-000057.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12751913,
+      "sha256": "667c8db4ca522012e5f18057cc5b928ba02ceee4e456e9cec824b3c8bf8bd173"
+    },
+    {
+      "batch_id": 58,
+      "path": "reviews/part-000058.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13695347,
+      "sha256": "03b0a603e77d677311c44b85ec75d79fef5dd0627a924738413fa32e3a7078fe"
+    },
+    {
+      "batch_id": 59,
+      "path": "reviews/part-000059.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13084510,
+      "sha256": "03fbb68da2d92836c30ad2f883497653894b43fffd953a8aab24961667f4de9b"
+    },
+    {
+      "batch_id": 60,
+      "path": "reviews/part-000060.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13432932,
+      "sha256": "a8bf1cf5e02910a2ebf94a7b5eb42d9bb9a3619bb01722c1ba31b50539fd3bec"
+    },
+    {
+      "batch_id": 61,
+      "path": "reviews/part-000061.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13035542,
+      "sha256": "acad8a1f81c6e41ef7118b484324a0713ded7546f657c9210c5cf5a237b4bd38"
+    },
+    {
+      "batch_id": 62,
+      "path": "reviews/part-000062.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13359922,
+      "sha256": "4a0598ac3feaad8a171e1ba363bc92a3ab67a760acf8178400632d88684a0729"
+    },
+    {
+      "batch_id": 63,
+      "path": "reviews/part-000063.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13160583,
+      "sha256": "0b23c44cc8ba95ca8a20772c092f84f8f6e462c103fedc682348dda06530478c"
+    },
+    {
+      "batch_id": 64,
+      "path": "reviews/part-000064.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13393040,
+      "sha256": "ec1f6e6cd860422cf9ae3a5b0c6c47e9beb1dd0fc2d74208f4c2b834adfb49dd"
+    },
+    {
+      "batch_id": 65,
+      "path": "reviews/part-000065.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13468466,
+      "sha256": "d0ce34c65123079487138adfdb6d5baa1e2615690972dff190a2b561c6c0513a"
+    },
+    {
+      "batch_id": 66,
+      "path": "reviews/part-000066.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13302981,
+      "sha256": "57f73c1650502a6778eb172b6227dc97d7a0980e43d194659d96cea1a14f53db"
+    },
+    {
+      "batch_id": 67,
+      "path": "reviews/part-000067.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13256698,
+      "sha256": "44c43c03870f62a212e9bd322fa59fcee75cd73639a5a4f6a1751de1abda3f43"
+    },
+    {
+      "batch_id": 68,
+      "path": "reviews/part-000068.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13562462,
+      "sha256": "847310d5c1bc1eb7c3c875d081be05c4324cd8f267ac789a8ab9b71916c9bc1e"
+    },
+    {
+      "batch_id": 69,
+      "path": "reviews/part-000069.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13013441,
+      "sha256": "e3f164bea68c4478bff0b427576d2c7aa519f856dfcdddd395d2fc449375febd"
+    },
+    {
+      "batch_id": 70,
+      "path": "reviews/part-000070.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13667008,
+      "sha256": "c0eef44596592167f419258dcba626202b91f900c9eebd9062538d5bcc097285"
+    },
+    {
+      "batch_id": 71,
+      "path": "reviews/part-000071.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12680385,
+      "sha256": "57926097b7f2c2cb6f7a6ca98f95c5debd16b006dce24bec935d3d4c1c924912"
+    },
+    {
+      "batch_id": 72,
+      "path": "reviews/part-000072.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12877971,
+      "sha256": "cf712d6595e25331c9bb1648bc0f33d892b3e6d76b6b1f1423e3005ab5bacf58"
+    },
+    {
+      "batch_id": 73,
+      "path": "reviews/part-000073.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13139998,
+      "sha256": "f5025f03a58d42afebe5b437a38e66a1888a5e0a1d56af1c3739969d357cda01"
+    },
+    {
+      "batch_id": 74,
+      "path": "reviews/part-000074.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13389376,
+      "sha256": "806cc6876db35b4e785b64eb1951fa88c2b5ecb11ca5320eb3992a24b427489f"
+    },
+    {
+      "batch_id": 75,
+      "path": "reviews/part-000075.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13117529,
+      "sha256": "331d93c6dc03b6bb8f85efb590372cd88ae67af11420c262ea211bbbb5b0607c"
+    },
+    {
+      "batch_id": 76,
+      "path": "reviews/part-000076.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13544450,
+      "sha256": "489584d0334d9eac79711b837da8ef000cf8a60ad1c5d2e572cea7d320871f9d"
+    },
+    {
+      "batch_id": 77,
+      "path": "reviews/part-000077.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12905283,
+      "sha256": "3db698fbed41206a932960419dba5163147eca4e0e75d8a9ebf87d40b629fc47"
+    },
+    {
+      "batch_id": 78,
+      "path": "reviews/part-000078.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13073700,
+      "sha256": "cdb5a36286c1771c73900a112127c88eab68416b3a6ea392023fe5020024d302"
+    },
+    {
+      "batch_id": 79,
+      "path": "reviews/part-000079.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13288424,
+      "sha256": "d2de415463aacfc975bf75b357ea9a5447d233984616e2752fa8fe02add79ceb"
+    },
+    {
+      "batch_id": 80,
+      "path": "reviews/part-000080.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12861734,
+      "sha256": "439c13a42c7920551969aab8cea975c69f0bdc5be471e03a587564558481477d"
+    },
+    {
+      "batch_id": 81,
+      "path": "reviews/part-000081.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13517951,
+      "sha256": "2ef0f44bad46f545a2c4d216d2bc54bd40cd55499cc1855aa5a18e067a921cb6"
+    },
+    {
+      "batch_id": 82,
+      "path": "reviews/part-000082.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13401759,
+      "sha256": "0041b42500a45246d98ab07144def8bb0b5c3d597c5bc19a5889af83224a737c"
+    },
+    {
+      "batch_id": 83,
+      "path": "reviews/part-000083.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13435847,
+      "sha256": "f70edb02176f411f7cbc8c03508f26a97f030ff36e22f48ee42793f1b5ed70a5"
+    },
+    {
+      "batch_id": 84,
+      "path": "reviews/part-000084.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13508042,
+      "sha256": "1887296387b0ce26982b7f745c96642f3df75c3aa8e802a9cf57f4a6fb7d6837"
+    },
+    {
+      "batch_id": 85,
+      "path": "reviews/part-000085.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13571739,
+      "sha256": "15e9a122cd40031bf1da0909c7b3dd3efafab6ec0592feb6d6a5940121736941"
+    },
+    {
+      "batch_id": 86,
+      "path": "reviews/part-000086.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13872713,
+      "sha256": "5ee50d06ea044e1d347de700dc3d9779618ac86c9eb54d0faa19c08c23633b76"
+    },
+    {
+      "batch_id": 87,
+      "path": "reviews/part-000087.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12517086,
+      "sha256": "6483ed3b496fb742251c6fbc29cb5fc300335792f8e0edff70a899f9c23cf830"
+    },
+    {
+      "batch_id": 88,
+      "path": "reviews/part-000088.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13400776,
+      "sha256": "246f6f0f4b7392ba6b40f243b910fb21842a4f68bb5c4a055907b4c4c287e1a5"
+    },
+    {
+      "batch_id": 89,
+      "path": "reviews/part-000089.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13305979,
+      "sha256": "5f50194f1dd2131852f0180ff0c7818a70e773deb7021a381e9d04c3c24fc5d6"
+    },
+    {
+      "batch_id": 90,
+      "path": "reviews/part-000090.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12640869,
+      "sha256": "1f38c92d1975894f5deb7d4f51644fca9548ade120a88ba1dbb1f147aa68ce44"
+    },
+    {
+      "batch_id": 91,
+      "path": "reviews/part-000091.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13203880,
+      "sha256": "67706095d1610912d1ca77121b69c84d9d06e00bbd24664d9f65145ac9928e6a"
+    },
+    {
+      "batch_id": 92,
+      "path": "reviews/part-000092.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13344057,
+      "sha256": "5f91d2b426d0daf91798d75de9d518393e0ed85798c256adaf437884d2eb6ece"
+    },
+    {
+      "batch_id": 93,
+      "path": "reviews/part-000093.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13263565,
+      "sha256": "c4fb5903294fa9c0d5185951ece52c037afd853e25902e524318ec9c32722d7e"
+    },
+    {
+      "batch_id": 94,
+      "path": "reviews/part-000094.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13529684,
+      "sha256": "3d2530c473c763d37a263cc4b44bb0f88b8ecb55f9b50330b6c12faa02851b5a"
+    },
+    {
+      "batch_id": 95,
+      "path": "reviews/part-000095.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13166035,
+      "sha256": "efc10fcf5749165668d86fd73be313b69b373f0e5e5d6a74793550d30ee9b129"
+    },
+    {
+      "batch_id": 96,
+      "path": "reviews/part-000096.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13205769,
+      "sha256": "8d988b97a436a9c462385a2042ca142ac6494044f418425a93f6cccc6006a725"
+    },
+    {
+      "batch_id": 97,
+      "path": "reviews/part-000097.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13650572,
+      "sha256": "7902e5fcf13219f469b6731b055343221a126dbd5e18fbcd1dd69fb593af2dde"
+    },
+    {
+      "batch_id": 98,
+      "path": "reviews/part-000098.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13242492,
+      "sha256": "cd386b895f3ddaf21d08e8893ef892b6ee6ac7aa3fbe243eae6fcc46895a3848"
+    },
+    {
+      "batch_id": 99,
+      "path": "reviews/part-000099.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13567372,
+      "sha256": "5b4c70e07b3ee6e8742ebabc1f37832d69703f1543bb87a49ffc264ad9ed4391"
+    },
+    {
+      "batch_id": 100,
+      "path": "reviews/part-000100.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12841234,
+      "sha256": "91900d53620b4c2eb24c6c33477417ae3565c74fcf0f2c0341a311d20ad1ca86"
+    },
+    {
+      "batch_id": 101,
+      "path": "reviews/part-000101.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12966474,
+      "sha256": "755dd5e5ab9c73d24bc421724a344f6543cd047bfaa0a7fc25ea0aa67df2307c"
+    },
+    {
+      "batch_id": 102,
+      "path": "reviews/part-000102.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13211450,
+      "sha256": "8d5e3867d6a3f250975f082d60c275d1ad88f3da5489f893bd05bb6d04f4b8ee"
+    },
+    {
+      "batch_id": 103,
+      "path": "reviews/part-000103.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12980836,
+      "sha256": "f5cdac2111c68c63cfd2b1c854d479b1cf54082e5449eb7786e4292c91ce83a5"
+    },
+    {
+      "batch_id": 104,
+      "path": "reviews/part-000104.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13141404,
+      "sha256": "17632a91820a5f674fae72ad5187a78196067b65d8a742f6018e277c0809759e"
+    },
+    {
+      "batch_id": 105,
+      "path": "reviews/part-000105.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13355377,
+      "sha256": "9e30d6952cae21e230e17c74f4a82781943c29f625003dd968ccd4a8276dbe31"
+    },
+    {
+      "batch_id": 106,
+      "path": "reviews/part-000106.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13547812,
+      "sha256": "c449a34bd01827c376aa93ed8ea1fb32e7b752dd1afc4b5f966cde28be3dfebf"
+    },
+    {
+      "batch_id": 107,
+      "path": "reviews/part-000107.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13363631,
+      "sha256": "fa638edd9dabfba5710683577ae9049f3b4c86675383657afe43e3739810d32a"
+    },
+    {
+      "batch_id": 108,
+      "path": "reviews/part-000108.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12989315,
+      "sha256": "04966d9337887cc14a5b1b1e4065df83dd58a541345ecac2646d307b65615c07"
+    },
+    {
+      "batch_id": 109,
+      "path": "reviews/part-000109.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12991749,
+      "sha256": "27a202ad1c81e07d44e1beee1f937aed646da588627a8021fc78f2fa1205d089"
+    },
+    {
+      "batch_id": 110,
+      "path": "reviews/part-000110.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13699726,
+      "sha256": "8da15d8cfab95563bfed547cbb117ca4f9795e95c2129a8fbba2b067b012df4f"
+    },
+    {
+      "batch_id": 111,
+      "path": "reviews/part-000111.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13267126,
+      "sha256": "21b10ba26ba4b24dec6a6a212f1d7e312bc17074f15cb10ce039c2533ee7c072"
+    },
+    {
+      "batch_id": 112,
+      "path": "reviews/part-000112.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13177646,
+      "sha256": "38da1d092919682d471e684866f6bf12833b2fd36e0b0eab1414f667ab9e22c5"
+    },
+    {
+      "batch_id": 113,
+      "path": "reviews/part-000113.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13632782,
+      "sha256": "ed1d864f39d1c0e079348571428e6510b634cb80ebdb4bbd56163c6693db924e"
+    },
+    {
+      "batch_id": 114,
+      "path": "reviews/part-000114.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13403867,
+      "sha256": "15b2a9afaf527efafd38cdd85df800b8c5c40986bbdcdbd87d2e048b97604e72"
+    },
+    {
+      "batch_id": 115,
+      "path": "reviews/part-000115.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13044720,
+      "sha256": "f204aa1239c160782e4c69cb06e26365f12527373801a51dcf18bc5f7ff85b73"
+    },
+    {
+      "batch_id": 116,
+      "path": "reviews/part-000116.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12690274,
+      "sha256": "41a59cec56f69ffdbd9d10925528c2e2cb16c92c2e3a6614eb2b832b75bf7cbe"
+    },
+    {
+      "batch_id": 117,
+      "path": "reviews/part-000117.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13073568,
+      "sha256": "7e1c6d0c39a65b99ebf5e43f65e5290af1e0c0dc1e8eee2e5c85f2b827503129"
+    },
+    {
+      "batch_id": 118,
+      "path": "reviews/part-000118.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13319752,
+      "sha256": "0c28678251b348d35b0312afec7de4b5a2332fe9d1223a607aac0a58a6f2712c"
+    },
+    {
+      "batch_id": 119,
+      "path": "reviews/part-000119.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13427780,
+      "sha256": "dd5bf68b6472b95a385ee031f56e53cabd702a38b7c0a4d1c4328768c0d39751"
+    },
+    {
+      "batch_id": 120,
+      "path": "reviews/part-000120.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13624280,
+      "sha256": "f222a5d2688f15e4fb98d2a7f8718d7200d0202b559c0ae7c19d4aa467231a51"
+    },
+    {
+      "batch_id": 121,
+      "path": "reviews/part-000121.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13162805,
+      "sha256": "e593d07e0d67fc9e036b23891b86f0bc10bf09ecc11cce61a649b6b2925024e4"
+    },
+    {
+      "batch_id": 122,
+      "path": "reviews/part-000122.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13358507,
+      "sha256": "582543a40f08684af64744d229a85ad61d247ac67360f4b1db6f8c2f94577882"
+    },
+    {
+      "batch_id": 123,
+      "path": "reviews/part-000123.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13462625,
+      "sha256": "3e4d7f706d35411109a965805fd93cc822170575ed540f313d84dc7ccd419c6d"
+    },
+    {
+      "batch_id": 124,
+      "path": "reviews/part-000124.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13303613,
+      "sha256": "5beab45bfe782fe8af8adfac7ad8480b199073e0a14bbf98cabd900f111cce97"
+    },
+    {
+      "batch_id": 125,
+      "path": "reviews/part-000125.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13694119,
+      "sha256": "eed9821967a527066098d9f5ffb953173ef1c7bed1851163058bffac4a7e3b34"
+    },
+    {
+      "batch_id": 126,
+      "path": "reviews/part-000126.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13054401,
+      "sha256": "b64df78064ff889530e38c365a0f959c558b3758dad0609efa9468754a9eaad4"
+    },
+    {
+      "batch_id": 127,
+      "path": "reviews/part-000127.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13138503,
+      "sha256": "5f238d1aa0bd4f214c190ca1d77dee2f303a4034d5eecacf29c1060deb301eaa"
+    },
+    {
+      "batch_id": 128,
+      "path": "reviews/part-000128.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13183912,
+      "sha256": "767795fbafa9a997ca2130cadb780cfe555556b15dc33989847bdceeb300cf42"
+    },
+    {
+      "batch_id": 129,
+      "path": "reviews/part-000129.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12981712,
+      "sha256": "8c3bbacba3b42482ded455ebb726a4bace9d0dc3f43faef27244a24a2b48edfa"
+    },
+    {
+      "batch_id": 130,
+      "path": "reviews/part-000130.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13594453,
+      "sha256": "c76d584b8c6a19b8f381f978964d5f001049587b816aa6d5d6f883e62c7445b1"
+    },
+    {
+      "batch_id": 131,
+      "path": "reviews/part-000131.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12941908,
+      "sha256": "38dee08751a9d7f22485f0cff6d9b9990c719fc6bd8fcae4e5ed104042285e7b"
+    },
+    {
+      "batch_id": 132,
+      "path": "reviews/part-000132.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13757635,
+      "sha256": "13c127a5879f3f1d26e263f48905706a8ce5fc2fead0df0e6f660cf363811c9a"
+    },
+    {
+      "batch_id": 133,
+      "path": "reviews/part-000133.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12805148,
+      "sha256": "3963d1feee1b0616d159048b50f8a68b4bc80daccec29e6a07803c104750bd57"
+    },
+    {
+      "batch_id": 134,
+      "path": "reviews/part-000134.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13360176,
+      "sha256": "204ba1213cf0283b29455de590669dab4d3dadab25d89ca86287b9f05088199a"
+    },
+    {
+      "batch_id": 135,
+      "path": "reviews/part-000135.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13534573,
+      "sha256": "ceec1c84b7fce2c651135bc4d9587f3edbca54026b4b918f0c77b4e797258dda"
+    },
+    {
+      "batch_id": 136,
+      "path": "reviews/part-000136.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13373726,
+      "sha256": "c28e41c38d9a1d6c3a50f459db21432322577ee84646bc7551ee50bb5f448968"
+    },
+    {
+      "batch_id": 137,
+      "path": "reviews/part-000137.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13640517,
+      "sha256": "acdb51801217775f1801d4591047446271b41b2826a7b328fe8ef82ba5e26d87"
+    },
+    {
+      "batch_id": 138,
+      "path": "reviews/part-000138.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13772940,
+      "sha256": "8eef5c37c70c7ab0f91c7cd300de215501973825398bb6819d4474ead2c82d9e"
+    },
+    {
+      "batch_id": 139,
+      "path": "reviews/part-000139.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13097669,
+      "sha256": "c16738b7e93e71f1acb3d2160ddcafe458aecd06fe666a003411c06936cec919"
+    },
+    {
+      "batch_id": 140,
+      "path": "reviews/part-000140.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13771933,
+      "sha256": "25520003b36f06f4cd21ca1dbae6ef08c9213995f4a0d726f55840b59be75cf0"
+    },
+    {
+      "batch_id": 141,
+      "path": "reviews/part-000141.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12906839,
+      "sha256": "df879171960fd803d121954b262552555dad4415e516927515d356fd4bf8c03e"
+    },
+    {
+      "batch_id": 142,
+      "path": "reviews/part-000142.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13181944,
+      "sha256": "cf20975b13a8415612af8f1b5dafb7dcc3f581c9e14a499c08249d6bad6a9a4c"
+    },
+    {
+      "batch_id": 143,
+      "path": "reviews/part-000143.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13650884,
+      "sha256": "b2624265d9ee33e8ba924f3a7077a02db58d1dfeef6bd126f13d6a54813e9bbc"
+    },
+    {
+      "batch_id": 144,
+      "path": "reviews/part-000144.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13008875,
+      "sha256": "81d0ae518375bd0ffb0ca90483cc0a0718050dcb6700e46b83327ff1ae4cb60d"
+    },
+    {
+      "batch_id": 145,
+      "path": "reviews/part-000145.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13112086,
+      "sha256": "0ae3791beb80ea864d0274590a8e03e9e8369bb4f0306cf3a6e4428578d50e1f"
+    },
+    {
+      "batch_id": 146,
+      "path": "reviews/part-000146.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13385181,
+      "sha256": "edd2da1619603cd8ab4401ecece772d91f5177b4ee66f547a13f6c11c5fc3250"
+    },
+    {
+      "batch_id": 147,
+      "path": "reviews/part-000147.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13017230,
+      "sha256": "06a6ed73ba67d2318fb4316b5267bad2b9a81a8abaa8ff97ca98b4a66bc48fae"
+    },
+    {
+      "batch_id": 148,
+      "path": "reviews/part-000148.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13077991,
+      "sha256": "0175bd6f31d2530834f84a4af23c7ce7f6ea3c221af5b57a927291cf4ab4f02d"
+    },
+    {
+      "batch_id": 149,
+      "path": "reviews/part-000149.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13654278,
+      "sha256": "5b2e32e946f32a41d9b825bd5a4a8839dff12805832f224e19c0e42c7f2a3f95"
+    },
+    {
+      "batch_id": 150,
+      "path": "reviews/part-000150.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13018841,
+      "sha256": "a59005d3fea9959ad2e3e2dc0ed0afbcc9107789ac897bb92c2bd9db721bab08"
+    },
+    {
+      "batch_id": 151,
+      "path": "reviews/part-000151.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13660339,
+      "sha256": "c8eead462262d9cf03967cba358cfb7382b7b18406f25d5014b54025d45fe68e"
+    },
+    {
+      "batch_id": 152,
+      "path": "reviews/part-000152.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13106800,
+      "sha256": "a703c968bfc37adec10af19625f3f7735b95d47080c94dbcf7b416bb776aeebc"
+    },
+    {
+      "batch_id": 153,
+      "path": "reviews/part-000153.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13423558,
+      "sha256": "ca3588e8e296b93f25dde7772d100cb87305a1fcb79736c810ad35d0c47737fe"
+    },
+    {
+      "batch_id": 154,
+      "path": "reviews/part-000154.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12978612,
+      "sha256": "d0c506f58285342c07c03ed56549db3652af5e4fdfb5185b8c1829461ff54a8d"
+    },
+    {
+      "batch_id": 155,
+      "path": "reviews/part-000155.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13090715,
+      "sha256": "28e1415c733a78c1576ddc52df0892f0440270f0c83243909a1a904110de92af"
+    },
+    {
+      "batch_id": 156,
+      "path": "reviews/part-000156.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13302178,
+      "sha256": "1830b0322f6c878261f80631d3456aa894dffa154b1c8ed88e9a2c6d1533aa08"
+    },
+    {
+      "batch_id": 157,
+      "path": "reviews/part-000157.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13676657,
+      "sha256": "4ceeaf32e34a603f496a19ca3865ead0c23a7fd63da22121a6c52da1fe6e7565"
+    },
+    {
+      "batch_id": 158,
+      "path": "reviews/part-000158.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12868917,
+      "sha256": "e7d5f5638962944fda0f012028ad581e73125c72412e387185157ab24a6cd1d2"
+    },
+    {
+      "batch_id": 159,
+      "path": "reviews/part-000159.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13072964,
+      "sha256": "cfc03ba0785653f5afeabc8e4e5416bd4c1b24d02b1a2426779da221bb29b3d0"
+    },
+    {
+      "batch_id": 160,
+      "path": "reviews/part-000160.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13318827,
+      "sha256": "e406b7d0fde20ca49f68cf2881ef5737df5ae7cfbe5e9d22bf869a491d290845"
+    },
+    {
+      "batch_id": 161,
+      "path": "reviews/part-000161.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13551799,
+      "sha256": "f55ab7c46ea83df0be3477321e05cfa13890500d26f1c26fd1e3c8b37568aabc"
+    },
+    {
+      "batch_id": 162,
+      "path": "reviews/part-000162.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13666912,
+      "sha256": "fbda82f9a4286cc08012dc4d293d176a73a14a10b0bdd44c1a395b045bdb4c71"
+    },
+    {
+      "batch_id": 163,
+      "path": "reviews/part-000163.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13637270,
+      "sha256": "75042a21922c541e9e9e07aff6531bda6bbedbd2a565533e5a69da800bd3e22e"
+    },
+    {
+      "batch_id": 164,
+      "path": "reviews/part-000164.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13268474,
+      "sha256": "55024697c0de72deef9ba03116d5ec2a680f5a66a201d32aa99a2c872905b552"
+    },
+    {
+      "batch_id": 165,
+      "path": "reviews/part-000165.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13101312,
+      "sha256": "a9069a3589c8657a583673612acd37a0c4490c95f0ef0af89a522b3eaf695ec8"
+    },
+    {
+      "batch_id": 166,
+      "path": "reviews/part-000166.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13304142,
+      "sha256": "f9394323fbbf713ea40a6f955b9ceac142bffec249ac8646e3cf3b2b0dab94ba"
+    },
+    {
+      "batch_id": 167,
+      "path": "reviews/part-000167.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13348898,
+      "sha256": "e21ece4d7ab3e8c17b549077a7bd2f62fec9d3297ee7694e7c4e71708ccd4156"
+    },
+    {
+      "batch_id": 168,
+      "path": "reviews/part-000168.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13251190,
+      "sha256": "f417d3cc09ce19c9ca81bfe1bca910f33dd933484fba75797cfe7c27d652c14a"
+    },
+    {
+      "batch_id": 169,
+      "path": "reviews/part-000169.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13476782,
+      "sha256": "c56558d3b57a3e9455bd4b6d338361088d0f8ea53d16166ab15037c5f17b64ec"
+    },
+    {
+      "batch_id": 170,
+      "path": "reviews/part-000170.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13119927,
+      "sha256": "12b469dfd00fc3b1519946962ffde1aa40670361a7504decb6cf6752f5dd6383"
+    },
+    {
+      "batch_id": 171,
+      "path": "reviews/part-000171.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13703235,
+      "sha256": "228d1201b1604e79574f8191d07414ce3a0d298d3557f1a58c3756c175e1e239"
+    },
+    {
+      "batch_id": 172,
+      "path": "reviews/part-000172.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13559366,
+      "sha256": "9ae3b686dc5723e50cf5d8a0d043708b2906ee0099c62ea4d2aa806a44abdfe2"
+    },
+    {
+      "batch_id": 173,
+      "path": "reviews/part-000173.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13181309,
+      "sha256": "2855249073d658dc98372743f043650642986bee5b76981cb03813a589057b75"
+    },
+    {
+      "batch_id": 174,
+      "path": "reviews/part-000174.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13429930,
+      "sha256": "8f2bdefe99fcf17abf252292d8f9f6cd4c82f67a1a38e4443cd227dd0b80757c"
+    },
+    {
+      "batch_id": 175,
+      "path": "reviews/part-000175.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13425341,
+      "sha256": "0a47d4bf8e2cf1cd2a1430f6b69a372c0dd03a748f1a01198773cdcf6a70f4f6"
+    },
+    {
+      "batch_id": 176,
+      "path": "reviews/part-000176.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12951058,
+      "sha256": "532a7ee09e2fb5ba611e1203c223ec2357472d8583109bd54c71493605a4b77c"
+    },
+    {
+      "batch_id": 177,
+      "path": "reviews/part-000177.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13172806,
+      "sha256": "2bc76c8ecfc867f1aff9b421cd3e3b57616d48cdf3114d0c8e44d853655eb3df"
+    },
+    {
+      "batch_id": 178,
+      "path": "reviews/part-000178.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13241225,
+      "sha256": "b01c50e06b1fd070c263c29f19df2f67d1c006f2a4cd0845cf5fd49ed8fa8cfe"
+    },
+    {
+      "batch_id": 179,
+      "path": "reviews/part-000179.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13559304,
+      "sha256": "a0bff6ee437bd0df880c7cef0a7c150dcc9139bc36e5513c01a10e2a51a4fbef"
+    },
+    {
+      "batch_id": 180,
+      "path": "reviews/part-000180.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13191978,
+      "sha256": "ff8be2f1de90599f9e885b06821b2f7d35417c978850c93c4826894844fb22fd"
+    },
+    {
+      "batch_id": 181,
+      "path": "reviews/part-000181.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13213788,
+      "sha256": "7de86960f23dfec333920c4ff0cea7c965faef268fbc02250734cc7d010971f6"
+    },
+    {
+      "batch_id": 182,
+      "path": "reviews/part-000182.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13240003,
+      "sha256": "4e0be9136c060e153eb13b580d88b6647886ef54dd0b87eabe11dcb2dbe385ee"
+    },
+    {
+      "batch_id": 183,
+      "path": "reviews/part-000183.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12680461,
+      "sha256": "bec0b0758f0516bd8186f4e8217f7927ce8b9fbcd12e535c8535b80567da0e56"
+    },
+    {
+      "batch_id": 184,
+      "path": "reviews/part-000184.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13694273,
+      "sha256": "e8a3107966c0b060790ea185e1c249eb00ca99f48c80323ee54f7977f3f92193"
+    },
+    {
+      "batch_id": 185,
+      "path": "reviews/part-000185.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12568170,
+      "sha256": "ead7a202336db60b70ccaa31f8d847c852085c0731e0f6e46fc60faec7252587"
+    },
+    {
+      "batch_id": 186,
+      "path": "reviews/part-000186.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13725404,
+      "sha256": "cdd41f7f2136c0c5e95014dbb601aac7ec171e46846ef5f73476197742d50cca"
+    },
+    {
+      "batch_id": 187,
+      "path": "reviews/part-000187.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13403918,
+      "sha256": "477ab2ef43a174d90b73f863ea203f1e1cc2f98f1320414b2109a9b665bb0011"
+    },
+    {
+      "batch_id": 188,
+      "path": "reviews/part-000188.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12990065,
+      "sha256": "bc198874ca80f86432a45337e6421ac59ec575df91a7e8f2fe49985e7ca09d62"
+    },
+    {
+      "batch_id": 189,
+      "path": "reviews/part-000189.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13146336,
+      "sha256": "4f6b2bbd45bf7030938827ec97d0fe40f7f694818bc3d39c2d100d83d5c3fb04"
+    },
+    {
+      "batch_id": 190,
+      "path": "reviews/part-000190.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12806865,
+      "sha256": "157c9b5bcd95655db360383eb517969a72d9e6ab2f543ebf81f169977113ad44"
+    },
+    {
+      "batch_id": 191,
+      "path": "reviews/part-000191.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12794344,
+      "sha256": "e17991659c57425529c8774867c5dd26e219d62d57da3b8ac5d2fbc8c5d17f53"
+    },
+    {
+      "batch_id": 192,
+      "path": "reviews/part-000192.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12800604,
+      "sha256": "3067e59dd1c58acfaafbfc1c995b0c62074da6c0c4cc4cd84a1f79a9325f2034"
+    },
+    {
+      "batch_id": 193,
+      "path": "reviews/part-000193.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13198091,
+      "sha256": "a9f09936ad8a59b945e50903dec9e9d21042c392e2706b00889c65aba78e8eab"
+    },
+    {
+      "batch_id": 194,
+      "path": "reviews/part-000194.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13093620,
+      "sha256": "119e565bf1419c10b85c31dbfe4628d322c0ac155bdb3e21f85a70344e670b21"
+    },
+    {
+      "batch_id": 195,
+      "path": "reviews/part-000195.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13796777,
+      "sha256": "6c0a517b9cc4759baac4bc6bf6b777e566c595c417396af1a8d95177f78c577f"
+    },
+    {
+      "batch_id": 196,
+      "path": "reviews/part-000196.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13573161,
+      "sha256": "1644aeb917756018213df6f872e2d6e5feffa6853f90216ad5f1baddf356d527"
+    },
+    {
+      "batch_id": 197,
+      "path": "reviews/part-000197.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12914696,
+      "sha256": "4cbe6fa25dc5158ea449905d360b18b9504ad7b557df64a2249ea0135c35bb5c"
+    },
+    {
+      "batch_id": 198,
+      "path": "reviews/part-000198.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13115116,
+      "sha256": "1d5bde9410a772a1237dafe49899cc0ed673cac82f9235b12e6797faf5e3b555"
+    },
+    {
+      "batch_id": 199,
+      "path": "reviews/part-000199.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13385488,
+      "sha256": "ea01b347c0f86ea5239dda2b898a2c700862820c51f1992899b52f3453e951a0"
+    },
+    {
+      "batch_id": 200,
+      "path": "reviews/part-000200.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13369278,
+      "sha256": "6c0a49ef78636947ef0f1ad7f103e47f3546b8ecbf5fc95744d306d1ac9d3452"
+    },
+    {
+      "batch_id": 201,
+      "path": "reviews/part-000201.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13508889,
+      "sha256": "406d9a778ee3458eff8bfd5bd5d3d54d659cc381e102edb5cf3aa3e1a3701ff2"
+    },
+    {
+      "batch_id": 202,
+      "path": "reviews/part-000202.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13424204,
+      "sha256": "8b11f8025310a241870c51d826095a960d12a7235e11d5b36c05197914f19056"
+    },
+    {
+      "batch_id": 203,
+      "path": "reviews/part-000203.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13115015,
+      "sha256": "97b95892e872df99b3dbce9f14e705e76754967cf00767b17da17b85e96d4df3"
+    },
+    {
+      "batch_id": 204,
+      "path": "reviews/part-000204.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13158181,
+      "sha256": "641a4683020db2b466dcc89cf1aaf7c1ecb760e8420704e0a180afed25a64297"
+    },
+    {
+      "batch_id": 205,
+      "path": "reviews/part-000205.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12838667,
+      "sha256": "6128721032099638ec5cbbb8cb0ec7067abcdc16edfeddc6dffce0552ff4220a"
+    },
+    {
+      "batch_id": 206,
+      "path": "reviews/part-000206.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13727232,
+      "sha256": "3d240f646b19dc84b81f69a1ccafb5e8ce2f0905b1ad197ecf863207fff742ed"
+    },
+    {
+      "batch_id": 207,
+      "path": "reviews/part-000207.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13419335,
+      "sha256": "81e1661d287afdeb92e704e330422bbecb03e5375be7149ffe1ff7bae4df6e52"
+    },
+    {
+      "batch_id": 208,
+      "path": "reviews/part-000208.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13839679,
+      "sha256": "2731514b236d91cb8891d74b3f2ac3aaab38ff12aa32a63e731abe3598e96d92"
+    },
+    {
+      "batch_id": 209,
+      "path": "reviews/part-000209.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13144730,
+      "sha256": "aa2ab50c85b5cfeab3eac7226dc2fa293001ce9e7474bf76f1e3e8e38f3812c0"
+    },
+    {
+      "batch_id": 210,
+      "path": "reviews/part-000210.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13747483,
+      "sha256": "5b4bad5658c1015cb7144b1b2e08054b2e3ee78f0636f1846d319d166abc1fad"
+    },
+    {
+      "batch_id": 211,
+      "path": "reviews/part-000211.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13517486,
+      "sha256": "50160f4e7684f6a9fa71e742719062a61ec79d1b053f74aac6bae937b069edbe"
+    },
+    {
+      "batch_id": 212,
+      "path": "reviews/part-000212.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13200447,
+      "sha256": "347a0b569f7e75f95dd47a03fce87e3d99ad015c7e0040f361a1378182002b9c"
+    },
+    {
+      "batch_id": 213,
+      "path": "reviews/part-000213.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13278709,
+      "sha256": "d7be591112012b75507b8dd7b1bf4482d28ca9b39a81b7da8d19601c9640a0f8"
+    },
+    {
+      "batch_id": 214,
+      "path": "reviews/part-000214.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13107485,
+      "sha256": "b6e457b5a2869f8ad5fcb7fcda1e7d0ef65837ced7f3dbcaade5633a4f82de8d"
+    },
+    {
+      "batch_id": 215,
+      "path": "reviews/part-000215.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13312816,
+      "sha256": "2ee651cdc1c3a88ec19e0cbfab8bcad5b9f23ac43d3f81ebd32cfda49ba950bb"
+    },
+    {
+      "batch_id": 216,
+      "path": "reviews/part-000216.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13435516,
+      "sha256": "4d848d52d763ef222474576019a96c0535965803d44f191e36997d80ccdbc6cf"
+    },
+    {
+      "batch_id": 217,
+      "path": "reviews/part-000217.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12973664,
+      "sha256": "4d7042aac43a419fd3a2159010cb138d33ae9dd99603a86dcf9705b595f3bd07"
+    },
+    {
+      "batch_id": 218,
+      "path": "reviews/part-000218.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13513409,
+      "sha256": "9f0c4bbd3d34de2c3f5af461dff8463a2db6e8fff739883d797de8ac7cf6d66a"
+    },
+    {
+      "batch_id": 219,
+      "path": "reviews/part-000219.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13546841,
+      "sha256": "b7bc2bac4c06eca291115fc9a5940f4baaead86733cc0172b959b62bed4c04c7"
+    },
+    {
+      "batch_id": 220,
+      "path": "reviews/part-000220.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13046351,
+      "sha256": "7993762cd1c3b968e112118f76003dcffced8c1f5d35cc6c3e67b0a27b9da5bf"
+    },
+    {
+      "batch_id": 221,
+      "path": "reviews/part-000221.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13131745,
+      "sha256": "4c55c59688ead21e7fbd2848e3ed6bc84e2790c55964817cd2bbe569008bda4e"
+    },
+    {
+      "batch_id": 222,
+      "path": "reviews/part-000222.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13017151,
+      "sha256": "641ab75d93647aa14aebb95eec90bad1a29fe9b6f0734249ff8453c2c47d2d45"
+    },
+    {
+      "batch_id": 223,
+      "path": "reviews/part-000223.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13223139,
+      "sha256": "ca0eadab41f679e7da22a7c4a922ee20770bf68b1a989bf0da53fdc0242fe9b5"
+    },
+    {
+      "batch_id": 224,
+      "path": "reviews/part-000224.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13237381,
+      "sha256": "ab028e58b2baaecbfe6118af23fef17f964e6fa9b6eb097c887b4d86a10e0b9f"
+    },
+    {
+      "batch_id": 225,
+      "path": "reviews/part-000225.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13687473,
+      "sha256": "1d7090c97b651d50e9ae6afcb522833e5c0d1a455724ea5e3bee17c64a042b2b"
+    },
+    {
+      "batch_id": 226,
+      "path": "reviews/part-000226.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13137850,
+      "sha256": "18501bfe8f11e982a50aa3be4045ec29f6dfd1c9b2b88be45c6f6ebcb57271bd"
+    },
+    {
+      "batch_id": 227,
+      "path": "reviews/part-000227.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13390090,
+      "sha256": "efa37558cf48c34322b016406cf8d0a65eddecb81c07fbb1aa9c36b05089a209"
+    },
+    {
+      "batch_id": 228,
+      "path": "reviews/part-000228.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13110342,
+      "sha256": "7762c5d408f4e43ea42177af3189b99daeced356d3847e734398d0aa8190c390"
+    },
+    {
+      "batch_id": 229,
+      "path": "reviews/part-000229.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13512333,
+      "sha256": "7ffefc7ea423ed121ca1f38678dc86e561faef1eb3edb4136ac819533467af05"
+    },
+    {
+      "batch_id": 230,
+      "path": "reviews/part-000230.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13215943,
+      "sha256": "777f853486bf0adf384e72a0c48b7b8dd64814412be2140ad45644043ba76aea"
+    },
+    {
+      "batch_id": 231,
+      "path": "reviews/part-000231.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13247650,
+      "sha256": "945bb43f3c79b706bf45aef4fa094311301370ccd908ce9194a82ce65e1ab61f"
+    },
+    {
+      "batch_id": 232,
+      "path": "reviews/part-000232.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13350309,
+      "sha256": "eec779e6c4999babe79e70263f065dcc174e770e5196533aef1212aa0862238b"
+    },
+    {
+      "batch_id": 233,
+      "path": "reviews/part-000233.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12647578,
+      "sha256": "b064cb163e954546fa10edac3fe8745363a11a31378fd5f569bf637f82264699"
+    },
+    {
+      "batch_id": 234,
+      "path": "reviews/part-000234.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12845999,
+      "sha256": "2329d7ac5b37964154eedf86e9a16e41674a43e858511483b05b18c04f287381"
+    },
+    {
+      "batch_id": 235,
+      "path": "reviews/part-000235.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13057387,
+      "sha256": "7f82b6a29b8d38276fee2a17094425a45f5cbc80354abe5b8920f60a145b2ed7"
+    },
+    {
+      "batch_id": 236,
+      "path": "reviews/part-000236.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12976386,
+      "sha256": "aa77eb4c01d73deb7da33af6cdd8f642544eca74caa77853dd9fa9c57516babb"
+    },
+    {
+      "batch_id": 237,
+      "path": "reviews/part-000237.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13484201,
+      "sha256": "24287bcece7df1a8b8ca9149c9009994becc3f9aed961b98bdfd0ddec3762826"
+    },
+    {
+      "batch_id": 238,
+      "path": "reviews/part-000238.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13560269,
+      "sha256": "cd05a2fc31e9716a7f7bcb5c365a220f0df7a28db67060ec4f528740be06da1b"
+    },
+    {
+      "batch_id": 239,
+      "path": "reviews/part-000239.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13475188,
+      "sha256": "029cb47c45cec9c1d2be5df9f638dd6eb34e2ea5b6b8d86d6aac7298d026eb10"
+    },
+    {
+      "batch_id": 240,
+      "path": "reviews/part-000240.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13147960,
+      "sha256": "850734f5b4fc1f2cdb03bb3505d9d2c13b3748ae45f422ea6ea1078988d3c06e"
+    },
+    {
+      "batch_id": 241,
+      "path": "reviews/part-000241.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13354162,
+      "sha256": "79841af0c7537d35deb6e43d84769fd2e79c6967d7ac8e4f1f60e5a6b576c8b9"
+    },
+    {
+      "batch_id": 242,
+      "path": "reviews/part-000242.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12818311,
+      "sha256": "16fe227d3cac813a377c4fcece128463315dd82bf063cb128ebe181c04d48f11"
+    },
+    {
+      "batch_id": 243,
+      "path": "reviews/part-000243.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13125258,
+      "sha256": "b3a5adb7a8671f26364f5b7c2a4c39b07a255fc1840bb491db376e722c37a009"
+    },
+    {
+      "batch_id": 244,
+      "path": "reviews/part-000244.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13794580,
+      "sha256": "fb453625d06ca82ea42a0d2a9340bc05be7493813a78a76cec66f83d319b4e57"
+    },
+    {
+      "batch_id": 245,
+      "path": "reviews/part-000245.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12899252,
+      "sha256": "a372b9973b0ff51780a32b0b56b8480749b1f16ba5c22ce5184273e6a990ec80"
+    },
+    {
+      "batch_id": 246,
+      "path": "reviews/part-000246.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13287718,
+      "sha256": "a6a3e45a6559486ec7089261143c5fe786a2fb0662824dba7e8d448dce8e72cb"
+    },
+    {
+      "batch_id": 247,
+      "path": "reviews/part-000247.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12800203,
+      "sha256": "d5db8616a56ce5af0efc238507ad2c86462d76b361fb92120140ef6a6f79f198"
+    },
+    {
+      "batch_id": 248,
+      "path": "reviews/part-000248.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13219211,
+      "sha256": "e85ef81c888dcc5813b35bdac533118c98cf8918a1a1f85dfc5854645e08f100"
+    },
+    {
+      "batch_id": 249,
+      "path": "reviews/part-000249.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13404309,
+      "sha256": "70f6ba3b2601a4be2819f0a0abccd80eb59b6f421feb67115ae8ee37369d0ac8"
+    },
+    {
+      "batch_id": 250,
+      "path": "reviews/part-000250.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13576914,
+      "sha256": "50907048d56a22bbbf6436774338db3ed70db1c0a618ef6396012c5e0ee2cf7f"
+    },
+    {
+      "batch_id": 251,
+      "path": "reviews/part-000251.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13328188,
+      "sha256": "aad00e04a9d4abc8a55ea6ab226de1505af3270264027a544a288b635fb57a02"
+    },
+    {
+      "batch_id": 252,
+      "path": "reviews/part-000252.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13857975,
+      "sha256": "d9afea103b5e0085bbdeb5dd48a322afa504af07b4b6dfd2fec7b580dacdeacf"
+    },
+    {
+      "batch_id": 253,
+      "path": "reviews/part-000253.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12938572,
+      "sha256": "e830e364ae110121a52f090733742b21d09ee3df6bf3e7851a5e9bd490790842"
+    },
+    {
+      "batch_id": 254,
+      "path": "reviews/part-000254.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12759610,
+      "sha256": "f2aabba8f4426e8f824acd23965b76980342ef850e23a53484b0ee703fff4cfa"
+    },
+    {
+      "batch_id": 255,
+      "path": "reviews/part-000255.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13620125,
+      "sha256": "08d47a81d5b4648a1296c32a61bff3e74f6db96a92ff900e857ff6ea8ea54b7d"
+    },
+    {
+      "batch_id": 256,
+      "path": "reviews/part-000256.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13567614,
+      "sha256": "78f167ed8480ea627240a32f208804662b6cc849ece7668c0d00e6480b514762"
+    },
+    {
+      "batch_id": 257,
+      "path": "reviews/part-000257.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13406307,
+      "sha256": "a7bf54c5b021624fa6c857da1a44303d1ca8a91ebf95b720d505ecead3ca1596"
+    },
+    {
+      "batch_id": 258,
+      "path": "reviews/part-000258.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13147328,
+      "sha256": "2333105dc06d26e725008932f6320675c083bfa1bb5137d2b9a99ef1a37e4a0f"
+    },
+    {
+      "batch_id": 259,
+      "path": "reviews/part-000259.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12963436,
+      "sha256": "fd138b56ad152c60ab52b8576c8885b2c1ecf1622448fbd9e0a4a1cfa8d6bc16"
+    },
+    {
+      "batch_id": 260,
+      "path": "reviews/part-000260.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13096189,
+      "sha256": "00bc84874f1a19989d12093247faa384b93a186c2181999cdb02c986563ab3fa"
+    },
+    {
+      "batch_id": 261,
+      "path": "reviews/part-000261.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13563869,
+      "sha256": "371eaa9e7471aec5105f1f9b58ba4f08b7708754c0d2ad151b75727e78472cf3"
+    },
+    {
+      "batch_id": 262,
+      "path": "reviews/part-000262.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13505112,
+      "sha256": "f2872913a79f673d7ded87251f772ccc24414e5c5658370d95fa90e06758f9fa"
+    },
+    {
+      "batch_id": 263,
+      "path": "reviews/part-000263.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13361722,
+      "sha256": "8a5953b0dc411eea2fbba0cf812b16f4295304c24bcfd18c0c0ba168655bf604"
+    },
+    {
+      "batch_id": 264,
+      "path": "reviews/part-000264.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13023271,
+      "sha256": "9d7035728245379fae0f308fa1048835ac57a458c55ceeb728ad97dc2415f2c2"
+    },
+    {
+      "batch_id": 265,
+      "path": "reviews/part-000265.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13630807,
+      "sha256": "78d6e3282b839c794501358ecb2e66e4d3fb020f85e4b0849af1a87ee465ca2a"
+    },
+    {
+      "batch_id": 266,
+      "path": "reviews/part-000266.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13424511,
+      "sha256": "3e16bc3cc8408e9bfedc024e8fa8b97f7e14706649c8ef34746b60254809975f"
+    },
+    {
+      "batch_id": 267,
+      "path": "reviews/part-000267.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13384011,
+      "sha256": "d257096cf6c7ea9eb752ee31a1ad7fe8c73b876a5b52b044f439d46246e20655"
+    },
+    {
+      "batch_id": 268,
+      "path": "reviews/part-000268.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13378050,
+      "sha256": "0d864a69ca82bec66d032623b61fbe2dfab334786ff6e48d5d034070e3090e88"
+    },
+    {
+      "batch_id": 269,
+      "path": "reviews/part-000269.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13189552,
+      "sha256": "883dc7b5b9a01428c73417dd5f8187033f75619d67b486fb482fe131737df3c9"
+    },
+    {
+      "batch_id": 270,
+      "path": "reviews/part-000270.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13289640,
+      "sha256": "3794c0ab7fed4b7c86d95ceae76113b1fcfc2b82060456b50310560e3014edf9"
+    },
+    {
+      "batch_id": 271,
+      "path": "reviews/part-000271.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13229772,
+      "sha256": "d6fdf6fb0d2870287c232741bbebdafec136275174ea8966c81d5aacb284a21f"
+    },
+    {
+      "batch_id": 272,
+      "path": "reviews/part-000272.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13129610,
+      "sha256": "cadc518045a8c2b5bed4bdd9349bbe8b36381120a41e0221235014f4b5d0e5d6"
+    },
+    {
+      "batch_id": 273,
+      "path": "reviews/part-000273.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13575173,
+      "sha256": "5238f2c2708cf24fd92529718c954dab87f0ff80b1bd4804a02dc945b0cacb1c"
+    },
+    {
+      "batch_id": 274,
+      "path": "reviews/part-000274.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12779796,
+      "sha256": "51f49e82273b900f1a1719bc3ce123297c407e8da1fe37e1e8d781197ec2632c"
+    },
+    {
+      "batch_id": 275,
+      "path": "reviews/part-000275.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13465900,
+      "sha256": "6e769c6ba8fa7bc2c814b648927d75b042cee6591c5984df25f69273fd7feb92"
+    },
+    {
+      "batch_id": 276,
+      "path": "reviews/part-000276.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13357318,
+      "sha256": "43a4e8e28641ac5fe055232c7f8eb71220757b8531ecab66168d2a837e0b96d1"
+    },
+    {
+      "batch_id": 277,
+      "path": "reviews/part-000277.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13058286,
+      "sha256": "20cc3c60770722604d6c849306ed45091de31a8f76956d73db7bde3d55946c60"
+    },
+    {
+      "batch_id": 278,
+      "path": "reviews/part-000278.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13062817,
+      "sha256": "7c3ae5a1c2be165f53bf5ff3455d888fe1b0a044a795c609d8d5725fc1980b30"
+    },
+    {
+      "batch_id": 279,
+      "path": "reviews/part-000279.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13411030,
+      "sha256": "954a195f257898790dced16d2f65124798956589dd3e77bcea2bbeb5e374c1d3"
+    },
+    {
+      "batch_id": 280,
+      "path": "reviews/part-000280.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13747784,
+      "sha256": "57add2899e7fa881b3e47f35069a806ea12d3ebba4306da6dcbd6f07dadbb42c"
+    },
+    {
+      "batch_id": 281,
+      "path": "reviews/part-000281.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13349440,
+      "sha256": "af9348e241b0d0f791c22bcb9c704b1ebeb507f756e7dcfc60a4d7360a114fd5"
+    },
+    {
+      "batch_id": 282,
+      "path": "reviews/part-000282.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13208966,
+      "sha256": "f8b9a5c539f8737d8ecb4f296e7042df079c849b27f216cc45a2378cea241e2b"
+    },
+    {
+      "batch_id": 283,
+      "path": "reviews/part-000283.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13041070,
+      "sha256": "d183d41e511830641c2ac37ac8f63ef722ee3e521bb900a19b734bee75cb2d3c"
+    },
+    {
+      "batch_id": 284,
+      "path": "reviews/part-000284.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13353703,
+      "sha256": "305232dfad60ca36054790ea8415d2890c93f4c27d54021b3e6de4931a8c380b"
+    },
+    {
+      "batch_id": 285,
+      "path": "reviews/part-000285.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13523749,
+      "sha256": "f5dea1f0ddb2f6739a9e0e7cb907adc0247b2378d1936821000ec95107ca9077"
+    },
+    {
+      "batch_id": 286,
+      "path": "reviews/part-000286.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13340072,
+      "sha256": "24450bd0bd4bb30d07bcc00f29abed6f48ec6972a8e54ce9987faed55f06ec8b"
+    },
+    {
+      "batch_id": 287,
+      "path": "reviews/part-000287.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13264453,
+      "sha256": "9fa8c7cbeb48dc685a927567dd6899274edc75f414019b2e2194453ed7de728b"
+    },
+    {
+      "batch_id": 288,
+      "path": "reviews/part-000288.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12727621,
+      "sha256": "baa275a713b01dbf67c9b828c7c184c3da72fc8e555c7ced8c3a22b7a72eab8d"
+    },
+    {
+      "batch_id": 289,
+      "path": "reviews/part-000289.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12858911,
+      "sha256": "2dfe5c5cd4261d6fd1d3a81e423a6175310734aa6bce25573eed508bd257f049"
+    },
+    {
+      "batch_id": 290,
+      "path": "reviews/part-000290.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13397368,
+      "sha256": "d7d51d76915d6949432c40a1533130c956efbdd3767ded8746173702530d862a"
+    },
+    {
+      "batch_id": 291,
+      "path": "reviews/part-000291.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13441122,
+      "sha256": "953e573ece6bfa34e73bdfcfabfb22b529c4ccfbf7f9086ab99517f0c0ffc0ca"
+    },
+    {
+      "batch_id": 292,
+      "path": "reviews/part-000292.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13396837,
+      "sha256": "242d69265aa2687736c00d130c7dce58d2dc394ca4a7501f093c918c42e23497"
+    },
+    {
+      "batch_id": 293,
+      "path": "reviews/part-000293.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12983811,
+      "sha256": "08114164071dc2bb0f3622f06296c15754ea17cc368c08133302a77347421589"
+    },
+    {
+      "batch_id": 294,
+      "path": "reviews/part-000294.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13675068,
+      "sha256": "90c3b2d94aa2f2623f16b41ecf245e3d1f501b4114d9070f8beb99a5dd711e67"
+    },
+    {
+      "batch_id": 295,
+      "path": "reviews/part-000295.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13108563,
+      "sha256": "68055e2db78344734f8a6134fe476b87092fca1c06858ee78c5f41f64c805c3a"
+    },
+    {
+      "batch_id": 296,
+      "path": "reviews/part-000296.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12843242,
+      "sha256": "6bc88c48cc7c1877663a368c21ad888b1fce59a2b2505228cf73538edb364424"
+    },
+    {
+      "batch_id": 297,
+      "path": "reviews/part-000297.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13953079,
+      "sha256": "a273231b98a2173ba5888969226c41e54283da700476a79e860e5e79fc2d173a"
+    },
+    {
+      "batch_id": 298,
+      "path": "reviews/part-000298.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13791811,
+      "sha256": "e83ab865f0defdff25951e3677c37361b8625f5c917a054e001e76f435fe4214"
+    },
+    {
+      "batch_id": 299,
+      "path": "reviews/part-000299.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13334226,
+      "sha256": "3d238a54edae1b8511e1daeed01d9840f006597584ee0898dea5191fe1ddb175"
+    },
+    {
+      "batch_id": 300,
+      "path": "reviews/part-000300.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13130933,
+      "sha256": "4a89f9640b25efea0c59d8ed55614bdc470693823a4942c7b3c98346d503f628"
+    },
+    {
+      "batch_id": 301,
+      "path": "reviews/part-000301.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12982207,
+      "sha256": "35b2bee6feb4dc4e3d01ac4bb292c1726d6bf09d58792235c7484569604fae7f"
+    },
+    {
+      "batch_id": 302,
+      "path": "reviews/part-000302.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13813239,
+      "sha256": "cf5047051dcee6c2173d29124fd1dc81f52f60d645c694aa4d96cb3e6a34437d"
+    },
+    {
+      "batch_id": 303,
+      "path": "reviews/part-000303.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13169557,
+      "sha256": "0d8c7e7d8e272d0eb7bddb8fcc589b638d5f5fbe792a678ef85dd03484228f15"
+    },
+    {
+      "batch_id": 304,
+      "path": "reviews/part-000304.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13242014,
+      "sha256": "0710e7276314c0a387b2dd88294a7eecc9885dda58317defcd11a31e64feb105"
+    },
+    {
+      "batch_id": 305,
+      "path": "reviews/part-000305.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13462759,
+      "sha256": "1bde9403fbab0f9a130124c1706b7c73383aebea33bcb2a531dce50f1f872556"
+    },
+    {
+      "batch_id": 306,
+      "path": "reviews/part-000306.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13380121,
+      "sha256": "114340451366385391fa226013a8f18bce02abf1d38840119a11e56e6dade9ef"
+    },
+    {
+      "batch_id": 307,
+      "path": "reviews/part-000307.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13190830,
+      "sha256": "038daff3ed6eb63cb5d6c151919e3a3c76e2b51a8c9beed0f21e7f0058d56c02"
+    },
+    {
+      "batch_id": 308,
+      "path": "reviews/part-000308.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13485368,
+      "sha256": "a167133f0528010f754e3cc6fa67e150e3a6d2793d60150b27040d0241defb60"
+    },
+    {
+      "batch_id": 309,
+      "path": "reviews/part-000309.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13600264,
+      "sha256": "3027e11648b97a94fed0d4892fba34bb940f7815b86a25e048dbc4864a19f7c7"
+    },
+    {
+      "batch_id": 310,
+      "path": "reviews/part-000310.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12712343,
+      "sha256": "e0faeed66260f3b0d354af45d7724c95e6c7f4ed6a1909aca42296be18bfbf66"
+    },
+    {
+      "batch_id": 311,
+      "path": "reviews/part-000311.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12845187,
+      "sha256": "483f2c577609561db60f74a9d21f3138294de09c6a02cb56c63db04d58d00453"
+    },
+    {
+      "batch_id": 312,
+      "path": "reviews/part-000312.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13894773,
+      "sha256": "226a013eaeb348b33dace8785132bb0148056663bb148c3bd4b3dd2f922267e2"
+    },
+    {
+      "batch_id": 313,
+      "path": "reviews/part-000313.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13103496,
+      "sha256": "19b52b3fd7d2852daa338587e37a79adfaa76ca6fcc9dd4e7cb334baf01efc20"
+    },
+    {
+      "batch_id": 314,
+      "path": "reviews/part-000314.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13153507,
+      "sha256": "357692c3c0e7041a7db8c1e0b306f55abb153def78ee0488c7ba426bb4a3cef2"
+    },
+    {
+      "batch_id": 315,
+      "path": "reviews/part-000315.parquet",
+      "rows": 25000,
+      "file_size_bytes": 13674439,
+      "sha256": "b0840e13e554786f4eb0c169de74c4c2ad34af4cde508c830d741ca7056d1890"
+    },
+    {
+      "batch_id": 316,
+      "path": "reviews/part-000316.parquet",
+      "rows": 25000,
+      "file_size_bytes": 12609354,
+      "sha256": "5300b91fb393ac779ea632f9660c721bc341643d08d7fa5b093ab3f2a74fd4a5"
+    },
+    {
+      "batch_id": 317,
+      "path": "reviews/part-000317.parquet",
+      "rows": 11684,
+      "file_size_bytes": 6460882,
+      "sha256": "9886f2404e94312b53bee016883999892e97d70abb89dd2cb94830a4f279ef97"
+    }
+  ]
+}

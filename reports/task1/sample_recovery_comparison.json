@@ -1,9 +1,0 @@
-{
-  "verified_at": "2026-10-14T11:41:24.959937+00:00",
-  "status": "passed",
-  "left": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task1\\sample_20k",
-  "right": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task1\\sample_recovery_20k",
-  "scope": "sample",
-  "records_compared": 20000,
-  "all_fields_except_run_id_equal": true
-}
