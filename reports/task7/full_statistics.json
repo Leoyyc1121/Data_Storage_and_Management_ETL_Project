@@ -1,18 +1,18 @@
 {
-  "observed_at": "2026-10-16T01:15:06.821199+00:00",
+  "observed_at": "2026-10-16T01:58:22.126821+00:00",
   "status": "complete",
   "tables": {
     "field_selections": {
       "rows": 1795037,
-      "ordered_rows_sha256": "0bedbb919b483f5c9748d6064165d28c999bd89272627b0af6a4af213041329d"
+      "ordered_rows_sha256": "c82eaff237142934d2f3f122a7648c00a19c6310ef60baeda3ffe993a4640a25"
     },
     "selection_members": {
-      "rows": 287061,
-      "ordered_rows_sha256": "63ff46294005c2b70b5cfbf245be6bad7b4320f2937eb7d55674f00827d4fa48"
+      "rows": 287054,
+      "ordered_rows_sha256": "22fc7a34db6ee016e9df478e7dfad8667a85494e2ab491836ccb90ba9e29a983"
     },
     "movies": {
       "rows": 2953,
-      "ordered_rows_sha256": "36c6e91301dc1d40127352cfcf3edb78b20f68427f8777f369a38b3dff29ac46"
+      "ordered_rows_sha256": "9404678bf67adad8cf362e04a95a7ca3a4156dafb9bf02ea57d81cc03e1e9b90"
     },
     "editions": {
       "rows": 253059,
@@ -20,8 +20,8 @@
     }
   },
   "selection_statuses": {
-    "missing": 1631086,
-    "selected": 163951
+    "missing": 1631089,
+    "selected": 163948
   },
   "policy": "Semantic eligibility first; unique highest applicable authority for scalar, explicit supported union for multivalue. Equal-authority disagreements remain NULL with reason. No majority/latest arbitrary tie break."
 }

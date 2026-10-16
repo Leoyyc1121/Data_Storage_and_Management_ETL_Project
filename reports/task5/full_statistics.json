@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-16T01:14:17.743275+00:00",
+  "observed_at": "2026-10-16T01:56:54.995692+00:00",
   "status": "complete_engineering_pending_human_acceptance",
   "tables": {
     "work_matches": {
@@ -11,24 +11,24 @@
       "ordered_rows_sha256": "a10c45c69784de397b9f5a45a03b2da650acfc1fbd66045f4c7f6cce5e041e06"
     },
     "people": {
-      "rows": 1974,
-      "ordered_rows_sha256": "fb5ce9cd796ded321b518a81599c4b610731285983b39237fe3d994c0612eb76"
+      "rows": 1962,
+      "ordered_rows_sha256": "407533ee29b332481d8301e20ac51c231524cd2d63dabc5ee33b38fea1ec889c"
     },
     "person_aliases": {
-      "rows": 2392,
-      "ordered_rows_sha256": "687b3ef6311b7610fdd9ff3142834e08ff126ff4a0b125e78fb9efd9f8744371"
+      "rows": 2385,
+      "ordered_rows_sha256": "9372db09ee2b21b450c61343f8e62da31d3f2cb17319e34f1db3206e2dd8e277"
     },
     "credits": {
-      "rows": 2399,
-      "ordered_rows_sha256": "b2ada374816f681e678f51633f3509523fbc19be4b1ee55586debf2028104871"
+      "rows": 2392,
+      "ordered_rows_sha256": "33ffc472765f1ae93b61cab2cfc8a6023efcf77f4c4a78e2255e07680af8a905"
     },
     "person_decisions": {
-      "rows": 553,
-      "ordered_rows_sha256": "e3b868f3ad46c94ed0a53153050f96617c320a4c6d74592d273fdc406dd483a6"
+      "rows": 554,
+      "ordered_rows_sha256": "fd5312a3aab5efa0e43256cf8536245a8f30ce078f254ca79443460a6623468f"
     },
     "person_evaluation_pairs": {
       "rows": 120,
-      "ordered_rows_sha256": "e1f3b323402d31b010d56e5bb83d95a2694c7c114f9202cfcb2dd98393bae1a8"
+      "ordered_rows_sha256": "4581f38adf6ba627be3ed07158733c6ab21a2bbf112fdee55e75adc516a91814"
     }
   },
   "work_matches": {
@@ -36,7 +36,7 @@
     "verified_multifield": 169
   },
   "people_status": {
-    "provisional_source_context": 403,
+    "provisional_source_context": 391,
     "verified_external_context": 1571
   },
   "human_evaluation": {
@@ -46,7 +46,7 @@
     "precision": null,
     "recall": null,
     "f1": null,
-    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v5\\person_evaluation_queue.json"
+    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v6\\person_evaluation_queue.json"
   },
   "limitations": [
     "No human labeling supplied; independent evaluation NOT completed.",

@@ -1,6 +1,6 @@
 {
   "status": "passed",
-  "version": "final_v5",
+  "version": "final_v6",
   "same_input_repeated_via_dag": true,
   "all_ordered_table_hashes_equal": true,
   "tables": {
@@ -13,25 +13,25 @@
       "ordered_rows_sha256": "a10c45c69784de397b9f5a45a03b2da650acfc1fbd66045f4c7f6cce5e041e06"
     },
     "people": {
-      "rows": 1974,
-      "ordered_rows_sha256": "fb5ce9cd796ded321b518a81599c4b610731285983b39237fe3d994c0612eb76"
+      "rows": 1962,
+      "ordered_rows_sha256": "407533ee29b332481d8301e20ac51c231524cd2d63dabc5ee33b38fea1ec889c"
     },
     "person_aliases": {
-      "rows": 2392,
-      "ordered_rows_sha256": "687b3ef6311b7610fdd9ff3142834e08ff126ff4a0b125e78fb9efd9f8744371"
+      "rows": 2385,
+      "ordered_rows_sha256": "9372db09ee2b21b450c61343f8e62da31d3f2cb17319e34f1db3206e2dd8e277"
     },
     "credits": {
-      "rows": 2399,
-      "ordered_rows_sha256": "b2ada374816f681e678f51633f3509523fbc19be4b1ee55586debf2028104871"
+      "rows": 2392,
+      "ordered_rows_sha256": "33ffc472765f1ae93b61cab2cfc8a6023efcf77f4c4a78e2255e07680af8a905"
     },
     "person_decisions": {
-      "rows": 553,
-      "ordered_rows_sha256": "e3b868f3ad46c94ed0a53153050f96617c320a4c6d74592d273fdc406dd483a6"
+      "rows": 554,
+      "ordered_rows_sha256": "fd5312a3aab5efa0e43256cf8536245a8f30ce078f254ca79443460a6623468f"
     },
     "person_evaluation_pairs": {
       "rows": 120,
-      "ordered_rows_sha256": "e1f3b323402d31b010d56e5bb83d95a2694c7c114f9202cfcb2dd98393bae1a8"
+      "ordered_rows_sha256": "4581f38adf6ba627be3ed07158733c6ab21a2bbf112fdee55e75adc516a91814"
     }
   },
-  "execution_evidence": "reports/pipeline/last_execution.json; prefix run 15fead71fe0f4ac1be4b90d48739be75 completed task5..task7_verify with zero new core rows."
+  "execution_evidence": "DAG prefix run f0c43c39857c42bebb7a27653ed83cab completed task5..task7_verify; counts/hashes equal first final_v6 run."
 }

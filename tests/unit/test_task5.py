@@ -20,6 +20,12 @@ class NamesTests(unittest.TestCase):
         self.assertEqual(rp.ROLE_FIELDS,{'directors':'director','credited_stars':'starring','credited_cast':'cast'})
     def test_original_credited_spelling(self):
         self.assertEqual(rp.credited_spelling(dict(normalized='jane doe',raw='Starring Jane Doe, John Smith')),'Jane Doe')
+    def test_untruncated_source_name_recovery(self):
+        a=dict(normalized='jane doe',raw='truncated excerpt',field_locator='description[0]#line[0]')
+        self.assertEqual(rp.credited_spelling(a,json.dumps(dict(description=['Director: Jane Doe'])).encode()),'Jane Doe')
+    def test_compound_name_not_fabricated_person(self):
+        a=dict(normalized='jane doe john smith',raw='Starring Jane Doe & John Smith',field_locator='description[0]')
+        self.assertIsNone(rp.credited_spelling(a,json.dumps(dict(description=[a['raw']])).encode()))
     def test_initials_never_identity(self):
         self.assertFalse(rp.compatible('J Smith','J. Smith'))
         self.assertFalse(rp.compatible('J Smith','John Smith'))

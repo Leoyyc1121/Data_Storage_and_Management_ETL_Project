@@ -25,7 +25,9 @@ def verify(c):
             for p in profiles:
                 for record in p['records']:
                     for a in record['assertions']:
-                        if a['field'] in ROLE_FIELDS:expected_roles.add((w['movie_id'],ROLE_FIELDS[a['field']],record['source_record_id'],a['field_locator'],credited_spelling(a) or a['raw']))
+                        if a['field'] in ROLE_FIELDS:
+                            source_raw=d.execute('SELECT raw_record FROM source_records WHERE source_record_id=?',(record['source_record_id'],)).fetchone()[0]
+                            expected_roles.add((w['movie_id'],ROLE_FIELDS[a['field']],record['source_record_id'],a['field_locator'],credited_spelling(a,source_raw) or a['raw']))
             expected=set()
             for title in {v for p in profiles for v in p['titles']}:expected.update(r[0] for r in imdb.execute('SELECT tconst FROM title_lookup WHERE normalized_title=?',(title,)))
             actual=list(d.execute('SELECT * FROM work_match_candidates WHERE movie_id=?',(w['movie_id'],)))

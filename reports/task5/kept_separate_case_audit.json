@@ -1,7 +1,7 @@
 {
   "status": "source_context_examples_available",
   "count": 5,
-  "local_evidence_packet": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v5\\person_kept_separate_examples.json",
+  "local_evidence_packet": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v6\\person_kept_separate_examples.json",
   "sha256": "898249caf6baf359676f3a7fe453e67305956591f66da222fb391a371681d744",
   "scope": "Same-name disambiguation examples from retained candidate catalog, not all loaded target people or independently human-confirmed homonyms. Birth/year/ID/credit context reviewed by code; no name-only merge.",
   "human_gold": false

@@ -1,0 +1,11 @@
+{
+  "status": "complete_and_full_field_verified",
+  "database_path": "data/integration/final_v3/review_work_v2/reviews.sqlite3",
+  "file_size_bytes": 26780393472,
+  "sha256": "ce0fa0ad8bbaba21d32f2937aa1f738a56fff75fbbabde584f2e7cac259515fd",
+  "raw_reviews": 7911684,
+  "logical_reviews": 7906538,
+  "identity_mapping_sha256": "8eb65b283e4265eb6edad92ba4d771257d81f7c125f580599e1f1eca7ba922f2",
+  "storage": "Local only, not in public Git. SQLite audit runs also present; rerunning adds audit rows and may change file hash while domain identity hash/counts remain invariant.",
+  "recovery": "Restore exact Task1 source and current shard manifest; use config/reviews.example.json and run_review_etl. Same source/rules keep domain IDs stable; a new physical runtime/audit run can change binary database hash. No raw review was deleted."
+}
