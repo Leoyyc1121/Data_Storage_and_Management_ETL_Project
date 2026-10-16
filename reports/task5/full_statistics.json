@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-16T00:37:11.798603+00:00",
+  "observed_at": "2026-10-16T00:45:40.596547+00:00",
   "status": "complete_engineering_pending_human_acceptance",
   "tables": {
     "work_matches": {
@@ -46,7 +46,7 @@
     "precision": null,
     "recall": null,
     "f1": null,
-    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v3\\person_evaluation_queue.json"
+    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v4\\person_evaluation_queue.json"
   },
   "limitations": [
     "No human labeling supplied; independent evaluation NOT completed.",

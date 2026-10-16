@@ -1,0 +1,6 @@
+{
+  "status": "passed",
+  "foreign_key_errors": 0,
+  "invalid_null_status_rows": 0,
+  "all_candidates_preserved": true
+}

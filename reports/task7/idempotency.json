@@ -1,0 +1,25 @@
+{
+  "status": "passed",
+  "same_inputs_repeated": true,
+  "all_four_ordered_table_hashes_equal": true,
+  "tables": {
+    "field_selections": {
+      "rows": 1795037,
+      "ordered_rows_sha256": "5c157caf04fdd18b4d211fb840e26a547a18c6e3d18d2ad74c20b1c60b4b62bb"
+    },
+    "selection_members": {
+      "rows": 286240,
+      "ordered_rows_sha256": "5d8c2677ac6a193f6c29198d729e8b7f7a4e9942687a0016b4dc22781cd436d0"
+    },
+    "movies": {
+      "rows": 2953,
+      "ordered_rows_sha256": "57b01ac1bd0c9970c174927619c3d3e6a2b67ec7f8811a9b838fb59e68659b61"
+    },
+    "editions": {
+      "rows": 253059,
+      "ordered_rows_sha256": "5bab5cfb2efc5a796b9568bbd8fc047133d970a9826021afe0d0378595281ac7"
+    }
+  },
+  "version": "final_v4",
+  "note": "Compared first final_v4 run against completed second run; no new field/member rows."
+}

@@ -1,10 +1,12 @@
 {
   "task4_config": "config/task4.example.json",
   "imdb_config": "config/imdb.example.json",
-  "work_dir": "data/integration/final_v3",
+  "work_dir": "data/integration/final_v4",
   "report_root": "reports",
   "source_reviews": "data/staging/task1/full_v2",
-  "target_dir": "data/target/final_v3",
+  "target_dir": "data/target/final_v4",
+  "review_config": "config/reviews.example.json",
   "batch_size": 25000,
+  "review_version": "review_work_v2",
   "evaluation_pairs": 120
 }
