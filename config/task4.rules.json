@@ -1,0 +1,28 @@
+{
+  "version": "task4-multifield-complete-link-v3",
+  "definition": "The same creative movie work across physical medium, language, subtitle and region editions. Remakes, sequels, unrelated same-title works and television series are not the same work. Cuts/restorations/runtime discrepancies require review rather than automatic grouping.",
+  "candidate_title_similarity": 0.88,
+  "minimum_shared_plot_words": 80,
+  "minimum_shared_plot_unique_words": 40,
+  "nonexact_block_max_products": 500,
+  "runtime_tolerance_minutes": 3,
+  "evaluation_sampling_salt": "task4-independent-label-queue-v1",
+  "language_aliases": {
+    "English": "en", "Anglais": "en", "French": "fr", "Francais": "fr", "Français": "fr",
+    "Spanish": "es", "German": "de", "Deutsch": "de", "Italian": "it", "Hindi": "hi",
+    "Japanese": "ja", "Chinese": "zh", "Mandarin": "cmn", "Cantonese": "yue", "Korean": "ko",
+    "Russian": "ru", "Thai": "th", "Arabic": "ar", "Portuguese": "pt", "Dutch": "nl",
+    "Hebrew": "he", "Persian": "fa", "Farsi": "fa", "Vietnamese": "vi", "Latin": "la"
+  },
+  "automatic_rules": ["title_director_and_two_credited_stars", "title_work_year_and_director", "title_work_year_and_two_credited_stars", "title_identical_long_plot_and_cast_or_director"],
+  "policies": {
+    "title_only_auto_merge": false,
+    "missing_year_is_match_evidence": false,
+    "unverified_external_id_alone_auto_merge": false,
+    "require_every_cross_cluster_pair_supported": true,
+    "compilation_reviews": "product_only",
+    "television": "separate_no_movie_merge",
+    "pending_products": "attach_only_if_multifield_match_to_movie_seed",
+    "evaluation_labels": "human_only_not_generated"
+  }
+}

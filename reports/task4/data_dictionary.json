@@ -1,0 +1,91 @@
+{
+  "scope": "Task4 integration checkpoint, not final target schema or completed Task5/6/7/9.",
+  "rules_version": "task4-multifield-complete-link-v3",
+  "tables": [
+    {
+      "table": "products",
+      "key": "asin",
+      "contents": "All253059 original products; original Task3 classification, raw/normalized profile assertions, edition candidates, exact source record locators, review_count, first_review_id and source review hashes in profile; run_id and profile_hash.",
+      "notes": "Do not count review_count after a one-to-many source/cast join. All original reviews remain in Task1."
+    },
+    {
+      "table": "pairs",
+      "key": "pair_id",
+      "foreign_keys": [
+        "left_asin->products.asin",
+        "right_asin->products.asin"
+      ],
+      "contents": "Distinct ordered candidate endpoints; proposed/final decision, rule/version, facts and evidence strength; run_id.",
+      "notes": "manual_review denotes an uncompleted review queue, not a person having approved the match."
+    },
+    {
+      "table": "works",
+      "key": "movie_id",
+      "unique": "anchor_source_record_id",
+      "contents": "System UUIDv5 work identity anchored to a movie seed source record; provisional_singleton or multifield_group; sourced provisional display_title,rule_version,run_id.",
+      "notes": "Not ASIN as movie_id. Provisional singleton counts are not verified distinct-movie census. No final release date/person identities selected."
+    },
+    {
+      "table": "product_movie",
+      "key": [
+        "asin",
+        "movie_id"
+      ],
+      "foreign_keys": [
+        "asin->products.asin",
+        "movie_id->works.movie_id"
+      ],
+      "contents": "single_work/contains relationship, evidence and run_id. Many-to-many capable.",
+      "notes": "Unverified compilation members remain unmapped; compilation reviews stay product-only, no copying."
+    },
+    {
+      "table": "product_status",
+      "key": "asin",
+      "foreign_keys": [
+        "asin->products.asin"
+      ],
+      "contents": "Every product has merged/provisional_work/compilation_unresolved/pending_classification/excluded_content and reason."
+    },
+    {
+      "table": "cluster_checks",
+      "key": [
+        "merge_pair_id",
+        "left_asin",
+        "right_asin"
+      ],
+      "contents": "Each cross-pair re-evaluation when groups considered for union; verdict and source assertions."
+    },
+    {
+      "table": "mapping_history",
+      "key": "event_id",
+      "contents": "Before/after group membership, deciding edge, rule_version,run_id. Old version directories and precise code/rule/config snapshots retained for recomputation/splits."
+    },
+    {
+      "table": "evaluation_pairs",
+      "key": "pair_id",
+      "foreign_keys": [
+        "pair_id->pairs.pair_id"
+      ],
+      "contents": "Reserved independent_human_evaluation partition, stratum and deterministic sampling version.",
+      "notes": "No generated labels. Excludes all registered inspected development pairs; queue exported separately without algorithm predictions."
+    },
+    {
+      "table": "state",
+      "key": "key",
+      "contents": "Input fingerprint, per-phase completion and last committed ASIN/pair_id."
+    },
+    {
+      "table": "runs",
+      "key": "run_id",
+      "contents": "Start/end time, phase and complete/interrupted/failed state."
+    }
+  ],
+  "decision_vocabulary": [
+    "auto_merge",
+    "manual_review",
+    "reject",
+    "unresolved"
+  ],
+  "human_evaluation": "At least100 separately completed human labels, both positive/negative and evidence required. Undefined metrics NULL. AI-created/synthetic labels are not human evaluation.",
+  "edition_semantics": "Raw language/subtitle/distributor/region assertions retained separately from normalized aliases. No scalar conflict resolved silently."
+}

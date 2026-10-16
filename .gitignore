@@ -85,3 +85,6 @@ dist/
 
 # Small Task 3 execution evidence; decisions/SQLite/Parquet stay local
 !reports/task3/execution.log
+
+# Small Task4 run evidence; full integration products/relationships remain local
+!reports/task4/execution.log

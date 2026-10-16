@@ -1,0 +1,12 @@
+{
+  "run_id": "16ff61037929438d89237c61b60d5dde",
+  "started_at": "2026-10-16T00:25:27.042244+00:00",
+  "finished_at": "2026-10-16T00:27:14.538690+00:00",
+  "status": "complete",
+  "phase": "pairs",
+  "elapsed_seconds": 107.53199999999924,
+  "products": 253059,
+  "pairs": 416,
+  "deleted_reviews": 0,
+  "input_fingerprint": "a78c6d4269a3ddddad5425bc09b288b038e97754defad8fda15ef3bfdec9efdb"
+}

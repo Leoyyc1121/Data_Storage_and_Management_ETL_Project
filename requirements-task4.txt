@@ -1,0 +1,2 @@
+# Offline work resolution reuses fixed dependency versions.
+-r requirements-task3.txt

@@ -1,0 +1,18 @@
+{
+  "verified_at": "2026-10-16T00:27:14.182199+00:00",
+  "status": "passed_integrity_not_human_accuracy",
+  "products": 253059,
+  "reviews_retained": 7911684,
+  "all_raw_source_candidate_profiles_replayed": 88660,
+  "candidate_pairs_replayed": 416,
+  "work_records": 2953,
+  "all_within_group_pairs_checked": 3,
+  "cluster_cross_pair_checks": 3,
+  "transitive_edges_blocked": 0,
+  "all_product_statuses_and_mappings_verified": true,
+  "all_exported_fields_match_checkpoint": true,
+  "evaluation_reserved_pairs": 120,
+  "evaluation_development_overlap": 0,
+  "independent_human_evaluation_completed": false,
+  "scope": "Full deterministic raw assertion, decision, cluster, mapping and export verification; not manual gold labeling, final work-field completeness or target loading acceptance."
+}

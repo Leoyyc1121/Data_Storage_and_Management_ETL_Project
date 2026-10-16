@@ -1,0 +1,16 @@
+{
+  "observed_at": "2026-10-16T00:25:40.336465+00:00",
+  "status": "passed",
+  "same_input_fingerprint": true,
+  "all_six_output_file_hashes_equal": true,
+  "evaluation_queue_hash_equal": true,
+  "output_sha256": {
+    "products": "1091bf6318eaf46c0ad5ef741615ed19f59d1370bef8098105540813c7af83d9",
+    "works": "cc2739355b94ea04c1bf87c81ad959057e3a2314bf0b3564b7e7a6401bb656d1",
+    "mappings": "bc4d33e6385af307e9b0317095cf725253acb4cbf17e33d6aed7be94cf02bf87",
+    "product_status": "6bab21a48156173a88c042d6eab6ed219bc8eaabff7990d3d25a2be8f78ee13f",
+    "decisions": "43d5e02bcfd02c7dbd35c7bdbbc2e5afaad398e2f61c5925771ca81bb8fd9a3f",
+    "history": "b4de66bc044d35778ab09ef98d264791010f90fdb2d1c02e4a355b49767258ac"
+  },
+  "reviews_retained": 7911684
+}

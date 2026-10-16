@@ -1,0 +1,275 @@
+{
+  "observed_at": "2026-10-16T00:25:40.336465+00:00",
+  "status": "complete_pipeline_pending_human_acceptance",
+  "engine_version": "1.2.0",
+  "rule_version": "task4-multifield-complete-link-v3",
+  "input_registration": {
+    "task3_input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8",
+    "task3_outputs": {
+      "products": "f942982010337eae4afd4235f6d3f64b529a43d3c36c62ed4af4ba69d520b0f5",
+      "candidates": "56d4aab5ee187960665df4943edf81fd795bfaaa6a44a3beacb4c5f4b67e1cfe"
+    },
+    "products": 253059,
+    "reviews": 7911684,
+    "task3_movie_products": 2955,
+    "rules_sha256": "57bb493e5bb9b2c8d00a4c2a54b2fb9c514c035ade0865779caf63e14fb5658c",
+    "engine_version": "1.2.0",
+    "engine_sha256": "dcd54551291a574d45883a44db2c4b72a78a554daee957e97eb0525a3c8fcdd9",
+    "evaluation_pairs": 120,
+    "development_pair_ids": [
+      "0049bed751ac8f5089102c4133fb5b1fdd200f49bcdb66f4346b9ff1e64b9f05",
+      "017766d8e205d15790851f02a9ec51540c679d85c1e4480bee55b4efaddc2489",
+      "0765557188368f49748a4869b3637c0e8e1fd05f0c0d3ba445abc300874aaf32",
+      "091c914fd44ee080c55f595fd2c59b1067518f194f01bf79fa041297ec3495ba",
+      "0a1f8bb0dc569e6ae04122874ba2aa06e2ee40cdd91612e0430dc36e567549fe",
+      "0a464ff09e315b7b81df90f42d22b1500492609a229dec77c2ff156acf2b0f41",
+      "0cb768adce8e91547d8517bfc3cc3605c47cfcbdc5a64d38839f23d947821c29",
+      "0cf2f2ba9cd8680b408a6e77281ffec6c1ffc80624ce6a2eb113f7b2babdf1fb",
+      "0e49beda8d5c310188159213246aa807add72b9579adc5f8b09fc4b4417cc977",
+      "11973b98e06b0df1cd226bf5fce4e95b21261c577ae30655d5e8068e171f4202",
+      "18014936b7098a1cd016b1f8335e4993704faecbcf3c05ddf52090a09312b621",
+      "1b51e0d99728fbe745fa55f3057be1d65ae1ece579239d8986d4e09a15631b74",
+      "1dc423897458d7eb456373c13b93e775e56805cb03ce5ed1f37e7723dab7435e",
+      "22ed80f41860b4b953a640fee0cf562475dc98d1b31c9e0c96e2a98e14dd35bc",
+      "25528d1e803e5cd63e0517c3a9d5981a2b91e486c6f5bd5b4a6c53f636ccfb76",
+      "25611bc6b3123d022012f29b3988f1f30c39b36600e050a7b4c3432efcb18579",
+      "2b49a5aab578cc8b98f864fda90685d22d393abb1de8655ee964ac521c05d26f",
+      "2c1cca0068532aef437321ba95d0d6fec0a03577ec7ec6e1d8e4024e2301cfee",
+      "2e48cb6ba60854a690921c34125ff65018c996bb011deb495d43976b558f415a",
+      "2ee941d5003f26726cc76a0c8edf9890cc64a1fe4f7c25e8476e08909fb08c46",
+      "300b7ac3e45f44edbb72d059f9d22deba5f497373423e6135c1223b17847300a",
+      "32202bd555f6c37567abf1d18353c93c60d0c1bd6a79a15df835e66f420a42a3",
+      "327f6b7d394eccd915fef27b933b144de31227aa19a2890105d330aaa92af9de",
+      "3f4fd1ce4768907993af9435d2c0a5837124a615537898e13014558d0546f6b0",
+      "438d745a7b0fab4abb9e6a19cf02d010906813bc51afef39561ab9d748b8e89f",
+      "44062baa5d04d5333b26b8771d5e444f8724025664d0b601d20966af25d78a14",
+      "47b1f6c052b5a77ccfea3887d85c379b14f0bcc1886ef2d7611c968c32fbecf7",
+      "49e50674cf7d4c3d37dc18f8be6b00b1cc10d58055ec019bf2f6328bb2d7e1ac",
+      "4a2991239bab643de82c226b8a9a2c5cd3290020f470c2bf92891242fca569b0",
+      "4a8cffb12988e29ee85b2829ec69a21c429009097f90c99c09e364eebfbb32f5",
+      "4b4b9681ad34f7307018b2704701a7402645218f35488a691f62328697daa952",
+      "4b7afa30ac4388e138ea80ddb63a8f648e622dea2b5d937884bdca9a0de76ec3",
+      "4c511e61088f7cc6b4423d8349c1e698a9cd74cf01c5a044f367d91442210dd9",
+      "4e1001f5ecb0d328851e37b46b5e163a1436fd10e5be3f6006382bd780f7f99a",
+      "513fb06a2aee0d08f68ecf94f007c92bbe2283a6285647043dad542f8ea52a1b",
+      "5484603c987de31dd61e9d1f3cfcb6d1099af0c2fce13ed9c0b25642dbd15ca4",
+      "55fdef67d87404d2ecc4ef31b1723f276f5613f57e37e4b531598645cfa8edd1",
+      "58338f7b534795782fdb79302466d7cec93401897feeb20e488171324a7476b6",
+      "59ccb0c81f1a1e47ecab98bcbc7376a9a0b1f48bffc64bc052f55354bc5ee325",
+      "5c718daf714a11bc1393e93fbb225a7c064e5ba98ddfd317ce689a8d00365e07",
+      "5edfd4fb562c6295f618ba7140a376ab4451333b0b710bf688b3e82a4b9c0650",
+      "5f16cf8c43b0fa32f7fef9d44f2a568ed8905fc44e98b37d2756b47cd61b67ab",
+      "600b0f6b66893cfdfe074f5fb095e5a059acfa54ab0061de5ca31b18b206abb1",
+      "62edf1122795d9cd233ccec3771800a55a1a7bec896e0b344230682cf4be2920",
+      "67404b0594ae150b318f547baf7742e2887347fd0fc944d9659f94ac79a250d1",
+      "6bbd3eba167e056e57b896acf0b6785ffc679baef12365cd85edaf762ed4337b",
+      "70cb70cb7e9abec9f32ae01f64a47c0dbc5d0cf8bf18dbf40de582c6fde51134",
+      "7a1b41c2f80dbf4febe8bdf314b25e820ed5b84cad062dedf8e47c5e1df5729a",
+      "7ea0df42f809d0b030010e1b2a92be4be89a97dcf876e546de29057082069b3a",
+      "86c1175b4d4c309cb003836874a5b61edebcbea5d0006caec793f4e9675d5645",
+      "876989d753a2ed26b6b043f7d528f6983166c6573da9938314c0d1528534bd84",
+      "885f5665cfc9cedb2882c3e5a8cd95a4de1e8da3d1b34e2cf23f2acd9be89030",
+      "886b1605fc3946d4e84fda65a6c9629e11ebacc10e4f804dad20636785c3b9f6",
+      "903e81d182d6a21babb680362ca821a0f4af03c3298e9c8136e4bde4a088b68e",
+      "9242699e2093fd07ae72244d89ae6bab5b1f471064e6ace8017952a4f8345d5b",
+      "92ec11ec6668779c41ed60891acf3f3ad4b582121db9e761a47e017d7ce4947e",
+      "96c303179eace440f09059233c7163a4fe35f848dd9e0ac9a51095c84c78e69c",
+      "9c3af1d4709afa851bb589a2c7f374c50ace965d18b6ebc07f5dc98883777d7b",
+      "a4e996e4bf4bbc35fc72e249339fdaf7fb6e4be3b893df34889a5775decd120b",
+      "a7f1a250da85908fdc0c4429b7c7c7979d48c887ef50661ed9b7157794e9cfd7",
+      "a9af9fd5d5e30dac24b9b86a52528760f2a5786ff5bfdea9ed74f8fcf4125fdd",
+      "afdfbbcfd8c5f8cd0b8838350499e053203cf3b8f74387a6a72eaf4054ac45c3",
+      "b0f5e4c83f304f58200a19c4bd5fcd8e6c19c8061090e385ccc1aea9f8d12656",
+      "b36a5df38b1ec89062e7d1050ac32ab074f8f2ef83898f962f687551abe47a3d",
+      "b6c01f842dba1de069668a3c60a2c780a6febca847167c2bef585fee676077c4",
+      "bb7450f377e982a02dd9a0b5151f2834f9d88a63b312ef93f18cfa94834fbfd7",
+      "bf67bf7fc3939ea533725a2ea3016cd05a35ac28b4ba0360c1392286aeb6794e",
+      "c29d457a599f154877728119542827912cbc1f93d937df1aed804e69e09f9e41",
+      "c52b5aa84ac29bf98a5ccf45e8a6d0bcb63d35c1339b05ffd85d1f0db18ae64f",
+      "cb7f3ca7d869d79d517d2119dc7dcd7809ca092cb0689de801b7f4db0a232787",
+      "cc68cf518d71d2c90d0e2c8223907207b163cdcf252f4e5ebc057b7255be03eb",
+      "ccb80fea31b895de8c59257d391eed5c495be3a3c2da9550cc1a4641e45a14b6",
+      "dd6e5f90fd97753cb99b59b54c0e77337e9767afb66bb41d118ee73469239aab",
+      "ebda06ba8f91ee430e9d0a6409ca498156315a85157b4f0828dbdc20142d0076",
+      "ec3de18f6198df49fbebd5954cbc1c8fbaf7f242be1de70378503d2e410886c6",
+      "f13973672e7e270b2f707b35550996609855b5a93e8cecb9d5b5dcb98d4b3f25",
+      "f185b5219a8fa09111b87ab56fd05739f89d71da6e5c29928dd248e2a7ba4af7",
+      "f2e5bd3818fd45635b887414ff00366a27b1d61979948537628f5b0f4a9b9f30",
+      "f35acc7d8f1e83cb82ef8034329e8a7af763189b0d3c4813d945131b8b74bbee",
+      "f3a1153223468e24ee1b9cbe1d2b3fccf2f0440cc296397e0f149058bc9628f7",
+      "f3ae0dc46866b07fc09f217c8c8f479c49bfbb25b3bac3a6db8eaf9436c32ef3",
+      "f44dc7d4ddca36d30ba0c64e66aabb576bad20e0ce332612b2369e0f211073b0",
+      "f6c5e057e0da61a9ba9d26b5b4eec43c1bb95ee7101d2f025983010b70ca6a91",
+      "f78297bd3a2bb99ac1d95ece7bdb473c5a43a0e9aeb4e48a15962634c5c4f69b",
+      "f81902118e68c5aedc8b4af94418eb7e43f06b7ff466a20aa60cb0be7b82ec35",
+      "fa1aaa4f7805ecf70f203b1ed1c1113f985db5dfbe1d722db08d28b9a56874eb",
+      "fcc15326d366eb30347920cb0b42419c5bd45130ff6be6f394cbd0f116f3964f",
+      "ff1a0f501ff1f966d35ccd8cc008d4ea1a858b4e1bf9f8c5ac2476da733d62c0",
+      "ffadf2cdab971bc87c9c98c3829ba056541af621cce8a75518d17af38eab6bad"
+    ]
+  },
+  "input_fingerprint": "a78c6d4269a3ddddad5425bc09b288b038e97754defad8fda15ef3bfdec9efdb",
+  "products": 253059,
+  "reviews_retained": 7911684,
+  "before_provisional_movie_seeds": 2955,
+  "after_work_records": 2953,
+  "merged_seed_reduction": 2,
+  "multifield_work_groups": 3,
+  "provisional_singleton_works": 2950,
+  "additional_pending_products_attached_by_multifield_evidence": 1,
+  "candidate_pairs": 416,
+  "decisions": {
+    "auto_merge": 3,
+    "manual_review": 350,
+    "reject": 63,
+    "unresolved": 0
+  },
+  "product_mapping_statuses": {
+    "compilation_unresolved": 137,
+    "excluded_content": 3690,
+    "merged": 6,
+    "pending_classification": 246276,
+    "provisional_work": 2950
+  },
+  "cluster_cross_pair_checks": 3,
+  "transitive_edges_blocked": 0,
+  "nonexact_high_frequency_prefixes_skipped": [],
+  "candidate_scope": "All target ASINs retained; candidate matching requires a Task3 movie seed and available source metadata. Exact-title blocks are not capped; nonexact frequent-prefix blocks are skipped and reported. Not exhaustive all-pairs matching.",
+  "review_policy": "All reviews stay on original products. Compilation reviews product-only, no copying; television excluded from movie merges. No deduplication/aggregate movie rating in Task4.",
+  "movie_id_semantics": "System UUIDv5 anchored to stable source record identity, never ASIN as movie_id. Identical version/input reruns stable; merge history and old version directories preserve remapping/splits.",
+  "field_semantics": "Raw/normalized assertions used as identity evidence only. Credited names not person entities; no chosen final release dates/canonical titles or field conflict arbitration. display_title is explicitly sourced provisional display label.",
+  "outputs": {
+    "products": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\product_profiles.parquet",
+      "rows": 253059,
+      "file_size_bytes": 63595412,
+      "sha256": "1091bf6318eaf46c0ad5ef741615ed19f59d1370bef8098105540813c7af83d9",
+      "ordered_rows_sha256": "1d54b4cb8554ea8eb37d9076e49d4e0460518fb91068de752e97e411eb42dada"
+    },
+    "works": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\movie_works.parquet",
+      "rows": 2953,
+      "file_size_bytes": 323420,
+      "sha256": "cc2739355b94ea04c1bf87c81ad959057e3a2314bf0b3564b7e7a6401bb656d1",
+      "ordered_rows_sha256": "4a97aeff9e4c0787b4ce4b97524d675ed8d31f3927f8a748874efe353de62423"
+    },
+    "mappings": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\product_movie.parquet",
+      "rows": 2956,
+      "file_size_bytes": 211640,
+      "sha256": "bc4d33e6385af307e9b0317095cf725253acb4cbf17e33d6aed7be94cf02bf87",
+      "ordered_rows_sha256": "fc30aef26e9ae9eb277b8078b28ab6ff3b01324d89a6a1ccd3f512dc03f8737e"
+    },
+    "product_status": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\product_mapping_status.parquet",
+      "rows": 253059,
+      "file_size_bytes": 1693747,
+      "sha256": "6bab21a48156173a88c042d6eab6ed219bc8eaabff7990d3d25a2be8f78ee13f",
+      "ordered_rows_sha256": "c9d8c06184bbb63e3b1da78efca118e1508dd2e970367d95e4379b65a3b0bbc4"
+    },
+    "decisions": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\merge_decisions.parquet",
+      "rows": 416,
+      "file_size_bytes": 65199,
+      "sha256": "43d5e02bcfd02c7dbd35c7bdbbc2e5afaad398e2f61c5925771ca81bb8fd9a3f",
+      "ordered_rows_sha256": "b41933545e5e258ad02434df753556c33b6d6e09684c6aca71b8613b037ebfa5"
+    },
+    "history": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\mapping_history.parquet",
+      "rows": 3,
+      "file_size_bytes": 2882,
+      "sha256": "b4de66bc044d35778ab09ef98d264791010f90fdb2d1c02e4a355b49767258ac",
+      "ordered_rows_sha256": "6140b1386cd170c26ecfdecefa5264725336fefd33f0658e495a828735207e8a"
+    }
+  },
+  "evaluation": {
+    "status": "awaiting_independent_human_labels",
+    "queue_pairs": 120,
+    "required_minimum_pairs": 100,
+    "manually_labeled_pairs": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "manual_review_coverage": 0.0,
+    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\evaluation_queue.json",
+    "queue_sha256": "7442984e4668af25794223deff191d8dbc21d2c8f9ecd878b50e0790c7f66ae5",
+    "note": "User confirmed no manual labels. This queue is NOT a completed labeled evaluation set. Development cases exclude these pair IDs."
+  },
+  "case_examples": {
+    "merged_groups": [
+      {
+        "movie_id": "mw_662495cddab75a9d86032c5b8f913e26",
+        "members": [
+          {
+            "asin": "630242335X",
+            "classification": "movie"
+          },
+          {
+            "asin": "6305252599",
+            "classification": "movie"
+          }
+        ]
+      },
+      {
+        "movie_id": "mw_84084cc0f61555cc8930f9ca941899ca",
+        "members": [
+          {
+            "asin": "B006QS9M1S",
+            "classification": "awaiting_confirmation"
+          },
+          {
+            "asin": "B006QS9MC2",
+            "classification": "movie"
+          }
+        ]
+      },
+      {
+        "movie_id": "mw_abe6448e5b4f5abb8a01f4d9d677404e",
+        "members": [
+          {
+            "asin": "B001EBO90G",
+            "classification": "movie"
+          },
+          {
+            "asin": "B001L67A3M",
+            "classification": "movie"
+          }
+        ]
+      }
+    ],
+    "kept_separate_pairs": [
+      {
+        "pair_id": "017766d8e205d15790851f02a9ec51540c679d85c1e4480bee55b4efaddc2489",
+        "left_asin": "6305235074",
+        "right_asin": "B00000I1RP",
+        "rule_id": "different_sequel_numerals"
+      },
+      {
+        "pair_id": "0a1f8bb0dc569e6ae04122874ba2aa06e2ee40cdd91612e0430dc36e567549fe",
+        "left_asin": "B000WTVZGC",
+        "right_asin": "B003ZZ7TPG",
+        "rule_id": "different_sequel_numerals"
+      },
+      {
+        "pair_id": "0cb768adce8e91547d8517bfc3cc3605c47cfcbdc5a64d38839f23d947821c29",
+        "left_asin": "6303853218",
+        "right_asin": "6303853226",
+        "rule_id": "different_sequel_numerals"
+      },
+      {
+        "pair_id": "0e49beda8d5c310188159213246aa807add72b9579adc5f8b09fc4b4417cc977",
+        "left_asin": "B003R9IELI",
+        "right_asin": "B004CWLRGI",
+        "rule_id": "different_sequel_numerals"
+      },
+      {
+        "pair_id": "11973b98e06b0df1cd226bf5fce4e95b21261c577ae30655d5e8068e171f4202",
+        "left_asin": "B00008EY5P",
+        "right_asin": "B00008EY5Q",
+        "rule_id": "different_sequel_numerals"
+      }
+    ]
+  },
+  "case_limitations": "Actual-source examples, not human gold labels. At least5 groups of each type still require source inspection; no fabricated pairs.",
+  "checkpoint_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\resolution.sqlite3"
+}

@@ -1,0 +1,49 @@
+2026-10-15 20:02:53,589 INFO Verify full Task3 input and provenance
+2026-10-15 20:05:45,486 INFO Profiles committed=2000 last_asin=0780628543
+2026-10-15 20:05:45,486 WARNING Interrupted; committed phase batches preserved. No complete report exported.
+2026-10-15 20:10:21,750 INFO Verify full Task3 input and provenance
+2026-10-15 20:12:56,807 INFO Profiles committed=2000 last_asin=0780628543
+2026-10-15 20:12:56,809 WARNING Interrupted; committed phase batches preserved. No complete report exported.
+2026-10-15 20:13:42,901 INFO Verify full Task3 input and provenance
+2026-10-15 20:16:08,084 INFO Profiles committed=4000 last_asin=0792834909
+2026-10-15 20:16:12,939 INFO Profiles committed=22000 last_asin=6302795788
+2026-10-15 20:16:21,749 INFO Profiles committed=42000 last_asin=B000003KAQ
+2026-10-15 20:16:29,417 INFO Profiles committed=62000 last_asin=B000053GXX
+2026-10-15 20:16:41,784 INFO Profiles committed=82000 last_asin=B00006B1HL
+2026-10-15 20:16:55,113 INFO Profiles committed=102000 last_asin=B00013A0EW
+2026-10-15 20:17:08,317 INFO Profiles committed=122000 last_asin=B0008ENI8E
+2026-10-15 20:17:23,732 INFO Profiles committed=142000 last_asin=B000HEWEUS
+2026-10-15 20:17:36,898 INFO Profiles committed=162000 last_asin=B000VWYJ86
+2026-10-15 20:17:51,661 INFO Profiles committed=182000 last_asin=B001ID0OV8
+2026-10-15 20:17:57,122 INFO Profiles committed=202000 last_asin=B002UOMGVK
+2026-10-15 20:18:01,150 INFO Profiles committed=222000 last_asin=B004DHT8EK
+2026-10-15 20:18:08,575 INFO Profiles committed=242000 last_asin=B006WDECNK
+2026-10-15 20:18:15,828 INFO Generate source-supported candidate pairs; movie seeds=2955 metadata_products=73813
+2026-10-15 20:18:25,521 INFO Candidate pairs=416; skipped high-frequency nonexact blocks=0
+2026-10-15 20:18:28,293 INFO Works=2954; complete-link checks=2; blocked transitive edges=0
+2026-10-15 20:18:28,306 INFO Export decisions, work/product mappings and unlabeled human evaluation queue
+2026-10-15 20:21:37,647 INFO Verify full Task3 input and provenance
+2026-10-15 20:22:59,529 INFO Generate source-supported candidate pairs; movie seeds=2955 metadata_products=73813
+2026-10-15 20:22:59,534 INFO Export decisions, work/product mappings and unlabeled human evaluation queue
+2026-10-16 08:12:47,890 INFO Verify full Task3 input and provenance
+2026-10-16 08:14:14,947 INFO Verify full Task3 input and provenance
+2026-10-16 08:15:28,532 INFO Profiles committed=2000 last_asin=0780628543
+2026-10-16 08:15:30,796 INFO Profiles committed=20000 last_asin=630249186X
+2026-10-16 08:15:34,749 INFO Profiles committed=40000 last_asin=6305746273
+2026-10-16 08:15:38,552 INFO Profiles committed=60000 last_asin=B00004Y50N
+2026-10-16 08:15:44,414 INFO Profiles committed=80000 last_asin=B000066JBH
+2026-10-16 08:15:50,902 INFO Profiles committed=100000 last_asin=B0000E1YTA
+2026-10-16 08:15:57,945 INFO Profiles committed=120000 last_asin=B0007QA0D4
+2026-10-16 08:16:07,057 INFO Profiles committed=140000 last_asin=B000GFLKG2
+2026-10-16 08:16:15,332 INFO Profiles committed=160000 last_asin=B000UO8EZY
+2026-10-16 08:16:23,708 INFO Profiles committed=180000 last_asin=B001F7Q4KW
+2026-10-16 08:16:29,892 INFO Profiles committed=200000 last_asin=B002Q5O6SE
+2026-10-16 08:16:33,703 INFO Profiles committed=220000 last_asin=B0047QRXYE
+2026-10-16 08:16:39,509 INFO Profiles committed=240000 last_asin=B006GVNHP2
+2026-10-16 08:16:46,157 INFO Generate source-supported candidate pairs; movie seeds=2955 metadata_products=73813
+2026-10-16 08:16:55,816 INFO Candidate pairs=416; skipped high-frequency nonexact blocks=0
+2026-10-16 08:16:58,714 INFO Works=2953; complete-link checks=3; blocked transitive edges=0
+2026-10-16 08:16:58,730 INFO Export decisions, work/product mappings and unlabeled human evaluation queue
+2026-10-16 08:24:20,328 INFO Verify full Task3 input and provenance
+2026-10-16 08:25:31,715 INFO Generate source-supported candidate pairs; movie seeds=2955 metadata_products=73813
+2026-10-16 08:25:31,719 INFO Export decisions, work/product mappings and unlabeled human evaluation queue

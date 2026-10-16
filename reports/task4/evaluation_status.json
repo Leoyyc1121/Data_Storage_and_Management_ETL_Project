@@ -1,0 +1,13 @@
+{
+  "status": "awaiting_independent_human_labels",
+  "queue_pairs": 120,
+  "required_minimum_pairs": 100,
+  "manually_labeled_pairs": 0,
+  "precision": null,
+  "recall": null,
+  "f1": null,
+  "manual_review_coverage": 0.0,
+  "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\evaluation_queue.json",
+  "queue_sha256": "7442984e4668af25794223deff191d8dbc21d2c8f9ecd878b50e0790c7f66ae5",
+  "note": "User confirmed no manual labels. This queue is NOT a completed labeled evaluation set. Development cases exclude these pair IDs."
+}
