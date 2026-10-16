@@ -1,0 +1,5 @@
+{
+  "status": "passed",
+  "invalid_year_identity_or_precision_rows": 0,
+  "calendar_dates_not_fabricated": true
+}
