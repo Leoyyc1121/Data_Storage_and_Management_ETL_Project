@@ -1,0 +1,22 @@
+{
+  "status": "complete",
+  "observed_at": "2026-10-16T01:25:54.949361+00:00",
+  "raw_reviews": 7911684,
+  "logical_reviews": 7906538,
+  "exact_same_product_duplicate_records": 5146,
+  "deleted_raw_reviews": 0,
+  "distinct_products": 253059,
+  "distinct_reviewers": 889176,
+  "quality_issue_counts": {
+    "helpful_votes_exceed_total": 43,
+    "invalid_utf8": 62085,
+    "multiline_text_field": 46
+  },
+  "identity_mapping_sha256": "8eb65b283e4265eb6edad92ba4d771257d81f7c125f580599e1f1eca7ba922f2",
+  "database_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v3\\review_work_v2\\reviews.sqlite3",
+  "source_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+  "source_files": 317,
+  "rating_policy": "One valid score per logical byte-identical-within-product review; cross-product/edition candidates kept separate; product-only compilation reviews. Movie aggregation requires single_work mapping and reports identity status, raw count, logical count and valid-score denominator.",
+  "cross_edition_policy": "Candidate blocking by same reviewer/time/normalized text within final mapped work, never auto-delete. Task9 materializes this scoped candidate queue.",
+  "preservation": "Every source review and raw value retained; cleaned text is separate; unresolved UTF8 text remains NULL with original bytes and locators. Ratios only when 0<=helpful<=total and total>0."
+}

@@ -1,0 +1,19 @@
+{
+  "status": "passed_repeated_mapping_and_recovery",
+  "raw_reviews": 7911684,
+  "logical_reviews": 7906538,
+  "exact_same_product_duplicate_mappings": 5146,
+  "deleted_raw_reviews": 0,
+  "first_identity_mapping_sha256": "8eb65b283e4265eb6edad92ba4d771257d81f7c125f580599e1f1eca7ba922f2",
+  "repeat_identity_mapping_sha256": "8eb65b283e4265eb6edad92ba4d771257d81f7c125f580599e1f1eca7ba922f2",
+  "intentional_batch_boundary_interruption": {"committed_reviews": 25000, "python_exit": 130, "note": "PowerShell outer runner reported1; internal CLI uses SystemExit130."},
+  "process_interruption_for_cache_tuning": {"last_committed_before_recovery": 1500000, "next_committed_after_recovery": 1525000, "reason": "Default2MiB SQLite cache caused index IO; only owned process stopped, committed WAL recovered; cleaning code and fingerprint unchanged."},
+  "completed_cleaning_run_id": "d9af358724b943428cb67320e498ed13",
+  "completed_cleaning_at": "2026-10-16T01:17:18.759322+00:00",
+  "repeat_run_id": "2174355c4fa44506af88d560545735d0",
+  "database_size_bytes_observed": 26780393472,
+  "memory_observations": {"first_full_process_peak_working_set_observed_bytes": 1462759424, "repeat_process_peak_working_set_observed_bytes": 1845714944, "scope": "Windows observed process peaks, not a claim of peak across every historical run."},
+  "performance_settings": {"sqlite_cache_kib": 524288, "mmap_bytes": 1073741824, "durability": "synchronous FULL, committed batches and cursor in one transaction"},
+  "raw_source_unchanged": true,
+  "full_field_verification": "Recorded separately in full_verification.json when completed; this mapping proof is not a substitute for it."
+}
