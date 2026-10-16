@@ -9,7 +9,7 @@ from build_target import state,set_state,edge
 class TargetTests(unittest.TestCase):
     def test_selected_queries_preserve_full_acceptance_report(self):self.assertEqual(verification_filename(PARAMETERS,[6]),'query_selection_verification.json')
     def test_default_full_query_report(self):self.assertEqual(verification_filename(PARAMETERS),'query_verification.json')
-    def test_query_scripts_executable_statement_boundaries(self):self.assertEqual(len(list(statements(ROOT/'sql/demo_queries.sql'))),8)
+    def test_query_scripts_executable_statement_boundaries(self):self.assertEqual(len(list(statements(ROOT/'sql/demo_queries.sql'))),10)
     def test_target_phase_state(self):
         d=sqlite3.connect(':memory:');self.assertIsNone(state(d,'ready'))
         d.execute('CREATE TABLE target_state(key TEXT PRIMARY KEY,value TEXT)');set_state(d,'ready',True);self.assertIs(state(d,'ready'),True);d.close()

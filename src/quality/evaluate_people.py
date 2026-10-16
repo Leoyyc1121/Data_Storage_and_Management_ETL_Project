@@ -15,11 +15,20 @@ def evaluate(c,path):
     if {p['label'] for p in complete}!={'same_person','different_person'}:raise ValueError('Both classes required')
     from verify_task5 import verify
     verify(c);tp=fp=fn=tn=unresolved=0
+    registry=None
+    if c.get('person_evaluation_registry'):
+        registry_path=ROOT/c['person_evaluation_registry']
+        registry_audit=json.loads((Path(c['report_root'])/'task5/evaluation_queue_audit.json').read_text(encoding='utf-8'))
+        if hash_file(registry_path)!=registry_audit['registry']['sha256']:raise ValueError('Reserved evaluation registry changed')
+        registry=json.loads(registry_path.read_text(encoding='utf-8'))
+        registry_pairs={r['pair_id']:r for r in registry['pairs']}
     with closing(ro(Path(c['work_dir'])/'integration.sqlite3')) as d:
+        if registry and registry['integration_task5_fingerprint']!=required(d,'task5'):raise ValueError('Reserved evaluation refers to a different model version')
         for p in complete:
             if p.get('labeler_type')!='human' or not all(p.get(k) for k in ('labeled_by','labeled_at','labeling_evidence','rationale')):raise ValueError('Human provenance required; AI/synthetic labels not accepted')
             if datetime.fromisoformat(p['labeled_at']).tzinfo is None:raise ValueError('Timezone required')
-            pair=d.execute('SELECT * FROM person_evaluation_pairs WHERE pair_id=?',(p['pair_id'],)).fetchone()
+            reserved=registry_pairs.get(p['pair_id']) if registry else None
+            pair=dict(left_alias_id=reserved['left']['alias_id'],right_alias_id=reserved['right']['alias_id']) if reserved else None if registry else d.execute('SELECT * FROM person_evaluation_pairs WHERE pair_id=?',(p['pair_id'],)).fetchone()
             if not pair:raise ValueError('Not reserved holdout pair')
             people=[d.execute('SELECT p.* FROM person_aliases a JOIN people p USING(person_id) WHERE a.alias_id=?',(pair[k],)).fetchone() for k in ('left_alias_id','right_alias_id')]
             prediction=people[0]['person_id']==people[1]['person_id'];gold=p['label']=='same_person'

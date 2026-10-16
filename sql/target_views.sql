@@ -37,8 +37,28 @@ SELECT l.asin,count(*) AS logical_review_count,count(r.score) AS valid_score_den
  (SELECT count(*) FROM raw_reviews raw WHERE raw.product_id=l.asin) AS raw_review_count
 FROM logical_reviews l JOIN raw_reviews r ON l.representative_sequence=r.record_sequence GROUP BY l.asin;
 CREATE VIEW IF NOT EXISTS movie_review_statistics AS
+WITH relevant_products AS (SELECT DISTINCT asin FROM product_movie WHERE relationship='single_work'),
+per_product AS (
+ SELECT p.asin,count(*) AS logical_review_count,count(r.score) AS valid_score_denominator,avg(r.score) AS mean_score,
+ (SELECT count(*) FROM raw_reviews raw WHERE raw.product_id=p.asin) AS raw_review_count
+ FROM relevant_products p CROSS JOIN logical_reviews l ON l.asin=p.asin
+ JOIN raw_reviews r ON r.record_sequence=l.representative_sequence GROUP BY p.asin
+)
 SELECT m.movie_id,w.identity_status,sum(p.raw_review_count) AS raw_review_count,
  sum(p.logical_review_count) AS logical_review_count,sum(p.valid_score_denominator) AS valid_score_denominator,
  sum(p.mean_score*p.valid_score_denominator)/NULLIF(sum(p.valid_score_denominator),0) AS mean_score
-FROM product_movie m JOIN movies w USING(movie_id) JOIN product_review_statistics p ON m.asin=p.asin
+FROM product_movie m JOIN movies w USING(movie_id) JOIN per_product p ON m.asin=p.asin
 WHERE m.relationship='single_work' GROUP BY m.movie_id,w.identity_status;
+CREATE VIEW IF NOT EXISTS work_review_observations AS
+WITH ranked AS (
+ SELECT m.movie_id,r.source_review_id,r.product_id,r.review_time_utc,r.review_time_raw,r.source_file_sha256,
+ r.raw_record_sha256,r.record_sequence,r.byte_start,r.byte_end,r.clean_rule_version,r.clean_run_id,
+ row_number() OVER(PARTITION BY m.movie_id ORDER BY CAST(r.review_time_raw AS INTEGER),r.record_sequence) AS position
+ FROM product_movie m CROSS JOIN raw_reviews r INDEXED BY review_product_index ON r.product_id=m.asin
+ WHERE m.relationship='single_work' AND r.review_time_utc IS NOT NULL
+)
+SELECT movie_id,review_time_utc AS earliest_review_time,source_review_id,product_id AS asin,review_time_raw,
+ source_file_sha256,raw_record_sha256,record_sequence,byte_start,byte_end,clean_rule_version,clean_run_id,
+ 'earliest_valid_observed_review_not_release_date' AS observation_semantics,
+ NULL AS inferred_release_bound,'preorder_and_work_identity_conditions_not_verified' AS inference_reason
+FROM ranked WHERE position=1;

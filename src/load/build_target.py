@@ -19,7 +19,7 @@ from integration_common import *
 from resolve_movies import load_config as task4_config
 from clean_reviews import review_root
 
-VERSION='target-field-lineage-v1'
+VERSION='target-field-lineage-v2'
 def state(d,key):
     try:r=d.execute('SELECT value FROM target_state WHERE key=?',(key,)).fetchone()
     except sqlite3.OperationalError:return None

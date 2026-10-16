@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-16T03:44:46.970435+00:00",
+  "observed_at": "2026-10-16T09:06:26.650885+00:00",
   "status": "not_fully_met",
   "strict_assignment_acceptance": false,
   "engineering_integrity": "passed_integrity_not_human_accuracy",
@@ -36,15 +36,16 @@
     },
     {
       "requirement": "Five source-supported kept-separate movie groups",
-      "status": "partial_source_examples_not_human_gold",
-      "reason": "Five sequel pair groups from3 franchises, not teaching/TV volumes. Diversity/disjoint group acceptance still needs review; not claimed as five independent confusion families.",
+      "status": "passed_source_examples_not_human_gold",
+      "reason": "Five source-supported sequel pair groups from3 franchises. Assignment does not require five different franchises. No teaching/TV volumes or claim of HUMAN gold accuracy.",
       "evidence": "reports/task4/kept_separate_case_audit.json"
     },
     {
       "requirement": "Five substantive alias merge groups and five true-homonym examples",
-      "status": "not_met",
-      "reason": "Substantive alias groups0; five source-context separation examples from candidate catalog exist, not all final target people or independently human-confirmed.",
-      "evidence": "reports/task5/kept_separate_case_audit.json"
+      "status": "source_alias_cases_passed_homonym_scope_partial",
+      "actual_substantive_alias_groups": 5,
+      "reason": "Contextual source-supported aliases audited; five source-context separation examples are from candidate catalog, not all final target people or independently human-confirmed.",
+      "evidence": "reports/task5/substantive_alias_audit.json;reports/task5/kept_separate_case_audit.json"
     },
     {
       "requirement": "At least100 independently HUMAN labeled movie pairs and balanced classes",
@@ -69,8 +70,8 @@
     {
       "requirement": "Identity-first release semantics precision and source selection",
       "status": "passed_engineering_with_missing_values",
-      "reason": "169 release years; no invented full dates, region or review upper bounds.",
-      "evidence": "reports/task6/full_verification.json"
+      "reason": "169 release years; sourced work_review_observations stores earliest valid review separately, no invented full dates/regions/review upper bounds.",
+      "evidence": "reports/task6/full_verification.json;sql/target_views.sql"
     },
     {
       "requirement": "All field candidates and sourced scalar/multivalue selections",
@@ -88,12 +89,26 @@
     {
       "requirement": "Field-level source/operation/selection lineage and required reverse queries",
       "status": "passed_engineering",
+      "reason": "Includes all four required directions, now person credits/alias history plus complete bound-entity results without thirty-row truncation.",
       "evidence": "reports/final/full_verification.json;sql/demo_queries.sql"
     },
     {
+      "requirement": "Movie field coverage denominator and full product identification coverage",
+      "status": "passed_corrected",
+      "reason": "169 independently multifield-identified works for movie information;2953 all/provisional work records separately;172/253059 product identification. Conditional100% coverage is not population identification.",
+      "evidence": "reports/final/field_completeness.json"
+    },
+    {
+      "requirement": "Person evaluation pool supports both identity-like and confusing distinct-context candidates",
+      "status": "prepared_not_labeled",
+      "actual_pairs": 120,
+      "reason": "60 cross-work,30 similar-name,30 initials;265 development sources and5 alias case people excluded. Candidate buckets are NOT gold classes.",
+      "evidence": "reports/task5/evaluation_queue_audit.json"
+    },
+    {
       "requirement": "Offline fixed raw-evidence sample covers ALL required difficult cases",
-      "status": "partial",
-      "reason": "Real source sample has merging/nonmovie/compilation/missing dates/conflict/access failure, but substantive real person aliases remain missing.",
+      "status": "source_case_categories_passed_not_human_gold",
+      "reason": "Version2 includes actual contextual person-alias evidence; source-case demonstrations do not substitute for independent HUMAN evaluation.",
       "evidence": "reports/final/offline_sample_manifest.json"
     },
     {
@@ -104,7 +119,7 @@
     {
       "requirement": "At least5 executable result queries",
       "status": "passed",
-      "actual": 8,
+      "actual": 10,
       "required": 5,
       "evidence": "reports/final/query_verification.json"
     },
@@ -117,7 +132,7 @@
   "required_user_or_permitted_new_evidence": [
     "Independent human movie and person labels (>=100 each, both classes, evidence, disagreements).",
     "At least2 additional genuinely supported cross-edition groups.",
-    "At least5 substantive person alias groups and stronger real homonym/alias offline cases."
+    "Stronger independent same-name/different-person examples in final-target context and missing historical original-download evidence."
   ],
   "nonfabrication": "No AI-generated facts, fabricated page success, synthetic HUMAN labels or perfect-accuracy claims. Missing historical acquisition evidence remains unknown."
 }

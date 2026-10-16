@@ -1,25 +1,25 @@
 {
   "status": "passed",
-  "version": "final_v6",
-  "same_input_repeated_via_dag": true,
+  "version": "final_v7",
+  "same_input_repeated": true,
   "all_ordered_table_hashes_equal": true,
   "tables": {
     "field_selections": {
       "rows": 1795037,
-      "ordered_rows_sha256": "c82eaff237142934d2f3f122a7648c00a19c6310ef60baeda3ffe993a4640a25"
+      "ordered_rows_sha256": "487aca7d75bf41660bd7a437c7198d133e2ffdf046e11f0e0fc7d3a772c6f06d"
     },
     "selection_members": {
-      "rows": 287054,
-      "ordered_rows_sha256": "22fc7a34db6ee016e9df478e7dfad8667a85494e2ab491836ccb90ba9e29a983"
+      "rows": 287022,
+      "ordered_rows_sha256": "5a9a03f2ffa0bb5a2c4f700603db19ff25b2c6662413f09e3666c1026d51cade"
     },
     "movies": {
       "rows": 2953,
-      "ordered_rows_sha256": "9404678bf67adad8cf362e04a95a7ca3a4156dafb9bf02ea57d81cc03e1e9b90"
+      "ordered_rows_sha256": "ed1472d0757df89434089794a824b4a9c5197be523d046dd840b691716c6e2ad"
     },
     "editions": {
       "rows": 253059,
       "ordered_rows_sha256": "5bab5cfb2efc5a796b9568bbd8fc047133d970a9826021afe0d0378595281ac7"
     }
   },
-  "execution_evidence": "DAG prefix run f0c43c39857c42bebb7a27653ed83cab completed task5..task7_verify; counts/hashes equal first final_v6 run."
+  "execution_evidence": "Actual same-input stage function repeated; ordered table hashes compared before and after, not inferred from cached statistics."
 }

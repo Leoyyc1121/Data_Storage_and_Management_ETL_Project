@@ -1,7 +1,6 @@
 {
-  "status": "passed_full_selection_replay",
-  "nonmissing_fields_replayed": 163948,
-  "all_field_states_checked": 1795037,
-  "all_retained_raw_records_hash_verified": 92236,
-  "foreign_key_errors": 0
+  "status": "passed",
+  "foreign_key_errors": 0,
+  "invalid_null_status_rows": 0,
+  "all_candidates_preserved": true
 }

@@ -18,7 +18,7 @@ from integration_common import *
 from resolve_movies import load_config as task4_config
 from acquire_imdb import load_config as imdb_config
 
-VERSION='people-context-v3'
+VERSION='people-context-v4'
 TABLES=['work_matches','work_match_candidates','people','person_aliases','credits','person_decisions','person_evaluation_pairs']
 ROLE_FIELDS={'directors':'director','credited_stars':'starring','credited_cast':'cast'}
 def credited_spelling(a,raw_record=None):
@@ -40,6 +40,48 @@ def norm_name(raw):
 def full_name(raw):
     parts=norm_name(raw).split();return len(parts)>=2 and sum(len(x)>1 for x in parts)>=2
 def compatible(a,b):return full_name(a) and full_name(b) and norm_name(a)==norm_name(b)
+
+def name_relation(raw,canonical):
+    """Lexical candidate relation ONLY; never enough to identify a person.
+
+    Two complete shared name tokens plus a verified, independently matched
+    work/role and a unique external person are required by the caller.
+    No arbitrary edit-distance/initials-only identity decisions.
+    """
+    if not full_name(raw) or not full_name(canonical):return None
+    a,b=norm_name(raw).split(),norm_name(canonical).split()
+    if a==b:return 'full_normalized_name'
+    if ''.join(a)==''.join(b):return 'token_boundary_variant'
+    if len(a)>len(b):a,b=b,a
+    if len(a)<2 or len(b)>5 or sum(len(x)>1 for x in a)<2:return None
+    if a[0]!=b[0]:return None
+    # Middle-name additions or an appended surname, with all original full
+    # tokens intact/in order. Conflicting middle initials do not qualify.
+    cursor=0
+    for token in a:
+        while cursor<len(b) and not (token==b[cursor] or len(token)==1 and b[cursor].startswith(token)):
+            cursor+=1
+        if cursor==len(b):return None
+        cursor+=1
+    if a[-1]!=b[-1] and not (len(a)==2 and b[:2]==a):return None
+    return 'contextual_middle_name_or_surname_expansion'
+
+def credit_name_issue(raw):
+    value=norm_name(raw)
+    if len(value.split())>5:return 'name_span_contains_prose_or_compound_credit'
+    if re.search(r'\b(?:award|awards|winner|winning|globe|dolby|digital|chinese|movies|collection|librarian|magazine|laureate|includes|produced|synopsis|newlyweds|descents|vignette|intro)\b',value):return 'non_person_or_prose_role_span'
+    if re.search(r'\b(?:and|an army|new york times|tell them|training day|cinema fumetti|go go crazy|classic movies|super steep)\b',value):return 'non_person_or_compound_role_span'
+    if re.search(r'[a-z][A-Z]{2,}|[A-Z]{2}[a-z]{2,}',raw):return 'fused_name_or_prose_boundary_unresolved'
+    return None
+
+def contextual_people(raw,candidates):
+    # Several principal credits may name the SAME nconst; that is one identity,
+    # not ambiguity. Distinct plausible IDs remain ambiguous.
+    unique={}
+    for n,person in candidates:
+        relation=name_relation(raw,n['primary_name'])
+        if relation:unique[person['person_id']]=(n,person,relation)
+    return list(unique.values())
 def candidate_evidence(profiles,title,directors,actors):
     vals=defaultdict(set);hints=set()
     for p in profiles:
@@ -137,19 +179,20 @@ def build(d,c,t4,imdb,meta,run):
                     if a['field'] not in ROLE_FIELDS:continue
                     source_raw=d.execute('SELECT raw_record FROM source_records WHERE source_record_id=?',(r['source_record_id'],)).fetchone()[0]
                     role=ROLE_FIELDS[a['field']];spelling=credited_spelling(a,source_raw);raw=spelling or a['raw']
-                    if not spelling:
+                    issue=credit_name_issue(spelling) if spelling else 'original_name_span_or_compound_name_unresolved_no_person_created'
+                    if issue:
                         # Preserve the ambiguous original role assertion, NOT a
                         # sentence or compound list pretending to be a person.
-                        d.execute('INSERT OR IGNORE INTO person_decisions VALUES (?,?,?,?,?,?,?,?)',('pd:'+digest_json([mid,role,r['source_record_id'],a['field_locator'],raw]),mid,raw,role,None,'unresolved','original_name_span_or_compound_name_unresolved_no_person_created',js(dict(tconst=tid,source_record_id=r['source_record_id'],source_role_field=a['field'],field_locator=a['field_locator'],original_spelling_resolved=False,normalized_candidate=a['normalized'],candidate_nconsts=[]))))
+                        d.execute('INSERT OR IGNORE INTO person_decisions VALUES (?,?,?,?,?,?,?,?)',('pd:'+digest_json([mid,role,r['source_record_id'],a['field_locator'],raw]),mid,raw,role,None,'unresolved',issue,js(dict(tconst=tid,source_record_id=r['source_record_id'],source_role_field=a['field'],field_locator=a['field_locator'],original_spelling_resolved=bool(spelling),normalized_candidate=a['normalized'],candidate_nconsts=[]))))
                         continue
-                    possible=[(n,per) for n,per in credit_people['director' if role=='director' else 'cast'] if spelling and compatible(a['normalized'],n['primary_name'])]
-                    if len(possible)==1:person=possible[0][1];reason='same_verified_work_role_full_name_unique_external_credit'
+                    possible=contextual_people(raw,credit_people['director' if role=='director' else 'cast'])
+                    if len(possible)==1:person=possible[0][1];reason='same_independently_verified_work_role_unique_external_person_with_name_relation'
                     else:
                         pid=stable('person:','unresolved:'+digest_json([r['source_record_id'],role,raw]));person=dict(person_id=pid)
                         d.execute('INSERT OR IGNORE INTO people VALUES (?,?,?,?,?,?,?)',(pid,None,raw,'provisional_source_context',None,None,r['source_record_id']))
                         reason='ambiguous_or_missing_verified_work_role_person_context'
                     add_credit(d,run,mid,raw,role,None,r['source_record_id'],a['field_locator'],person,'explicit product-source role; original raw prose retained')
-                    d.execute('INSERT OR IGNORE INTO person_decisions VALUES (?,?,?,?,?,?,?,?)',('pd:'+digest_json([mid,role,r['source_record_id'],a['field_locator'],raw]),mid,raw,role,person['person_id'],'auto_context_bind' if len(possible)==1 else 'unresolved',reason,js(dict(tconst=tid,source_record_id=r['source_record_id'],source_role_field=a['field'],field_locator=a['field_locator'],original_spelling_resolved=bool(spelling),candidate_nconsts=[n['nconst'] for n,_ in possible]))))
+                    d.execute('INSERT OR IGNORE INTO person_decisions VALUES (?,?,?,?,?,?,?,?)',('pd:'+digest_json([mid,role,r['source_record_id'],a['field_locator'],raw]),mid,raw,role,person['person_id'],'auto_context_bind' if len(possible)==1 else 'unresolved',reason,js(dict(tconst=tid,source_record_id=r['source_record_id'],source_role_field=a['field'],field_locator=a['field_locator'],original_spelling_resolved=bool(spelling),name_relation=possible[0][2] if len(possible)==1 else None,candidate_nconsts=[n['nconst'] for n,_,_ in possible],work_identity_rule_uses_exact_names_only=True))))
     aliases=defaultdict(list);by_name=defaultdict(list)
     for a in d.execute('SELECT * FROM person_aliases ORDER BY alias_id'):
         aliases[a['person_id']].append(dict(a));by_name[a['normalized_name']].append(dict(a))
@@ -161,6 +204,8 @@ def build(d,c,t4,imdb,meta,run):
         representatives={a['person_id']:a for a in group}
         values=sorted(representatives.values(),key=lambda x:x['alias_id'])
         for a,b in zip(values,values[1:]):pairs[digest_json(sorted([a['alias_id'],b['alias_id']]))]=(a,b,'same_name_different_context_candidate')
+    development=set(c.get('development_source_records',[]))
+    pairs={k:v for k,v in pairs.items() if v[0]['source_record_id'] not in development and v[1]['source_record_id'] not in development}
     chosen=[]
     for stratum in sorted({v[2] for v in pairs.values()}):
         chosen.extend(sorted([(k,*v) for k,v in pairs.items() if v[2]==stratum],key=lambda x:digest_json(['person-holdout-v1',x[0]]))[:c['evaluation_pairs']//2])
@@ -170,7 +215,7 @@ def build(d,c,t4,imdb,meta,run):
     for key,a,b,stratum in chosen:
         d.execute('INSERT INTO person_evaluation_pairs VALUES (?,?,?,?)',(key,a['alias_id'],b['alias_id'],stratum))
         queue.append(dict(pair_id=key,stratum=stratum,left={k:v for k,v in a.items() if k!='person_id'},right={k:v for k,v in b.items() if k!='person_id'},label=None,labeled_by=None,labeler_type=None,labeled_at=None,labeling_evidence=None,rationale=None))
-    save_json(Path(c['work_dir'])/'person_evaluation_queue.json',dict(partition='independent_human_evaluation',predictions_hidden=True,pairs=queue,development_pairs=[]))
+    save_json(Path(c['work_dir'])/'person_evaluation_queue.json',dict(partition='reserved_for_independent_human_evaluation_not_yet_labeled',predictions_hidden=True,pairs=queue,development_source_records=sorted(development)))
 def verify(d):
     if d.execute('PRAGMA foreign_key_check').fetchone():raise ValueError('Foreign keys')
     for r in d.execute('SELECT * FROM work_matches WHERE tconst IS NOT NULL'):
@@ -186,7 +231,7 @@ def run(c):
     tc=task2_config(task3_config(t['task3_config'])['task2_config'])
     with run_lock(c['work_dir']),closing(open_db(c)) as d,closing(ro(Path(t['work_dir'])/'resolution.sqlite3')) as t4,closing(ro(Path(ic['work_dir'])/'catalog.sqlite3')) as imdb,closing(ro(Path(tc['work_dir'])/'metadata.sqlite3')) as meta:
         schema(d)
-        inputs=dict(version=VERSION,implementation=hash_file(__file__),common_implementation=hash_file(ROOT/'src/transform/integration_common.py'),evaluation_pairs=c['evaluation_pairs'],task4_state=[tuple(r) for r in t4.execute('SELECT * FROM state ORDER BY key')],imdb_state=[tuple(r) for r in imdb.execute('SELECT * FROM state ORDER BY key')])
+        inputs=dict(version=VERSION,implementation=hash_file(__file__),common_implementation=hash_file(ROOT/'src/transform/integration_common.py'),evaluation_pairs=c['evaluation_pairs'],development_source_records=c.get('development_source_records',[]),task4_state=[tuple(r) for r in t4.execute('SELECT * FROM state ORDER BY key')],imdb_state=[tuple(r) for r in imdb.execute('SELECT * FROM state ORDER BY key')])
         rid=begin(d,'task5',inputs)
         if rid:
             with d:build(d,c,t4,imdb,meta,rid);finish(d,'task5',rid)

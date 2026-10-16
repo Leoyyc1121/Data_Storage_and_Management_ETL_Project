@@ -173,6 +173,12 @@
       ]
     },
     {
+      "id": "alias_audit",
+      "depends_on": ["task5_verify"],
+      "module": "src.quality.alias_audit",
+      "args": []
+    },
+    {
       "id": "task7",
       "depends_on": [
         "task6"
@@ -249,6 +255,12 @@
         "--config",
         "config/integration.example.json"
       ]
+    },
+    {
+      "id": "field_completeness",
+      "depends_on": ["target_verify"],
+      "module": "src.quality.field_completeness",
+      "args": []
     }
   ]
 }

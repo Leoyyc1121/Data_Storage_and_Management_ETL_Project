@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "final_v6",
-  "same_input_repeated_via_dag": true,
+  "version": "final_v7",
+  "same_input_repeated": true,
   "all_ordered_table_hashes_equal": true,
   "tables": {
     "work_matches": {
@@ -13,25 +13,25 @@
       "ordered_rows_sha256": "a10c45c69784de397b9f5a45a03b2da650acfc1fbd66045f4c7f6cce5e041e06"
     },
     "people": {
-      "rows": 1962,
-      "ordered_rows_sha256": "407533ee29b332481d8301e20ac51c231524cd2d63dabc5ee33b38fea1ec889c"
+      "rows": 1918,
+      "ordered_rows_sha256": "fc5e7153ddd06218a7d3db79a0d1b810f1f57fd33c543a31a6ebde883c733e63"
     },
     "person_aliases": {
-      "rows": 2385,
-      "ordered_rows_sha256": "9372db09ee2b21b450c61343f8e62da31d3f2cb17319e34f1db3206e2dd8e277"
+      "rows": 2354,
+      "ordered_rows_sha256": "aff59f791de8892b0b847868877f5e0a173bb4bbcf76d2b323a675eab279de5f"
     },
     "credits": {
-      "rows": 2392,
-      "ordered_rows_sha256": "33ffc472765f1ae93b61cab2cfc8a6023efcf77f4c4a78e2255e07680af8a905"
+      "rows": 2360,
+      "ordered_rows_sha256": "a75bd15f41d823b66bf3b2959d67c877e66e14fdc893394c6d06bc8bc581f70b"
     },
     "person_decisions": {
       "rows": 554,
-      "ordered_rows_sha256": "fd5312a3aab5efa0e43256cf8536245a8f30ce078f254ca79443460a6623468f"
+      "ordered_rows_sha256": "a8019d7d4a3c25feb4ccc0c2ea38932e9c11493590a3f0e4bfe1588ed395c02f"
     },
     "person_evaluation_pairs": {
       "rows": 120,
-      "ordered_rows_sha256": "4581f38adf6ba627be3ed07158733c6ab21a2bbf112fdee55e75adc516a91814"
+      "ordered_rows_sha256": "e8d4c569834b11767ab67721a8d3c3c5b0418129091552d926e947998a9704c2"
     }
   },
-  "execution_evidence": "DAG prefix run f0c43c39857c42bebb7a27653ed83cab completed task5..task7_verify; counts/hashes equal first final_v6 run."
+  "execution_evidence": "Actual same-input stage function repeated; ordered table hashes compared before and after, not inferred from cached statistics."
 }

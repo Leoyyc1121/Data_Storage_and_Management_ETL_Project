@@ -1,0 +1,6 @@
+{
+  "status": "passed_full_earliest_observation_replay",
+  "work_observations": 2953,
+  "mismatches": 0,
+  "semantics": "Every returned work observation checked against minimum valid source Unix time, contributing raw review, source hash/offsets. No release inference made."
+}

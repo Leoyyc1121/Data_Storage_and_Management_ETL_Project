@@ -28,7 +28,7 @@ from classify_products import load_config as task3_config,load_rules as class_ru
 from acquire_products import load_config as task2_config
 from acquire_imdb import load_config as imdb_config
 from build_target import run as load_target
-BASE=ROOT/'data/acceptance/fixed_v1'
+BASE=ROOT/'data/acceptance/fixed_v2'
 ASINS=['630242335X','6305252599','B006QS9M1S','B006QS9MC2','B001EBO90G','B001L67A3M','B000WTVZGC','B003ZZ7TPG']
 def export(c):
     BASE.mkdir(parents=True,exist_ok=True);packet=BASE/'evidence.json'
@@ -41,6 +41,13 @@ def export(c):
         for r in t4.execute("SELECT asin FROM products WHERE json_extract(profile,'$.classification_reason')='inner_asin_conflict'"):asins.add(r[0])
         for r in integrated.execute("SELECT movie_id FROM work_matches WHERE status='verified_multifield' ORDER BY movie_id LIMIT 2"):
             asins.update(x[0] for x in t4.execute('SELECT asin FROM product_movie WHERE movie_id=?',(r[0],)))
+        # Source-supported substantive variants are demonstration/development
+        # examples, NOT human evaluation labels. Include actual work evidence.
+        from resolve_people import name_relation
+        alias_people=set()
+        for r in integrated.execute('SELECT a.movie_id,a.raw_name,p.person_id,p.canonical_name FROM person_aliases a JOIN people p USING(person_id) WHERE p.nconst IS NOT NULL ORDER BY p.person_id,a.alias_id'):
+            if name_relation(r['raw_name'],r['canonical_name'])=='contextual_middle_name_or_surname_expansion' and (r['person_id'] in alias_people or len(alias_people)<5):
+                alias_people.add(r['person_id']);asins.update(x[0] for x in t4.execute('SELECT asin FROM product_movie WHERE movie_id=?',(r['movie_id'],)))
         raw_meta=[dict(r) for asin in sorted(asins) for r in meta.execute('SELECT * FROM records WHERE asin=? ORDER BY source_id,record_sequence',(asin,))]
         for r in raw_meta:r['raw_record_base64']=base64.b64encode(r.pop('raw_record')).decode()
         schema=[r[0] for r in t4.execute("SELECT sql FROM sqlite_master WHERE type='table' AND name NOT LIKE 'sqlite_%'")]
@@ -55,21 +62,21 @@ def export(c):
     with (ROOT/'data/raw/movies.txt').open('rb') as stream:
         for asin,r in sorted(found.items()):
             stream.seek(r['byte_start']);raw=stream.read(r['byte_end']-r['byte_start']);raw_reviews.append(dict(**r,raw_base64=base64.b64encode(raw).decode(),raw_sha256=hashlib.sha256(raw).hexdigest()))
-    value=dict(version='fixed-real-evidence-v1',asins=sorted(asins),metadata_records=raw_meta,reviews=raw_reviews,source_review_sha256=manifest['source_sha256'],source_review_run_id=manifest['run_id'],task4_schema=schema,release_schema=None,
+    value=dict(version='fixed-real-evidence-v2',asins=sorted(asins),metadata_records=raw_meta,reviews=raw_reviews,source_review_sha256=manifest['source_sha256'],source_review_run_id=manifest['run_id'],task4_schema=schema,release_schema=None,
         acquisition_failure=dict(status='not_collected',evidence_reference='reports/task2/access_policy.json',reason='retained_original_robots_503_policy_failure_not_a_successful_page'))
     with closing(ro(Path(c['work_dir'])/'integration.sqlite3')) as d:value['release_schema']=d.execute("SELECT sql FROM sqlite_master WHERE name='release_info'").fetchone()[0]
     save_json(packet,value)
     with closing(ro(Path(im['work_dir'])/'catalog.sqlite3')) as source,closing(sqlite3.connect(BASE/'catalog.sqlite3')) as dest:source.backup(dest)
     result=dict(version=value['version'],status='fixed_local_raw_evidence_exported',asins=sorted(asins),review_records=len(raw_reviews),metadata_records=len(raw_meta),
         packet=dict(path=str(packet.resolve()),bytes=packet.stat().st_size,sha256=hash_file(packet)),catalog=dict(path=str((BASE/'catalog.sqlite3').resolve()),sha256=hash_file(BASE/'catalog.sqlite3')),
-        source_review_sha256=manifest['source_sha256'],coverage=['real_cross_edition_groups','non_movies','compilations','missing_full_dates','source_inner_asin_conflicts','actual_policy_acquisition_failure','formatting_name_aliases_only'],
-        unmet=['Substantive real person aliases not supplied; formatting aliases are not5 validated alias cases.','Independent HUMAN movie/person labels remain absent.'],distribution='Local raw/IMDb-derived evidence not committed. Restore registered sources and run export once, preserve hashes; subsequent run needs no network.')
+        source_review_sha256=manifest['source_sha256'],coverage=['real_cross_edition_groups','non_movies','compilations','missing_full_dates','source_inner_asin_conflicts','actual_policy_acquisition_failure','substantive_contextual_person_aliases'],
+        substantive_alias_groups=len(alias_people),unmet=(['Fewer than5 substantive contextual alias groups in fixed source evidence.'] if len(alias_people)<5 else [])+['Independent HUMAN movie/person labels remain absent.'],distribution='Local raw/IMDb-derived evidence not committed. Restore registered sources and run export once, preserve hashes; subsequent run needs no network. Old fixed_v1 evidence preserved.')
     save_json(ROOT/'reports/final/offline_sample_manifest.json',result);return result
 def execute(c,stop_after_phase=None):
     public=json.loads((ROOT/'reports/final/offline_sample_manifest.json').read_text(encoding='utf-8'))
     for key in ('packet','catalog'):
         if hash_file(public[key]['path'])!=public[key]['sha256']:raise ValueError('Fixed evidence packet changed')
-    packet=json.loads((BASE/'evidence.json').read_text(encoding='utf-8'));work=BASE/'run_v8';work.mkdir(parents=True,exist_ok=True)
+    packet=json.loads((BASE/'evidence.json').read_text(encoding='utf-8'));work=BASE/'run_v1';work.mkdir(parents=True,exist_ok=True)
     core_files=['src/extract/parse_reviews.py','src/transform/classify_products.py','src/transform/resolve_movies.py','src/transform/resolve_people.py','src/transform/enrich_release.py','src/transform/select_fields.py','src/transform/clean_reviews.py','src/load/build_target.py']
     signature=digest_json(dict(packet=public['packet']['sha256'],catalog=public['catalog']['sha256'],helper=hash_file(__file__),core={f:hash_file(ROOT/f) for f in core_files}))
     reg=work/'run_registration.json'
@@ -147,6 +154,9 @@ def execute(c,stop_after_phase=None):
     sys.path.insert(0,str(ROOT/'src/quality'))
     from run_queries import run as execute_queries
     outcome['queries']=execute_queries(cfg);outcome['catalog_raw_field_replay']=catalog_verification
+    from alias_audit import audit as verify_alias_cases
+    outcome['substantive_alias_audit']=verify_alias_cases(cfg)
+    if outcome['substantive_alias_audit']['substantive_person_groups']<5:raise ValueError('Fixed sample failed actual substantive alias coverage')
     save_json(work/'integration.json',cfg)
     save_json(ROOT/'reports/final/offline_acceptance.json',outcome);return outcome
 def main():

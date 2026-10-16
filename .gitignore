@@ -92,4 +92,8 @@ dist/
 # ETL orchestration checkpoints and permitted local-only acceptance evidence
 /data/pipeline/
 /data/acceptance/
+/data/evaluation/
 !reports/task8/execution.log
+# Small aggregate-only execution logs for the final corrected DAG and prefix.
+!reports/pipeline/56349d5a180f4e5eb39d44cdb87ddb44-*.log
+!reports/pipeline/aa38aea2b9e04b269ed2ff699dc8ac1e-*.log

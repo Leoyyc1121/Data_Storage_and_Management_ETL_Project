@@ -1,0 +1,18 @@
+{
+  "status": "mixed_independent_candidates_reserved_NOT_HUMAN_labeled",
+  "pairs": 120,
+  "candidate_strata": {
+    "cross_work_identity_candidate": 60,
+    "similar_name_different_context_candidate": 30,
+    "shared_initials_different_context_candidate": 30
+  },
+  "human_labeled_pairs": 0,
+  "registry": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\people_v2\\reserved_pairs.json",
+    "sha256": "90eef1a1e9299337e10e129d33afae22ea0d9e6673265258c9bde2d7a1523c42"
+  },
+  "integration_task5_fingerprint": "8c19b4e8ab47d7ef900165e10779c0c0f44ca6428ccff88bce612b05706e1f80",
+  "excluded_development_sources": 265,
+  "excluded_development_people": 5,
+  "scope": "Separate read-only evaluation registry; supersedes the positive-only in-DB v7 candidate queue for future person evaluation. Candidate buckets are NOT manually established gold classes."
+}

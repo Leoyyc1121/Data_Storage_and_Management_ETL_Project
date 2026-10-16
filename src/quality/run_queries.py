@@ -32,10 +32,10 @@ def run(c,show_rows=False,parameters=None,query_numbers=None):
             if query_numbers and i not in query_numbers:continue
             rows=d.execute(sql,bindings).fetchall();result.append(dict(query=i,status='passed',returned_rows=len(rows)))
             if show_rows:print(js(dict(query=i,rows=[dict(r) for r in rows])))
-    save_json(Path(c['report_root'])/'final'/verification_filename(bindings,query_numbers),dict(status='passed',queries=result,scope='Listed queries actually executed read-only; filtered/selected invocations do not overwrite full eight-query acceptance proof. Row content local only due to source terms.'));return result
+    save_json(Path(c['report_root'])/'final'/verification_filename(bindings,query_numbers),dict(status='passed',queries=result,scope='Listed queries actually executed read-only; filtered/selected invocations do not overwrite the complete query acceptance proof. Row content local only due to source terms.'));return result
 def main():
     if hasattr(sys.stdout,'reconfigure'):sys.stdout.reconfigure(encoding='utf-8')
-    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--config',type=Path,default=ROOT/'config/integration.example.json');p.add_argument('--show-rows',action='store_true');p.add_argument('--query',type=int,nargs='+',choices=range(1,9))
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--config',type=Path,default=ROOT/'config/integration.example.json');p.add_argument('--show-rows',action='store_true');p.add_argument('--query',type=int,nargs='+',choices=range(1,11))
     for key in PARAMETERS:p.add_argument('--'+key.replace('_','-'))
     a=p.parse_args();print(js(run(load_config(a.config),a.show_rows,{k:getattr(a,k) for k in PARAMETERS},a.query)))
 if __name__=='__main__':main()

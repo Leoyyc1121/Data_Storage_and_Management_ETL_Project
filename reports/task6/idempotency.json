@@ -1,7 +1,7 @@
 {
   "status": "passed",
-  "version": "final_v6",
-  "same_input_repeated_via_dag": true,
+  "version": "final_v7",
+  "same_input_repeated": true,
   "all_ordered_table_hashes_equal": true,
   "tables": {
     "release_info": {
@@ -9,5 +9,5 @@
       "ordered_rows_sha256": "f4cfecf0ea7815a252c873b05dd12ecb59f025b7172e55398145546a689e3160"
     }
   },
-  "execution_evidence": "DAG prefix run f0c43c39857c42bebb7a27653ed83cab completed task5..task7_verify; counts/hashes equal first final_v6 run."
+  "execution_evidence": "Actual same-input stage function repeated; ordered table hashes compared before and after, not inferred from cached statistics."
 }

@@ -3,45 +3,54 @@
   "queries": [
     {
       "query": 1,
-      "returned_rows": 30,
-      "status": "passed"
+      "status": "passed",
+      "returned_rows": 30
     },
     {
       "query": 2,
-      "returned_rows": 30,
-      "status": "passed"
+      "status": "passed",
+      "returned_rows": 30
     },
     {
       "query": 3,
-      "returned_rows": 30,
-      "status": "passed"
+      "status": "passed",
+      "returned_rows": 30
     },
     {
       "query": 4,
-      "returned_rows": 30,
-      "status": "passed"
+      "status": "passed",
+      "returned_rows": 30
     },
     {
       "query": 5,
-      "returned_rows": 30,
-      "status": "passed"
+      "status": "passed",
+      "returned_rows": 30
     },
     {
       "query": 6,
-      "returned_rows": 30,
-      "status": "passed"
+      "status": "passed",
+      "returned_rows": 30
     },
     {
       "query": 7,
-      "returned_rows": 30,
-      "status": "passed"
+      "status": "passed",
+      "returned_rows": 30
     },
     {
       "query": 8,
-      "returned_rows": 12,
-      "status": "passed"
+      "status": "passed",
+      "returned_rows": 12
+    },
+    {
+      "query": 9,
+      "status": "passed",
+      "returned_rows": 30
+    },
+    {
+      "query": 10,
+      "status": "passed",
+      "returned_rows": 30
     }
   ],
-  "scope": "All eight full-target queries actually executed read-only in DAG run a2d5cdee5ee94bcdadea688f576e8f9b; rows local only. Later selected user queries are recorded separately.",
-  "execution_log": "reports/pipeline/a2d5cdee5ee94bcdadea688f576e8f9b-demo_queries.log"
+  "scope": "Listed queries actually executed read-only; filtered/selected invocations do not overwrite the complete query acceptance proof. Row content local only due to source terms."
 }

@@ -1,15 +1,15 @@
 {
   "status": "passed",
-  "input_fingerprint": "b22ba0c9398fa106b86bb826a6168fdc094b39db4c270d4c3f7e4b24e1015bd0",
-  "physical_file_size_bytes": 34921340928,
-  "published_file_sha256": "01ea490714bb78961d5cc05fe8cb6123a7fa073de3b6bad3030cdff8ed63e14b",
+  "input_fingerprint": "c5cb47e10277ff20f8b9d00af01c82db7040c0e56d83910e5b56c149d2dc7066",
+  "physical_file_size_bytes": 34920345600,
+  "published_file_sha256": "a0d96ffc1b3a80efc6ce64dca175a0a4f47eb441643d6f92178fde0e9dc6e4d6",
   "intentional_interruption": {
     "phase": "review_copy",
     "python_exit_code": 130,
-    "scope": "Actual full 7911684-review target backup completed before interruption; same fingerprint resumed remaining phases."
+    "scope": "Actual final_v7 complete review copy checkpoint; intentional stop and observed Python LASTEXITCODE130, then resumed remaining phases."
   },
   "resumed_via_dag": {
-    "run_id": "a2d5cdee5ee94bcdadea688f576e8f9b",
+    "run_id": "56349d5a180f4e5eb39d44cdb87ddb44",
     "status": "complete",
     "jobs": [
       {
@@ -26,6 +26,11 @@
         "job": "demo_queries",
         "status": "complete",
         "exit_code": 0
+      },
+      {
+        "job": "field_completeness",
+        "status": "complete",
+        "exit_code": 0
       }
     ]
   },
@@ -37,15 +42,15 @@
       "reviewers": 889176,
       "editions": 253059,
       "movies": 2953,
-      "people": 1962,
-      "credits": 2392,
-      "movie_person": 2330,
+      "people": 1918,
+      "credits": 2360,
+      "movie_person": 2299,
       "movie_genres": 2157,
       "source_records": 283547,
-      "assertions": 1406330,
-      "field_selections": 2830857,
-      "selection_members": 1322874,
-      "lineage_edges": 7742034,
+      "assertions": 1406034,
+      "field_selections": 2830593,
+      "selection_members": 1322578,
+      "lineage_edges": 7740850,
       "cross_edition_candidates": 243
     },
     "after_counts": {
@@ -54,19 +59,19 @@
       "reviewers": 889176,
       "editions": 253059,
       "movies": 2953,
-      "people": 1962,
-      "credits": 2392,
-      "movie_person": 2330,
+      "people": 1918,
+      "credits": 2360,
+      "movie_person": 2299,
       "movie_genres": 2157,
       "source_records": 283547,
-      "assertions": 1406330,
-      "field_selections": 2830857,
-      "selection_members": 1322874,
-      "lineage_edges": 7742034,
+      "assertions": 1406034,
+      "field_selections": 2830593,
+      "selection_members": 1322578,
+      "lineage_edges": 7740850,
       "cross_edition_candidates": 243
     },
     "all_fifteen_counts_compared_equal": true
   },
-  "source_update_demonstration": "people-context-v2 -> v3 recomputed final_v6 identities/fields; old integration final_v5 retained. Superseded unpublished target copy removed after saving diagnostic; no original/review data removed.",
-  "scope": "Engineering integrity/recovery/idempotence only, not human matching accuracy."
+  "source_update_demonstration": "people-context-v3 -> v4 recomputed final_v7; final_v6 integration and target retained.",
+  "scope": "Actual engineering checks, NOT HUMAN accuracy."
 }

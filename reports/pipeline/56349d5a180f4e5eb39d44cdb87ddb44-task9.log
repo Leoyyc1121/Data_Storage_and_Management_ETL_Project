@@ -1,0 +1,3 @@
+INFO:root:Atomic load of entities, candidates, selections and raw source records
+INFO:root:Build target indexes and queryable lineage/statistics views
+{"file_size_bytes":34920345600,"input_fingerprint":"c5cb47e10277ff20f8b9d00af01c82db7040c0e56d83910e5b56c149d2dc7066","semantics":"SQLite equivalent relational target, preserving every original review. Raw/normalized field assertions, selection/unselected members, rule/run/times, source locators and parent-child graph. Review provenance is a queryable view; no fake human labels.","sha256":"a0d96ffc1b3a80efc6ce64dca175a0a4f47eb441643d6f92178fde0e9dc6e4d6","status":"complete","target_path":"D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\target\\final_v7\\etl.sqlite3"}
