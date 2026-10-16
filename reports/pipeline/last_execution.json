@@ -1,0 +1,27 @@
+{
+  "run_id": "a2d5cdee5ee94bcdadea688f576e8f9b",
+  "status": "complete",
+  "definition_version": "course-etl-dag-v1",
+  "definition_sha256": "1d907eb4f74f82838e0753a7064797e0880fe22939176a962fc7a65f8f7e88da",
+  "results": [
+    {
+      "job": "task9",
+      "status": "complete",
+      "exit_code": 0,
+      "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-task9.log"
+    },
+    {
+      "job": "target_verify",
+      "status": "complete",
+      "exit_code": 0,
+      "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-target_verify.log"
+    },
+    {
+      "job": "demo_queries",
+      "status": "complete",
+      "exit_code": 0,
+      "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-demo_queries.log"
+    }
+  ],
+  "recovery": "Rerun same command. Each stage rechecks fingerprint and resumes own committed batches/complete phases. --from-job selects affected descendants after source/rule change; use NEW version directories and preserve old source/decisions. No automatic threshold or access-policy overrides."
+}

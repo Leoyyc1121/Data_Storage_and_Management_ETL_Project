@@ -1,0 +1,70 @@
+{
+  "status": "passed_offline_core_end_to_end",
+  "scope": "fixed_acceptance_sample_not_full_dataset",
+  "counts": {
+    "raw_reviews": 17,
+    "logical_reviews": 17,
+    "editions": 17,
+    "movies": 6,
+    "people": 47,
+    "credits": 55,
+    "field_selections": 541,
+    "lineage_edges": 3240
+  },
+  "packet_sha256": "9d46ed3fc45f108c4e1e8492585262462a34656e2852d96daa58cf38b6aa17a8",
+  "target_action": "already_complete_no_insert",
+  "actual_network_requests": 0,
+  "human_evaluation_completed": false,
+  "coverage_limitations": [
+    "Substantive real person aliases not supplied; formatting aliases are not5 validated alias cases.",
+    "Independent HUMAN movie/person labels remain absent."
+  ],
+  "queries": [
+    {
+      "query": 1,
+      "status": "passed",
+      "returned_rows": 9
+    },
+    {
+      "query": 2,
+      "status": "passed",
+      "returned_rows": 7
+    },
+    {
+      "query": 3,
+      "status": "passed",
+      "returned_rows": 6
+    },
+    {
+      "query": 4,
+      "status": "passed",
+      "returned_rows": 14
+    },
+    {
+      "query": 5,
+      "status": "passed",
+      "returned_rows": 6
+    },
+    {
+      "query": 6,
+      "status": "passed",
+      "returned_rows": 30
+    },
+    {
+      "query": 7,
+      "status": "passed",
+      "returned_rows": 17
+    },
+    {
+      "query": 8,
+      "status": "passed",
+      "returned_rows": 12
+    }
+  ],
+  "catalog_raw_field_replay": {
+    "status": "passed_complete_retained_raw_TSV_field_replay",
+    "raw_records_compared": 194887,
+    "foreign_key_errors": 0,
+    "scope": "Retained candidate subset only; full archive scan/CRC evidence separately registered. Not identity matching accuracy."
+  }
+}

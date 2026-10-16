@@ -1,0 +1,11 @@
+{
+  "status": "passed",
+  "queries": [
+    {
+      "query": 6,
+      "status": "passed",
+      "returned_rows": 30
+    }
+  ],
+  "scope": "Listed queries actually executed read-only; filtered/selected invocations do not overwrite full eight-query acceptance proof. Row content local only due to source terms."
+}

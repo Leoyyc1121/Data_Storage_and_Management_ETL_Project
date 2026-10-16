@@ -1,0 +1,25 @@
+{
+  "status": "passed_actual_offline_target_interruption_and_repeat",
+  "scope": "Fixed real-source17-review sample, not full dataset or HUMAN evaluation",
+  "sample_packet_sha256": "9d46ed3fc45f108c4e1e8492585262462a34656e2852d96daa58cf38b6aa17a8",
+  "current_run_directory": "data/acceptance/fixed_v1/run_v8",
+  "interrupted_after_phase": "integration",
+  "resumed_action": "complete",
+  "same_input_repeat_action": "already_complete_no_insert",
+  "counts_before_and_after_repeat": {
+    "raw_reviews": 17,
+    "logical_reviews": 17,
+    "editions": 17,
+    "movies": 6,
+    "people": 47,
+    "credits": 55,
+    "field_selections": 541,
+    "lineage_edges": 3240
+  },
+  "query_count_executed": 8,
+  "network_requests_during_replay": 0,
+  "old_sample_run_directories": "run_v1..v7 retained local target/schema/provenance diagnostics; not independent evaluation data",
+  "limitations": "Substantive person-alias cases and independent human labels absent. Raw/derived source content local-only; public Git contains hash/recovery manifest.",
+  "raw_catalog_records_replayed": 194887,
+  "core_and_packet_fingerprint_guard": true
+}

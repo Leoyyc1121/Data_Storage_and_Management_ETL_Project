@@ -1,0 +1,8 @@
+{
+  "status": "complete",
+  "target_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\target\\final_v6\\etl.sqlite3",
+  "input_fingerprint": "b22ba0c9398fa106b86bb826a6168fdc094b39db4c270d4c3f7e4b24e1015bd0",
+  "file_size_bytes": 34921340928,
+  "sha256": "01ea490714bb78961d5cc05fe8cb6123a7fa073de3b6bad3030cdff8ed63e14b",
+  "semantics": "SQLite equivalent relational target, preserving every original review. Raw/normalized field assertions, selection/unselected members, rule/run/times, source locators and parent-child graph. Review provenance is a queryable view; no fake human labels."
+}

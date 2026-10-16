@@ -1,0 +1,123 @@
+{
+  "observed_at": "2026-10-16T03:44:46.970435+00:00",
+  "status": "not_fully_met",
+  "strict_assignment_acceptance": false,
+  "engineering_integrity": "passed_integrity_not_human_accuracy",
+  "checks": [
+    {
+      "requirement": "Full review/product/user processing and reconciliation",
+      "status": "passed",
+      "evidence": "reports/final/full_verification.json"
+    },
+    {
+      "requirement": "Original compressed source SHA256 and exact original download time",
+      "status": "partial",
+      "reason": "No registered compressed-original checksum; download date known, exact original time NULL. Do not invent historical evidence.",
+      "evidence": "reports/task1/source_manifest.reported.json"
+    },
+    {
+      "requirement": "Full ASIN manifest and permitted acquisition with failures/coverage",
+      "status": "passed_with_access_limit",
+      "reason": "253059 statuses retained; HTML successes0, UCSD metadata73813 ASIN. Restriction evidence and alternative source scope disclosed.",
+      "evidence": "reports/task2/full_verification.json"
+    },
+    {
+      "requirement": "Content categories and all original review mappings",
+      "status": "passed_engineering",
+      "reason": "All products processed; unresolved classification not presented as verified movie census.",
+      "evidence": "reports/task3/full_verification.json"
+    },
+    {
+      "requirement": "At least5 actual cross-edition movie merge groups",
+      "status": "not_met",
+      "actual": 3,
+      "required": 5,
+      "evidence": "reports/task4/full_statistics.json"
+    },
+    {
+      "requirement": "Five source-supported kept-separate movie groups",
+      "status": "partial_source_examples_not_human_gold",
+      "reason": "Five sequel pair groups from3 franchises, not teaching/TV volumes. Diversity/disjoint group acceptance still needs review; not claimed as five independent confusion families.",
+      "evidence": "reports/task4/kept_separate_case_audit.json"
+    },
+    {
+      "requirement": "Five substantive alias merge groups and five true-homonym examples",
+      "status": "not_met",
+      "reason": "Substantive alias groups0; five source-context separation examples from candidate catalog exist, not all final target people or independently human-confirmed.",
+      "evidence": "reports/task5/kept_separate_case_audit.json"
+    },
+    {
+      "requirement": "At least100 independently HUMAN labeled movie pairs and balanced classes",
+      "status": "not_met",
+      "actual": 0,
+      "required": 100,
+      "evidence": "reports/task4/evaluation_status.json"
+    },
+    {
+      "requirement": "At least100 independently HUMAN labeled person pairs and balanced classes",
+      "status": "not_met",
+      "actual": 0,
+      "required": 100,
+      "evidence": "reports/task5/full_statistics.json"
+    },
+    {
+      "requirement": "Measured matching Precision Recall F1 errors and manual/unresolved coverage",
+      "status": "not_met",
+      "reason": "Metrics remain NULL until legitimate labels supplied; structural replay and synthetic tests are not accuracy.",
+      "evidence": "src/quality/evaluate_task4.py;src/quality/evaluate_people.py"
+    },
+    {
+      "requirement": "Identity-first release semantics precision and source selection",
+      "status": "passed_engineering_with_missing_values",
+      "reason": "169 release years; no invented full dates, region or review upper bounds.",
+      "evidence": "reports/task6/full_verification.json"
+    },
+    {
+      "requirement": "All field candidates and sourced scalar/multivalue selections",
+      "status": "passed_engineering",
+      "evidence": "reports/task7/full_verification.json"
+    },
+    {
+      "requirement": "Raw-review retention exact duplicate mapping and score denominator",
+      "status": "passed_engineering",
+      "actual_raw": 7911684,
+      "actual_logical": 7906538,
+      "exact_duplicate_mappings": 5146,
+      "evidence": "reports/task8/full_verification.json"
+    },
+    {
+      "requirement": "Field-level source/operation/selection lineage and required reverse queries",
+      "status": "passed_engineering",
+      "evidence": "reports/final/full_verification.json;sql/demo_queries.sql"
+    },
+    {
+      "requirement": "Offline fixed raw-evidence sample covers ALL required difficult cases",
+      "status": "partial",
+      "reason": "Real source sample has merging/nonmovie/compilation/missing dates/conflict/access failure, but substantive real person aliases remain missing.",
+      "evidence": "reports/final/offline_sample_manifest.json"
+    },
+    {
+      "requirement": "Idempotent target load interruption recovery and versioned recomputation",
+      "status": "passed_engineering",
+      "evidence": "reports/task9/idempotency_recovery.json;reports/final/offline_acceptance.json;reports/pipeline/last_execution.json"
+    },
+    {
+      "requirement": "At least5 executable result queries",
+      "status": "passed",
+      "actual": 8,
+      "required": 5,
+      "evidence": "reports/final/query_verification.json"
+    },
+    {
+      "requirement": "Report implementation model dictionary instructions AI use and no restricted raw data in Git",
+      "status": "passed_artifacts_subject_to_final_git_audit",
+      "evidence": "README.md;项目实施记录.md;reports/项目报告.md;reports/final/data_dictionary.json"
+    }
+  ],
+  "required_user_or_permitted_new_evidence": [
+    "Independent human movie and person labels (>=100 each, both classes, evidence, disagreements).",
+    "At least2 additional genuinely supported cross-edition groups.",
+    "At least5 substantive person alias groups and stronger real homonym/alias offline cases."
+  ],
+  "nonfabrication": "No AI-generated facts, fabricated page success, synthetic HUMAN labels or perfect-accuracy claims. Missing historical acquisition evidence remains unknown."
+}

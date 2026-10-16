@@ -1,0 +1,47 @@
+{
+  "status": "passed",
+  "queries": [
+    {
+      "query": 1,
+      "returned_rows": 30,
+      "status": "passed"
+    },
+    {
+      "query": 2,
+      "returned_rows": 30,
+      "status": "passed"
+    },
+    {
+      "query": 3,
+      "returned_rows": 30,
+      "status": "passed"
+    },
+    {
+      "query": 4,
+      "returned_rows": 30,
+      "status": "passed"
+    },
+    {
+      "query": 5,
+      "returned_rows": 30,
+      "status": "passed"
+    },
+    {
+      "query": 6,
+      "returned_rows": 30,
+      "status": "passed"
+    },
+    {
+      "query": 7,
+      "returned_rows": 30,
+      "status": "passed"
+    },
+    {
+      "query": 8,
+      "returned_rows": 12,
+      "status": "passed"
+    }
+  ],
+  "scope": "All eight full-target queries actually executed read-only in DAG run a2d5cdee5ee94bcdadea688f576e8f9b; rows local only. Later selected user queries are recorded separately.",
+  "execution_log": "reports/pipeline/a2d5cdee5ee94bcdadea688f576e8f9b-demo_queries.log"
+}

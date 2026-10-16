@@ -1,0 +1,14 @@
+{
+  "input_fingerprint": "b22ba0c9398fa106b86bb826a6168fdc094b39db4c270d4c3f7e4b24e1015bd0",
+  "inputs": {
+    "task7": "41cc71e8152f40fe9e9406d27e411aeac720e15e4972d160e15d8672f664d75a",
+    "review_fingerprint": "a5557e6987c72fddeabec555acf357396da207a5cce881dd17b1c2a9bbf951e3",
+    "catalog_sha256": "e0c549e27320597144e90f72a47fb42ed286d63e1f440e2c74bba53219cae5a6",
+    "version": "target-field-lineage-v1",
+    "implementation": "f0621a51d44d6c903b2807003213f66861b4c85fee7ec8ce5941b76971eeeff7",
+    "views": "72023779f2792b04fef28373435aa95ca33e5e2c43136fccaa19df1978412e2b",
+    "scope": "full",
+    "expected_reviews": 7911684
+  },
+  "registered_at": "2026-10-16T02:32:58.600130+00:00"
+}

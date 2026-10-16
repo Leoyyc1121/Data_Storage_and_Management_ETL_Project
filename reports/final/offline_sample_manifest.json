@@ -1,0 +1,49 @@
+{
+  "version": "fixed-real-evidence-v1",
+  "status": "fixed_local_raw_evidence_exported",
+  "asins": [
+    "0001517791",
+    "076700941X",
+    "630242335X",
+    "6305252599",
+    "B00005AWQL",
+    "B000063UYL",
+    "B0002US528",
+    "B000LXSAJO",
+    "B000MLH99C",
+    "B000T63TQC",
+    "B000WTVZGC",
+    "B0012SANTW",
+    "B001EBO90G",
+    "B001L67A3M",
+    "B003ZZ7TPG",
+    "B006QS9M1S",
+    "B006QS9MC2"
+  ],
+  "review_records": 17,
+  "metadata_records": 20,
+  "packet": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v1\\evidence.json",
+    "bytes": 137978,
+    "sha256": "9d46ed3fc45f108c4e1e8492585262462a34656e2852d96daa58cf38b6aa17a8"
+  },
+  "catalog": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v1\\catalog.sqlite3",
+    "sha256": "9f6163da675cfaaccdc21ceaded6e56e6eff7b5a6378778a9430ea49c4eeb973"
+  },
+  "source_review_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+  "coverage": [
+    "real_cross_edition_groups",
+    "non_movies",
+    "compilations",
+    "missing_full_dates",
+    "source_inner_asin_conflicts",
+    "actual_policy_acquisition_failure",
+    "formatting_name_aliases_only"
+  ],
+  "unmet": [
+    "Substantive real person aliases not supplied; formatting aliases are not5 validated alias cases.",
+    "Independent HUMAN movie/person labels remain absent."
+  ],
+  "distribution": "Local raw/IMDb-derived evidence not committed. Restore registered sources and run export once, preserve hashes; subsequent run needs no network."
+}

@@ -1,0 +1,8 @@
+{
+  "status": "passed",
+  "command": ".venv/Scripts/python.exe -m unittest discover -s tests/unit",
+  "tests":193,
+  "elapsed_seconds":73.087,
+  "scope":"Synthetic engineering tests, NOT HUMAN evaluation labels or measured matching accuracy.",
+  "additional_actual_checks":"Full Task1..Task9 integrity/replay reports,194887 retained IMDb raw-row field replay,8 full-target SQL executions,parameterized field lookup in fixed real sample."
+}

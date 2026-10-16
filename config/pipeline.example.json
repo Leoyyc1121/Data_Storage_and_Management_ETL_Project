@@ -1,0 +1,254 @@
+{
+  "version": "course-etl-dag-v1",
+  "state_dir": "data/pipeline/default",
+  "report_dir": "reports/pipeline",
+  "jobs": [
+    {
+      "id": "task1",
+      "depends_on": [],
+      "module": "src.extract.parse_reviews",
+      "args": [
+        "--manifest",
+        "data/staging/task1/full_v2/source_manifest.json",
+        "--run-name",
+        "full_v2",
+        "--encoding-policy",
+        "unresolved",
+        "--batch-size",
+        "25000",
+        "--resume"
+      ]
+    },
+    {
+      "id": "task1_verify",
+      "depends_on": [
+        "task1"
+      ],
+      "module": "src.quality.verify_task1",
+      "args": [
+        "--run-dir",
+        "data/staging/task1/full_v2",
+        "--output",
+        "reports/task1/pipeline_verification.json"
+      ]
+    },
+    {
+      "id": "task1_manifest",
+      "depends_on": [
+        "task1_verify"
+      ],
+      "module": "src.extract.export_review_manifest",
+      "args": []
+    },
+    {
+      "id": "task2_manifest",
+      "depends_on": [
+        "task1_manifest"
+      ],
+      "module": "src.extract.acquire_products",
+      "args": [
+        "prepare",
+        "--config",
+        "config/task2.example.json"
+      ]
+    },
+    {
+      "id": "task2_acquire",
+      "depends_on": [
+        "task2_manifest"
+      ],
+      "module": "src.extract.acquire_products",
+      "args": [
+        "crawl",
+        "--config",
+        "config/task2.example.json"
+      ],
+      "network": true,
+      "failure_branch": "stop_or_record_restriction_never_bypass"
+    },
+    {
+      "id": "task2_metadata",
+      "depends_on": [
+        "task2_acquire"
+      ],
+      "module": "src.extract.acquire_product_metadata",
+      "args": [
+        "--config",
+        "config/task2.example.json",
+        "--source-config",
+        "config/task2.metadata.example.json"
+      ],
+      "network": true
+    },
+    {
+      "id": "task2_export",
+      "depends_on": [
+        "task2_metadata"
+      ],
+      "module": "src.extract.acquire_products",
+      "args": [
+        "export",
+        "--config",
+        "config/task2.example.json",
+        "--metadata-config",
+        "config/task2.metadata.example.json"
+      ]
+    },
+    {
+      "id": "task3",
+      "depends_on": [
+        "task2_export"
+      ],
+      "module": "src.transform.classify_products",
+      "args": [
+        "--config",
+        "config/task3.example.json"
+      ]
+    },
+    {
+      "id": "task4",
+      "depends_on": [
+        "task3"
+      ],
+      "module": "src.transform.resolve_movies",
+      "args": [
+        "--config",
+        "config/task4.example.json"
+      ]
+    },
+    {
+      "id": "imdb_download",
+      "depends_on": [
+        "task4"
+      ],
+      "module": "src.extract.acquire_imdb",
+      "args": [
+        "--config",
+        "config/imdb.example.json"
+      ],
+      "network": true
+    },
+    {
+      "id": "imdb_import",
+      "depends_on": [
+        "imdb_download"
+      ],
+      "module": "src.extract.import_imdb",
+      "args": [
+        "--config",
+        "config/imdb.example.json"
+      ]
+    },
+    {
+      "id": "task5",
+      "depends_on": [
+        "imdb_import"
+      ],
+      "module": "src.transform.resolve_people",
+      "args": [
+        "--config",
+        "config/integration.example.json"
+      ]
+    },
+    {
+      "id": "task5_verify",
+      "depends_on": [
+        "task5"
+      ],
+      "module": "src.quality.verify_task5",
+      "args": [
+        "--config",
+        "config/integration.example.json"
+      ]
+    },
+    {
+      "id": "task6",
+      "depends_on": [
+        "task5_verify"
+      ],
+      "module": "src.transform.enrich_release",
+      "args": [
+        "--config",
+        "config/integration.example.json"
+      ]
+    },
+    {
+      "id": "task7",
+      "depends_on": [
+        "task6"
+      ],
+      "module": "src.transform.select_fields",
+      "args": [
+        "--config",
+        "config/integration.example.json"
+      ]
+    },
+    {
+      "id": "task7_verify",
+      "depends_on": [
+        "task7"
+      ],
+      "module": "src.quality.verify_task7",
+      "args": [
+        "--config",
+        "config/integration.example.json"
+      ]
+    },
+    {
+      "id": "task8",
+      "depends_on": [
+        "task1_manifest"
+      ],
+      "module": "src.transform.run_review_etl",
+      "args": [
+        "--config",
+        "config/reviews.example.json"
+      ]
+    },
+    {
+      "id": "task8_verify",
+      "depends_on": [
+        "task8"
+      ],
+      "module": "src.quality.verify_task8",
+      "args": [
+        "--config",
+        "config/reviews.example.json"
+      ]
+    },
+    {
+      "id": "task9",
+      "depends_on": [
+        "task7_verify",
+        "task8_verify"
+      ],
+      "module": "src.load.build_target",
+      "args": [
+        "--config",
+        "config/integration.example.json"
+      ]
+    },
+    {
+      "id": "target_verify",
+      "depends_on": [
+        "task9"
+      ],
+      "module": "src.quality.verify_target",
+      "args": [
+        "--config",
+        "config/integration.example.json"
+      ]
+    },
+    {
+      "id": "demo_queries",
+      "depends_on": [
+        "target_verify"
+      ],
+      "module": "src.quality.run_queries",
+      "args": [
+        "--config",
+        "config/integration.example.json"
+      ]
+    }
+  ]
+}

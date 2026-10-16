@@ -1,0 +1,7 @@
+{
+  "namespace": "FieldSelection.field is the semantic field name; all raw/normalized values and member provenance use this namespace.",
+  "movie_column_to_field": {"canonical_title":"title","directors":"director","movie_id":"movie_id","identity_status":"identity_status","tconst":"tconst","release_year":"release_year","release_date":"release_date","date_precision":"date_precision","runtime_minutes":"runtime_minutes","genres":"genres","starring":"starring","cast":"cast"},
+  "cli": "python -m src.quality.run_queries --movie-id <actual ID> --field-name canonical_title --show-rows; canonical_title/directors are mapped to title/director automatically. SQL6 directly uses semantic names.",
+  "other_levels": "Product and person fields match their target column names. Raw locator/FK/audit columns are technical provenance attributes, not independent asserted factual fields.",
+  "multivalued_missing": "Empty relation/[] alone is not confirmed absence; consult FieldSelection missing/status/reason. Principal cast is partial, not a complete cast claim."
+}

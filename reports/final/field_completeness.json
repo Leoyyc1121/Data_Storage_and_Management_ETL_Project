@@ -1,0 +1,133 @@
+{
+  "status": "complete",
+  "semantics": "Coverage of loaded source-based product fields and current work records, NOT coverage of the unknown true movie population. Identifier/status fields excluded. Selected cast means some supported credits, not a complete cast list.",
+  "levels": {
+    "product": {
+      "denominator": 253059,
+      "scope": "All original ASIN",
+      "fields": {
+        "title": {
+          "status_counts": {
+            "missing": 179246,
+            "selected": 73813
+          },
+          "denominator": 253059,
+          "selected_fraction": 0.29168296721317954
+        },
+        "medium": {
+          "status_counts": {
+            "missing": 236728,
+            "selected": 16331
+          },
+          "denominator": 253059,
+          "selected_fraction": 0.06453435760040149
+        },
+        "language": {
+          "status_counts": {
+            "missing": 201097,
+            "selected": 51962
+          },
+          "denominator": 253059,
+          "selected_fraction": 0.20533551464283034
+        },
+        "subtitles": {
+          "status_counts": {
+            "missing": 236463,
+            "selected": 16596
+          },
+          "denominator": 253059,
+          "selected_fraction": 0.06558154422486456
+        },
+        "region_code": {
+          "status_counts": {
+            "missing": 253059
+          },
+          "denominator": 253059,
+          "selected_fraction": 0.0
+        },
+        "distributor": {
+          "status_counts": {
+            "missing": 253059
+          },
+          "denominator": 253059,
+          "selected_fraction": 0.0
+        },
+        "product_release_date": {
+          "status_counts": {
+            "missing": 253059
+          },
+          "denominator": 253059,
+          "selected_fraction": 0.0
+        }
+      }
+    },
+    "movie": {
+      "denominator": 2953,
+      "scope": "Provisional plus multifield work records, including169 external matches; not confirmed-film census",
+      "fields": {
+        "title": {
+          "status_counts": {
+            "selected": 2953
+          },
+          "denominator": 2953,
+          "selected_fraction": 1.0
+        },
+        "genres": {
+          "status_counts": {
+            "missing": 1616,
+            "selected": 1337
+          },
+          "denominator": 2953,
+          "selected_fraction": 0.4527599051811717
+        },
+        "director": {
+          "status_counts": {
+            "missing": 2683,
+            "selected": 270
+          },
+          "denominator": 2953,
+          "selected_fraction": 0.091432441584829
+        },
+        "starring": {
+          "status_counts": {
+            "missing": 2778,
+            "selected": 175
+          },
+          "denominator": 2953,
+          "selected_fraction": 0.05926176769387064
+        },
+        "cast": {
+          "status_counts": {
+            "missing": 2780,
+            "selected": 173
+          },
+          "denominator": 2953,
+          "selected_fraction": 0.058584490348797834
+        },
+        "release_year": {
+          "status_counts": {
+            "missing": 2784,
+            "selected": 169
+          },
+          "denominator": 2953,
+          "selected_fraction": 0.05722993565865222
+        },
+        "release_date": {
+          "status_counts": {
+            "missing": 2953
+          },
+          "denominator": 2953,
+          "selected_fraction": 0.0
+        },
+        "runtime_minutes": {
+          "status_counts": {
+            "missing": 2784,
+            "selected": 169
+          },
+          "denominator": 2953,
+          "selected_fraction": 0.05722993565865222
+        }
+      }
+    }
+  }
+}

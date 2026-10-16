@@ -1,0 +1,12 @@
+{
+  "source_raw_reviews":7911684,
+  "logical_reviews":7906538,
+  "within_product_exact_duplicate_mappings":5146,
+  "cross_edition_pending_candidate_pairs":243,
+  "dedup_definition":"Only byte-identical full raw records within one ASIN share a logical ID; every original record remains mapped and queryable.",
+  "movie_scope":"single_work product mappings only; compilations product-only, no copying to members; identity status always displayed.",
+  "score_denominator":"Valid non-NULL scores from each within-product logical representative, each counted once; not people, cast, assertions or number of raw copies.",
+  "cross_edition_uncertainty":"243 pairs are unresolved review-identity candidates, not automatically deleted/merged. Aggregate may include repeated postings across editions; it is not claimed as a fully cross-edition deduplicated count of independent opinions.",
+  "join_safety":"Aggregate logical representatives by product before joining product-to-work mapping. Never aggregate after joining one-to-many credits/source assertions.",
+  "future_review":"Resolve candidate pairs with evidence, preserve raw-to-logical mappings/version history, then rerun statistics under a new explicit policy/version if cross-edition logical identities change."
+}

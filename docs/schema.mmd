@@ -1,0 +1,18 @@
+erDiagram
+    MOVIES ||--o{ PRODUCT_MOVIE : has_editions
+    EDITIONS ||--o{ PRODUCT_MOVIE : represents_or_contains
+    EDITIONS ||--o{ RAW_REVIEWS : preserves
+    REVIEWERS ||--o{ RAW_REVIEWS : wrote
+    LOGICAL_REVIEWS ||--|{ RAW_REVIEWS : exact_product_record_mapping
+    MOVIES ||--o{ MOVIE_PERSON : credits
+    PEOPLE ||--o{ MOVIE_PERSON : roles
+    MOVIES ||--o{ CREDITS : raw_role_evidence
+    PEOPLE ||--o{ PERSON_ALIASES : context_names
+    MOVIES ||--o{ MOVIE_GENRES : genre_members
+    SOURCE_RECORDS ||--o{ ASSERTIONS : raw_field_evidence
+    ASSERTIONS ||--o{ SELECTION_MEMBERS : chosen_or_unchosen
+    FIELD_SELECTIONS ||--o{ SELECTION_MEMBERS : selection
+    OPERATIONS ||--o{ ASSERTIONS : produces
+    ETL_RUNS ||--o{ OPERATIONS : versioned_processing
+    LINEAGE_EDGES }o--o{ OPERATIONS : parent_child_nodes
+    RELEASE_INFO }o--|| MOVIES : year_date_precision_region_semantics

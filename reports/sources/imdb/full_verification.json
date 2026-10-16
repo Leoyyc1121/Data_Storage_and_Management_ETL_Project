@@ -1,0 +1,6 @@
+{
+  "status": "passed_complete_retained_raw_TSV_field_replay",
+  "raw_records_compared": 194887,
+  "foreign_key_errors": 0,
+  "scope": "Retained candidate subset only; full archive scan/CRC evidence separately registered. Not identity matching accuracy."
+}

@@ -1,0 +1,25 @@
+{
+  "url": "https://query.wikidata.org/robots.txt",
+  "observed_at": "2026-10-16T01:06:11.228188+00:00",
+  "http_status": 200,
+  "error": null,
+  "error_detail": null,
+  "truncated": false,
+  "response_headers": {
+    "date": "Fri, 16 Oct 2026 01:06:10 GMT",
+    "last-modified": "Thu, 24 Sep 2026 09:00:58 GMT",
+    "content-type": "text/plain",
+    "etag": "\"5f-65c36d68fc680\""
+  },
+  "snapshot_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\wikidata\\person_aliases_v1\\policy\\212a112f9e27af6072758663789987cf84bfde70bd9b87f97ef76f91fd089b0c.txt",
+  "content_hash": "212a112f9e27af6072758663789987cf84bfde70bd9b87f97ef76f91fd089b0c",
+  "user_agent": "CourseMovieETL/1.0 (https://github.com/Leoyyc1121/Data_Storage_and_Management_ETL_Project; AI-assisted ChatGPT-User)",
+  "robots_agent": "ChatGPT-User",
+  "collector_version": "1.1.0",
+  "request_attempt": 1,
+  "rules_usable": true,
+  "evidence_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\wikidata\\person_aliases_v1\\policy\\04779b796f784009aef3ef99538c458d.json",
+  "attempt_evidence_paths": [
+    "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\wikidata\\person_aliases_v1\\policy\\04779b796f784009aef3ef99538c458d.json"
+  ]
+}

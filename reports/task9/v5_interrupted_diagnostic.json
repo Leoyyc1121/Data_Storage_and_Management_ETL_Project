@@ -1,0 +1,22 @@
+{
+  "status": "superseded_unpublished_target_copy",
+  "reason": "Self-review recovered original name spans and stopped unsafe compound-name person creation. Integration final_v5 remains preserved; final_v6 recomputes people/fields. Unpublished large target copy is reconstructible and not final evidence.",
+  "registration": {
+    "input_fingerprint": "9f3866e7f1cb3f850271927026e5dd2ead8a5dd2274930e873adf2963ce94e4e",
+    "inputs": {
+      "task7": "2f5224780b930c459053e85d528c62d745a837e575475e21f20e53ce663cdf2d",
+      "review_fingerprint": "a5557e6987c72fddeabec555acf357396da207a5cce881dd17b1c2a9bbf951e3",
+      "version": "target-field-lineage-v1",
+      "implementation": "b5922e21d1683a150d796e6596e2ebfa4c2e9fcf2a8a02aa5480a85f0d21172a",
+      "views": "8167a3ef9750a7c9faee895e7bf6a7f676a7a058ec964869938e46782ce3ba7a",
+      "scope": "full",
+      "expected_reviews": 7911684
+    },
+    "registered_at": "2026-10-16T01:40:24.986568+00:00"
+  },
+  "review_source_sha256": "ce0fa0ad8bbaba21d32f2937aa1f738a56fff75fbbabde584f2e7cac259515fd",
+  "reviews_copied": 7911684,
+  "published": false,
+  "source_integration_preserved": "data/integration/final_v5/integration.sqlite3",
+  "recovery": "Use original preserved integration/version inputs for diagnostics, or current final_v6 configuration for corrected target. No unique raw data removed."
+}
