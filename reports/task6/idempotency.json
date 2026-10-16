@@ -1,7 +1,13 @@
 {
   "status": "passed",
-  "same_input_repeated": true,
-  "release_info_rows": 2953,
-  "ordered_rows_sha256": "82a87fa11667cbe8521c34170be739271b9f78ceafa2d7f9e1597fe5fce28745",
-  "full_date_not_invented": true
+  "version": "final_v5",
+  "same_input_repeated_via_dag": true,
+  "all_ordered_table_hashes_equal": true,
+  "tables": {
+    "release_info": {
+      "rows": 2953,
+      "ordered_rows_sha256": "f4cfecf0ea7815a252c873b05dd12ecb59f025b7172e55398145546a689e3160"
+    }
+  },
+  "execution_evidence": "reports/pipeline/last_execution.json; prefix run 15fead71fe0f4ac1be4b90d48739be75 completed task5..task7_verify with zero new core rows."
 }

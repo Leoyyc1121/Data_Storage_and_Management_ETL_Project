@@ -18,8 +18,12 @@ from integration_common import *
 from resolve_movies import load_config as task4_config
 from acquire_imdb import load_config as imdb_config
 
-VERSION='people-context-v1'
+VERSION='people-context-v2'
 TABLES=['work_matches','work_match_candidates','people','person_aliases','credits','person_decisions','person_evaluation_pairs']
+ROLE_FIELDS={'directors':'director','credited_stars':'starring','credited_cast':'cast'}
+def credited_spelling(a):
+    match=re.search(r'(?<!\w)'+re.escape(a['normalized']).replace(r'\ ',r'\s+')+r'(?!\w)',a['raw'],re.I)
+    return match.group() if match else None
 def norm_name(raw):
     value=''.join(ch for ch in unicodedata.normalize('NFKD',raw.casefold()) if not unicodedata.combining(ch))
     return ' '.join(re.findall(r'[^\W\d_]+',value))
@@ -32,7 +36,7 @@ def candidate_evidence(profiles,title,directors,actors):
         hints.update(p['title_year_hints'])
         for k,v in p['values'].items():vals[k].update(v)
     source_dirs=vals['directors']|vals['director_mentions']
-    source_actors=vals['starring']|vals['actor_context']
+    source_actors=vals['credited_stars']|vals['credited_cast']|vals['actor_context']
     dirs=sorted({n['nconst'] for n in directors if any(compatible(x,n['primary_name']) for x in source_dirs)})
     cast=sorted({n['nconst'] for n in actors if any(compatible(x,n['primary_name']) for x in source_actors)})
     years=vals['work_years']|hints
@@ -120,16 +124,16 @@ def build(d,c,t4,imdb,meta,run):
         for p in profiles:
             for r in p['records']:
                 for a in r['assertions']:
-                    if a['field'] not in ('directors','starring'):continue
-                    role='director' if a['field']=='directors' else 'starring';raw=a['normalized']
-                    possible=[(n,per) for n,per in credit_people['director' if role=='director' else 'cast'] if compatible(raw,n['primary_name'])]
+                    if a['field'] not in ROLE_FIELDS:continue
+                    role=ROLE_FIELDS[a['field']];spelling=credited_spelling(a);raw=spelling or a['raw']
+                    possible=[(n,per) for n,per in credit_people['director' if role=='director' else 'cast'] if spelling and compatible(a['normalized'],n['primary_name'])]
                     if len(possible)==1:person=possible[0][1];reason='same_verified_work_role_full_name_unique_external_credit'
                     else:
                         pid=stable('person:','unresolved:'+digest_json([r['source_record_id'],role,raw]));person=dict(person_id=pid)
                         d.execute('INSERT OR IGNORE INTO people VALUES (?,?,?,?,?,?,?)',(pid,None,raw,'provisional_source_context',None,None,r['source_record_id']))
                         reason='ambiguous_or_missing_verified_work_role_person_context'
                     add_credit(d,run,mid,raw,role,None,r['source_record_id'],a['field_locator'],person,'explicit product-source role; original raw prose retained')
-                    d.execute('INSERT INTO person_decisions VALUES (?,?,?,?,?,?,?,?)',('pd:'+digest_json([mid,role,r['source_record_id'],a['field_locator'],raw]),mid,raw,role,person['person_id'],'auto_context_bind' if len(possible)==1 else 'unresolved',reason,js(dict(tconst=tid,source_record_id=r['source_record_id'],candidate_nconsts=[n['nconst'] for n,_ in possible]))))
+                    d.execute('INSERT OR IGNORE INTO person_decisions VALUES (?,?,?,?,?,?,?,?)',('pd:'+digest_json([mid,role,r['source_record_id'],a['field_locator'],raw]),mid,raw,role,person['person_id'],'auto_context_bind' if len(possible)==1 else 'unresolved',reason,js(dict(tconst=tid,source_record_id=r['source_record_id'],source_role_field=a['field'],field_locator=a['field_locator'],original_spelling_resolved=bool(spelling),candidate_nconsts=[n['nconst'] for n,_ in possible]))))
     aliases=defaultdict(list);by_name=defaultdict(list)
     for a in d.execute('SELECT * FROM person_aliases ORDER BY alias_id'):
         aliases[a['person_id']].append(dict(a));by_name[a['normalized_name']].append(dict(a))

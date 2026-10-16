@@ -8,7 +8,7 @@ import sys
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'src/transform'))
 from integration_common import *
-from resolve_people import candidate_evidence,verify as structural
+from resolve_people import candidate_evidence,verify as structural,ROLE_FIELDS,credited_spelling
 from resolve_movies import load_config as task4_config
 from acquire_imdb import load_config as imdb_config
 
@@ -19,8 +19,13 @@ def verify(c):
         for row in d.execute('SELECT * FROM source_records'):
             if hashlib.sha256(row['raw_record']).hexdigest()!=row['raw_sha256']:raise ValueError('Source raw hash mismatch')
             if row['byte_end']-row['byte_start']!=len(row['raw_record']):raise ValueError('Source offset mismatch')
+        expected_roles=set()
         for w in d.execute('SELECT * FROM work_matches ORDER BY movie_id'):
             profiles=[json.loads(r[0]) for r in t4.execute('SELECT p.profile FROM products p JOIN product_movie m USING(asin) WHERE m.movie_id=?',(w['movie_id'],))]
+            for p in profiles:
+                for record in p['records']:
+                    for a in record['assertions']:
+                        if a['field'] in ROLE_FIELDS:expected_roles.add((w['movie_id'],ROLE_FIELDS[a['field']],record['source_record_id'],a['field_locator'],credited_spelling(a) or a['raw']))
             expected=set()
             for title in {v for p in profiles for v in p['titles']}:expected.update(r[0] for r in imdb.execute('SELECT tconst FROM title_lookup WHERE normalized_title=?',(title,)))
             actual=list(d.execute('SELECT * FROM work_match_candidates WHERE movie_id=?',(w['movie_id'],)))
@@ -35,12 +40,14 @@ def verify(c):
                 if e['qualified']:qualified.append(r['tconst'])
                 count+=1
             if w['tconst']!=(qualified[0] if len(qualified)==1 else None):raise ValueError('Wrong unique match selection')
+        actual_roles={(r['movie_id'],r['role'],json.loads(r['evidence'])['source_record_id'],json.loads(r['evidence'])['field_locator'],r['raw_name']) for r in d.execute('SELECT * FROM person_decisions')}
+        if expected_roles!=actual_roles:raise ValueError('Explicit source role schema contract not completely preserved')
         queue=json.loads((Path(c['work_dir'])/'person_evaluation_queue.json').read_text(encoding='utf-8'))
         ids={r[0] for r in d.execute('SELECT pair_id FROM person_evaluation_pairs')}
         if ids!={p['pair_id'] for p in queue['pairs']}:raise ValueError('Queue mismatch')
         if any(p['label'] is not None for p in queue['pairs']):raise ValueError('Automatic queue must not generate human labels')
         result=dict(status='passed_full_evidence_replay_not_human_accuracy',all_candidate_matches_replayed=count,
-            raw_source_hashes_verified=d.execute('SELECT count(*) FROM source_records').fetchone()[0],human_queue_pairs=len(ids),human_labels_completed=0)
+            raw_source_hashes_verified=d.execute('SELECT count(*) FROM source_records').fetchone()[0],all_explicit_source_role_assertions_preserved=len(actual_roles),human_queue_pairs=len(ids),human_labels_completed=0)
         return result
 def main():
     p=argparse.ArgumentParser(description=__doc__);p.add_argument('--config',type=Path,default=ROOT/'config/integration.example.json');a=p.parse_args();c=load_config(a.config);r=verify(c);save_json(Path(c['report_root'])/'task5'/'full_verification.json',r);print(js(r))

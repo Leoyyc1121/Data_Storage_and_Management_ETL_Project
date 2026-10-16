@@ -1,0 +1,62 @@
+{
+  "status": "five_actual_sequel_pairs_source_inspected_not_human_gold",
+  "examples": [
+    {
+      "asins": [
+        "6305235074",
+        "6305235120"
+      ],
+      "rule_id": "different_sequel_numerals",
+      "source_record_ids": [
+        "meta:a619b3009526ce26b69d9d9c44e77a287fd0cfe58cd9f3fc970ea246e3c21293",
+        "meta:21f76624ad153bf23e50b12c51202b317eaa9f67dcffda5f4afe1de6fc6894ce"
+      ]
+    },
+    {
+      "asins": [
+        "6304853653",
+        "6305235074"
+      ],
+      "rule_id": "different_sequel_numerals",
+      "source_record_ids": [
+        "meta:a71d00f34bcd42574343c6b07c3a24e876c8178b0ebbdb0fdc6bdcb4c0c6e5e6",
+        "meta:a619b3009526ce26b69d9d9c44e77a287fd0cfe58cd9f3fc970ea246e3c21293"
+      ]
+    },
+    {
+      "asins": [
+        "B000WTVZGC",
+        "B003ZZ7TPG"
+      ],
+      "rule_id": "different_sequel_numerals",
+      "source_record_ids": [
+        "meta:fd9193ec5d5bb27860543cab2247002eda35f1596fe04a5269985e4190e79408",
+        "meta:b349737a6fa73b84754de6902b1ebf138f1f5b031efb622cdc23190f697f1e72"
+      ]
+    },
+    {
+      "asins": [
+        "B000EWBNYG",
+        "B001O7SWJ4"
+      ],
+      "rule_id": "different_sequel_numerals",
+      "source_record_ids": [
+        "meta:1136eb67163ea72cf351dad0bd5c1bc04328978ab38a6a333e3f968eb74690f6",
+        "meta:c5977f9960ee13706b4210f9f246978cecd52a0a9aa4df88832cc06e833a5549"
+      ]
+    },
+    {
+      "asins": [
+        "6304856245",
+        "6305235074"
+      ],
+      "rule_id": "different_sequel_numerals",
+      "source_record_ids": [
+        "meta:63f68ab3354fe8d8a802a5d8b11dc6b48618b88b0288f84440293eada7cb7fd8",
+        "meta:a619b3009526ce26b69d9d9c44e77a287fd0cfe58cd9f3fc970ea246e3c21293"
+      ]
+    }
+  ],
+  "franchises": 3,
+  "scope": "Five source-supported pair groups from three franchises, not five different franchises; excludes teaching volumes and TV episode examples."
+}

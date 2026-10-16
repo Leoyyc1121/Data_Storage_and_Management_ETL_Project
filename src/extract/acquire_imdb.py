@@ -11,6 +11,8 @@ import sys
 import time
 from urllib import request,error
 
+sys.path.insert(0,str(Path(__file__).resolve().parent))
+
 from acquire_products import HTTPClient, Policy, load_config as load_task2, run_lock, save_body, save_json
 from register_source import hash_file,utc_now
 

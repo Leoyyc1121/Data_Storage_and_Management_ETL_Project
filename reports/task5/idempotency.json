@@ -1,34 +1,37 @@
 {
   "status": "passed",
-  "all_seven_tables_same_ordered_hashes": true,
+  "version": "final_v5",
+  "same_input_repeated_via_dag": true,
+  "all_ordered_table_hashes_equal": true,
   "tables": {
     "work_matches": {
       "rows": 2953,
-      "ordered_rows_sha256": "88c72538673ec8d70504ef2603987ceca364533088f4f3a3337847d72634ec95"
+      "ordered_rows_sha256": "c4ab30004735f50da4da4d4c8153f4918bd2afb7f4efb87dbb9d2680dd0fc094"
     },
     "work_match_candidates": {
       "rows": 9344,
-      "ordered_rows_sha256": "a2c36fce508e3ee24d5c13d3ac86aa1acbc194de5806c73ba13c1294213e6c18"
+      "ordered_rows_sha256": "a10c45c69784de397b9f5a45a03b2da650acfc1fbd66045f4c7f6cce5e041e06"
     },
     "people": {
-      "rows": 1505,
-      "ordered_rows_sha256": "587b32046fbfd9f60454609a58eb86fa7b9fc33f579ae326b3387a03484a54aa"
+      "rows": 1974,
+      "ordered_rows_sha256": "fb5ce9cd796ded321b518a81599c4b610731285983b39237fe3d994c0612eb76"
     },
     "person_aliases": {
-      "rows": 1689,
-      "ordered_rows_sha256": "4fc12b747369059bb6ecb030500a2097951fe8b95c7746f1177eec8d5bdf446f"
+      "rows": 2392,
+      "ordered_rows_sha256": "687b3ef6311b7610fdd9ff3142834e08ff126ff4a0b125e78fb9efd9f8744371"
     },
     "credits": {
-      "rows": 1690,
-      "ordered_rows_sha256": "583f4a8323fdb8905c313902d2e8a6dd7c3568aa4c32b7ddb99666ed1588e2c9"
+      "rows": 2399,
+      "ordered_rows_sha256": "b2ada374816f681e678f51633f3509523fbc19be4b1ee55586debf2028104871"
     },
     "person_decisions": {
-      "rows": 155,
-      "ordered_rows_sha256": "c800d140dd44206ac2cb02f6b7a93271102a67cda64bb422bc021608fd763272"
+      "rows": 553,
+      "ordered_rows_sha256": "e3b868f3ad46c94ed0a53153050f96617c320a4c6d74592d273fdc406dd483a6"
     },
     "person_evaluation_pairs": {
       "rows": 120,
-      "ordered_rows_sha256": "acc146acf2cb8d78e8c8e7f6609d47a18684e0cf2e77f61c6f865597b8dc0f96"
+      "ordered_rows_sha256": "e1f3b323402d31b010d56e5bb83d95a2694c7c114f9202cfcb2dd98393bae1a8"
     }
-  }
+  },
+  "execution_evidence": "reports/pipeline/last_execution.json; prefix run 15fead71fe0f4ac1be4b90d48739be75 completed task5..task7_verify with zero new core rows."
 }

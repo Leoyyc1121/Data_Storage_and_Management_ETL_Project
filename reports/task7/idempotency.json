@@ -1,25 +1,25 @@
 {
   "status": "passed",
-  "same_inputs_repeated": true,
-  "all_four_ordered_table_hashes_equal": true,
+  "version": "final_v5",
+  "same_input_repeated_via_dag": true,
+  "all_ordered_table_hashes_equal": true,
   "tables": {
     "field_selections": {
       "rows": 1795037,
-      "ordered_rows_sha256": "5c157caf04fdd18b4d211fb840e26a547a18c6e3d18d2ad74c20b1c60b4b62bb"
+      "ordered_rows_sha256": "0bedbb919b483f5c9748d6064165d28c999bd89272627b0af6a4af213041329d"
     },
     "selection_members": {
-      "rows": 286240,
-      "ordered_rows_sha256": "5d8c2677ac6a193f6c29198d729e8b7f7a4e9942687a0016b4dc22781cd436d0"
+      "rows": 287061,
+      "ordered_rows_sha256": "63ff46294005c2b70b5cfbf245be6bad7b4320f2937eb7d55674f00827d4fa48"
     },
     "movies": {
       "rows": 2953,
-      "ordered_rows_sha256": "57b01ac1bd0c9970c174927619c3d3e6a2b67ec7f8811a9b838fb59e68659b61"
+      "ordered_rows_sha256": "36c6e91301dc1d40127352cfcf3edb78b20f68427f8777f369a38b3dff29ac46"
     },
     "editions": {
       "rows": 253059,
       "ordered_rows_sha256": "5bab5cfb2efc5a796b9568bbd8fc047133d970a9826021afe0d0378595281ac7"
     }
   },
-  "version": "final_v4",
-  "note": "Compared first final_v4 run against completed second run; no new field/member rows."
+  "execution_evidence": "reports/pipeline/last_execution.json; prefix run 15fead71fe0f4ac1be4b90d48739be75 completed task5..task7_verify with zero new core rows."
 }

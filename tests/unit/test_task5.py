@@ -16,6 +16,10 @@ import resolve_people as rp
 import integration_common as common
 
 class NamesTests(unittest.TestCase):
+    def test_role_field_contract(self):
+        self.assertEqual(rp.ROLE_FIELDS,{'directors':'director','credited_stars':'starring','credited_cast':'cast'})
+    def test_original_credited_spelling(self):
+        self.assertEqual(rp.credited_spelling(dict(normalized='jane doe',raw='Starring Jane Doe, John Smith')),'Jane Doe')
     def test_initials_never_identity(self):
         self.assertFalse(rp.compatible('J Smith','J. Smith'))
         self.assertFalse(rp.compatible('J Smith','John Smith'))
