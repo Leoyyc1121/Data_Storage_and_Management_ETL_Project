@@ -1,0 +1,50 @@
+{
+  "observed_at": "2026-10-16T00:31:25.110399+00:00",
+  "status": "complete",
+  "input_fingerprint": "51ddfe55f50e47993102bf1083a3add68fc9282632dce6cd95f8d74ba6225918",
+  "selected_title_forms": 2967,
+  "titles": 9259,
+  "names": 74078,
+  "principal_credits": 102291,
+  "raw_source_records": 194887,
+  "states": {
+    "title.basics.tsv.gz": {
+      "sequence": 12866376,
+      "next_offset": 1117319568,
+      "read": 12866375,
+      "kept": 9259,
+      "issues": 0,
+      "complete": true,
+      "gzip_crc_verified": true
+    },
+    "title.crew.tsv.gz": {
+      "sequence": 12866376,
+      "next_offset": 423575299,
+      "read": 12866375,
+      "kept": 9259,
+      "issues": 0,
+      "complete": true,
+      "gzip_crc_verified": true
+    },
+    "title.principals.tsv.gz": {
+      "sequence": 102312264,
+      "next_offset": 4573918244,
+      "read": 102312263,
+      "kept": 102291,
+      "issues": 0,
+      "complete": true,
+      "gzip_crc_verified": true
+    },
+    "name.basics.tsv.gz": {
+      "sequence": 15738258,
+      "next_offset": 972586134,
+      "read": 15738257,
+      "kept": 74078,
+      "issues": 0,
+      "complete": true,
+      "gzip_crc_verified": true
+    }
+  },
+  "scope": "Complete bulk files streamed/CRC-checked; selected raw rows retained by title-key filter. Title selection is not movie identity verification. Principal cast, not full cast or starring.",
+  "catalog_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\imdb\\snapshot_20261016\\catalog.sqlite3"
+}

@@ -1,0 +1,56 @@
+{
+  "observed_at": "2026-10-16T00:34:27.910416+00:00",
+  "status": "complete_engineering_pending_human_acceptance",
+  "tables": {
+    "work_matches": {
+      "rows": 2953,
+      "ordered_rows_sha256": "88c72538673ec8d70504ef2603987ceca364533088f4f3a3337847d72634ec95"
+    },
+    "work_match_candidates": {
+      "rows": 9344,
+      "ordered_rows_sha256": "a2c36fce508e3ee24d5c13d3ac86aa1acbc194de5806c73ba13c1294213e6c18"
+    },
+    "people": {
+      "rows": 1505,
+      "ordered_rows_sha256": "587b32046fbfd9f60454609a58eb86fa7b9fc33f579ae326b3387a03484a54aa"
+    },
+    "person_aliases": {
+      "rows": 1689,
+      "ordered_rows_sha256": "4fc12b747369059bb6ecb030500a2097951fe8b95c7746f1177eec8d5bdf446f"
+    },
+    "credits": {
+      "rows": 1690,
+      "ordered_rows_sha256": "583f4a8323fdb8905c313902d2e8a6dd7c3568aa4c32b7ddb99666ed1588e2c9"
+    },
+    "person_decisions": {
+      "rows": 155,
+      "ordered_rows_sha256": "c800d140dd44206ac2cb02f6b7a93271102a67cda64bb422bc021608fd763272"
+    },
+    "person_evaluation_pairs": {
+      "rows": 120,
+      "ordered_rows_sha256": "acc146acf2cb8d78e8c8e7f6609d47a18684e0cf2e77f61c6f865597b8dc0f96"
+    }
+  },
+  "work_matches": {
+    "unresolved": 2812,
+    "verified_multifield": 141
+  },
+  "people_status": {
+    "provisional_source_context": 136,
+    "verified_external_context": 1369
+  },
+  "human_evaluation": {
+    "status": "awaiting_independent_human_labels",
+    "required_minimum": 100,
+    "labeled": 0,
+    "precision": null,
+    "recall": null,
+    "f1": null,
+    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v2\\person_evaluation_queue.json"
+  },
+  "limitations": [
+    "No human labeling supplied; independent evaluation NOT completed.",
+    "Source aliases retained; no assertion that all cast or full starring billing was obtained.",
+    "Five alias-merge and five homonym example acceptance requires separate evidence review."
+  ]
+}

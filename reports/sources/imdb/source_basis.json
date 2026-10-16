@@ -1,0 +1,18 @@
+{
+  "publisher_schema": "https://data.imdb.com/non-commercial-datasets/",
+  "publisher_use_conditions": "https://help.imdb.com/article/imdb/general-information/can-i-use-imdb-data-in-my-software/G5JTRESSHJBBHTGX",
+  "bulk_files_only": true,
+  "scope": "Individual personal non-commercial course project; not a license for public redistribution.",
+  "public_git_policy": "Only code, aggregate statistics and source hash/storage/recovery metadata. No retained raw or derived IMDb records, names, credits, evaluation evidence or target database.",
+  "required_attribution": "Information courtesy of IMDb (https://www.imdb.com). Used with permission.",
+  "schema_semantics": {
+    "startYear": "Movie release year, not a complete date, territory or guaranteed earliest global premiere.",
+    "principals": "Principal cast/crew with source ordering; not complete cast, not starring billing.",
+    "nconst": "IMDb person identifier; binds only after source-work and role/name context verification.",
+    "knownForTitles": "Limited known-for list; not a complete filmography or sufficient credit evidence.",
+    "null_token": "\\N"
+  },
+  "snapshot_policy": "Each archive has its own SHA256, ETag, Last-Modified and publisher x-amz-meta-run-date in acquisition.json; files were not assumed to represent one coherent daily snapshot.",
+  "recovery": "Download official offered archives, compare each registered SHA256, then import complete gzip streams and retain selected raw rows/offsets. Publisher refresh may change bytes: do not overwrite old version or claim exact historical replay without retained archives. Input change requires a new version work directory.",
+  "verification": "catalog_statistics.json records full-file EOF/CRC checks and row counts; acquisition-time pending_full_import is an honest earlier state, not a failed final CRC."
+}

@@ -1,0 +1,7 @@
+{
+  "engineering_acceptance": "Contextual work match and person binding implemented; full evidence replay, stable IDs, PK/FK and rerun checks required.",
+  "human_acceptance": "NOT complete: no human labels supplied. 120 unlabeled reserved pairs are not 100 completed human judgments.",
+  "case_acceptance": "Five substantive alias merges and five homonym separations not claimed. Case/diacritic normalization is not evidence of five genuine alternative identities.",
+  "recovery": "Task5 writes all identity tables in one SQLite transaction. An uncommitted interruption rolls back to the previous stage state; rerun recomputes this stage. Synthetic import test interrupts at 50000 committed source rows and resumes without duplicate rows.",
+  "version_history": "final_v1 retained as initial 82-pair queue diagnostic. final_v2 changes only holdout backfill/version fingerprint and has 120 pairs; not a change to identity thresholds."
+}

@@ -1,0 +1,7 @@
+{
+  "status": "passed_full_evidence_replay_not_human_accuracy",
+  "all_candidate_matches_replayed": 9344,
+  "raw_source_hashes_verified": 6328,
+  "human_queue_pairs": 120,
+  "human_labels_completed": 0
+}

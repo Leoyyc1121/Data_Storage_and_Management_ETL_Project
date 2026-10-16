@@ -1,0 +1,2 @@
+-r requirements-task4.txt
+# sqlite3, gzip, urllib and the orchestration runtime use Python standard library.

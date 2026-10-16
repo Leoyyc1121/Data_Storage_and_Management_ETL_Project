@@ -1,0 +1,47 @@
+"""Replay all contextual external-work matches and retained source hashes."""
+import argparse
+from contextlib import closing
+import hashlib
+import json
+from pathlib import Path
+import sys
+ROOT=Path(__file__).resolve().parents[2]
+sys.path.insert(0,str(ROOT/'src/transform'))
+from integration_common import *
+from resolve_people import candidate_evidence,verify as structural
+from resolve_movies import load_config as task4_config
+from acquire_imdb import load_config as imdb_config
+
+def verify(c):
+    tc=task4_config(c['task4_config']);ic=imdb_config(c['imdb_config']);count=0
+    with closing(ro(Path(c['work_dir'])/'integration.sqlite3')) as d,closing(ro(Path(tc['work_dir'])/'resolution.sqlite3')) as t4,closing(ro(Path(ic['work_dir'])/'catalog.sqlite3')) as imdb:
+        required(d,'task5');structural(d)
+        for row in d.execute('SELECT * FROM source_records'):
+            if hashlib.sha256(row['raw_record']).hexdigest()!=row['raw_sha256']:raise ValueError('Source raw hash mismatch')
+            if row['byte_end']-row['byte_start']!=len(row['raw_record']):raise ValueError('Source offset mismatch')
+        for w in d.execute('SELECT * FROM work_matches ORDER BY movie_id'):
+            profiles=[json.loads(r[0]) for r in t4.execute('SELECT p.profile FROM products p JOIN product_movie m USING(asin) WHERE m.movie_id=?',(w['movie_id'],))]
+            expected=set()
+            for title in {v for p in profiles for v in p['titles']}:expected.update(r[0] for r in imdb.execute('SELECT tconst FROM title_lookup WHERE normalized_title=?',(title,)))
+            actual=list(d.execute('SELECT * FROM work_match_candidates WHERE movie_id=?',(w['movie_id'],)))
+            if expected!={r['tconst'] for r in actual}:raise ValueError('Missing work candidate')
+            qualified=[]
+            for r in actual:
+                title=imdb.execute('SELECT * FROM titles WHERE tconst=?',(r['tconst'],)).fetchone();crew=imdb.execute('SELECT * FROM crew WHERE tconst=?',(r['tconst'],)).fetchone()
+                directors=[dict(n) for key in json.loads(crew['directors']) if (n:=imdb.execute('SELECT * FROM names WHERE nconst=?',(key,)).fetchone())] if crew else []
+                actors=[dict(n) for n in imdb.execute("SELECT DISTINCT n.* FROM principals p JOIN names n USING(nconst) WHERE p.tconst=? AND p.category IN ('actor','actress')",(r['tconst'],))]
+                e=candidate_evidence(profiles,title,directors,actors)
+                if e!=json.loads(r['evidence']) or e['qualified']!=bool(r['qualified']):raise ValueError('Work evidence mismatch')
+                if e['qualified']:qualified.append(r['tconst'])
+                count+=1
+            if w['tconst']!=(qualified[0] if len(qualified)==1 else None):raise ValueError('Wrong unique match selection')
+        queue=json.loads((Path(c['work_dir'])/'person_evaluation_queue.json').read_text(encoding='utf-8'))
+        ids={r[0] for r in d.execute('SELECT pair_id FROM person_evaluation_pairs')}
+        if ids!={p['pair_id'] for p in queue['pairs']}:raise ValueError('Queue mismatch')
+        if any(p['label'] is not None for p in queue['pairs']):raise ValueError('Automatic queue must not generate human labels')
+        result=dict(status='passed_full_evidence_replay_not_human_accuracy',all_candidate_matches_replayed=count,
+            raw_source_hashes_verified=d.execute('SELECT count(*) FROM source_records').fetchone()[0],human_queue_pairs=len(ids),human_labels_completed=0)
+        return result
+def main():
+    p=argparse.ArgumentParser(description=__doc__);p.add_argument('--config',type=Path,default=ROOT/'config/integration.example.json');a=p.parse_args();c=load_config(a.config);r=verify(c);save_json(Path(c['report_root'])/'task5'/'full_verification.json',r);print(js(r))
+if __name__=='__main__':main()
