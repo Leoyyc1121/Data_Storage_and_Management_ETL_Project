@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-19T11:29:55.976371+00:00",
+  "observed_at": "2026-10-19T11:31:17.002742+00:00",
   "status": "passed_submission_boundary_and_registered_local_artifacts",
   "files": [
     {
@@ -1094,13 +1094,13 @@
     },
     {
       "path": "项目实施记录.md",
-      "bytes": 133437,
-      "sha256": "8ddff4037724871d65efaf16a785542519ac55b727650105192936c11a265104"
+      "bytes": 134486,
+      "sha256": "46e90eacde518b925e378d050ec375c6c1e8fd91cde6e9e7f64579c1781f7446"
     }
   ],
   "files_count": 219,
-  "submission_bytes": 1309262,
-  "content_fingerprint": "abc11107bd6247dfc28bb91e9fd5c97717a4147d5b118a45e5bc4ea55ecf12f0",
+  "submission_bytes": 1310311,
+  "content_fingerprint": "9dc44fa6e78c72d097d4ffbeefdc92219b2cea21a66209d159c27d037dcd4e33",
   "self_hash_exclusions": [
     "reports/final/submission_manifest.json",
     "reports/final/submission_verification.json"

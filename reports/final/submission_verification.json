@@ -1,8 +1,8 @@
 {
-  "observed_at": "2026-10-19T11:29:55.981901+00:00",
+  "observed_at": "2026-10-19T11:31:17.005745+00:00",
   "status": "passed",
   "submitted_content_files": 219,
-  "submission_bytes": 1309262,
+  "submission_bytes": 1310311,
   "no_large_or_restricted_data_in_submission": true,
   "json_and_markdown_links_valid": true,
   "known_credential_patterns_found": 0,
