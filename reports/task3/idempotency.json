@@ -1,84 +1,48 @@
 {
-  "verified_at": "2026-10-15T11:18:16.986849+00:00",
+  "observed_at": "2026-10-19T11:07:58.833585+00:00",
   "status": "passed",
-  "scope": "Actual full v2 offline classification repeated; checkpoint decisions reused, all candidate and classification rows reverified. Not final target-database loading.",
-  "before": {
-    "run_id": "55fa8bf710dd446ba37fbc2fd4af487d",
-    "status": "complete",
-    "products": 253059,
-    "candidates": 88660,
-    "review_references": 7911684,
-    "classification_counts": {
-      "movie": 2955,
-      "non_movie": 2232,
-      "compilation": 137,
-      "television_series": 1143,
-      "concert": 308,
-      "other_content": 7,
-      "awaiting_confirmation": 246277
-    },
-    "outputs": {
-      "products": {
-        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\product_classification.parquet",
-        "rows": 253059,
-        "file_size_bytes": 14240606,
-        "sha256": "f942982010337eae4afd4235f6d3f64b529a43d3c36c62ed4af4ba69d520b0f5",
-        "ordered_rows_sha256": "956697a90a95b751d5b48eee1c970fd30803269e4f260e8eff98024c4ab0dbf0"
-      },
-      "candidates": {
-        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\classification_evidence.parquet",
-        "rows": 88660,
-        "file_size_bytes": 16228406,
-        "sha256": "56d4aab5ee187960665df4943edf81fd795bfaaa6a44a3beacb4c5f4b67e1cfe",
-        "ordered_rows_sha256": "6f0c451b72629f97233fb63eea3a2889bee1a01a31d4e5a9de86019c9e0a43c8"
-      }
-    },
-    "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8",
-    "verification_status": "passed",
-    "inserted_products": 251059,
-    "inserted_candidates": 88436
+  "scope": "Actual full_v3 same-input runs; first output SHA binding retained by original Task4 registration, each replay fully verifies source candidates/classifications.",
+  "input_fingerprint": "d1fb9bd402c11d89bd6ee50a31a329b5ebf61a8ed600c511f6b3dfb30b3f24a8",
+  "all_output_file_hashes_equal": true,
+  "output_sha256": {
+    "products": "96dadecee2fd40e54933ade64de7f9a588d1f5343b9a82b9f0cbbbeac3d04a4c",
+    "candidates": "d65659c5cc4493e9b18005e4146e9e6b835f21c3cd13377738e698c5501debce"
   },
-  "after": {
-    "run_id": "69613a1608c449e9a4813dd5c7fd48b9",
-    "status": "complete",
-    "products": 253059,
-    "candidates": 88660,
-    "review_references": 7911684,
-    "classification_counts": {
-      "movie": 2955,
-      "non_movie": 2232,
-      "compilation": 137,
-      "television_series": 1143,
-      "concert": 308,
-      "other_content": 7,
-      "awaiting_confirmation": 246277
+  "runs": [
+    {
+      "run_id": "deeb15ee70d746988c512e0ea5bc2f0f",
+      "started_at": "2026-10-19T07:29:57.422965+00:00",
+      "finished_at": "2026-10-19T07:35:24.308350+00:00",
+      "status": "complete",
+      "inserted_products": 253059,
+      "inserted_candidates": 88660
     },
-    "outputs": {
-      "products": {
-        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\product_classification.parquet",
-        "rows": 253059,
-        "file_size_bytes": 14240606,
-        "sha256": "f942982010337eae4afd4235f6d3f64b529a43d3c36c62ed4af4ba69d520b0f5",
-        "ordered_rows_sha256": "956697a90a95b751d5b48eee1c970fd30803269e4f260e8eff98024c4ab0dbf0"
-      },
-      "candidates": {
-        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\classification_evidence.parquet",
-        "rows": 88660,
-        "file_size_bytes": 16228406,
-        "sha256": "56d4aab5ee187960665df4943edf81fd795bfaaa6a44a3beacb4c5f4b67e1cfe",
-        "ordered_rows_sha256": "6f0c451b72629f97233fb63eea3a2889bee1a01a31d4e5a9de86019c9e0a43c8"
-      }
+    {
+      "run_id": "d0ef677fd3c545588ef5c19347c24da5",
+      "started_at": "2026-10-19T07:36:27.158813+00:00",
+      "finished_at": "2026-10-19T07:40:07.447538+00:00",
+      "status": "complete",
+      "inserted_products": 0,
+      "inserted_candidates": 0
     },
-    "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8",
-    "verification_status": "passed",
-    "inserted_products": 0,
-    "inserted_candidates": 0
+    {
+      "run_id": "d49826bb54d04f6ea268339fec5f3330",
+      "started_at": "2026-10-19T10:58:04.652121+00:00",
+      "finished_at": "2026-10-19T11:02:08.234405+00:00",
+      "status": "complete",
+      "inserted_products": 0,
+      "inserted_candidates": 0
+    }
+  ],
+  "products": 253059,
+  "classification_counts": {
+    "movie": 3617,
+    "non_movie": 2232,
+    "compilation": 137,
+    "television_series": 1143,
+    "concert": 308,
+    "other_content": 7,
+    "awaiting_confirmation": 245615
   },
-  "checks": {
-    "counts_and_statuses_same": true,
-    "all_output_hashes_same": true,
-    "input_fingerprint_same": true,
-    "zero_inserted_on_repeat": true,
-    "full_verification_passed": true
-  }
+  "reviews_retained": 7911684
 }

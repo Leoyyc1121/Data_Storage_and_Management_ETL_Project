@@ -1,0 +1,4 @@
+# Source/rule fingerprints and delivery checksums bind exact bytes.
+# Do not let core.autocrlf rewrite either implementation or generated evidence.
+* -text
+* whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol

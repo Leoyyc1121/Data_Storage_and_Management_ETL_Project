@@ -89,6 +89,24 @@ def download(config,name,client):
             time.sleep(2**attempt)
 
 
+def replay_registered_archives(config):
+    """Offline input stage: verify existing immutable files, make no HTTP call."""
+    root=Path(config['raw_dir']);files=[]
+    if not root.is_dir():raise ValueError('Offline mode requires registered IMDb archives')
+    with run_lock(root):
+        for name in config['files']:
+            path=root/name;record=root/(name+'.manifest.json')
+            if not path.is_file() or not record.is_file():raise ValueError('Missing registered archive: '+name)
+            registration=json.loads(record.read_text(encoding='utf-8'))
+            if registration.get('url')!=BASE+name or path.stat().st_size!=registration['bytes'] or hash_file(path)!=registration['sha256']:
+                raise ValueError('Offline IMDb archive differs from registration: '+name)
+            files.append(dict(registration,path=str(path.resolve())))
+    save_json(Path(config['report_dir'])/'acquisition.json',dict(status='complete',observed_at=utc_now(),files=files,
+        mode='registered_local_archive_replay',actual_network_requests=0,
+        policy=dict(scope='No live access: preserved original download registrations and bytes verified; historical times unchanged.')))
+    return files
+
+
 def acquire(config):
     reports=Path(config["report_dir"]);reports.mkdir(parents=True,exist_ok=True)
     settings=load_task2(ROOT/"config/task2.example.json")
@@ -107,10 +125,10 @@ def acquire(config):
 
 
 def main():
-    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument("--config",type=Path,default=ROOT/"config/imdb.example.json");args=parser.parse_args()
+    parser=argparse.ArgumentParser(description=__doc__);parser.add_argument("--config",type=Path,default=ROOT/"config/imdb.example.json");parser.add_argument('--offline',action='store_true');args=parser.parse_args()
     config=load_config(args.config);Path(config["report_dir"]).mkdir(parents=True,exist_ok=True)
     logging.basicConfig(level=logging.INFO,format="%(asctime)s %(levelname)s %(message)s",handlers=[logging.StreamHandler(),logging.FileHandler(Path(config["report_dir"])/"execution.log",encoding="utf-8")])
-    result=acquire(config);print(json.dumps(dict(archives=len(result),bytes=sum(f["bytes"] for f in result)),indent=2))
+    result=replay_registered_archives(config) if args.offline else acquire(config);print(json.dumps(dict(archives=len(result),bytes=sum(f["bytes"] for f in result)),indent=2))
 
 
 if __name__=="__main__":main()

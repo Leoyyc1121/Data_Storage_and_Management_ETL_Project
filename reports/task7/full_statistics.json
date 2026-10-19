@@ -1,27 +1,27 @@
 {
-  "observed_at": "2026-10-16T08:55:05.916316+00:00",
+  "observed_at": "2026-10-19T11:12:38.579927+00:00",
   "status": "complete",
   "tables": {
     "field_selections": {
-      "rows": 1795037,
-      "ordered_rows_sha256": "487aca7d75bf41660bd7a437c7198d133e2ffdf046e11f0e0fc7d3a772c6f06d"
+      "rows": 1800317,
+      "ordered_rows_sha256": "fc344f609c13fca6a0ba08b5c6fd92fed746fdd6495cdff78eb671644c91338b"
     },
     "selection_members": {
-      "rows": 287022,
-      "ordered_rows_sha256": "5a9a03f2ffa0bb5a2c4f700603db19ff25b2c6662413f09e3666c1026d51cade"
+      "rows": 290246,
+      "ordered_rows_sha256": "774819b9cfe86621616a749394c18b24e639ae479161477887744e1c85d2fbf7"
     },
     "movies": {
-      "rows": 2953,
-      "ordered_rows_sha256": "ed1472d0757df89434089794a824b4a9c5197be523d046dd840b691716c6e2ad"
+      "rows": 3613,
+      "ordered_rows_sha256": "c6f7de89fed2f2aebc78a54625b46219c7e2a488bb60b69ba03cf29fae584cfb"
     },
     "editions": {
       "rows": 253059,
-      "ordered_rows_sha256": "5bab5cfb2efc5a796b9568bbd8fc047133d970a9826021afe0d0378595281ac7"
+      "ordered_rows_sha256": "405dd050cab07a80c69709e73bb940a00dbfe96dcef8da828867ffa09bfc16d7"
     }
   },
   "selection_statuses": {
-    "missing": 1631111,
-    "selected": 163926
+    "missing": 1634675,
+    "selected": 165642
   },
   "policy": "Semantic eligibility first; unique highest applicable authority for scalar, explicit supported union for multivalue. Equal-authority disagreements remain NULL with reason. No majority/latest arbitrary tie break."
 }

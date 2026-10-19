@@ -78,10 +78,10 @@ def local_artifacts(hash_large=False):
         rows.append(dict(kind=label,path=str(path),bytes=path.stat().st_size,registered_sha256=digest,
             checksum_status='recomputed_and_matched' if rehashed else 'registered_previous_verification_not_rehashed_this_run',registration=evidence,public_git=False))
     required=['data/staging/task1/full_v2/checkpoint.sqlite3','data/staging/task2/full/acquisition.sqlite3',
-        'data/staging/task2/full/metadata.sqlite3','data/staging/task3/full_v2/classification.sqlite3',
-        'data/integration/task4/full_v3/resolution.sqlite3','data/integration/final_v7/integration.sqlite3',
-        'data/acceptance/fixed_v2/run_v1/target/etl.sqlite3','data/evaluation/people_v2/reserved_pairs.json',
-        'data/evaluation/annotation_v1/movies.labels.json','data/evaluation/annotation_v1/people.labels.json']
+        'data/staging/task2/full/metadata.sqlite3','data/staging/task3/full_v3/classification.sqlite3',
+        'data/integration/task4/full_v4/resolution.sqlite3','data/integration/final_v8/integration.sqlite3',
+        'data/acceptance/fixed_v3/run_v1/target/etl.sqlite3','data/evaluation/people_v3/reserved_pairs.json',
+        'data/evaluation/annotation_v2/movies.labels.json','data/evaluation/annotation_v2/people.labels.json']
     for rel in required:
         if not (ROOT/rel).is_file():raise ValueError('Required runtime material missing: '+rel)
     return rows,required

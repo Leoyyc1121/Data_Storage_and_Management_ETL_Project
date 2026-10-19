@@ -1,14 +1,14 @@
 {
-  "input_fingerprint": "c5cb47e10277ff20f8b9d00af01c82db7040c0e56d83910e5b56c149d2dc7066",
+  "input_fingerprint": "b211b9d7ff0a4fa104f14c84fc681349b6d2b23f42610a21cd2b531a6a7e3741",
   "inputs": {
-    "task7": "59e4b22d70d0393c8340293cdb95b29c1cba318af62fc71f0b77290292455249",
+    "task7": "16382e716e87eff1acd3b2c84de220bf2b2a7c7624966847d6c6a423be5237d1",
     "review_fingerprint": "a5557e6987c72fddeabec555acf357396da207a5cce881dd17b1c2a9bbf951e3",
-    "catalog_sha256": "e0c549e27320597144e90f72a47fb42ed286d63e1f440e2c74bba53219cae5a6",
+    "catalog_sha256": "70cf7ddfaca13855a6b03dd66fff43597da2ed59e683d878130ab8cf03fb359e",
     "version": "target-field-lineage-v2",
     "implementation": "5712a2324192097c7dfe2c6ae38293916946cd70b64cf9023d6542da2e168e4a",
     "views": "dae4430fb337d604bc7ffaa400a05700e6c6788ab46378569dcd1333e8abdc32",
     "scope": "full",
     "expected_reviews": 7911684
   },
-  "registered_at": "2026-10-16T08:58:15.125241+00:00"
+  "registered_at": "2026-10-19T08:17:12.961359+00:00"
 }

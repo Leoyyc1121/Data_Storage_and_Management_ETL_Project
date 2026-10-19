@@ -77,7 +77,7 @@ def prepare(c, output):
 def main():
     p = argparse.ArgumentParser(description=__doc__)
     p.add_argument('--config', type=Path, default=ROOT/'config/integration.example.json')
-    p.add_argument('--output-dir', type=Path, default=ROOT/'data/evaluation/annotation_v1')
+    p.add_argument('--output-dir', type=Path, default=ROOT/'data/evaluation/annotation_v2')
     a = p.parse_args()
     print(json.dumps(prepare(load_config(a.config), a.output_dir), ensure_ascii=False, indent=2))
 

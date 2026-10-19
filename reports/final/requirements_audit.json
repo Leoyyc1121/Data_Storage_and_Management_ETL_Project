@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-19T06:25:18.732416+00:00",
+  "observed_at": "2026-10-19T11:29:22.053299+00:00",
   "status": "not_fully_met",
   "strict_assignment_acceptance": false,
   "engineering_integrity": "passed_integrity_not_human_accuracy",
@@ -29,8 +29,8 @@
     },
     {
       "requirement": "At least5 actual cross-edition movie merge groups",
-      "status": "not_met",
-      "actual": 3,
+      "status": "passed",
+      "actual": 5,
       "required": 5,
       "evidence": "reports/task4/full_statistics.json"
     },
@@ -70,7 +70,7 @@
     {
       "requirement": "Identity-first release semantics precision and source selection",
       "status": "passed_engineering_with_missing_values",
-      "reason": "169 release years; sourced work_review_observations stores earliest valid review separately, no invented full dates/regions/review upper bounds.",
+      "reason": "282 release years; sourced work_review_observations stores earliest valid review separately, no invented full dates/regions/review upper bounds.",
       "evidence": "reports/task6/full_verification.json;sql/target_views.sql"
     },
     {
@@ -95,20 +95,20 @@
     {
       "requirement": "Movie field coverage denominator and full product identification coverage",
       "status": "passed_corrected",
-      "reason": "169 independently multifield-identified works for movie information;2953 all/provisional work records separately;172/253059 product identification. Conditional100% coverage is not population identification.",
+      "reason": "282 independently multifield-identified works for movie information;3613 all/provisional work records separately;286/253059 product identification. Conditional coverage is not population identification.",
       "evidence": "reports/final/field_completeness.json"
     },
     {
       "requirement": "Person evaluation pool supports both identity-like and confusing distinct-context candidates",
       "status": "prepared_not_labeled",
       "actual_pairs": 120,
-      "reason": "60 cross-work,30 similar-name,30 initials;265 development sources and5 alias case people excluded. Candidate buckets are NOT gold classes.",
+      "reason": "60 cross-work,30 similar-name,30 initials;276 development sources and5 alias case people excluded. Candidate buckets are NOT gold classes.",
       "evidence": "reports/task5/evaluation_queue_audit.json"
     },
     {
       "requirement": "Offline fixed raw-evidence sample covers ALL required difficult cases",
       "status": "source_case_categories_passed_not_human_gold",
-      "reason": "Version2 includes actual contextual person-alias evidence; source-case demonstrations do not substitute for independent HUMAN evaluation.",
+      "reason": "Current fixed evidence includes actual contextual person aliases; source-case demonstrations do not substitute for independent HUMAN evaluation.",
       "evidence": "reports/final/offline_sample_manifest.json"
     },
     {
@@ -144,8 +144,7 @@
   ],
   "required_user_or_permitted_new_evidence": [
     "Independent human movie and person labels (>=100 each, both classes, evidence, disagreements).",
-    "At least2 additional genuinely supported cross-edition groups.",
-    "Stronger independent same-name/different-person examples in final-target context and missing historical original-download evidence."
+    "Review source-supported same-name/different-person examples and missing historical original-download evidence."
   ],
   "nonfabrication": "No AI-generated facts, fabricated page success, synthetic HUMAN labels or perfect-accuracy claims. Missing historical acquisition evidence remains unknown."
 }

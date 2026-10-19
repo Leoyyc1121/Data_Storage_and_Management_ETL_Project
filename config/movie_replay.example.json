@@ -1,0 +1,13 @@
+{
+  "version": "movie-five-group-same-input-replay-v1",
+  "state_dir": "data/pipeline/movie_replay",
+  "report_dir": "reports/pipeline/movie_replay",
+  "jobs": [
+    {
+      "id": "task4_same_input_replay",
+      "depends_on": [],
+      "module": "src.transform.resolve_movies",
+      "args": ["--config", "config/task4.example.json"]
+    }
+  ]
+}

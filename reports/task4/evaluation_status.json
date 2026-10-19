@@ -7,7 +7,7 @@
   "recall": null,
   "f1": null,
   "manual_review_coverage": 0.0,
-  "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\evaluation_queue.json",
-  "queue_sha256": "7442984e4668af25794223deff191d8dbc21d2c8f9ecd878b50e0790c7f66ae5",
+  "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\evaluation_queue.json",
+  "queue_sha256": "c2c3369e631a7c74ffb140024db6f92f5a2ec04687aba03f1725d4c60bf73659",
   "note": "User confirmed no manual labels. This queue is NOT a completed labeled evaluation set. Development cases exclude these pair IDs."
 }

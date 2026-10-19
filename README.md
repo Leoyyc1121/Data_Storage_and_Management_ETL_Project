@@ -8,15 +8,17 @@
 | --- | --- | --- |
 | 1 全量评论抽取 | 7,911,684 条评论；253,059 商品；889,176 用户 | 全量核验通过 |
 | 2 合规采集 | 全量 ASIN 清单；公开研究元数据覆盖 73,813 商品；HTML 成功 0 | 受限替代路径，范围已披露 |
-| 3 内容分类 | 全量有处理状态；电影商品 2,955；待确认 246,277 | 全量规则重放通过 |
-| 4 作品合并 | 416 候选对；3 组多字段合并；2,953 条作品记录 | 工程核验通过；不足 5 组合并案例，人工评估待补 |
-| 5 人物消歧 | 1,918 人物记录；2,360 条角色信用；5 组实质别名 | 全量重放通过；独立人工评估待补 |
-| 6 上映补全 | 169 条身份匹配后的上映年；完整日期 0 | 不伪造日期，缺失原因保留 |
-| 7 字段选择 | 1,795,037 个选择状态，全部候选与理由保留 | 全量选择重放通过 |
+| 3 内容分类 | 全量有处理状态；电影商品 3,617；待确认 245,615 | 全量规则重放通过 |
+| 4 作品合并 | 552 候选对；5 组多字段合并；3,613 条作品记录 | 已达到五组合并要求；独立人工评估待补 |
+| 5 人物消歧 | 3,245 人物记录；3,923 条角色信用；5 组实质别名 | 全量重放通过；独立人工评估待补 |
+| 6 上映补全 | 282 条身份匹配后的上映年；完整日期 0 | 不伪造日期，缺失原因保留 |
+| 7 字段选择 | 1,800,317 个元数据选择状态，全部候选与理由保留 | 全量选择重放通过 |
 | 8 评论清洗 | 原始评论全留；7,906,538 逻辑评论；精确重复映射 5,146 | 全量逐字段核验、幂等及恢复通过 |
-| 9 血缘和目标库 | final_v7 全量发布；7,740,850 条处理边；10 个查询执行通过 | 全量完整性、实际中断恢复与幂等检查通过 |
+| 9 血缘和目标库 | final_v8 全量发布；7,876,297 条处理边；10 个查询执行通过 | 全量完整性与幂等、固定样本实际中断恢复通过 |
 
 “作品记录”含临时单例，不是已确认的真实电影总数。同名/同年份/缺失年份不能单独支持合并；角色、商品版本和合集评论不混淆。两个 120 对队列均未人工标注，Precision/Recall/F1 为 NULL，不能把测试通过当作匹配准确率。最终验收不能宣称全部严格达标。
+
+五组为 Star Trek VI、Lady for a Day、Chocolate、The Big Lebowski、The Other Boleyn Girl；新增两组经真实来源证据及 complete-link 检查后，由同一 DAG 重算下游，不直接编辑目标映射。[五组验收](reports/task4/five_group_acceptance.json)与[流水线验收](reports/final/movie_merge_pipeline_acceptance.json)记录实际结果。
 
 2026-10-19 已实际复试 Scrapy 2.19.0；VPN 开启与关闭后 robots 预检均返回 HTTP 503，商品请求 0。[复试汇总](reports/task2/scrapy_retest_summary.json)保留证据位置及哈希。未满足真实 HTML 成功的替换条件，正式流程仍用原实现；未提升的试验代码和数据已移到项目外归档。
 
@@ -54,16 +56,18 @@ python -m venv .venv
 & .\.venv\Scripts\python.exe -m src.pipeline.run
 ```
 
-已恢复登记来源、任务 1—4 与评论检查点时，可从集成步骤离线继续：
+已恢复任务 1—2、评论检查点及登记的 IMDb 原始档案时，可离线重算分类及全部受影响下游：
 
 ```powershell
-& .\.venv\Scripts\python.exe -m src.pipeline.run --from-job task5 --offline
+& .\.venv\Scripts\python.exe -m src.pipeline.run --from-job task3 --offline
 & .\.venv\Scripts\python.exe -m src.quality.run_queries --show-rows
 ```
 
 只查看一类结果时，可用 `--query 6 --field-name title --show-rows`，再传入 `--movie-id` 查看指定作品的完整候选；`--query 9 --person-id ...` 反查人物信用和别名决定，`--query 10 --movie-id ...` 查看有原件定位的最早评论观察。指定实体的结果不再截断为前 30 条。
 
-中断后重跑同一命令；输入或规则变更时使用新版本目录，保留旧原件和决定。新解析 run_id 可改变 Parquet 二进制哈希，应重新导出当前分片清单，不沿用旧机清单。原始档案刷新后不保证能从公开地址恢复完全相同的历史字节。
+此离线分支重新核验本地 IMDb 登记档案的 URL、大小和 SHA，不发送下载请求；不是“跳过获取就假装成功”。仅需重算已恢复集成输入时也可用 `--from-job task5 --offline`。中断后重跑同一命令；输入/规则变化使用新版本目录，保留旧原件和决定。新解析 run_id 可改变 Parquet 二进制哈希，应导出当前分片清单。原始档案刷新后不保证还能恢复相同历史字节。
+
+`.gitattributes` 禁止 Git 自动转换换行，保留来源/规则指纹和提交清单所校验的文件字节；不要在恢复检查点前批量改写源码或配置换行。
 
 固定离线样本先在已恢复来源的机器导出，之后不访问网络：
 
@@ -72,9 +76,18 @@ python -m venv .venv
 & .\.venv\Scripts\python.exe -m src.quality.offline_acceptance run
 ```
 
-固定包当前为 fixed_v2：23 条真实评论、26 条研究原件，含 5 组实质人物别名。现场演示可依次运行离线样本、人物/字段反查，再展示中断恢复证据，避免重新下载整套来源。
+固定包当前为 fixed_v3，包含五组电影合并、五组实质人物别名和真实采集失败原件；数量与哈希见[固定样本登记](reports/final/offline_sample_manifest.json)。`run --sample-dir 本机路径 --run-name 新目录名`可在不同输出位置重建，不依赖清单中的旧机绝对路径。
 
-人工标注使用 `data/evaluation/annotation_v1/` 中的电影、人物盲化包，各 120 对；已隐藏人物模型 ID、身份状态及模型分层，不直接用含模型输出的原注册队列标注。[人工评估说明](docs/人工评估与剩余验收.md)包含导出、证据填写、争议裁定、指标计算和仍缺少的真实材料。所有标签仍为空，不能以此宣称人工验收完成。
+```powershell
+& .\.venv\Scripts\python.exe src/quality/verify_movie_merge_pipeline.py
+& .\.venv\Scripts\python.exe src/quality/verify_isolated_reproduction.py
+```
+
+前者检查全量目标五组、15类数量幂等及固定样本实际退出130/恢复/重跑；后者在隔离目录从空输出重建，禁止读取原项目数据，仅共用Python依赖。它们不代替独立人工评估或第二台机器的全量重建。
+
+隔离工具不覆盖已有目录，再次执行时加 `--directory data/acceptance/isolated_project_v5` 指定尚不存在的新目录。隔离是Python文件/连接审计及SQLite ATTACH路径检查，不是操作系统沙箱。
+
+人工标注使用 `data/evaluation/annotation_v2/` 中绑定当前模型的电影、人物盲化包，各 120 对；已隐藏人物模型 ID、身份状态及模型分层，不直接用含模型输出的原注册队列标注。[人工评估说明](docs/人工评估与剩余验收.md)包含导出、证据填写、争议裁定、指标计算和仍缺少的真实材料。标签仍为空。
 
 ## 交付材料
 
@@ -84,7 +97,7 @@ python -m venv .venv
 - reports/task1—task9：全量统计、检查、幂等/恢复和来源证据；reports/final：数据字典、完整性、离线复现及严格要求审计。
 - data/raw、staging、integration、target：仅本机保存，具体位置、大小与哈希见统计/清单；克隆仓库不会得到数据本体。
 
-交付边界、保留数据与归档恢复方法见[交付说明](docs/交付与恢复.md)。提交文件清单由 `src/quality/verify_submission.py` 生成；历史数据库、重复报告、旧 Word 草稿及失败试验不放入提交范围。当前原件、final_v7、评论库、fixed_v2 和虚拟环境仍在本机保留。
+交付边界、保留数据与归档恢复方法见[交付说明](docs/交付与恢复.md)。提交清单由 `src/quality/verify_submission.py` 生成；历史数据库、旧 Word 草稿和失败试验不放入提交范围。当前原件、final_v8、评论库、fixed_v3 和环境保留在本机；旧v7及本轮前报告另留历史副本。
 
 ## 来源与使用边界
 

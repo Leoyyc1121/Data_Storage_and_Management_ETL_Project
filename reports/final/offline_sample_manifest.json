@@ -1,11 +1,13 @@
 {
-  "version": "fixed-real-evidence-v2",
+  "version": "fixed-real-evidence-v3",
   "status": "fixed_local_raw_evidence_exported",
   "asins": [
     "0001517791",
     "076700941X",
     "6301689984",
     "630242335X",
+    "6304994540",
+    "6304994567",
     "6305252599",
     "B00005AWQL",
     "B000063UYL",
@@ -18,24 +20,27 @@
     "B000MLH99C",
     "B000T63TQC",
     "B000WTVZGC",
+    "B0012QE4Q2",
     "B0012SANTW",
+    "B0017APPSE",
     "B001EBO90G",
     "B001L67A3M",
+    "B002E2QH1I",
     "B00383XYN6",
     "B003ZZ7TPG",
     "B006QS9M1S",
     "B006QS9MC2"
   ],
-  "review_records": 23,
-  "metadata_records": 26,
+  "review_records": 28,
+  "metadata_records": 31,
   "packet": {
-    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v2\\evidence.json",
-    "bytes": 181787,
-    "sha256": "9b3ee766d8de60e2a39fcde38b18ee8001848fc2194ca705c25e74868c3fc950"
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v3\\evidence.json",
+    "bytes": 246619,
+    "sha256": "0b2fa5b5eb55264fc405cd078841aea31cc92c4f321aea1c5cf034bc18f12503"
   },
   "catalog": {
-    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v2\\catalog.sqlite3",
-    "sha256": "9f6163da675cfaaccdc21ceaded6e56e6eff7b5a6378778a9430ea49c4eeb973"
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v3\\catalog.sqlite3",
+    "sha256": "f78031cff0b278b55825ddc7e3dba97b7237ca49404c0181fc757d8f0a9c7c34"
   },
   "source_review_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
   "coverage": [

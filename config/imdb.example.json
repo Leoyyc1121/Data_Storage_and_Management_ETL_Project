@@ -1,6 +1,6 @@
 {
   "raw_dir": "data/raw/imdb/snapshot_20261016",
-  "work_dir": "data/staging/imdb/snapshot_20261016",
+  "work_dir": "data/staging/imdb/snapshot_20261016_v2",
   "report_dir": "reports/sources/imdb",
   "task4_config": "config/task4.example.json",
   "files": ["title.basics.tsv.gz", "title.crew.tsv.gz", "title.principals.tsv.gz", "name.basics.tsv.gz"],

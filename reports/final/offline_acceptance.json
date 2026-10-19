@@ -2,47 +2,55 @@
   "status": "passed_offline_core_end_to_end",
   "scope": "fixed_acceptance_sample_not_full_dataset",
   "counts": {
-    "raw_reviews": 23,
-    "logical_reviews": 23,
-    "editions": 23,
-    "movies": 12,
-    "people": 111,
-    "credits": 156,
-    "field_selections": 1063,
-    "lineage_edges": 6870
+    "raw_reviews": 28,
+    "logical_reviews": 28,
+    "editions": 28,
+    "movies": 15,
+    "people": 122,
+    "credits": 169,
+    "field_selections": 1220,
+    "lineage_edges": 7741
   },
-  "packet_sha256": "9b3ee766d8de60e2a39fcde38b18ee8001848fc2194ca705c25e74868c3fc950",
+  "packet_sha256": "0b2fa5b5eb55264fc405cd078841aea31cc92c4f321aea1c5cf034bc18f12503",
   "target_action": "already_complete_no_insert",
   "actual_network_requests": 0,
   "human_evaluation_completed": false,
   "coverage_limitations": [
     "Independent HUMAN movie/person labels remain absent."
   ],
+  "acquisition_failure_replay": {
+    "status": "passed_original_policy_response_and_product_status_replay",
+    "policy_http_status": 503,
+    "sample_products": 28,
+    "product_attempts": 0,
+    "raw_response_sha256": "470de24561f8fdb4c965acb40542fe9fad14e1843793a497a3bacd906d05544c",
+    "network_requests": 0
+  },
   "queries": [
     {
       "query": 1,
       "status": "passed",
-      "returned_rows": 15
+      "returned_rows": 20
     },
     {
       "query": 2,
       "status": "passed",
-      "returned_rows": 15
+      "returned_rows": 16
     },
     {
       "query": 3,
       "status": "passed",
-      "returned_rows": 12
+      "returned_rows": 15
     },
     {
       "query": 4,
       "status": "passed",
-      "returned_rows": 26
+      "returned_rows": 30
     },
     {
       "query": 5,
       "status": "passed",
-      "returned_rows": 12
+      "returned_rows": 15
     },
     {
       "query": 6,
@@ -52,7 +60,7 @@
     {
       "query": 7,
       "status": "passed",
-      "returned_rows": 23
+      "returned_rows": 28
     },
     {
       "query": 8,
@@ -67,12 +75,12 @@
     {
       "query": 10,
       "status": "passed",
-      "returned_rows": 12
+      "returned_rows": 15
     }
   ],
   "catalog_raw_field_replay": {
     "status": "passed_complete_retained_raw_TSV_field_replay",
-    "raw_records_compared": 194887,
+    "raw_records_compared": 288371,
     "foreign_key_errors": 0,
     "scope": "Retained candidate subset only; full archive scan/CRC evidence separately registered. Not identity matching accuracy."
   },
@@ -83,7 +91,7 @@
     "alias_assertions": 7,
     "excluded_nonperson_or_unresolved_spans": 0,
     "case_packet": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v2\\run_v1\\substantive_alias_evidence.json",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v3\\run_v1\\substantive_alias_evidence.json",
       "sha256": "0479c567def11e8d45cb122605c74d465f5fb92d4ef7f4325b0cecbbaeac0c12",
       "bytes": 14475
     },
@@ -95,7 +103,7 @@
       "person:f3525b6cfb9553c1923b966aa48f2a78"
     ],
     "evaluation_queue_pairs": 8,
-    "development_source_records": 265,
+    "development_source_records": 276,
     "semantics": "Nontrivial middle-name or appended-surname variants, independently verified same work/role, unique external nconst. No fuzzy name-only, initials-only, spelling/punctuation-only groups counted. Cases are rule-development evidence, not independent human evaluation."
   }
 }

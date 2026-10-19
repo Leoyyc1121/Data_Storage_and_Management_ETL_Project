@@ -1,0 +1,16 @@
+{
+  "run_id": "201cbcced994410883dc071c2dcc6eb7",
+  "status": "complete",
+  "definition_version": "movie-five-group-same-input-replay-v1",
+  "definition_sha256": "615f608342761b63d61e8077b2556329d4a02c2873569415ead9648efe988a4a",
+  "results": [
+    {
+      "job": "task4_same_input_replay",
+      "status": "complete",
+      "exit_code": 0,
+      "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\movie_replay\\201cbcced994410883dc071c2dcc6eb7-task4_same_input_replay.log",
+      "execution_mode": "local"
+    }
+  ],
+  "recovery": "Rerun same command. Each stage rechecks fingerprint and resumes own committed batches/complete phases. --from-job selects affected descendants after source/rule change; use NEW version directories and preserve old source/decisions. No automatic threshold or access-policy overrides."
+}

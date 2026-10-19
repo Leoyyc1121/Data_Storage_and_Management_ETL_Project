@@ -28,7 +28,7 @@ sys.path.insert(0, str(ROOT / "src/extract"))
 from acquire_products import digest_json, load_config as load_task2, run_lock, save_json
 from register_source import hash_file, utc_now
 
-ENGINE_VERSION = "1.1.0"
+ENGINE_VERSION = "1.2.0"
 LABELS = ("movie", "non_movie", "compilation", "television_series", "concert", "other_content", "awaiting_confirmation")
 FIELDS = ("title", "original_title", "genres", "directors", "starring", "cast", "release_date", "release_year",
           "medium", "language", "subtitles", "region_code", "cut", "distributor", "product_release_date")
@@ -48,6 +48,49 @@ def text(value):
 
 def json_text(value):
     return json.dumps(value, ensure_ascii=False, sort_keys=True, separators=(",", ":"))
+
+
+def title_bound_movie_evidence(title, descriptions):
+    """Recover affirmative main-work prose, never infer movie type from format.
+
+    This is classification evidence, NOT proof that two editions are one work.
+    Later matching must still compare plots, people, variants and whole clusters.
+    """
+    main = re.sub(r"\b(?:DVD|VHS|Blu[- ]?ray|widescreen|full[- ]?screen)\b", " ", title, flags=re.I)
+    main = " ".join(re.findall(r"\w+", main.casefold()))
+    if not main:
+        return []
+    combined = " ".join(value for _, value in descriptions)
+    # Do not turn an episodic release, performance or bonus feature into a film.
+    if re.search(r"\b(?:episodes?|episodic|seasons?|television series|concert|recorded live|instructional)\b", combined, re.I):
+        return []
+    title_pattern = r"(?<!\w)" + re.escape(main).replace(r"\ ", r"\s+") + r"(?!\w)"
+    facts = []
+    for loc, value in descriptions:
+        normalized = " ".join(re.findall(r"\w+", value.casefold()))
+        if len(normalized.split()) < 80 or not re.search(title_pattern, normalized):
+            continue
+        match = re.search(title_pattern + r"\s+(?:is|features|tells|depicts|follows)\b.{0,100}?\b(?:film|movie)\b", normalized)
+        if match:
+            facts.append(dict(field_locator=loc, matched_text=match.group(),
+                evidence_kind="main_title_bound_movie_narrative", words=len(normalized.split())))
+    # Some publisher pages have no genre category but explicitly credit several
+    # stars, name the main work, and carry a substantial film narrative.
+    names = set()
+    cast_locators = []
+    for loc, value in descriptions:
+        for match in re.finditer(r"\b(?:starring|stars)\s+([^.!?]{1,300})", value, re.I):
+            for raw in re.split(r",|\band\b", match[1]):
+                raw = raw.strip()
+                if re.fullmatch(r"[A-Z][\w'’\-]+(?:\s+(?:[A-Z][\w.'’\-]+|de|van|von|del)){1,4}", raw):
+                    names.add(raw)
+                    cast_locators.append(dict(field_locator=loc, raw_name=raw))
+    if len(names) >= 2 and any(len(re.findall(r"\w+", value)) >= 80 and
+            re.search(title_pattern, " ".join(re.findall(r"\w+", value.casefold()))) and
+            re.search(r"\b(?:film|movie)\b", value, re.I) for _, value in descriptions):
+        facts.append(dict(evidence_kind="title_film_narrative_and_explicit_cast", cast=cast_locators,
+            distinct_credited_names=sorted(names)))
+    return facts
 
 
 def load_config(path):
@@ -152,6 +195,10 @@ def classify_record(item, rules):
     contrary = tv_title or tv_desc or program_title or comp_title or comp_desc or concert or workout or instruction or music_video
     if title and not contrary and (movie_cat or genres and movie_desc):
         add("movie", "explicit_movie_category" if movie_cat else "genre_and_movie_description", movie_cat or genres + movie_desc)
+        return {"label": "movie", "reason": "positive_movie_evidence", "confidence": "rule_supported", "evidence": evidence}
+    narrative = title_bound_movie_evidence(title, descriptions) if title and not contrary else []
+    if narrative:
+        add("movie", "main_title_and_film_narrative_corroborated", narrative)
         return {"label": "movie", "reason": "positive_movie_evidence", "confidence": "rule_supported", "evidence": evidence}
     return {"label": "awaiting_confirmation", "reason": "insufficient_or_ambiguous_evidence", "confidence": "unresolved",
             "evidence": [{"rule_id": "insufficient_evidence", "title": title or None,

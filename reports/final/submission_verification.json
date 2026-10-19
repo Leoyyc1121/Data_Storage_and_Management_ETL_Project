@@ -1,19 +1,17 @@
 {
-  "observed_at": "2026-10-19T06:51:19.586465+00:00",
+  "observed_at": "2026-10-19T11:29:55.981901+00:00",
   "status": "passed",
-  "submitted_content_files": 172,
-  "submission_bytes": 1183788,
+  "submitted_content_files": 219,
+  "submission_bytes": 1309262,
   "no_large_or_restricted_data_in_submission": true,
   "json_and_markdown_links_valid": true,
   "known_credential_patterns_found": 0,
   "registered_local_artifacts_checked": 7,
-  "large_artifacts_rehashed": true,
+  "large_artifacts_rehashed": false,
   "archived_scrapy_evidence_files_hash_checked": 6,
   "scope": "Boundary, known credential-pattern, link, JSON and recorded artifact checks only; NOT human matching accuracy or a new replay of all source fields.",
   "self_hash_exclusions": [
     "reports/final/submission_manifest.json",
     "reports/final/submission_verification.json"
-  ],
-  "artifact_verification_observed_at": "2026-10-19T06:28:16.625621+00:00",
-  "file_inventory_refreshed_after_final_tests": true
+  ]
 }

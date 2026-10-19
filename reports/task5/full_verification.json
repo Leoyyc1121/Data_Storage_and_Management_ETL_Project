@@ -1,8 +1,8 @@
 {
   "status": "passed_full_evidence_replay_not_human_accuracy",
-  "all_candidate_matches_replayed": 9344,
-  "raw_source_hashes_verified": 92236,
-  "all_explicit_source_role_assertions_preserved": 554,
+  "all_candidate_matches_replayed": 14211,
+  "raw_source_hashes_verified": 94724,
+  "all_explicit_source_role_assertions_preserved": 864,
   "human_queue_pairs": 120,
   "human_labels_completed": 0
 }

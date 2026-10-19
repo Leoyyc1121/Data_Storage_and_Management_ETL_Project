@@ -1,0 +1,84 @@
+{
+  "status": "passed_all_seven_registered_artifact_hashes_recomputed",
+  "started_at": "2026-10-19T11:22:31.984446+00:00",
+  "observed_at": "2026-10-19T11:25:02.613266+00:00",
+  "artifacts": [
+    {
+      "kind": "review_source",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\movies.txt",
+      "bytes": 9332887470,
+      "registered_sha256": "ac12efcd30fecd0ff1ff27d16a48cd3354038331a9f812556f873c4fbe5895bc",
+      "checksum_status": "recomputed_and_matched",
+      "registration": "reports/task1/source_manifest.reported.json",
+      "public_git": false
+    },
+    {
+      "kind": "final_target",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\target\\final_v8\\etl.sqlite3",
+      "bytes": 35099467776,
+      "registered_sha256": "3dae5f222e6d81e25278aca0e168787f9409cea37e47f1ac92993bb43682332d",
+      "checksum_status": "recomputed_and_matched",
+      "registration": "reports/task9/load_statistics.json",
+      "public_git": false
+    },
+    {
+      "kind": "cleaned_reviews",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v3\\review_work_v2\\reviews.sqlite3",
+      "bytes": 26780393472,
+      "registered_sha256": "ce0fa0ad8bbaba21d32f2937aa1f738a56fff75fbbabde584f2e7cac259515fd",
+      "checksum_status": "recomputed_and_matched",
+      "registration": "reports/task8/output_manifest.json",
+      "public_git": false
+    },
+    {
+      "kind": "product_manifest",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task2\\full\\product_manifest.parquet",
+      "bytes": 12205020,
+      "registered_sha256": "d4c4bdf56cb2c58f8dbd247e926bf62c147a676d42dc0486491fa4f23aca4efa",
+      "checksum_status": "recomputed_and_matched",
+      "registration": "reports/task2/full_statistics.json",
+      "public_git": false
+    },
+    {
+      "kind": "research_metadata",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task2\\full\\third_party_product_records.parquet",
+      "bytes": 62907673,
+      "registered_sha256": "2ee1f41f8aede45eb43390f68efd1fbe968f22e8c5139ae67c3410ab7fe14e70",
+      "checksum_status": "recomputed_and_matched",
+      "registration": "reports/task2/full_statistics.json",
+      "public_git": false
+    },
+    {
+      "kind": "fixed_raw_packet",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v3\\evidence.json",
+      "bytes": 246619,
+      "registered_sha256": "0b2fa5b5eb55264fc405cd078841aea31cc92c4f321aea1c5cf034bc18f12503",
+      "checksum_status": "recomputed_and_matched",
+      "registration": "reports/final/offline_sample_manifest.json",
+      "public_git": false
+    },
+    {
+      "kind": "fixed_candidate_catalog",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v3\\catalog.sqlite3",
+      "bytes": 163155968,
+      "registered_sha256": "f78031cff0b278b55825ddc7e3dba97b7237ca49404c0181fc757d8f0a9c7c34",
+      "checksum_status": "recomputed_and_matched",
+      "registration": "reports/final/offline_sample_manifest.json",
+      "public_git": false
+    }
+  ],
+  "required_local_runtime_files_checked": [
+    "data/staging/task1/full_v2/checkpoint.sqlite3",
+    "data/staging/task2/full/acquisition.sqlite3",
+    "data/staging/task2/full/metadata.sqlite3",
+    "data/staging/task3/full_v3/classification.sqlite3",
+    "data/integration/task4/full_v4/resolution.sqlite3",
+    "data/integration/final_v8/integration.sqlite3",
+    "data/acceptance/fixed_v3/run_v1/target/etl.sqlite3",
+    "data/evaluation/people_v3/reserved_pairs.json",
+    "data/evaluation/annotation_v2/movies.labels.json",
+    "data/evaluation/annotation_v2/people.labels.json"
+  ],
+  "scope": "Actual current raw/target/review/manifest/metadata/fixed-packet/catalog bytes rehashed and matched, not HUMAN accuracy. Submission inventory is separately refreshed after documentation.",
+  "reproduce": "python -B src/quality/verify_submission.py --hash-large performs the same seven artifact hash checks plus final submission inspection."
+}

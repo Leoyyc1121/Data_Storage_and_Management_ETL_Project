@@ -1,0 +1,33 @@
+2026-10-19 15:40:08,365 INFO Verify full Task3 input and provenance
+2026-10-19 15:43:16,330 INFO Profiles committed=2000 last_asin=0780628543
+2026-10-19 15:43:21,464 INFO Profiles committed=20000 last_asin=630249186X
+2026-10-19 15:43:30,681 INFO Profiles committed=40000 last_asin=6305746273
+2026-10-19 15:43:38,697 INFO Profiles committed=60000 last_asin=B00004Y50N
+2026-10-19 15:43:50,941 INFO Profiles committed=80000 last_asin=B000066JBH
+2026-10-19 15:44:05,714 INFO Profiles committed=100000 last_asin=B0000E1YTA
+2026-10-19 15:44:20,283 INFO Profiles committed=120000 last_asin=B0007QA0D4
+2026-10-19 15:44:36,778 INFO Profiles committed=140000 last_asin=B000GFLKG2
+2026-10-19 15:44:51,511 INFO Profiles committed=160000 last_asin=B000UO8EZY
+2026-10-19 15:45:07,948 INFO Profiles committed=180000 last_asin=B001F7Q4KW
+2026-10-19 15:45:21,398 INFO Profiles committed=200000 last_asin=B002Q5O6SE
+2026-10-19 15:45:29,835 INFO Profiles committed=220000 last_asin=B0047QRXYE
+2026-10-19 15:45:42,608 INFO Profiles committed=240000 last_asin=B006GVNHP2
+2026-10-19 15:45:58,148 INFO Generate source-supported candidate pairs; movie seeds=3617 metadata_products=73813
+2026-10-19 15:46:21,169 INFO Candidate pairs=552; skipped high-frequency nonexact blocks=0
+2026-10-19 15:46:29,388 INFO Works=3613; complete-link checks=5; blocked transitive edges=0
+2026-10-19 15:46:29,410 INFO Export decisions, work/product mappings and unlabeled human evaluation queue
+{
+  "status": "complete",
+  "statistics": {
+    "products": 253059,
+    "candidate_pairs": 552,
+    "after_work_records": 3613,
+    "multifield_work_groups": 5,
+    "decisions": {
+      "auto_merge": 5,
+      "manual_review": 479,
+      "reject": 68,
+      "unresolved": 0
+    }
+  }
+}

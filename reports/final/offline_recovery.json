@@ -1,37 +1,50 @@
 {
   "status": "passed_actual_offline_target_interruption_and_repeat",
-  "scope": "Fixed real-source23-review version2 sample, not full dataset or HUMAN evaluation",
-  "sample_packet_sha256": "9b3ee766d8de60e2a39fcde38b18ee8001848fc2194ca705c25e74868c3fc950",
-  "current_run_directory": "data\\acceptance\\fixed_v2\\run_v1",
+  "scope": "fixed_v3 real-evidence sample, not full-dataset interruption or HUMAN evaluation",
+  "sample_packet_sha256": "0b2fa5b5eb55264fc405cd078841aea31cc92c4f321aea1c5cf034bc18f12503",
+  "current_run_directory": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v3\\run_v1",
   "interrupted_after_phase": "integration",
   "observed_interruption_python_exit_code": 130,
   "resumed_action": "complete",
   "same_input_repeat_action": "already_complete_no_insert",
   "before_counts": {
-    "raw_reviews": 23,
-    "logical_reviews": 23,
-    "editions": 23,
-    "movies": 12,
-    "people": 111,
-    "credits": 156,
-    "field_selections": 1063,
-    "lineage_edges": 6870
+    "raw_reviews": 28,
+    "logical_reviews": 28,
+    "editions": 28,
+    "movies": 15,
+    "people": 122,
+    "credits": 169,
+    "field_selections": 1220,
+    "lineage_edges": 7741
   },
   "after_counts": {
-    "raw_reviews": 23,
-    "logical_reviews": 23,
-    "editions": 23,
-    "movies": 12,
-    "people": 111,
-    "credits": 156,
-    "field_selections": 1063,
-    "lineage_edges": 6870
+    "raw_reviews": 28,
+    "logical_reviews": 28,
+    "editions": 28,
+    "movies": 15,
+    "people": 122,
+    "credits": 169,
+    "field_selections": 1220,
+    "lineage_edges": 7741
   },
+  "actual_cross_edition_groups": 5,
   "query_count_executed": 10,
   "network_requests_during_replay": 0,
-  "substantive_source_alias_groups": 5,
-  "old_sample_versions": "fixed_v1 and its run_v1..v8 retained local, not independent evaluation data",
-  "limitations": "Independent HUMAN movie/person labels absent; actual raw/IMDb-derived cases stay local.",
-  "raw_catalog_records_replayed": 194887,
-  "core_and_packet_fingerprint_guard": true
+  "commands": {
+    "interruption": {
+      "exit_code": 130,
+      "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\final\\movie5-offline-interruption.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "resume": {
+      "exit_code": 0,
+      "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\final\\movie5-offline-resume.log",
+      "sha256": "258319f4c0ede910ae3228b187dadf582e3df9c9f217f651763092f34c7c3600"
+    },
+    "repeat": {
+      "exit_code": 0,
+      "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\final\\movie5-offline-repeat.log",
+      "sha256": "890ce66ad0c2292eb958bcb07c0d51c522717f19d81a657ceddb5e098599d87d"
+    }
+  }
 }

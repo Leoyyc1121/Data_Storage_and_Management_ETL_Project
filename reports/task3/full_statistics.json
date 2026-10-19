@@ -1,39 +1,39 @@
 {
-  "observed_at": "2026-10-15T11:17:07.758705+00:00",
+  "observed_at": "2026-10-19T10:58:45.840459+00:00",
   "status": "complete",
-  "engine_version": "1.1.0",
-  "rule_version": "task3-conservative-content-v2",
+  "engine_version": "1.2.0",
+  "rule_version": "task3-title-bound-narrative-v3",
   "input_registration": {
     "task2_manifest_sha256": "d4c4bdf56cb2c58f8dbd247e926bf62c147a676d42dc0486491fa4f23aca4efa",
     "metadata_sha256": "2ee1f41f8aede45eb43390f68efd1fbe968f22e8c5139ae67c3410ab7fe14e70",
     "task2_source_fingerprint": "e10c81f1ee201711b0d90fc57a54a8d18fd251b367c7460c0987fc800e6a8a47",
-    "rule_file_sha256": "d26480d4b9dc3e1e72eeae8c0ea049c58302f2a28f8fbfa6833e40e9e9dec95c",
-    "engine_version": "1.1.0",
-    "engine_source_sha256": "421254c30e72b489face0f527b97e6413a659186ba2aadc5ce53ec44b99c9a5f",
+    "rule_file_sha256": "e51a1fd100ab2ee0390937b45b958102c18027b24b3b7f1bbe82e63483f0b332",
+    "engine_version": "1.2.0",
+    "engine_source_sha256": "d54277015bf16d1a347a4813473638d8b57bdf10bdb05b96a74cb0d393160f31",
     "products": 253059,
     "reviews": 7911684
   },
-  "input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8",
+  "input_fingerprint": "d1fb9bd402c11d89bd6ee50a31a329b5ebf61a8ed600c511f6b3dfb30b3f24a8",
   "products": 253059,
   "total_target_products": 253059,
   "classification_counts": {
-    "movie": 2955,
+    "movie": 3617,
     "non_movie": 2232,
     "compilation": 137,
     "television_series": 1143,
     "concert": 308,
     "other_content": 7,
-    "awaiting_confirmation": 246277
+    "awaiting_confirmation": 245615
   },
-  "identified_movie_products": 2955,
-  "identification_coverage_all_products": 0.0116771187746731,
-  "unresolved_rate_all_products": 0.9731999257090244,
+  "identified_movie_products": 3617,
+  "identification_coverage_all_products": 0.014293109512011033,
+  "unresolved_rate_all_products": 0.9705839349716865,
   "review_references_retained": 7911684,
   "review_policy": "All Task1 review records and Task2 ASIN references retained. No movie_id, review deletion, review copying or entity merging in Task3.",
   "reason_counts": {
-    "candidate_consensus": 6782,
+    "candidate_consensus": 7444,
     "inner_asin_conflict": 4,
-    "insufficient_or_ambiguous_evidence": 67027,
+    "insufficient_or_ambiguous_evidence": 66365,
     "no_available_product_metadata": 179246
   },
   "classification_candidate_records": 88660,
@@ -59,13 +59,13 @@
   "field_coverage": {
     "scope": "Candidate availability per product, NOT selected/verified final movie-work field coverage. Multiple candidates counted at most once per ASIN/field; conflicts remain candidates.",
     "all_product_denominator": 253059,
-    "identified_movie_product_denominator": 2955,
+    "identified_movie_product_denominator": 3617,
     "fields": {
       "title": {
         "available_all_products": 73813,
         "missing_all_products": 179246,
         "coverage_all_products": 0.29168296721317954,
-        "available_movie_products": 2955,
+        "available_movie_products": 3617,
         "missing_movie_products": 0,
         "coverage_movie_products": 1.0,
         "inferred_final_values": 0,
@@ -76,7 +76,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -85,9 +85,9 @@
         "available_all_products": 33538,
         "missing_all_products": 219521,
         "coverage_all_products": 0.13253035853299033,
-        "available_movie_products": 1247,
-        "missing_movie_products": 1708,
-        "coverage_movie_products": 0.42199661590524534,
+        "available_movie_products": 1597,
+        "missing_movie_products": 2020,
+        "coverage_movie_products": 0.44152612662427426,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
       },
@@ -96,7 +96,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -106,7 +106,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -116,7 +116,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -126,7 +126,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -136,7 +136,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -145,9 +145,9 @@
         "available_all_products": 16331,
         "missing_all_products": 236728,
         "coverage_all_products": 0.06453435760040149,
-        "available_movie_products": 536,
-        "missing_movie_products": 2419,
-        "coverage_movie_products": 0.18138747884940778,
+        "available_movie_products": 672,
+        "missing_movie_products": 2945,
+        "coverage_movie_products": 0.18578932817251867,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
       },
@@ -155,9 +155,9 @@
         "available_all_products": 52477,
         "missing_all_products": 200582,
         "coverage_all_products": 0.2073706131771642,
-        "available_movie_products": 1618,
-        "missing_movie_products": 1337,
-        "coverage_movie_products": 0.5475465313028764,
+        "available_movie_products": 2109,
+        "missing_movie_products": 1508,
+        "coverage_movie_products": 0.5830799004700028,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
       },
@@ -165,9 +165,9 @@
         "available_all_products": 16766,
         "missing_all_products": 236293,
         "coverage_all_products": 0.06625332432357671,
-        "available_movie_products": 853,
-        "missing_movie_products": 2102,
-        "coverage_movie_products": 0.28866328257191204,
+        "available_movie_products": 1122,
+        "missing_movie_products": 2495,
+        "coverage_movie_products": 0.310201824716616,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
       },
@@ -176,7 +176,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -186,7 +186,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -196,7 +196,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -206,7 +206,7 @@
         "missing_all_products": 253059,
         "coverage_all_products": 0.0,
         "available_movie_products": 0,
-        "missing_movie_products": 2955,
+        "missing_movie_products": 3617,
         "coverage_movie_products": 0.0,
         "inferred_final_values": 0,
         "verified_final_work_values": 0
@@ -217,18 +217,18 @@
   },
   "outputs": {
     "products": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\product_classification.parquet",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v3\\product_classification.parquet",
       "rows": 253059,
-      "file_size_bytes": 14240606,
-      "sha256": "f942982010337eae4afd4235f6d3f64b529a43d3c36c62ed4af4ba69d520b0f5",
-      "ordered_rows_sha256": "956697a90a95b751d5b48eee1c970fd30803269e4f260e8eff98024c4ab0dbf0"
+      "file_size_bytes": 14243564,
+      "sha256": "96dadecee2fd40e54933ade64de7f9a588d1f5343b9a82b9f0cbbbeac3d04a4c",
+      "ordered_rows_sha256": "c9f1430a4cf882a40d535f81da84a9a7af960d13d723f86a99fca9d72bec7ed1"
     },
     "candidates": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\classification_evidence.parquet",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v3\\classification_evidence.parquet",
       "rows": 88660,
-      "file_size_bytes": 16228406,
-      "sha256": "56d4aab5ee187960665df4943edf81fd795bfaaa6a44a3beacb4c5f4b67e1cfe",
-      "ordered_rows_sha256": "6f0c451b72629f97233fb63eea3a2889bee1a01a31d4e5a9de86019c9e0a43c8"
+      "file_size_bytes": 16272967,
+      "sha256": "d65659c5cc4493e9b18005e4146e9e6b835f21c3cd13377738e698c5501debce",
+      "ordered_rows_sha256": "32c7e8ea1998dc71a9d0f16becb08554cba173e26292446756b62debb78686ff"
     }
   },
   "examples": {
@@ -379,5 +379,5 @@
     "Movie label is a source-supported product classification, not a resolved movie work.",
     "Unknown and conflicting records retained; no final credits/dates invented."
   ],
-  "checkpoint_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v2\\classification.sqlite3"
+  "checkpoint_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full_v3\\classification.sqlite3"
 }

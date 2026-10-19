@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-10-19T11:28:57.855298+00:00",
+  "status": "passed_five_group_versioned_pipeline_acceptance",
+  "main_dag_run_id": "892bc73cb2b84dfa96b2d033e6a797b4",
+  "affected_jobs_complete": 15,
+  "actual_full_target_work_groups": 5,
+  "new_pair_target_mappings": [
+    [
+      {
+        "asin": "6304994540",
+        "movie_id": "mw_d075a08719085134abe85e3b6ef54331",
+        "relationship": "single_work"
+      },
+      {
+        "asin": "6304994567",
+        "movie_id": "mw_d075a08719085134abe85e3b6ef54331",
+        "relationship": "single_work"
+      }
+    ],
+    [
+      {
+        "asin": "B0012QE4Q2",
+        "movie_id": "mw_694a964947e35e78b8a9b03f802f1a59",
+        "relationship": "single_work"
+      },
+      {
+        "asin": "B0017APPSE",
+        "movie_id": "mw_694a964947e35e78b8a9b03f802f1a59",
+        "relationship": "single_work"
+      }
+    ]
+  ],
+  "raw_review_retention": 7911684,
+  "logical_reviews": 7906538,
+  "same_input_all_fifteen_counts_equal": true,
+  "offline_sample_groups": 5,
+  "offline_actual_exit130_resume_repeat": true,
+  "source_downloads_or_HTTP_requests_in_this_recompute": 0,
+  "old_versions_preserved": true,
+  "case_evidence": "reports/task4/five_group_acceptance.json",
+  "human_labels_generated": 0,
+  "limitation": "Five-group requirement and reproducible engineering verified; independent HUMAN movie/person evaluation remains unfinished."
+}

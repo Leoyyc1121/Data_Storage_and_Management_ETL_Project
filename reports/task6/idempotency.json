@@ -1,13 +1,28 @@
 {
+  "observed_at": "2026-10-19T11:15:19.635362+00:00",
   "status": "passed",
-  "version": "final_v7",
+  "version": "final_v8",
   "same_input_repeated": true,
   "all_ordered_table_hashes_equal": true,
   "tables": {
     "release_info": {
-      "rows": 2953,
-      "ordered_rows_sha256": "f4cfecf0ea7815a252c873b05dd12ecb59f025b7172e55398145546a689e3160"
+      "rows": 3613,
+      "ordered_rows_sha256": "b197eea43efea4776e3347a4cdc465d2c7d8e4a3e914486c903cfe69b481a9d4"
     }
   },
-  "execution_evidence": "Actual same-input stage function repeated; ordered table hashes compared before and after, not inferred from cached statistics."
+  "baseline_statistics_observed_at": "2026-10-19T08:06:05.933209+00:00",
+  "replayed_statistics_observed_at": "2026-10-19T11:12:36.390370+00:00",
+  "dag_run_id": "892bc73cb2b84dfa96b2d033e6a797b4",
+  "actual_stage_execution": {
+    "run_id": "892bc73cb2b84dfa96b2d033e6a797b4",
+    "job_id": "task6",
+    "started_at": "2026-10-19T11:12:35.537145+00:00",
+    "finished_at": "2026-10-19T11:12:36.445010+00:00",
+    "status": "complete",
+    "exit_code": 0,
+    "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\892bc73cb2b84dfa96b2d033e6a797b4-task6.log",
+    "definition_hash": "99612fc8d62a1998295d69d6d28dff9f8cd71da349a2d4b66063e4a495880e5e"
+  },
+  "execution_log_sha256": "3ac0e65b9a5d7327f8b4cf55909194e171f1f0cc09da4b4df1b0ead9c845b34b",
+  "execution_evidence": "Stage CLI actually repeated through main DAG; its newly computed ordered table hashes compared to saved statistics from before the repeat. Business tables unchanged, no HUMAN labels."
 }

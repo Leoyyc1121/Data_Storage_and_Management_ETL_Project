@@ -1,11 +1,16 @@
 {
   "task3_config": "config/task3.example.json",
   "rules_file": "config/task4.rules.json",
-  "work_dir": "data/integration/task4/full_v3",
+  "work_dir": "data/integration/task4/full_v4",
   "report_dir": "reports/task4",
   "batch_size": 2000,
   "evaluation_pairs": 120,
   "development_pairs": [
+    ["6304994540", "6304994567"],
+    ["B0012QE4Q2", "B0017APPSE"],
+    ["B002E2QH1I", "B00383XYN6"],
+    ["B000E1YW04", "B000LXH0AY"],
+    ["0790729989", "630394518X"],
     [
       "630242335X",
       "6305252599"

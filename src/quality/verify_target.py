@@ -7,7 +7,36 @@ import sys
 ROOT=Path(__file__).resolve().parents[2]
 sys.path.insert(0,str(ROOT/'src/transform'))
 from integration_common import *
+def ensure_publication_report(c):
+    """Recover a summary lost after atomic rename, without rebuilding target data.
+
+    A process can stop between os.replace and the large-file checksum/report.
+    Observation time below is not a fabricated original completion timestamp.
+    """
+    target=Path(c['target_dir'])/'etl.sqlite3'
+    registration=json.loads((target.parent/'load_registration.json').read_text(encoding='utf-8'))
+    fingerprint=registration['input_fingerprint']
+    if digest_json(registration['inputs'])!=fingerprint:
+        raise ValueError('Invalid target input registration')
+    with closing(ro(target)) as d:
+        states={r['key']:json.loads(r['value']) for r in d.execute('SELECT * FROM target_state')}
+    if states.get('ready') is not True or states.get('input')!=fingerprint:
+        raise ValueError('Cannot publish statistics for an incomplete/unregistered target')
+    report=Path(c['report_root'])/'task9/load_statistics.json'
+    previous=json.loads(report.read_text(encoding='utf-8')) if report.exists() else None
+    if previous and previous.get('input_fingerprint')==fingerprint and Path(previous['target_path']).resolve()==target.resolve():
+        if previous['file_size_bytes']!=target.stat().st_size:
+            raise ValueError('Published target size changed')
+        return previous
+    result=dict(status='complete',target_path=str(target.resolve()),input_fingerprint=fingerprint,
+        file_size_bytes=target.stat().st_size,sha256=hash_file(target),publication_observed_at=utc_now(),
+        report_recovered_after_atomic_publication=True,
+        semantics='Registered ready target already atomically published. Summary recovered by normal target verification after process loss; observation time is not asserted as original completion time. All original reviews retained; no HUMAN labels created.')
+    save_json(report,result)
+    return result
+
 def verify(c):
+    ensure_publication_report(c)
     with closing(ro(Path(c['target_dir'])/'etl.sqlite3')) as d:
         d.execute('PRAGMA cache_size=-786432');d.execute('PRAGMA mmap_size=1073741824')
         if d.execute('PRAGMA foreign_key_check').fetchone():raise ValueError('Target FK violation')

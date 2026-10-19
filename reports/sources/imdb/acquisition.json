@@ -1,6 +1,6 @@
 {
   "status": "complete",
-  "observed_at": "2026-10-16T00:18:50.504444+00:00",
+  "observed_at": "2026-10-19T11:10:55.229242+00:00",
   "files": [
     {
       "source_id": "imdb:title.basics.tsv.gz",
@@ -159,29 +159,9 @@
       "gzip_crc_status": "pending_full_import"
     }
   ],
+  "mode": "registered_local_archive_replay",
+  "actual_network_requests": 0,
   "policy": {
-    "url": "https://datasets.imdbws.com/robots.txt",
-    "observed_at": "2026-10-16T00:17:10.906404+00:00",
-    "http_status": 404,
-    "error": null,
-    "error_detail": null,
-    "truncated": false,
-    "response_headers": {
-      "content-type": "text/html",
-      "date": "Fri, 16 Oct 2026 00:12:58 GMT",
-      "last-modified": "Thu, 16 Apr 2026 13:18:12 GMT",
-      "etag": "\"473c42108f602facc8ff77e52126c73b\""
-    },
-    "snapshot_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\imdb\\snapshot_20261016\\policy\\990c86b56bc025305281393773c321e7388bdf0fc61ea2573a60583ed09ce743.txt",
-    "content_hash": "990c86b56bc025305281393773c321e7388bdf0fc61ea2573a60583ed09ce743",
-    "user_agent": "CourseMovieETL/1.0 (AI-assisted academic project; ChatGPT-User)",
-    "robots_agent": "ChatGPT-User",
-    "collector_version": "1.1.0",
-    "request_attempt": 1,
-    "rules_usable": true,
-    "evidence_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\imdb\\snapshot_20261016\\policy\\a0843499840d41d385d6c3c196b698a0.json",
-    "attempt_evidence_paths": [
-      "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\imdb\\snapshot_20261016\\policy\\a0843499840d41d385d6c3c196b698a0.json"
-    ]
+    "scope": "No live access: preserved original download registrations and bytes verified; historical times unchanged."
   }
 }

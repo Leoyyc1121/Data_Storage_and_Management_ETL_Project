@@ -1,0 +1,26 @@
+INFO:root:Product-field selections: 10000
+INFO:root:Product-field selections: 20000
+INFO:root:Product-field selections: 30000
+INFO:root:Product-field selections: 40000
+INFO:root:Product-field selections: 50000
+INFO:root:Product-field selections: 60000
+INFO:root:Product-field selections: 70000
+INFO:root:Product-field selections: 80000
+INFO:root:Product-field selections: 90000
+INFO:root:Product-field selections: 100000
+INFO:root:Product-field selections: 110000
+INFO:root:Product-field selections: 120000
+INFO:root:Product-field selections: 130000
+INFO:root:Product-field selections: 140000
+INFO:root:Product-field selections: 150000
+INFO:root:Product-field selections: 160000
+INFO:root:Product-field selections: 170000
+INFO:root:Product-field selections: 180000
+INFO:root:Product-field selections: 190000
+INFO:root:Product-field selections: 200000
+INFO:root:Product-field selections: 210000
+INFO:root:Product-field selections: 220000
+INFO:root:Product-field selections: 230000
+INFO:root:Product-field selections: 240000
+INFO:root:Product-field selections: 250000
+{"observed_at":"2026-10-19T08:15:05.408729+00:00","policy":"Semantic eligibility first; unique highest applicable authority for scalar, explicit supported union for multivalue. Equal-authority disagreements remain NULL with reason. No majority/latest arbitrary tie break.","selection_statuses":{"missing":1634675,"selected":165642},"status":"complete","tables":{"editions":{"ordered_rows_sha256":"405dd050cab07a80c69709e73bb940a00dbfe96dcef8da828867ffa09bfc16d7","rows":253059},"field_selections":{"ordered_rows_sha256":"fc344f609c13fca6a0ba08b5c6fd92fed746fdd6495cdff78eb671644c91338b","rows":1800317},"movies":{"ordered_rows_sha256":"c6f7de89fed2f2aebc78a54625b46219c7e2a488bb60b69ba03cf29fae584cfb","rows":3613},"selection_members":{"ordered_rows_sha256":"774819b9cfe86621616a749394c18b24e639ae479161477887744e1c85d2fbf7","rows":290246}}}

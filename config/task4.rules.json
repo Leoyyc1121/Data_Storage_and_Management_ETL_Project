@@ -1,5 +1,5 @@
 {
-  "version": "task4-multifield-complete-link-v3",
+  "version": "task4-multifield-complete-link-v4",
   "definition": "The same creative movie work across physical medium, language, subtitle and region editions. Remakes, sequels, unrelated same-title works and television series are not the same work. Cuts/restorations/runtime discrepancies require review rather than automatic grouping.",
   "candidate_title_similarity": 0.88,
   "minimum_shared_plot_words": 80,

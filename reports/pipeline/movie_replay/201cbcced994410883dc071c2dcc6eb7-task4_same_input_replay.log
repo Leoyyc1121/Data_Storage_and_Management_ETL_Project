@@ -1,0 +1,18 @@
+2026-10-19 16:03:31,628 INFO Verify full Task3 input and provenance
+2026-10-19 16:06:31,262 INFO Generate source-supported candidate pairs; movie seeds=3617 metadata_products=73813
+2026-10-19 16:06:31,265 INFO Export decisions, work/product mappings and unlabeled human evaluation queue
+{
+  "status": "complete",
+  "statistics": {
+    "products": 253059,
+    "candidate_pairs": 552,
+    "after_work_records": 3613,
+    "multifield_work_groups": 5,
+    "decisions": {
+      "auto_merge": 5,
+      "manual_review": 479,
+      "reject": 68,
+      "unresolved": 0
+    }
+  }
+}

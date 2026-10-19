@@ -1,5 +1,5 @@
 {
-  "version": "task3-conservative-content-v2",
+  "version": "task3-title-bound-narrative-v3",
   "labels": ["movie", "non_movie", "compilation", "television_series", "concert", "other_content", "awaiting_confirmation"],
   "movie_categories": ["Movies", "Foreign Films", "Feature Films"],
   "television_categories": ["TV Shows", "Television Series"],

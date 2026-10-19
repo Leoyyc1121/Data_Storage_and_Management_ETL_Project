@@ -61,141 +61,141 @@
       }
     },
     "identified_movie": {
-      "denominator": 169,
+      "denominator": 282,
       "fields": {
         "title": {
           "status_counts": {
-            "selected": 169
+            "selected": 282
           },
-          "denominator": 169,
+          "denominator": 282,
           "selected_fraction": 1.0
         },
         "genres": {
           "status_counts": {
-            "selected": 169
+            "selected": 282
           },
-          "denominator": 169,
+          "denominator": 282,
           "selected_fraction": 1.0
         },
         "director": {
           "status_counts": {
-            "selected": 169
+            "selected": 282
           },
-          "denominator": 169,
+          "denominator": 282,
           "selected_fraction": 1.0
         },
         "starring": {
           "status_counts": {
-            "missing": 120,
-            "selected": 49
+            "missing": 186,
+            "selected": 96
           },
-          "denominator": 169,
-          "selected_fraction": 0.28994082840236685
+          "denominator": 282,
+          "selected_fraction": 0.3404255319148936
         },
         "cast": {
           "status_counts": {
             "missing": 1,
-            "selected": 168
+            "selected": 281
           },
-          "denominator": 169,
-          "selected_fraction": 0.9940828402366864
+          "denominator": 282,
+          "selected_fraction": 0.9964539007092199
         },
         "release_year": {
           "status_counts": {
-            "selected": 169
+            "selected": 282
           },
-          "denominator": 169,
+          "denominator": 282,
           "selected_fraction": 1.0
         },
         "release_date": {
           "status_counts": {
-            "missing": 169
+            "missing": 282
           },
-          "denominator": 169,
+          "denominator": 282,
           "selected_fraction": 0.0
         },
         "runtime_minutes": {
           "status_counts": {
-            "selected": 169
+            "selected": 282
           },
-          "denominator": 169,
+          "denominator": 282,
           "selected_fraction": 1.0
         }
       }
     },
     "all_work_records": {
-      "denominator": 2953,
+      "denominator": 3613,
       "fields": {
         "title": {
           "status_counts": {
-            "selected": 2953
+            "selected": 3613
           },
-          "denominator": 2953,
+          "denominator": 3613,
           "selected_fraction": 1.0
         },
         "genres": {
           "status_counts": {
-            "missing": 1616,
-            "selected": 1337
+            "missing": 1860,
+            "selected": 1753
           },
-          "denominator": 2953,
-          "selected_fraction": 0.4527599051811717
+          "denominator": 3613,
+          "selected_fraction": 0.48519236091890394
         },
         "director": {
           "status_counts": {
-            "missing": 2690,
-            "selected": 263
+            "missing": 3199,
+            "selected": 414
           },
-          "denominator": 2953,
-          "selected_fraction": 0.08906197087707417
+          "denominator": 3613,
+          "selected_fraction": 0.11458621644063105
         },
         "starring": {
           "status_counts": {
-            "missing": 2792,
-            "selected": 161
+            "missing": 3302,
+            "selected": 311
           },
-          "denominator": 2953,
-          "selected_fraction": 0.05452082627836099
+          "denominator": 3613,
+          "selected_fraction": 0.0860780514807639
         },
         "cast": {
           "status_counts": {
-            "missing": 2781,
-            "selected": 172
+            "missing": 3328,
+            "selected": 285
           },
-          "denominator": 2953,
-          "selected_fraction": 0.05824585167626143
+          "denominator": 3613,
+          "selected_fraction": 0.07888181566565182
         },
         "release_year": {
           "status_counts": {
-            "missing": 2784,
-            "selected": 169
+            "missing": 3331,
+            "selected": 282
           },
-          "denominator": 2953,
-          "selected_fraction": 0.05722993565865222
+          "denominator": 3613,
+          "selected_fraction": 0.07805148076390811
         },
         "release_date": {
           "status_counts": {
-            "missing": 2953
+            "missing": 3613
           },
-          "denominator": 2953,
+          "denominator": 3613,
           "selected_fraction": 0.0
         },
         "runtime_minutes": {
           "status_counts": {
-            "missing": 2784,
-            "selected": 169
+            "missing": 3331,
+            "selected": 282
           },
-          "denominator": 2953,
-          "selected_fraction": 0.05722993565865222
+          "denominator": 3613,
+          "selected_fraction": 0.07805148076390811
         }
       }
     }
   },
   "identification": {
     "all_products": 253059,
-    "classified_movie_products": 2955,
-    "multifield_identified_products": 172,
-    "identified_product_fraction": 0.0006796833939911246
+    "classified_movie_products": 3617,
+    "multifield_identified_products": 286,
+    "identified_product_fraction": 0.001130171224892219
   },
   "release_semantics": "Selected release_year means a sourced year for a matched work, not a verified full date or independently human-verified identity."
 }

@@ -1,0 +1,3 @@
+INFO:root:Copy complete review database using SQLite online backup
+INFO:root:Atomic load of entities, candidates, selections and raw source records
+INFO:root:Build target indexes and queryable lineage/statistics views

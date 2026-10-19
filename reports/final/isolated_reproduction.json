@@ -1,0 +1,34 @@
+{
+  "observed_at": "2026-10-19T11:14:33.449481+00:00",
+  "status": "passed_isolated_project_and_empty_output_reconstruction",
+  "copied_inputs": [
+    "registered raw evidence packet",
+    "retained IMDb catalog with raw TSV evidence"
+  ],
+  "preexisting_integration_or_target_databases_copied": false,
+  "original_project_sqlite_access_blocked": true,
+  "sqlite_attach_paths_authorized": true,
+  "network_connect_and_dns_blocked": true,
+  "original_project_data_file_access_blocked": true,
+  "source_packet_sha256": "0b2fa5b5eb55264fc405cd078841aea31cc92c4f321aea1c5cf034bc18f12503",
+  "counts": {
+    "raw_reviews": 28,
+    "logical_reviews": 28,
+    "editions": 28,
+    "movies": 15,
+    "people": 122,
+    "credits": 169,
+    "field_selections": 1220,
+    "lineage_edges": 7741
+  },
+  "counts_equal_original_reconstruction": true,
+  "actual_target_action": "complete",
+  "network_requests": 0,
+  "query_count": 10,
+  "isolation_directory": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\isolated_project_v4",
+  "log": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\final\\movie5-isolated-reproduction.log",
+    "sha256": "20caeca3ed39610113e2ff276baf45274af4c199c8af0b362ccfd01370a58578"
+  },
+  "limitation": "Python file/connect audit plus SQLite ATTACH authorizer, not an OS security sandbox. Existing Python dependency runtime is shared; NOT an independently installed environment or a second-machine full-dataset test. No HUMAN labels generated."
+}

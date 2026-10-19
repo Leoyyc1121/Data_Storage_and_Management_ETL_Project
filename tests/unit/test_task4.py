@@ -82,6 +82,18 @@ class RuleTests(unittest.TestCase):
         b["values"]["runtimes"]=[90];b["variants"]=["director_cut"]
         self.assertEqual(self.decision(a,b)["rule_id"],"cut_restoration_or_version_requires_review")
 
+    def test_episode_and_feature_not_merged_despite_same_cast_and_plot(self):
+        common={'directors':['synthetic director'],'credited_stars':['actor one','actor two']}
+        a=profile('A',values=dict(common,primary_content_scopes=['episodic_installment']),plots=['shared'])
+        b=profile('B',values=dict(common,primary_content_scopes=['complete_feature']),plots=['shared'])
+        self.assertEqual(self.decision(a,b)['rule_id'],'episodic_installment_not_complete_feature')
+
+    def test_primary_content_scope_extracted_not_incidental_preview(self):
+        for description,scope in [('Limited Edition Episodic release. DVD Includes: Synthetic Episode 1 (25 mins).','episodic_installment'),('DVD Includes: Synthetic complete feature film (82 mins). Preview part 1 review.','complete_feature')]:
+            raw=json.dumps(dict(asin='B000000001',title='Synthetic',description=[description])).encode()
+            row=dict(raw_record=raw,source_id='synthetic',archive_sha256='0'*64,record_sequence=1,byte_start=0,byte_end=len(raw),raw_record_sha256=hashlib.sha256(raw).hexdigest())
+            self.assertEqual(resolution.extract_record(row,self.rules)['values']['primary_content_scopes'],[scope])
+
     def test_sequel_digits_preserved_and_not_merged(self):
         self.assertEqual(self.decision(profile("A",title="synthetic saga ii"),profile("B",title="synthetic saga iii"))["rule_id"],"different_sequel_numerals")
         self.assertEqual(self.decision(profile("A",title="synthetic saga"),profile("B",title="synthetic saga 2"))["proposed_decision"],"manual_review")

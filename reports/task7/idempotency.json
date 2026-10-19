@@ -1,25 +1,40 @@
 {
+  "observed_at": "2026-10-19T11:15:19.654203+00:00",
   "status": "passed",
-  "version": "final_v7",
+  "version": "final_v8",
   "same_input_repeated": true,
   "all_ordered_table_hashes_equal": true,
   "tables": {
     "field_selections": {
-      "rows": 1795037,
-      "ordered_rows_sha256": "487aca7d75bf41660bd7a437c7198d133e2ffdf046e11f0e0fc7d3a772c6f06d"
+      "rows": 1800317,
+      "ordered_rows_sha256": "fc344f609c13fca6a0ba08b5c6fd92fed746fdd6495cdff78eb671644c91338b"
     },
     "selection_members": {
-      "rows": 287022,
-      "ordered_rows_sha256": "5a9a03f2ffa0bb5a2c4f700603db19ff25b2c6662413f09e3666c1026d51cade"
+      "rows": 290246,
+      "ordered_rows_sha256": "774819b9cfe86621616a749394c18b24e639ae479161477887744e1c85d2fbf7"
     },
     "movies": {
-      "rows": 2953,
-      "ordered_rows_sha256": "ed1472d0757df89434089794a824b4a9c5197be523d046dd840b691716c6e2ad"
+      "rows": 3613,
+      "ordered_rows_sha256": "c6f7de89fed2f2aebc78a54625b46219c7e2a488bb60b69ba03cf29fae584cfb"
     },
     "editions": {
       "rows": 253059,
-      "ordered_rows_sha256": "5bab5cfb2efc5a796b9568bbd8fc047133d970a9826021afe0d0378595281ac7"
+      "ordered_rows_sha256": "405dd050cab07a80c69709e73bb940a00dbfe96dcef8da828867ffa09bfc16d7"
     }
   },
-  "execution_evidence": "Actual same-input stage function repeated; ordered table hashes compared before and after, not inferred from cached statistics."
+  "baseline_statistics_observed_at": "2026-10-19T08:15:05.408729+00:00",
+  "replayed_statistics_observed_at": "2026-10-19T11:12:38.579927+00:00",
+  "dag_run_id": "892bc73cb2b84dfa96b2d033e6a797b4",
+  "actual_stage_execution": {
+    "run_id": "892bc73cb2b84dfa96b2d033e6a797b4",
+    "job_id": "task7",
+    "started_at": "2026-10-19T11:12:36.458263+00:00",
+    "finished_at": "2026-10-19T11:14:01.655688+00:00",
+    "status": "complete",
+    "exit_code": 0,
+    "log_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\892bc73cb2b84dfa96b2d033e6a797b4-task7.log",
+    "definition_hash": "6c02ab75dea6d27946763eb1fd0277e7ee1b4ca472c314197ddd6ed17ad177c8"
+  },
+  "execution_log_sha256": "c4c79ded43a307cc6242b48c6b8d4ad93573f1b481f5601c8ecdecf1a854d7a3",
+  "execution_evidence": "Stage CLI actually repeated through main DAG; its newly computed ordered table hashes compared to saved statistics from before the repeat. Business tables unchanged, no HUMAN labels."
 }

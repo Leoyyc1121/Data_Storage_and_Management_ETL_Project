@@ -1,17 +1,71 @@
 {
   "status": "passed",
-  "input_fingerprint": "c5cb47e10277ff20f8b9d00af01c82db7040c0e56d83910e5b56c149d2dc7066",
-  "physical_file_size_bytes": 34920345600,
-  "published_file_sha256": "a0d96ffc1b3a80efc6ce64dca175a0a4f47eb441643d6f92178fde0e9dc6e4d6",
+  "input_fingerprint": "b211b9d7ff0a4fa104f14c84fc681349b6d2b23f42610a21cd2b531a6a7e3741",
+  "physical_file_size_bytes": 35099467776,
+  "published_file_sha256": "3dae5f222e6d81e25278aca0e168787f9409cea37e47f1ac92993bb43682332d",
   "intentional_interruption": {
-    "phase": "review_copy",
-    "python_exit_code": 130,
-    "scope": "Actual final_v7 complete review copy checkpoint; intentional stop and observed Python LASTEXITCODE130, then resumed remaining phases."
+    "scope": "Current full target was not intentionally interrupted; actual current fixed_v3 interruption/resume is recorded separately.",
+    "evidence": "reports/final/offline_recovery.json"
   },
-  "resumed_via_dag": {
-    "run_id": "56349d5a180f4e5eb39d44cdb87ddb44",
+  "completed_via_dag": {
+    "run_id": "892bc73cb2b84dfa96b2d033e6a797b4",
     "status": "complete",
     "jobs": [
+      {
+        "job": "task3",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "task4",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "imdb_download",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "movie_case_audit",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "imdb_import",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "task5",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "task5_verify",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "alias_audit",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "task6",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "task7",
+        "status": "complete",
+        "exit_code": 0
+      },
+      {
+        "job": "task7_verify",
+        "status": "complete",
+        "exit_code": 0
+      },
       {
         "job": "task9",
         "status": "complete",
@@ -41,37 +95,37 @@
       "logical_reviews": 7906538,
       "reviewers": 889176,
       "editions": 253059,
-      "movies": 2953,
-      "people": 1918,
-      "credits": 2360,
-      "movie_person": 2299,
-      "movie_genres": 2157,
-      "source_records": 283547,
-      "assertions": 1406034,
-      "field_selections": 2830593,
-      "selection_members": 1322578,
-      "lineage_edges": 7740850,
-      "cross_edition_candidates": 243
+      "movies": 3613,
+      "people": 3245,
+      "credits": 3923,
+      "movie_person": 3772,
+      "movie_genres": 2934,
+      "source_records": 377031,
+      "assertions": 1419863,
+      "field_selections": 2846475,
+      "selection_members": 1336404,
+      "lineage_edges": 7876297,
+      "cross_edition_candidates": 1008
     },
     "after_counts": {
       "raw_reviews": 7911684,
       "logical_reviews": 7906538,
       "reviewers": 889176,
       "editions": 253059,
-      "movies": 2953,
-      "people": 1918,
-      "credits": 2360,
-      "movie_person": 2299,
-      "movie_genres": 2157,
-      "source_records": 283547,
-      "assertions": 1406034,
-      "field_selections": 2830593,
-      "selection_members": 1322578,
-      "lineage_edges": 7740850,
-      "cross_edition_candidates": 243
+      "movies": 3613,
+      "people": 3245,
+      "credits": 3923,
+      "movie_person": 3772,
+      "movie_genres": 2934,
+      "source_records": 377031,
+      "assertions": 1419863,
+      "field_selections": 2846475,
+      "selection_members": 1336404,
+      "lineage_edges": 7876297,
+      "cross_edition_candidates": 1008
     },
     "all_fifteen_counts_compared_equal": true
   },
-  "source_update_demonstration": "people-context-v3 -> v4 recomputed final_v7; final_v6 integration and target retained.",
-  "scope": "Actual engineering checks, NOT HUMAN accuracy."
+  "source_update_demonstration": "Task3 content evidence v2 to v3 and Task4 primary-content scope v4 recomputed final_v8 without overwriting final_v7.",
+  "scope": "Actual engineering evidence, NOT HUMAN accuracy."
 }

@@ -1,20 +1,20 @@
 {
-  "observed_at": "2026-10-16T00:25:40.336465+00:00",
+  "observed_at": "2026-10-19T11:07:07.354032+00:00",
   "status": "complete_pipeline_pending_human_acceptance",
-  "engine_version": "1.2.0",
-  "rule_version": "task4-multifield-complete-link-v3",
+  "engine_version": "1.3.0",
+  "rule_version": "task4-multifield-complete-link-v4",
   "input_registration": {
-    "task3_input_fingerprint": "cb6879aeab8a812d8c2b25c4acdee2c20bc4842674ef15bc5e891a03063fbcf8",
+    "task3_input_fingerprint": "d1fb9bd402c11d89bd6ee50a31a329b5ebf61a8ed600c511f6b3dfb30b3f24a8",
     "task3_outputs": {
-      "products": "f942982010337eae4afd4235f6d3f64b529a43d3c36c62ed4af4ba69d520b0f5",
-      "candidates": "56d4aab5ee187960665df4943edf81fd795bfaaa6a44a3beacb4c5f4b67e1cfe"
+      "products": "96dadecee2fd40e54933ade64de7f9a588d1f5343b9a82b9f0cbbbeac3d04a4c",
+      "candidates": "d65659c5cc4493e9b18005e4146e9e6b835f21c3cd13377738e698c5501debce"
     },
     "products": 253059,
     "reviews": 7911684,
-    "task3_movie_products": 2955,
-    "rules_sha256": "57bb493e5bb9b2c8d00a4c2a54b2fb9c514c035ade0865779caf63e14fb5658c",
-    "engine_version": "1.2.0",
-    "engine_sha256": "dcd54551291a574d45883a44db2c4b72a78a554daee957e97eb0525a3c8fcdd9",
+    "task3_movie_products": 3617,
+    "rules_sha256": "f6c15fd649f496f803a6ef868953908ed4488ebb7afa1b284128e4cc3344540b",
+    "engine_version": "1.3.0",
+    "engine_sha256": "b0b08e6c9b048d7e465fdeb6f992d1a2d9e37af266e376501fb87e41c383349a",
     "evaluation_pairs": 120,
     "development_pair_ids": [
       "0049bed751ac8f5089102c4133fb5b1fdd200f49bcdb66f4346b9ff1e64b9f05",
@@ -29,6 +29,7 @@
       "11973b98e06b0df1cd226bf5fce4e95b21261c577ae30655d5e8068e171f4202",
       "18014936b7098a1cd016b1f8335e4993704faecbcf3c05ddf52090a09312b621",
       "1b51e0d99728fbe745fa55f3057be1d65ae1ece579239d8986d4e09a15631b74",
+      "1dc05ca97f27f674a851de1fe901c385f6d5105657baeeaf22b1cdd445c4c1de",
       "1dc423897458d7eb456373c13b93e775e56805cb03ce5ed1f37e7723dab7435e",
       "22ed80f41860b4b953a640fee0cf562475dc98d1b31c9e0c96e2a98e14dd35bc",
       "25528d1e803e5cd63e0517c3a9d5981a2b91e486c6f5bd5b4a6c53f636ccfb76",
@@ -70,6 +71,7 @@
       "876989d753a2ed26b6b043f7d528f6983166c6573da9938314c0d1528534bd84",
       "885f5665cfc9cedb2882c3e5a8cd95a4de1e8da3d1b34e2cf23f2acd9be89030",
       "886b1605fc3946d4e84fda65a6c9629e11ebacc10e4f804dad20636785c3b9f6",
+      "8d57247c0e122000d72ba91a2c25091119be8b0bdb0f6de14a8d856b93e5ca8f",
       "903e81d182d6a21babb680362ca821a0f4af03c3298e9c8136e4bde4a088b68e",
       "9242699e2093fd07ae72244d89ae6bab5b1f471064e6ace8017952a4f8345d5b",
       "92ec11ec6668779c41ed60891acf3f3ad4b582121db9e761a47e017d7ce4947e",
@@ -77,6 +79,7 @@
       "9c3af1d4709afa851bb589a2c7f374c50ace965d18b6ebc07f5dc98883777d7b",
       "a4e996e4bf4bbc35fc72e249339fdaf7fb6e4be3b893df34889a5775decd120b",
       "a7f1a250da85908fdc0c4429b7c7c7979d48c887ef50661ed9b7157794e9cfd7",
+      "a807afe5de870a0a0c95b265f4e6d5dbad16bdca63bef0089f1e06e7edd7bb30",
       "a9af9fd5d5e30dac24b9b86a52528760f2a5786ff5bfdea9ed74f8fcf4125fdd",
       "afdfbbcfd8c5f8cd0b8838350499e053203cf3b8f74387a6a72eaf4054ac45c3",
       "b0f5e4c83f304f58200a19c4bd5fcd8e6c19c8061090e385ccc1aea9f8d12656",
@@ -90,8 +93,10 @@
       "cc68cf518d71d2c90d0e2c8223907207b163cdcf252f4e5ebc057b7255be03eb",
       "ccb80fea31b895de8c59257d391eed5c495be3a3c2da9550cc1a4641e45a14b6",
       "dd6e5f90fd97753cb99b59b54c0e77337e9767afb66bb41d118ee73469239aab",
+      "e706866a7705925fabd2b8901747bac9c49efb2e522f4457eb4da85731f5d787",
       "ebda06ba8f91ee430e9d0a6409ca498156315a85157b4f0828dbdc20142d0076",
       "ec3de18f6198df49fbebd5954cbc1c8fbaf7f242be1de70378503d2e410886c6",
+      "eea8703ee32c156029a88c665422fbcfd061ecf2a16a4c5de180135d03a36fa7",
       "f13973672e7e270b2f707b35550996609855b5a93e8cecb9d5b5dcb98d4b3f25",
       "f185b5219a8fa09111b87ab56fd05739f89d71da6e5c29928dd248e2a7ba4af7",
       "f2e5bd3818fd45635b887414ff00366a27b1d61979948537628f5b0f4a9b9f30",
@@ -108,30 +113,30 @@
       "ffadf2cdab971bc87c9c98c3829ba056541af621cce8a75518d17af38eab6bad"
     ]
   },
-  "input_fingerprint": "a78c6d4269a3ddddad5425bc09b288b038e97754defad8fda15ef3bfdec9efdb",
+  "input_fingerprint": "548034723d6be05286b8df748a883387af89f4bcb48d65bf8c1e46e87a0e7af8",
   "products": 253059,
   "reviews_retained": 7911684,
-  "before_provisional_movie_seeds": 2955,
-  "after_work_records": 2953,
-  "merged_seed_reduction": 2,
-  "multifield_work_groups": 3,
-  "provisional_singleton_works": 2950,
+  "before_provisional_movie_seeds": 3617,
+  "after_work_records": 3613,
+  "merged_seed_reduction": 4,
+  "multifield_work_groups": 5,
+  "provisional_singleton_works": 3608,
   "additional_pending_products_attached_by_multifield_evidence": 1,
-  "candidate_pairs": 416,
+  "candidate_pairs": 552,
   "decisions": {
-    "auto_merge": 3,
-    "manual_review": 350,
-    "reject": 63,
+    "auto_merge": 5,
+    "manual_review": 479,
+    "reject": 68,
     "unresolved": 0
   },
   "product_mapping_statuses": {
     "compilation_unresolved": 137,
     "excluded_content": 3690,
-    "merged": 6,
-    "pending_classification": 246276,
-    "provisional_work": 2950
+    "merged": 10,
+    "pending_classification": 245614,
+    "provisional_work": 3608
   },
-  "cluster_cross_pair_checks": 3,
+  "cluster_cross_pair_checks": 5,
   "transitive_edges_blocked": 0,
   "nonexact_high_frequency_prefixes_skipped": [],
   "candidate_scope": "All target ASINs retained; candidate matching requires a Task3 movie seed and available source metadata. Exact-title blocks are not capped; nonexact frequent-prefix blocks are skipped and reported. Not exhaustive all-pairs matching.",
@@ -140,46 +145,46 @@
   "field_semantics": "Raw/normalized assertions used as identity evidence only. Credited names not person entities; no chosen final release dates/canonical titles or field conflict arbitration. display_title is explicitly sourced provisional display label.",
   "outputs": {
     "products": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\product_profiles.parquet",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\product_profiles.parquet",
       "rows": 253059,
-      "file_size_bytes": 63595412,
-      "sha256": "1091bf6318eaf46c0ad5ef741615ed19f59d1370bef8098105540813c7af83d9",
-      "ordered_rows_sha256": "1d54b4cb8554ea8eb37d9076e49d4e0460518fb91068de752e97e411eb42dada"
+      "file_size_bytes": 63599785,
+      "sha256": "0b28c82ce96d380d3beb29bacc37e73d0b70b8f104809ef5c6b88dc1bdc92247",
+      "ordered_rows_sha256": "eb5dfc0ee96341a03e60a9a0214bcec43532e80334dccf207777b3db11f44286"
     },
     "works": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\movie_works.parquet",
-      "rows": 2953,
-      "file_size_bytes": 323420,
-      "sha256": "cc2739355b94ea04c1bf87c81ad959057e3a2314bf0b3564b7e7a6401bb656d1",
-      "ordered_rows_sha256": "4a97aeff9e4c0787b4ce4b97524d675ed8d31f3927f8a748874efe353de62423"
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\movie_works.parquet",
+      "rows": 3613,
+      "file_size_bytes": 390185,
+      "sha256": "df672647a5b35f9864ae08fa9f9fff6790c3874f11ebcb9e6c9e631644cb433b",
+      "ordered_rows_sha256": "9aade4c7b878355e770e05977451b90fae34d9e4ca8d9ca36448250018de5ea6"
     },
     "mappings": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\product_movie.parquet",
-      "rows": 2956,
-      "file_size_bytes": 211640,
-      "sha256": "bc4d33e6385af307e9b0317095cf725253acb4cbf17e33d6aed7be94cf02bf87",
-      "ordered_rows_sha256": "fc30aef26e9ae9eb277b8078b28ab6ff3b01324d89a6a1ccd3f512dc03f8737e"
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\product_movie.parquet",
+      "rows": 3618,
+      "file_size_bytes": 260690,
+      "sha256": "35853c9ed134c0b9adbbb0bc2dfa0d7fda50881c8b5e640532de823137cc9f6f",
+      "ordered_rows_sha256": "230b561280f3021a860f0daf5e61dd912e5fb73750ec9521aa44c0bd38c0c67d"
     },
     "product_status": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\product_mapping_status.parquet",
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\product_mapping_status.parquet",
       "rows": 253059,
-      "file_size_bytes": 1693747,
-      "sha256": "6bab21a48156173a88c042d6eab6ed219bc8eaabff7990d3d25a2be8f78ee13f",
-      "ordered_rows_sha256": "c9d8c06184bbb63e3b1da78efca118e1508dd2e970367d95e4379b65a3b0bbc4"
+      "file_size_bytes": 1697807,
+      "sha256": "728adc5a74b3230e210246892097aa144f60ea9e2daf2a7ff66ec1ad16d97f60",
+      "ordered_rows_sha256": "212a1ebe00a9fb64e774b5a8f5edb1d33354c71a52e3cf28b279ec78ca94cd90"
     },
     "decisions": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\merge_decisions.parquet",
-      "rows": 416,
-      "file_size_bytes": 65199,
-      "sha256": "43d5e02bcfd02c7dbd35c7bdbbc2e5afaad398e2f61c5925771ca81bb8fd9a3f",
-      "ordered_rows_sha256": "b41933545e5e258ad02434df753556c33b6d6e09684c6aca71b8613b037ebfa5"
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\merge_decisions.parquet",
+      "rows": 552,
+      "file_size_bytes": 84636,
+      "sha256": "bde7dc95957f59dcfefb570df3e76ab4f61e6bd9ce363cb63522b057a85403f5",
+      "ordered_rows_sha256": "dd27f9fdab06948ebbe9b6096a73e7d40a87e257df46e4912d12f9ea31b85fd2"
     },
     "history": {
-      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\mapping_history.parquet",
-      "rows": 3,
-      "file_size_bytes": 2882,
-      "sha256": "b4de66bc044d35778ab09ef98d264791010f90fdb2d1c02e4a355b49767258ac",
-      "ordered_rows_sha256": "6140b1386cd170c26ecfdecefa5264725336fefd33f0658e495a828735207e8a"
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\mapping_history.parquet",
+      "rows": 5,
+      "file_size_bytes": 3093,
+      "sha256": "2e4d884cc2f55ff22c6c36f731d9d490fb907fe589bab318881c945bf76083dd",
+      "ordered_rows_sha256": "d353ec18bcaebe8ba2daced0d81d768e3992f6773d0801d60df3ede8d8964d5f"
     }
   },
   "evaluation": {
@@ -191,8 +196,8 @@
     "recall": null,
     "f1": null,
     "manual_review_coverage": 0.0,
-    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\evaluation_queue.json",
-    "queue_sha256": "7442984e4668af25794223deff191d8dbc21d2c8f9ecd878b50e0790c7f66ae5",
+    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\evaluation_queue.json",
+    "queue_sha256": "c2c3369e631a7c74ffb140024db6f92f5a2ec04687aba03f1725d4c60bf73659",
     "note": "User confirmed no manual labels. This queue is NOT a completed labeled evaluation set. Development cases exclude these pair IDs."
   },
   "case_examples": {
@@ -206,6 +211,19 @@
           },
           {
             "asin": "6305252599",
+            "classification": "movie"
+          }
+        ]
+      },
+      {
+        "movie_id": "mw_694a964947e35e78b8a9b03f802f1a59",
+        "members": [
+          {
+            "asin": "B0012QE4Q2",
+            "classification": "movie"
+          },
+          {
+            "asin": "B0017APPSE",
             "classification": "movie"
           }
         ]
@@ -235,6 +253,19 @@
             "classification": "movie"
           }
         ]
+      },
+      {
+        "movie_id": "mw_d075a08719085134abe85e3b6ef54331",
+        "members": [
+          {
+            "asin": "6304994540",
+            "classification": "movie"
+          },
+          {
+            "asin": "6304994567",
+            "classification": "movie"
+          }
+        ]
       }
     ],
     "kept_separate_pairs": [
@@ -242,6 +273,12 @@
         "pair_id": "017766d8e205d15790851f02a9ec51540c679d85c1e4480bee55b4efaddc2489",
         "left_asin": "6305235074",
         "right_asin": "B00000I1RP",
+        "rule_id": "different_sequel_numerals"
+      },
+      {
+        "pair_id": "05e04d8a657476980078ee2f2ed7549ff819ba984929320c3d7afa086f791d11",
+        "left_asin": "B0013D8LU4",
+        "right_asin": "B001FWVKTM",
         "rule_id": "different_sequel_numerals"
       },
       {
@@ -261,15 +298,9 @@
         "left_asin": "B003R9IELI",
         "right_asin": "B004CWLRGI",
         "rule_id": "different_sequel_numerals"
-      },
-      {
-        "pair_id": "11973b98e06b0df1cd226bf5fce4e95b21261c577ae30655d5e8068e171f4202",
-        "left_asin": "B00008EY5P",
-        "right_asin": "B00008EY5Q",
-        "rule_id": "different_sequel_numerals"
       }
     ]
   },
   "case_limitations": "Actual-source examples, not human gold labels. At least5 groups of each type still require source inspection; no fabricated pairs.",
-  "checkpoint_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\resolution.sqlite3"
+  "checkpoint_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\resolution.sqlite3"
 }

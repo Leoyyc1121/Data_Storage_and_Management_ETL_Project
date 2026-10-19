@@ -100,3 +100,7 @@ dist/
 # Small aggregate-only execution logs for the final corrected DAG and prefix.
 !reports/pipeline/56349d5a180f4e5eb39d44cdb87ddb44-*.log
 !reports/pipeline/aa38aea2b9e04b269ed2ff699dc8ac1e-*.log
+!reports/pipeline/2ac806b3d1724fa0b323f95db4163325-*.log
+!reports/pipeline/892bc73cb2b84dfa96b2d033e6a797b4-*.log
+!reports/final/movie5-*.log
+!reports/pipeline/movie_replay/*.log

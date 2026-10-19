@@ -24,7 +24,7 @@ def run(c,source_id=None,rule_id=None,show_fields=False):
         result=dict(status='impact_located_read_only',source_record_id=source_id,rule_id=rule_id,affected_field_count=len(fields),
             affected_entities=len({(x[0],x[1]) for x in fields}),suggested_recompute_stages=stages,
             execution='Preserve old snapshots; change version directories; rerun affected stage and descendants via src.pipeline.run --from-job. Do not mutate registered inputs/decisions in place. Source-file version/ID changes can require broader source-stage recomputation.',
-            evidence_of_actual_version_recompute='Task5 contextual aliases/nonperson-span refinement v3 to v4 actually recomputed final_v7; old final_v6 integration and target retained.',
+            evidence_of_actual_version_recompute='Source classification narrative rule and movie primary-content scope rule recomputed Task3/full_v3 and Task4/full_v4, then downstream final_v8 via the DAG; previous final_v7 and its reports preserved separately.',
             scope='Dependency impact, not a claim that every located field necessarily changes value or that any source was modified.')
         if show_fields:result['fields']=list(fields.values())
         save_json(Path(c['report_root'])/'final/impact_recompute.json',{k:v for k,v in result.items() if k!='fields'});return result

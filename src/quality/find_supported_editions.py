@@ -10,7 +10,7 @@ from pathlib import Path
 import sys
 ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT/'src/transform'))
 from integration_common import *
-from resolve_movies import load_config as t4_config
+from resolve_movies import load_config as t4_config, content_scope_conflict
 from acquire_imdb import load_config as imdb_config
 from resolve_people import candidate_evidence
 
@@ -39,7 +39,7 @@ def search(c):
             if len(good)==1 and good[0][0] in works and not row['already_mapped']:
                 tid,e=good[0];mid=works[tid]
                 members=[json.loads(r[0]) for r in t4.execute('SELECT p.profile FROM products p JOIN product_movie m USING(asin) WHERE m.movie_id=?',(mid,))]
-                safe=all(p['variants']==profile['variants'] and (not p['values'].get('runtimes') or not profile['values'].get('runtimes') or min(abs(x-y) for x in p['values']['runtimes'] for y in profile['values']['runtimes'])<=3) for p in members)
+                safe=all(not content_scope_conflict(p,profile) and p['variants']==profile['variants'] and (not p['values'].get('runtimes') or not profile['values'].get('runtimes') or min(abs(x-y) for x in p['values']['runtimes'] for y in profile['values']['runtimes'])<=3) for p in members)
                 proposals.append(dict(asin=profile['asin'],movie_id=mid,tconst=tid,evidence=e,all_exact_title_candidates=sorted(ids),cut_runtime_cluster_compatible=safe,existing_asins=[p['asin'] for p in members],source_classification=profile['classification']))
     packet=Path(c['work_dir'])/'supported_editions_proposals.json';save_json(packet,dict(status='proposal_only_not_loaded',proposals=proposals))
     group_path=Path(c['work_dir'])/'rechecked_external_edition_groups.json'

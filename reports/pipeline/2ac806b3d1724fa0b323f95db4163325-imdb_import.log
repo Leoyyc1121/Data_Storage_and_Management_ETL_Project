@@ -1,0 +1,195 @@
+2026-10-19 15:50:35,379 INFO Import complete source file: title.basics.tsv.gz
+2026-10-19 15:50:56,627 INFO title.basics.tsv.gz read=1000000 kept=3080
+2026-10-19 15:51:07,896 INFO title.basics.tsv.gz read=2000000 kept=3886
+2026-10-19 15:51:19,699 INFO title.basics.tsv.gz read=3000000 kept=4658
+2026-10-19 15:51:31,298 INFO title.basics.tsv.gz read=4000000 kept=5518
+2026-10-19 15:51:42,951 INFO title.basics.tsv.gz read=5000000 kept=6400
+2026-10-19 15:51:55,906 INFO title.basics.tsv.gz read=6000000 kept=7372
+2026-10-19 15:52:07,743 INFO title.basics.tsv.gz read=7000000 kept=8184
+2026-10-19 15:52:20,019 INFO title.basics.tsv.gz read=8000000 kept=9004
+2026-10-19 15:52:32,778 INFO title.basics.tsv.gz read=9000000 kept=9942
+2026-10-19 15:52:45,355 INFO title.basics.tsv.gz read=10000000 kept=10830
+2026-10-19 15:52:59,294 INFO title.basics.tsv.gz read=11000000 kept=11954
+2026-10-19 15:53:12,628 INFO title.basics.tsv.gz read=12000000 kept=13100
+2026-10-19 15:53:22,770 INFO Import complete source file: title.crew.tsv.gz
+2026-10-19 15:53:28,064 INFO title.crew.tsv.gz read=1000000 kept=3080
+2026-10-19 15:53:33,766 INFO title.crew.tsv.gz read=2000000 kept=3886
+2026-10-19 15:53:38,769 INFO title.crew.tsv.gz read=3000000 kept=4658
+2026-10-19 15:53:43,635 INFO title.crew.tsv.gz read=4000000 kept=5518
+2026-10-19 15:53:48,712 INFO title.crew.tsv.gz read=5000000 kept=6400
+2026-10-19 15:53:53,815 INFO title.crew.tsv.gz read=6000000 kept=7372
+2026-10-19 15:53:58,827 INFO title.crew.tsv.gz read=7000000 kept=8184
+2026-10-19 15:54:03,834 INFO title.crew.tsv.gz read=8000000 kept=9004
+2026-10-19 15:54:08,709 INFO title.crew.tsv.gz read=9000000 kept=9942
+2026-10-19 15:54:13,665 INFO title.crew.tsv.gz read=10000000 kept=10830
+2026-10-19 15:54:18,750 INFO title.crew.tsv.gz read=11000000 kept=11954
+2026-10-19 15:54:23,806 INFO title.crew.tsv.gz read=12000000 kept=13100
+2026-10-19 15:54:30,174 INFO Import complete source file: title.principals.tsv.gz
+2026-10-19 15:54:37,028 INFO title.principals.tsv.gz read=1000000 kept=9119
+2026-10-19 15:54:44,540 INFO title.principals.tsv.gz read=2000000 kept=20554
+2026-10-19 15:54:51,209 INFO title.principals.tsv.gz read=3000000 kept=26739
+2026-10-19 15:54:58,043 INFO title.principals.tsv.gz read=4000000 kept=32971
+2026-10-19 15:55:05,685 INFO title.principals.tsv.gz read=5000000 kept=39656
+2026-10-19 15:55:11,714 INFO title.principals.tsv.gz read=6000000 kept=42231
+2026-10-19 15:55:16,952 INFO title.principals.tsv.gz read=7000000 kept=42231
+2026-10-19 15:55:22,157 INFO title.principals.tsv.gz read=8000000 kept=42231
+2026-10-19 15:55:27,235 INFO title.principals.tsv.gz read=9000000 kept=42533
+2026-10-19 15:55:33,131 INFO title.principals.tsv.gz read=10000000 kept=44786
+2026-10-19 15:55:38,633 INFO title.principals.tsv.gz read=11000000 kept=46316
+2026-10-19 15:55:44,070 INFO title.principals.tsv.gz read=12000000 kept=47524
+2026-10-19 15:55:49,310 INFO title.principals.tsv.gz read=13000000 kept=48412
+2026-10-19 15:55:54,448 INFO title.principals.tsv.gz read=14000000 kept=49332
+2026-10-19 15:55:59,571 INFO title.principals.tsv.gz read=15000000 kept=50424
+2026-10-19 15:56:04,796 INFO title.principals.tsv.gz read=16000000 kept=51379
+2026-10-19 15:56:10,206 INFO title.principals.tsv.gz read=17000000 kept=52543
+2026-10-19 15:56:15,590 INFO title.principals.tsv.gz read=18000000 kept=53380
+2026-10-19 15:56:20,723 INFO title.principals.tsv.gz read=19000000 kept=54506
+2026-10-19 15:56:25,954 INFO title.principals.tsv.gz read=20000000 kept=55565
+2026-10-19 15:56:31,349 INFO title.principals.tsv.gz read=21000000 kept=56794
+2026-10-19 15:56:36,549 INFO title.principals.tsv.gz read=22000000 kept=57789
+2026-10-19 15:56:41,799 INFO title.principals.tsv.gz read=23000000 kept=58748
+2026-10-19 15:56:47,286 INFO title.principals.tsv.gz read=24000000 kept=59696
+2026-10-19 15:56:52,471 INFO title.principals.tsv.gz read=25000000 kept=60772
+2026-10-19 15:56:57,569 INFO title.principals.tsv.gz read=26000000 kept=61785
+2026-10-19 15:57:03,305 INFO title.principals.tsv.gz read=27000000 kept=63554
+2026-10-19 15:57:08,811 INFO title.principals.tsv.gz read=28000000 kept=65082
+2026-10-19 15:57:14,279 INFO title.principals.tsv.gz read=29000000 kept=66135
+2026-10-19 15:57:19,707 INFO title.principals.tsv.gz read=30000000 kept=67182
+2026-10-19 15:57:25,290 INFO title.principals.tsv.gz read=31000000 kept=68549
+2026-10-19 15:57:30,603 INFO title.principals.tsv.gz read=32000000 kept=69740
+2026-10-19 15:57:36,044 INFO title.principals.tsv.gz read=33000000 kept=70893
+2026-10-19 15:57:41,392 INFO title.principals.tsv.gz read=34000000 kept=72169
+2026-10-19 15:57:46,742 INFO title.principals.tsv.gz read=35000000 kept=73365
+2026-10-19 15:57:52,118 INFO title.principals.tsv.gz read=36000000 kept=74415
+2026-10-19 15:57:57,819 INFO title.principals.tsv.gz read=37000000 kept=75649
+2026-10-19 15:58:03,628 INFO title.principals.tsv.gz read=38000000 kept=76923
+2026-10-19 15:58:09,141 INFO title.principals.tsv.gz read=39000000 kept=78527
+2026-10-19 15:58:14,712 INFO title.principals.tsv.gz read=40000000 kept=80295
+2026-10-19 15:58:19,993 INFO title.principals.tsv.gz read=41000000 kept=81711
+2026-10-19 15:58:25,478 INFO title.principals.tsv.gz read=42000000 kept=83031
+2026-10-19 15:58:31,037 INFO title.principals.tsv.gz read=43000000 kept=84721
+2026-10-19 15:58:36,499 INFO title.principals.tsv.gz read=44000000 kept=86048
+2026-10-19 15:58:42,104 INFO title.principals.tsv.gz read=45000000 kept=87257
+2026-10-19 15:58:47,251 INFO title.principals.tsv.gz read=46000000 kept=88282
+2026-10-19 15:58:52,686 INFO title.principals.tsv.gz read=47000000 kept=89432
+2026-10-19 15:58:57,960 INFO title.principals.tsv.gz read=48000000 kept=90474
+2026-10-19 15:59:03,597 INFO title.principals.tsv.gz read=49000000 kept=91809
+2026-10-19 15:59:09,081 INFO title.principals.tsv.gz read=50000000 kept=93076
+2026-10-19 15:59:14,449 INFO title.principals.tsv.gz read=51000000 kept=94216
+2026-10-19 15:59:19,985 INFO title.principals.tsv.gz read=52000000 kept=95247
+2026-10-19 15:59:25,520 INFO title.principals.tsv.gz read=53000000 kept=96254
+2026-10-19 15:59:31,341 INFO title.principals.tsv.gz read=54000000 kept=97227
+2026-10-19 15:59:36,796 INFO title.principals.tsv.gz read=55000000 kept=97952
+2026-10-19 15:59:42,007 INFO title.principals.tsv.gz read=56000000 kept=98838
+2026-10-19 15:59:47,162 INFO title.principals.tsv.gz read=57000000 kept=99632
+2026-10-19 15:59:52,389 INFO title.principals.tsv.gz read=58000000 kept=100477
+2026-10-19 15:59:57,653 INFO title.principals.tsv.gz read=59000000 kept=101484
+2026-10-19 16:00:02,955 INFO title.principals.tsv.gz read=60000000 kept=102386
+2026-10-19 16:00:08,115 INFO title.principals.tsv.gz read=61000000 kept=103098
+2026-10-19 16:00:13,752 INFO title.principals.tsv.gz read=62000000 kept=104483
+2026-10-19 16:00:19,171 INFO title.principals.tsv.gz read=63000000 kept=105485
+2026-10-19 16:00:24,638 INFO title.principals.tsv.gz read=64000000 kept=106598
+2026-10-19 16:00:30,211 INFO title.principals.tsv.gz read=65000000 kept=107957
+2026-10-19 16:00:35,749 INFO title.principals.tsv.gz read=66000000 kept=109408
+2026-10-19 16:00:40,945 INFO title.principals.tsv.gz read=67000000 kept=110586
+2026-10-19 16:00:46,294 INFO title.principals.tsv.gz read=68000000 kept=111672
+2026-10-19 16:00:51,739 INFO title.principals.tsv.gz read=69000000 kept=113046
+2026-10-19 16:00:57,012 INFO title.principals.tsv.gz read=70000000 kept=114190
+2026-10-19 16:01:02,646 INFO title.principals.tsv.gz read=71000000 kept=115475
+2026-10-19 16:01:08,183 INFO title.principals.tsv.gz read=72000000 kept=116847
+2026-10-19 16:01:13,630 INFO title.principals.tsv.gz read=73000000 kept=118070
+2026-10-19 16:01:19,140 INFO title.principals.tsv.gz read=74000000 kept=119272
+2026-10-19 16:01:24,481 INFO title.principals.tsv.gz read=75000000 kept=120185
+2026-10-19 16:01:29,689 INFO title.principals.tsv.gz read=76000000 kept=121232
+2026-10-19 16:01:35,129 INFO title.principals.tsv.gz read=77000000 kept=122378
+2026-10-19 16:01:40,529 INFO title.principals.tsv.gz read=78000000 kept=123872
+2026-10-19 16:01:45,905 INFO title.principals.tsv.gz read=79000000 kept=125222
+2026-10-19 16:01:51,324 INFO title.principals.tsv.gz read=80000000 kept=126221
+2026-10-19 16:01:56,611 INFO title.principals.tsv.gz read=81000000 kept=127381
+2026-10-19 16:02:02,128 INFO title.principals.tsv.gz read=82000000 kept=128882
+2026-10-19 16:02:07,914 INFO title.principals.tsv.gz read=83000000 kept=130465
+2026-10-19 16:02:13,561 INFO title.principals.tsv.gz read=84000000 kept=132133
+2026-10-19 16:02:19,292 INFO title.principals.tsv.gz read=85000000 kept=133740
+2026-10-19 16:02:24,831 INFO title.principals.tsv.gz read=86000000 kept=135437
+2026-10-19 16:02:30,771 INFO title.principals.tsv.gz read=87000000 kept=137211
+2026-10-19 16:02:36,675 INFO title.principals.tsv.gz read=88000000 kept=138768
+2026-10-19 16:02:42,081 INFO title.principals.tsv.gz read=89000000 kept=140158
+2026-10-19 16:02:47,650 INFO title.principals.tsv.gz read=90000000 kept=141377
+2026-10-19 16:02:52,958 INFO title.principals.tsv.gz read=91000000 kept=142452
+2026-10-19 16:02:57,882 INFO title.principals.tsv.gz read=92000000 kept=143455
+2026-10-19 16:03:02,817 INFO title.principals.tsv.gz read=93000000 kept=144377
+2026-10-19 16:03:07,740 INFO title.principals.tsv.gz read=94000000 kept=145345
+2026-10-19 16:03:12,483 INFO title.principals.tsv.gz read=95000000 kept=146273
+2026-10-19 16:03:17,164 INFO title.principals.tsv.gz read=96000000 kept=147289
+2026-10-19 16:03:22,107 INFO title.principals.tsv.gz read=97000000 kept=148028
+2026-10-19 16:03:27,678 INFO title.principals.tsv.gz read=98000000 kept=149218
+2026-10-19 16:03:32,348 INFO title.principals.tsv.gz read=99000000 kept=150177
+2026-10-19 16:03:36,754 INFO title.principals.tsv.gz read=100000000 kept=150802
+2026-10-19 16:03:41,135 INFO title.principals.tsv.gz read=101000000 kept=151264
+2026-10-19 16:03:45,649 INFO title.principals.tsv.gz read=102000000 kept=152022
+2026-10-19 16:03:47,664 INFO Import complete source file: name.basics.tsv.gz
+2026-10-19 16:04:04,508 INFO name.basics.tsv.gz read=1000000 kept=34331
+2026-10-19 16:04:11,103 INFO name.basics.tsv.gz read=2000000 kept=39061
+2026-10-19 16:04:17,418 INFO name.basics.tsv.gz read=3000000 kept=42951
+2026-10-19 16:04:23,865 INFO name.basics.tsv.gz read=4000000 kept=46908
+2026-10-19 16:04:29,910 INFO name.basics.tsv.gz read=5000000 kept=50723
+2026-10-19 16:04:35,900 INFO name.basics.tsv.gz read=6000000 kept=54064
+2026-10-19 16:04:41,790 INFO name.basics.tsv.gz read=7000000 kept=57173
+2026-10-19 16:04:47,597 INFO name.basics.tsv.gz read=8000000 kept=60056
+2026-10-19 16:04:53,232 INFO name.basics.tsv.gz read=9000000 kept=62494
+2026-10-19 16:05:01,390 INFO name.basics.tsv.gz read=10000000 kept=71670
+2026-10-19 16:05:09,633 INFO name.basics.tsv.gz read=11000000 kept=80437
+2026-10-19 16:05:17,229 INFO name.basics.tsv.gz read=12000000 kept=87728
+2026-10-19 16:05:24,498 INFO name.basics.tsv.gz read=13000000 kept=94175
+2026-10-19 16:05:31,421 INFO name.basics.tsv.gz read=14000000 kept=99859
+2026-10-19 16:05:38,086 INFO name.basics.tsv.gz read=15000000 kept=105042
+{
+  "observed_at": "2026-10-19T08:05:42.919174+00:00",
+  "status": "complete",
+  "input_fingerprint": "4bf8aa40991a59b92f2e345f6da7779a27112df1fcf61ca433bb3ae38ba37f61",
+  "selected_title_forms": 3624,
+  "titles": 13828,
+  "names": 108402,
+  "principal_credits": 152313,
+  "raw_source_records": 288371,
+  "states": {
+    "title.basics.tsv.gz": {
+      "sequence": 12866376,
+      "next_offset": 1117319568,
+      "read": 12866375,
+      "kept": 13828,
+      "issues": 0,
+      "complete": true,
+      "gzip_crc_verified": true
+    },
+    "title.crew.tsv.gz": {
+      "sequence": 12866376,
+      "next_offset": 423575299,
+      "read": 12866375,
+      "kept": 13828,
+      "issues": 0,
+      "complete": true,
+      "gzip_crc_verified": true
+    },
+    "title.principals.tsv.gz": {
+      "sequence": 102312264,
+      "next_offset": 4573918244,
+      "read": 102312263,
+      "kept": 152313,
+      "issues": 0,
+      "complete": true,
+      "gzip_crc_verified": true
+    },
+    "name.basics.tsv.gz": {
+      "sequence": 15738258,
+      "next_offset": 972586134,
+      "read": 15738257,
+      "kept": 108402,
+      "issues": 0,
+      "complete": true,
+      "gzip_crc_verified": true
+    }
+  },
+  "scope": "Complete bulk files streamed/CRC-checked; selected raw rows retained by title-key filter. Title selection is not movie identity verification. Principal cast, not full cast or starring.",
+  "catalog_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\imdb\\snapshot_20261016_v2\\catalog.sqlite3"
+}

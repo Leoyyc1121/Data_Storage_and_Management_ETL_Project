@@ -34,6 +34,15 @@ def descendants(jobs,start):
         old=len(chosen)
         chosen.update(j['id'] for j in jobs if set(j['depends_on'])&chosen);changed=len(chosen)>old
     return chosen
+
+def execution_arguments(job,offline):
+    args=list(job.get('args',[]))
+    if offline and job.get('network',False):
+        fallback=job.get('offline_args')
+        if not isinstance(fallback,list) or '--offline' not in fallback:
+            raise ValueError('Network job has no explicit offline input-verification branch')
+        args.extend(fallback)
+    return args
 def run(path,from_job=None,offline=False,plan=False,stop_after_jobs=None):
     c=json.loads(Path(path).read_text(encoding='utf-8-sig'));jobs=order_jobs(c['jobs']);selected=descendants(jobs,from_job) if from_job else {j['id'] for j in jobs}
     jobs=[j for j in jobs if j['id'] in selected]
@@ -47,7 +56,8 @@ def run(path,from_job=None,offline=False,plan=False,stop_after_jobs=None):
             jid=job['id'];log=reports/(rid+'-'+jid+'.log')
             if set(job['depends_on'])&failed:
                 failed.add(jid);results.append(dict(job=jid,status='blocked_upstream_failure'));continue
-            if offline and job.get('network',False):
+            try:arguments=execution_arguments(job,offline)
+            except ValueError:
                 failed.add(jid);results.append(dict(job=jid,status='blocked_network_disabled',reason='Offline mode does not invent source acquisition; use fixed offline acceptance runner or --from-job task5 after restoring registered raw sources.'));continue
             started=utc_now()
             with d:d.execute('INSERT INTO executions VALUES (?,?,?,?,?,?,?,?)',(rid,jid,started,None,'running',None,str(log.resolve()),digest_json(job)))
@@ -60,10 +70,10 @@ def run(path,from_job=None,offline=False,plan=False,stop_after_jobs=None):
                 script=(ROOT/Path(*job['module'].split('.'))).with_suffix('.py').resolve()
                 script.relative_to(ROOT/'src')
                 child_env=dict(os.environ,PYTHONUTF8='1',PYTHONIOENCODING='utf-8')
-                process=subprocess.run([sys.executable,str(script),*job.get('args',[])],cwd=ROOT,stdout=output,stderr=subprocess.STDOUT,env=child_env)
+                process=subprocess.run([sys.executable,str(script),*arguments],cwd=ROOT,stdout=output,stderr=subprocess.STDOUT,env=child_env)
             status='complete' if process.returncode==0 else 'interrupted' if process.returncode==130 else 'failed'
             with d:d.execute('UPDATE executions SET finished_at=?,status=?,exit_code=? WHERE run_id=? AND job_id=?',(utc_now(),status,process.returncode,rid,jid))
-            results.append(dict(job=jid,status=status,exit_code=process.returncode,log_path=str(log.resolve())))
+            results.append(dict(job=jid,status=status,exit_code=process.returncode,log_path=str(log.resolve()),execution_mode='registered_offline_branch' if offline and job.get('network',False) else 'local' if offline else 'configured'))
             (finished if status=='complete' else failed).add(jid)
             if stop_after_jobs and len(results)>=stop_after_jobs:break
         result=dict(run_id=rid,status='failed' if failed else 'interrupted_at_job_boundary' if len(results)<len(jobs) else 'complete',definition_version=c['version'],definition_sha256=hash_file(path),results=results,

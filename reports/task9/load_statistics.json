@@ -1,8 +1,10 @@
 {
   "status": "complete",
-  "target_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\target\\final_v7\\etl.sqlite3",
-  "input_fingerprint": "c5cb47e10277ff20f8b9d00af01c82db7040c0e56d83910e5b56c149d2dc7066",
-  "file_size_bytes": 34920345600,
-  "sha256": "a0d96ffc1b3a80efc6ce64dca175a0a4f47eb441643d6f92178fde0e9dc6e4d6",
-  "semantics": "SQLite equivalent relational target, preserving every original review. Raw/normalized field assertions, selection/unselected members, rule/run/times, source locators and parent-child graph. Review provenance is a queryable view; no fake human labels."
+  "target_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\target\\final_v8\\etl.sqlite3",
+  "input_fingerprint": "b211b9d7ff0a4fa104f14c84fc681349b6d2b23f42610a21cd2b531a6a7e3741",
+  "file_size_bytes": 35099467776,
+  "sha256": "3dae5f222e6d81e25278aca0e168787f9409cea37e47f1ac92993bb43682332d",
+  "publication_observed_at": "2026-10-19T11:03:17.086666+00:00",
+  "report_recovered_after_atomic_publication": true,
+  "semantics": "Registered ready target already atomically published. Summary recovered by normal target verification after process loss; observation time is not asserted as original completion time. All original reviews retained; no HUMAN labels created."
 }

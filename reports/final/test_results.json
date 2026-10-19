@@ -1,10 +1,10 @@
 {
-  "observed_at": "2026-10-19T06:49:25.409050+00:00",
+  "observed_at": "2026-10-19T11:16:03.262049+00:00",
   "status": "passed",
-  "tests_run": 223,
+  "tests_run": 245,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
-  "duration_seconds": 78.672,
-  "scope": "Final submission implementation: existing208 plus15 synthetic human-evaluation tests; archived Scrapy tests excluded. NOT human accuracy."
+  "duration_seconds": 89.312,
+  "scope": "Current ETL plus raw-evidence failure replay, atomic-publication recovery, isolated SQLite ATTACH path authorization and network rejection; NOT HUMAN accuracy."
 }

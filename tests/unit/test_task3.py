@@ -42,6 +42,26 @@ class RuleTests(unittest.TestCase):
     def test_empty_title_is_unresolved(self):
         self.assertEqual(self.label(title="", category=["Movies"]), "awaiting_confirmation")
 
+    def test_title_bound_substantial_movie_narrative(self):
+        prose = 'Synthetic Story is a carefully made movie. ' + 'A protagonist encounters a difficult choice and follows an unusual journey. ' * 9
+        self.assertEqual(self.label(title='Synthetic Story VHS', description=[prose]), 'movie')
+
+    def test_title_bound_narrative_does_not_accept_other_work_or_short_prose(self):
+        self.assertEqual(self.label(title='Synthetic Story', description=['Another Story is a movie. ' * 30]), 'awaiting_confirmation')
+        self.assertEqual(self.label(title='Synthetic Story', description=['Synthetic Story is a movie.']), 'awaiting_confirmation')
+
+    def test_explicit_cast_and_main_title_film_narrative_without_genre(self):
+        prose = 'Synthetic Story follows a difficult journey. The film explores an unusual dilemma. ' + 'The protagonist considers each choice and tries to resolve the conflict. ' * 9
+        self.assertEqual(self.label(title='Synthetic Story', description=['Starring Alice Example, Bob Example, and Carol Example.', prose]), 'movie')
+
+    def test_cast_names_or_brand_alone_not_movie_type(self):
+        self.assertEqual(self.label(title='Synthetic Story', description=['Starring Alice Example, Bob Example, and Carol Example.'], brand='Alice Example'), 'awaiting_confirmation')
+
+    def test_episodic_and_performance_prose_cannot_promote_main_work(self):
+        prose = 'Synthetic Story is a movie. ' + 'A protagonist follows an unusual journey through a fictional landscape. ' * 12
+        for warning in ['Episode 1 is included.', 'This is an episodic release.', 'A concert recorded live.']:
+            self.assertEqual(self.label(title='Synthetic Story', description=[prose, warning]), 'awaiting_confirmation')
+
     def test_movie_category_does_not_override_tv(self):
         self.assertEqual(self.label(title="Synthetic Complete First Season DVD", category=["Movies", "Boxed Sets"], description=["All episodes of this television series."]), "television_series")
 

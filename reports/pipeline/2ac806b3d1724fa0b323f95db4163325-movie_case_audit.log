@@ -1,0 +1,36 @@
+{
+  "observed_at": "2026-10-19T07:50:33.637645+00:00",
+  "status": "passed_at_least_five_actual_source_supported_work_groups",
+  "actual_work_groups": 5,
+  "demonstrated_nonheldout_groups": 5,
+  "required": 5,
+  "distinct_new_work_groups": 2,
+  "new_cases": [
+    {
+      "movie_id": "mw_694a964947e35e78b8a9b03f802f1a59",
+      "title": "The Other Boleyn Girl",
+      "asins": [
+        "B0012QE4Q2",
+        "B0017APPSE"
+      ]
+    },
+    {
+      "movie_id": "mw_d075a08719085134abe85e3b6ef54331",
+      "title": "The Big Lebowski VHS",
+      "asins": [
+        "6304994540",
+        "6304994567"
+      ]
+    }
+  ],
+  "all_cluster_pairs_rechecked": true,
+  "demonstration_evaluation_overlap": 0,
+  "episode_feature_false_merge_prevented": true,
+  "evidence_packet": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v4\\verified_merge_case_evidence.json",
+    "sha256": "8ffaa6e36688380ed8049d32d67f753e91e26fd0685f94bf154a89341c8f3101",
+    "bytes": 14654
+  },
+  "counts_changed_by_real_mappings_not_report_edits": true,
+  "independent_human_evaluation_completed": false
+}

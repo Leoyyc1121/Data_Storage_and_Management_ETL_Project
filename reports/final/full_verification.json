@@ -1,22 +1,22 @@
 {
   "status": "passed_integrity_not_human_accuracy",
-  "observed_at": "2026-10-16T04:38:08.396458+00:00",
+  "observed_at": "2026-10-19T11:26:40.011791+00:00",
   "counts": {
     "raw_reviews": 7911684,
     "logical_reviews": 7906538,
     "reviewers": 889176,
     "editions": 253059,
-    "movies": 2953,
-    "people": 1918,
-    "credits": 2360,
-    "movie_person": 2299,
-    "movie_genres": 2157,
-    "source_records": 283547,
-    "assertions": 1406034,
-    "field_selections": 2830593,
-    "selection_members": 1322578,
-    "lineage_edges": 7740850,
-    "cross_edition_candidates": 243
+    "movies": 3613,
+    "people": 3245,
+    "credits": 3923,
+    "movie_person": 3772,
+    "movie_genres": 2934,
+    "source_records": 377031,
+    "assertions": 1419863,
+    "field_selections": 2846475,
+    "selection_members": 1336404,
+    "lineage_edges": 7876297,
+    "cross_edition_candidates": 1008
   },
   "foreign_key_errors": 0,
   "product_review_count_mismatches": 0,
@@ -25,7 +25,7 @@
   "invalid_helpfulness_ratios": 0,
   "date_semantics": {
     "full_dates": 0,
-    "years": 169
+    "years": 282
   },
   "lineage_implementation": "Materialized source/assertion/selection processing graph for metadata and people, queryable raw/clean field provenance view for all reviews; source review field prefixes and raw byte locations available.",
   "limits": "Engineering integrity does not establish human matching accuracy or completion of required independent evaluation/cases."

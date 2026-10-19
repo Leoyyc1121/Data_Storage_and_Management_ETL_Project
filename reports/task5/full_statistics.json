@@ -1,43 +1,44 @@
 {
-  "observed_at": "2026-10-16T08:54:17.383258+00:00",
+  "observed_at": "2026-10-19T11:11:01.564331+00:00",
   "status": "complete_engineering_pending_human_acceptance",
   "tables": {
     "work_matches": {
-      "rows": 2953,
-      "ordered_rows_sha256": "c4ab30004735f50da4da4d4c8153f4918bd2afb7f4efb87dbb9d2680dd0fc094"
+      "rows": 3613,
+      "ordered_rows_sha256": "df18be6ca195d1946b0b85bdca89b07886c797b03282a9d29a34cf3a31945bca"
     },
     "work_match_candidates": {
-      "rows": 9344,
-      "ordered_rows_sha256": "a10c45c69784de397b9f5a45a03b2da650acfc1fbd66045f4c7f6cce5e041e06"
+      "rows": 14211,
+      "ordered_rows_sha256": "234930ef8dd95f190995b1d7ae687614e2273c41728acde00d8757d68c4a2beb"
     },
     "people": {
-      "rows": 1918,
-      "ordered_rows_sha256": "fc5e7153ddd06218a7d3db79a0d1b810f1f57fd33c543a31a6ebde883c733e63"
+      "rows": 3245,
+      "ordered_rows_sha256": "dbf4fd2c9951fbabab40a1980a6803eee755e3f1031bb4d93b7f87d91cc206d9"
     },
     "person_aliases": {
-      "rows": 2354,
-      "ordered_rows_sha256": "aff59f791de8892b0b847868877f5e0a173bb4bbcf76d2b323a675eab279de5f"
+      "rows": 3910,
+      "ordered_rows_sha256": "ead10406d043fbb8c5a853ab2448ba558aeaeb0a64846e3fee9f3013a6490bc1"
     },
     "credits": {
-      "rows": 2360,
-      "ordered_rows_sha256": "a75bd15f41d823b66bf3b2959d67c877e66e14fdc893394c6d06bc8bc581f70b"
+      "rows": 3923,
+      "ordered_rows_sha256": "d051e9d27797d8e7ab8361caeccc5615a032161a283a3d9a5a3d8ac34b943178"
     },
     "person_decisions": {
-      "rows": 554,
-      "ordered_rows_sha256": "a8019d7d4a3c25feb4ccc0c2ea38932e9c11493590a3f0e4bfe1588ed395c02f"
+      "rows": 864,
+      "ordered_rows_sha256": "68333ac6bb93ed1d83c71456fe7d24614819eb88630876130bce6decfb1e4e26"
     },
     "person_evaluation_pairs": {
       "rows": 120,
-      "ordered_rows_sha256": "e8d4c569834b11767ab67721a8d3c3c5b0418129091552d926e947998a9704c2"
+      "ordered_rows_sha256": "6cb1d078f763837f2271901e7fed01b12a4904feae6104d83c8d6c9ee235355a"
     }
   },
   "work_matches": {
-    "unresolved": 2784,
-    "verified_multifield": 169
+    "ambiguous": 1,
+    "unresolved": 3330,
+    "verified_multifield": 282
   },
   "people_status": {
-    "provisional_source_context": 347,
-    "verified_external_context": 1571
+    "provisional_source_context": 539,
+    "verified_external_context": 2706
   },
   "human_evaluation": {
     "status": "awaiting_independent_human_labels",
@@ -46,7 +47,7 @@
     "precision": null,
     "recall": null,
     "f1": null,
-    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v7\\person_evaluation_queue.json"
+    "queue_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v8\\person_evaluation_queue.json"
   },
   "limitations": [
     "No human labeling supplied; independent evaluation NOT completed.",

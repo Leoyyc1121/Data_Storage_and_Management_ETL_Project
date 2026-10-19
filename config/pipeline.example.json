@@ -117,7 +117,14 @@
       ]
     },
     {
+      "id": "movie_case_audit",
+      "depends_on": ["task4"],
+      "module": "src.quality.verify_movie_merge_cases",
+      "args": []
+    },
+    {
       "id": "imdb_download",
+      "offline_args": ["--offline"],
       "depends_on": [
         "task4"
       ],

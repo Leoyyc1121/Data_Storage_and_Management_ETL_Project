@@ -3,9 +3,9 @@
   "substantive_person_groups": 5,
   "required": 5,
   "alias_assertions": 7,
-  "excluded_nonperson_or_unresolved_spans": 40,
+  "excluded_nonperson_or_unresolved_spans": 46,
   "case_packet": {
-    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v7\\substantive_alias_evidence.json",
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v8\\substantive_alias_evidence.json",
     "sha256": "0479c567def11e8d45cb122605c74d465f5fb92d4ef7f4325b0cecbbaeac0c12",
     "bytes": 14475
   },
@@ -17,6 +17,6 @@
     "person:f3525b6cfb9553c1923b966aa48f2a78"
   ],
   "evaluation_queue_pairs": 120,
-  "development_source_records": 265,
+  "development_source_records": 276,
   "semantics": "Nontrivial middle-name or appended-surname variants, independently verified same work/role, unique external nconst. No fuzzy name-only, initials-only, spelling/punctuation-only groups counted. Cases are rule-development evidence, not independent human evaluation."
 }

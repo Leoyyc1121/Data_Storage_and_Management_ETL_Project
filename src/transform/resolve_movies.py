@@ -31,7 +31,7 @@ from acquire_products import digest_json, load_config as load_task2, run_lock, s
 from classify_products import load_config as load_task3, json_text, source_record_id, text
 from register_source import hash_file, utc_now
 
-ENGINE_VERSION = "1.2.0"
+ENGINE_VERSION = "1.3.0"
 DECISIONS = ("auto_merge", "manual_review", "reject", "unresolved")
 NAMESPACE = uuid.UUID("b81f0945-de98-5236-8f72-b086c420e642")
 STOP = {"a", "an", "the", "of", "and", "in", "to", "on", "for", "with", "from", "by"}
@@ -142,6 +142,13 @@ def extract_record(row, rules):
             continue
         loc = f"description[{i}]"
         clean = text(raw)
+        for scope, pattern in (
+                ("episodic_installment", r"\blimited edition episodic release\b|\bDVD Includes\s*:\s*.*?\bEpisode\s+[0-9]+\b"),
+                ("complete_feature", r"\bDVD Includes\s*:\s*.*?\bcomplete feature film\b")):
+            match = re.search(pattern, clean, re.I)
+            if match:
+                assert_value("primary_content_scopes", scope, loc, match.group(),
+                    "explicit primary DVD content, not an incidental cast or title reference")
         tokens = re.findall(r"\w+", clean.casefold())
         unique = set(tokens)
         if len(tokens) >= rules["minimum_shared_plot_words"] and len(unique) >= rules["minimum_shared_plot_unique_words"] and re.search(r"\b(?:film|movie|story|stars|starring)\b", clean, re.I):
@@ -223,6 +230,12 @@ def title_score(a, b):
     return max((SequenceMatcher(None, x, y, autojunk=False).ratio() for x in a["titles"] for y in b["titles"]), default=0.0)
 
 
+def content_scope_conflict(a, b):
+    left, right = (set(p['values'].get('primary_content_scopes', [])) for p in (a, b))
+    return bool('episodic_installment' in left and 'complete_feature' in right or
+                'complete_feature' in left and 'episodic_installment' in right)
+
+
 def compare(a, b, rules):
     va, vb = a["values"], b["values"]
     shared = lambda key: sorted(set(va.get(key, [])) & set(vb.get(key, [])))
@@ -240,11 +253,15 @@ def compare(a, b, rules):
         lexical_description_jaccard=similarity, left_work_years=sorted(years_a), right_work_years=sorted(years_b),
         shared_unverified_external_id_mentions=shared("external_id_mentions"), left_variants=a["variants"], right_variants=b["variants"],
         left_source_records=[r["source_record_id"] for r in a["records"]], right_source_records=[r["source_record_id"] for r in b["records"]])
+    facts.update(left_primary_content_scopes=va.get('primary_content_scopes', []),
+        right_primary_content_scopes=vb.get('primary_content_scopes', []))
     def result(decision, reason, strength):
         return dict(proposed_decision=decision, final_decision=decision, rule_id=reason, evidence_strength=strength, facts=facts,
             confidence_semantics="rule evidence strength, not measured probability/accuracy")
     if not a["eligible"] or not b["eligible"]:
         return result("reject", "work_type_or_identity_not_eligible", "excluded")
+    if content_scope_conflict(a, b):
+        return result("reject", "episodic_installment_not_complete_feature", "explicit_primary_content_conflict")
     # Multiple conflicting years in a single product are never selected silently.
     if len(years_a) > 1 or len(years_b) > 1:
         return result("manual_review", "within_product_year_conflict", "ambiguous")
