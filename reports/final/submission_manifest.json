@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-19T06:49:41.287598+00:00",
+  "observed_at": "2026-10-19T06:51:19.586465+00:00",
   "status": "passed_submission_boundary_and_registered_local_artifacts",
   "files": [
     {
@@ -79,8 +79,8 @@
     },
     {
       "path": "docs/人工评估与剩余验收.md",
-      "bytes": 5284,
-      "sha256": "bdafaa3dbae3db235552a122a94f148819cb787c8bb9f6073937de86b6e033c0"
+      "bytes": 9775,
+      "sha256": "331bd9e53e27feb6f546bc9e11a83b9ca817da479ab3018a7e982f9fa8b2372d"
     },
     {
       "path": "reports/final/cleanup_manifest.json",
@@ -859,13 +859,13 @@
     },
     {
       "path": "项目实施记录.md",
-      "bytes": 118996,
-      "sha256": "ba000c0d46b602a3ec1efb02bd90b24c1641116c460cf30eae2eaec46d1157e0"
+      "bytes": 121124,
+      "sha256": "4ac389ec7ea148c4acf23ce858ad9242bcdef251a27f17e9060f58df4aa6baf7"
     }
   ],
   "files_count": 172,
-  "submission_bytes": 1177169,
-  "content_fingerprint": "157b8405e5d7956cfc994b7a8a1bb5eaa31ea16df32ed85ac618ff5ba5e2a2e9",
+  "submission_bytes": 1183788,
+  "content_fingerprint": "0c948db32670c8b8b3e038de750da68fa43c4382c232b617f52f33cbe67f7f9a",
   "self_hash_exclusions": [
     "reports/final/submission_manifest.json",
     "reports/final/submission_verification.json"
