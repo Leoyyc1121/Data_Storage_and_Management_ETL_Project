@@ -13,6 +13,7 @@ sys.path.insert(0, str(ROOT/"src/transform"))
 from resolve_movies import digest_json, input_registration, load_config, save_json
 from acquire_products import timestamp
 from register_source import hash_file, utc_now
+from human_evaluation import load_labels, verify_binding, coverage
 
 
 def metrics(gold, predicted):
@@ -31,18 +32,17 @@ def metrics(gold, predicted):
 
 def evaluate(config, labels_path):
     _, registration = input_registration(config, verify_input=False)
-    package = json.loads(Path(labels_path).read_text(encoding="utf-8-sig"))
-    labeled = [row for row in package["pairs"] if row.get("label") in {"same_work", "different_work"}]
-    if len(labeled) < 100 or {row["label"] for row in labeled} != {"same_work", "different_work"}:
-        raise ValueError("At least100 independent HUMAN labels including both positive and negative pairs required")
-    if len({row["pair_id"] for row in labeled}) != len(labeled):
-        raise ValueError("Duplicate evaluation pair labels")
+    package, labeled, progress = load_labels(labels_path, {'same_work', 'different_work'})
+    verify_binding(package, hash_file(Path(config['work_dir'])/'evaluation_queue.json'), digest_json(registration))
     from verify_task4 import verify
     verify(config)
     with closing(sqlite3.connect((Path(config["work_dir"])/"resolution.sqlite3").as_uri()+"?mode=ro", uri=True)) as db:
         db.row_factory = sqlite3.Row
         if json.loads(db.execute("SELECT value FROM state WHERE key='input'").fetchone()[0]) != registration:
             raise ValueError("Evaluation source/rule binding changed")
+        reserved_ids = {r[0] for r in db.execute('SELECT pair_id FROM evaluation_pairs')}
+        if any(r['pair_id'] not in reserved_ids or r.get('partition') != 'independent_human_evaluation' for r in package['pairs']):
+            raise ValueError('All submitted pairs, including unresolved ones, must belong to the reserved partition')
         gold, predicted, errors = [], [], []
         for row in labeled:
             item = db.execute("SELECT p.* FROM evaluation_pairs e JOIN pairs p USING(pair_id) WHERE e.pair_id=?", (row["pair_id"],)).fetchone()
@@ -63,6 +63,7 @@ def evaluate(config, labels_path):
     result = dict(observed_at=utc_now(), status="evaluated_on_declared_independent_human_labels", input_fingerprint=digest_json(registration),
         labeled_pairs=len(labeled), reserved_queue_pairs=queue_count, label_coverage=len(labeled)/queue_count,
         labels_path=str(Path(labels_path).resolve()), labels_sha256=hash_file(labels_path), metrics=metrics(gold, predicted), errors=errors,
+        annotation_progress=coverage(progress, queue_count),
         scope="Constructed held-out pair sample only, not full-dataset accuracy. Human provenance is declared and must be auditable; code cannot certify that a person actually performed labeling.")
     save_json(Path(config["report_dir"])/"evaluation_results.json", result)
     return result

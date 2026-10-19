@@ -1,5 +1,5 @@
 {
-  "observed_at": "2026-10-16T09:06:26.650885+00:00",
+  "observed_at": "2026-10-19T06:25:18.732416+00:00",
   "status": "not_fully_met",
   "strict_assignment_acceptance": false,
   "engineering_integrity": "passed_integrity_not_human_accuracy",
@@ -64,7 +64,7 @@
     {
       "requirement": "Measured matching Precision Recall F1 errors and manual/unresolved coverage",
       "status": "not_met",
-      "reason": "Metrics remain NULL until legitimate labels supplied; structural replay and synthetic tests are not accuracy.",
+      "reason": "Metrics remain NULL until legitimate labels supplied; structural replay and synthetic tests are not accuracy. Current evaluation reports must bind to unchanged labels/model.",
       "evidence": "src/quality/evaluate_task4.py;src/quality/evaluate_people.py"
     },
     {
@@ -127,6 +127,19 @@
       "requirement": "Report implementation model dictionary instructions AI use and no restricted raw data in Git",
       "status": "passed_artifacts_subject_to_final_git_audit",
       "evidence": "README.md;项目实施记录.md;reports/项目报告.md;reports/final/data_dictionary.json"
+    },
+    {
+      "requirement": "Blinded editable human packets and explicit disagreement protocol",
+      "status": "prepared_not_labeled",
+      "movie_pairs": 120,
+      "person_pairs": 120,
+      "evidence": "reports/final/human_evaluation_handoff.json;docs/人工评估与剩余验收.md",
+      "scope": "Preparation is not completion of HUMAN evaluation."
+    },
+    {
+      "requirement": "Submission boundary and recoverable archival of redundant versions",
+      "status": "documented",
+      "evidence": "docs/交付与恢复.md;reports/final/cleanup_manifest.json;reports/final/submission_verification.json"
     }
   ],
   "required_user_or_permitted_new_evidence": [

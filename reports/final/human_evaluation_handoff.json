@@ -1,0 +1,42 @@
+{
+  "observed_at": "2026-10-19T06:16:31.504019+00:00",
+  "status": "ready_for_independent_HUMAN_annotation_NOT_evaluated",
+  "packets": {
+    "movies": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\annotation_v1\\movies.labels.json",
+      "sha256": "a5aca7617295cd43f0f0ce6c6579248e37fc0143a006e55182d19cb2f20507df",
+      "reserved_pairs": 120,
+      "human_labeled_pairs": 0,
+      "registry_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v3\\evaluation_queue.json",
+      "evaluation_binding": {
+        "registry_sha256": "7442984e4668af25794223deff191d8dbc21d2c8f9ecd878b50e0790c7f66ae5",
+        "model_fingerprint": "a78c6d4269a3ddddad5425bc09b288b038e97754defad8fda15ef3bfdec9efdb"
+      }
+    },
+    "people": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\annotation_v1\\people.labels.json",
+      "sha256": "073828e4438141872b545836baec925c2c6b99a8b5bc5343753e470ce3e7e2b2",
+      "reserved_pairs": 120,
+      "human_labeled_pairs": 0,
+      "registry_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\people_v2\\reserved_pairs.json",
+      "evaluation_binding": {
+        "registry_sha256": "90eef1a1e9299337e10e129d33afae22ea0d9e6673265258c9bde2d7a1523c42",
+        "model_fingerprint": "8c19b4e8ab47d7ef900165e10779c0c0f44ca6428ccff88bce612b05706e1f80"
+      }
+    }
+  },
+  "no_model_predictions_or_gold_labels_generated": true,
+  "person_model_identity_columns_removed": [
+    "nconst",
+    "identity_status",
+    "birth_year",
+    "death_year"
+  ],
+  "sampling_strata_hidden_from_annotators": true,
+  "metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "scope": "Engineering handoff only; >=100 genuinely human-resolved pairs per entity, both classes and difficult-case coverage still required."
+}

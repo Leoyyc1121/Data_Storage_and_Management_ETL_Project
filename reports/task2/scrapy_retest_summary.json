@@ -1,0 +1,73 @@
+{
+  "observed_at": "2026-10-19T06:16:57.276999+00:00",
+  "status": "archived_recoverably_all_referenced_evidence_hash_checked",
+  "framework": "Scrapy",
+  "framework_version": "2.19.0",
+  "real_product_html_successes": 0,
+  "product_requests": 0,
+  "replacement_performed": false,
+  "runs": [
+    {
+      "condition": "initial TLS configuration",
+      "robots_attempts": 3,
+      "http_responses": 0,
+      "error": "certificate verify failed"
+    },
+    {
+      "condition": "VPN route; system trusted CA adaptation",
+      "robots_attempts": 3,
+      "http_responses": 3,
+      "http_status": 503
+    },
+    {
+      "condition": "VPN manually disconnected; selected route WLAN",
+      "robots_attempts": 1,
+      "http_responses": 1,
+      "http_status": 503,
+      "observed_at": "2026-10-19T13:57:42.1005969+08:00"
+    }
+  ],
+  "conclusion": "Both VPN-on and VPN-off observations returned503. VPN is not established as the sole cause. No product URLs were requested and no HTML success fabricated.",
+  "original_implementation_retained": true,
+  "formal_pipeline_version": "final_v7",
+  "archive_root": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019",
+  "evidence": [
+    {
+      "original_path": "reports\\task2_scrapy\\acquisition_result.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2_scrapy\\acquisition_result.json",
+      "sha256": "2b0685dd9f610baa5ae0bee8b3323a8da926a6b7b12c15c37fff63ca52dd860a",
+      "bytes": 1877
+    },
+    {
+      "original_path": "reports\\task2_scrapy\\run_history_verification.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2_scrapy\\run_history_verification.json",
+      "sha256": "fa0a2c383b61c0086fb94470c8ceec90c8cbab976d327ee269f2a7d41864a377",
+      "bytes": 3162
+    },
+    {
+      "original_path": "reports\\task2_scrapy\\full_verification.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2_scrapy\\full_verification.json",
+      "sha256": "e054ded962a0aeaf1faa20167e2fd76b28725d44f2f775e9f5bddd8a4a81a0b0",
+      "bytes": 941
+    },
+    {
+      "original_path": "reports\\task2_scrapy\\network_checks\\vpn_off_20261019_135742\\network.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2_scrapy\\network_checks\\vpn_off_20261019_135742\\network.json",
+      "sha256": "bc7a4572f345ccd7f9e3245572304c606db4e48a8356aff08843ca95d7deaaf5",
+      "bytes": 442
+    },
+    {
+      "original_path": "reports\\task2_scrapy\\network_checks\\vpn_off_20261019_135742\\scrapy.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2_scrapy\\network_checks\\vpn_off_20261019_135742\\scrapy.log",
+      "sha256": "b55b4a1d3d6de6f084dd9bbb1ccafea6f891fb070a47a84b6e530a5f3cf83422",
+      "bytes": 4166
+    },
+    {
+      "original_path": "reports\\task2_scrapy\\network_checks\\vpn_off_20261019_135742\\headers.txt",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2_scrapy\\network_checks\\vpn_off_20261019_135742\\headers.txt",
+      "sha256": "b8e79144d3af38818dde3ab18b5c008b778a8b9f2959901eb3154ec179692140",
+      "bytes": 1212
+    }
+  ],
+  "limitations": "VPN-off probe retained headers/log only, not response body. Scrapy finish_reason=finished is not HTTP success. No further bypass or live acquisition attempted."
+}

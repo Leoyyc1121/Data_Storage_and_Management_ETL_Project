@@ -1,6 +1,13 @@
 {
   "status": "readonly_search_complete",
   "pending_products_with_external_candidates_checked": 220,
+  "all_eligible_profiles_with_external_candidates_checked": 1695,
+  "independently_qualified_profiles": 184,
+  "shared_external_context_candidate_groups": 4,
+  "candidate_groups_packet": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v7\\rechecked_external_edition_groups.json",
+    "sha256": "e6c7af7c53221171c8f557d8498012e6f01e0883b48db0b313f61957d7da0a34"
+  },
   "independently_qualified_pending_editions": 1,
   "cut_runtime_compatible": 1,
   "distinct_existing_works": 1,
@@ -8,5 +15,5 @@
     "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v7\\supported_editions_proposals.json",
     "sha256": "9323fe4ea6ec9fc79766d6867577c2bc498aecb6deaf0cb122ced30ba1324fd9"
   },
-  "semantics": "Requires independent complete title/work context and uniqueness; external ID alone insufficient. Existing published mappings unchanged by search."
+  "semantics": "Requires independent complete title/work context and uniqueness; external ID alone insufficient. Search now includes pairs with no already-mapped anchor; candidates are not cluster-validated merges. Existing published mappings unchanged by search."
 }

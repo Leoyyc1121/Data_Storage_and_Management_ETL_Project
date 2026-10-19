@@ -18,6 +18,8 @@
 
 “作品记录”含临时单例，不是已确认的真实电影总数。同名/同年份/缺失年份不能单独支持合并；角色、商品版本和合集评论不混淆。两个 120 对队列均未人工标注，Precision/Recall/F1 为 NULL，不能把测试通过当作匹配准确率。最终验收不能宣称全部严格达标。
 
+2026-10-19 已实际复试 Scrapy 2.19.0；VPN 开启与关闭后 robots 预检均返回 HTTP 503，商品请求 0。[复试汇总](reports/task2/scrapy_retest_summary.json)保留证据位置及哈希。未满足真实 HTML 成功的替换条件，正式流程仍用原实现；未提升的试验代码和数据已移到项目外归档。
+
 ## 流程与模型
 
 ```mermaid
@@ -70,9 +72,9 @@ python -m venv .venv
 & .\.venv\Scripts\python.exe -m src.quality.offline_acceptance run
 ```
 
-固定包当前为 fixed_v2：23 条真实评论、26 条研究原件，含 5 组实质人物别名；旧 fixed_v1 保留。现场演示可依次运行离线样本、人物/字段反查，再展示中断恢复证据，避免重新下载整套来源。
+固定包当前为 fixed_v2：23 条真实评论、26 条研究原件，含 5 组实质人物别名。现场演示可依次运行离线样本、人物/字段反查，再展示中断恢复证据，避免重新下载整套来源。
 
-人物标注请使用 `data/evaluation/people_v2/reserved_pairs.json`，它包含 60 对跨作品身份候选、30 对相似姓名和 30 对相同首字母候选。开发来源和本次别名案例已排除；候选分层不是人工正负标签。旧集成库中的人物队列仅留作历史诊断，后续评估器使用独立登记的新队列并核验哈希。
+人工标注使用 `data/evaluation/annotation_v1/` 中的电影、人物盲化包，各 120 对；已隐藏人物模型 ID、身份状态及模型分层，不直接用含模型输出的原注册队列标注。[人工评估说明](docs/人工评估与剩余验收.md)包含导出、证据填写、争议裁定、指标计算和仍缺少的真实材料。所有标签仍为空，不能以此宣称人工验收完成。
 
 ## 交付材料
 
@@ -81,6 +83,8 @@ python -m venv .venv
 - [ER 模型](docs/schema.mmd)、[演示及血缘 SQL](sql/demo_queries.sql)、[目标库视图](sql/target_views.sql)。
 - reports/task1—task9：全量统计、检查、幂等/恢复和来源证据；reports/final：数据字典、完整性、离线复现及严格要求审计。
 - data/raw、staging、integration、target：仅本机保存，具体位置、大小与哈希见统计/清单；克隆仓库不会得到数据本体。
+
+交付边界、保留数据与归档恢复方法见[交付说明](docs/交付与恢复.md)。提交文件清单由 `src/quality/verify_submission.py` 生成；历史数据库、重复报告、旧 Word 草稿及失败试验不放入提交范围。当前原件、final_v7、评论库、fixed_v2 和虚拟环境仍在本机保留。
 
 ## 来源与使用边界
 

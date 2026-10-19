@@ -1,2 +1,0 @@
-# Task 3 is offline and reuses the fixed Task 2/Task 1 dependency versions.
--r requirements-task2.txt

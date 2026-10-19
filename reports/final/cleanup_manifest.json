@@ -1,0 +1,680 @@
+{
+  "observed_at": "2026-10-19T14:16:58.5974732+08:00",
+  "status": "archived_recoverably",
+  "project_root": "D:\\My projects\\Data_Storage_and_Management_ETL_Project",
+  "archive_root": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019",
+  "items": 74,
+  "files": 343.0,
+  "bytes": 42441531219.0,
+  "current_runtime_data_preserved": true,
+  "permanent_material_deletions": 0,
+  "entries": [
+    {
+      "relative_path": "Data_Storage_and_Management_ETL_Assignment_English.docx",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\Data_Storage_and_Management_ETL_Assignment_English.docx",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\Data_Storage_and_Management_ETL_Assignment_English.docx",
+      "files": 1,
+      "bytes": 46283,
+      "sha256": "7a1a2ee8fe6a2b4e19b4fad85c06eb48ab4b5ad33bf075c1221b56d236083b50",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "数据存储与管理_ETL项目报告.docx",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\数据存储与管理_ETL项目报告.docx",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\数据存储与管理_ETL项目报告.docx",
+      "files": 1,
+      "bytes": 76374,
+      "sha256": "ae265e3468b6a8ffdbb89e20ce52f8ee59fa239635e8993c299d5e9a5d2410ac",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "rendered",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\rendered",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\rendered",
+      "files": 0,
+      "bytes": 0,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "requirements-task1.txt",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\requirements-task1.txt",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\requirements-task1.txt",
+      "files": 1,
+      "bytes": 30,
+      "sha256": "a2fb7eda9a453a42db1abdfc7271e57acabb2de1e4df4d3085aaf18124d3aeba",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "requirements-task2.txt",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\requirements-task2.txt",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\requirements-task2.txt",
+      "files": 1,
+      "bytes": 60,
+      "sha256": "6291918f59ba29c90e0126f20c4307834b72974ea663af2a5cc561c203c1f97b",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "requirements-task3.txt",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\requirements-task3.txt",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\requirements-task3.txt",
+      "files": 1,
+      "bytes": 102,
+      "sha256": "e82df7ea1befe78ae5b335c483394cc37561d1a0fb53b7e120eaa8522c00a5af",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "requirements-task4.txt",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\requirements-task4.txt",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\requirements-task4.txt",
+      "files": 1,
+      "bytes": 86,
+      "sha256": "1304b9d0531a1a3b242c93b4979ad2bb748bbd0715792d2b786bcfd3548e6256",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "requirements-scrapy.txt",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\requirements-scrapy.txt",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\requirements-scrapy.txt",
+      "files": 1,
+      "bytes": 127,
+      "sha256": "2a03035b89324b9df75715f0d72e2e28687a46d7497ef12361ec66f726659fbb",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "config/task2.scrapy.example.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\config\\task2.scrapy.example.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\config\\task2.scrapy.example.json",
+      "files": 1,
+      "bytes": 658,
+      "sha256": "6af2ffb6914ede0d371dafc58dc8c77ff212d8349da3fa6595db5be0a8600c17",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "src/extract/scrapy_products.py",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\src\\extract\\scrapy_products.py",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\src\\extract\\scrapy_products.py",
+      "files": 1,
+      "bytes": 18742,
+      "sha256": "a140f4d99c2386a3cb9b564a7a8343371b25e81cc3be28e3938f87126d46b123",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "tests/unit/test_task2_scrapy.py",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\tests\\unit\\test_task2_scrapy.py",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\tests\\unit\\test_task2_scrapy.py",
+      "files": 1,
+      "bytes": 10961,
+      "sha256": "f523a3ebda045b5a2dca37b0fe42a28f90ed9810a805739f8c74c87a17cebec1",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task2_scrapy",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task2_scrapy",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2_scrapy",
+      "files": 13,
+      "bytes": 32890,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/raw/task2_scrapy",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\raw\\task2_scrapy",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\raw\\task2_scrapy",
+      "files": 8,
+      "bytes": 10627,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/staging/task2_scrapy",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task2_scrapy",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\staging\\task2_scrapy",
+      "files": 11,
+      "bytes": 159823737,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v1",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v1",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v1",
+      "files": 3,
+      "bytes": 23797554,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v2",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v2",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v2",
+      "files": 3,
+      "bytes": 24698712,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v3/integration.sqlite3",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v3\\integration.sqlite3",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v3\\integration.sqlite3",
+      "files": 1,
+      "bytes": 1449316352,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v3/person_evaluation_queue.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v3\\person_evaluation_queue.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v3\\person_evaluation_queue.json",
+      "files": 1,
+      "bytes": 155479,
+      "sha256": "c406c4f4ceec5ea0942dd05f5cf236f06fb3d17ff011b42891d4c55addb9fdae",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v3/run.lock",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v3\\run.lock",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v3\\run.lock",
+      "files": 1,
+      "bytes": 1,
+      "sha256": "5feceb66ffc86f38d952786c6d696c79c2dbc239dd4e91b46729d73a27fb57e9",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v3/review_work",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v3\\review_work",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v3\\review_work",
+      "files": 2,
+      "bytes": 65537,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v4",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v4",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v4",
+      "files": 5,
+      "bytes": 1449496408,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v5",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v5",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v5",
+      "files": 4,
+      "bytes": 1452465464,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/final_v6",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\final_v6",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\final_v6",
+      "files": 6,
+      "bytes": 1452314444,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/task4/full",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\task4\\full",
+      "files": 5,
+      "bytes": 2326681,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/integration/task4/full_v2",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\integration\\task4\\full_v2",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\integration\\task4\\full_v2",
+      "files": 14,
+      "bytes": 569345994,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/staging/task3/full",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\staging\\task3\\full",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\staging\\task3\\full",
+      "files": 9,
+      "bytes": 543649636,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/target/final_v5",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\target\\final_v5",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\target\\final_v5",
+      "files": 2,
+      "bytes": 623,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/target/final_v6",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\target\\final_v6",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\target\\final_v6",
+      "files": 5,
+      "bytes": 34921374410,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "data/acceptance/fixed_v1",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\acceptance\\fixed_v1",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\data\\acceptance\\fixed_v1",
+      "files": 145,
+      "bytes": 391321924,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task1/full_statistics.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task1\\full_statistics.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task1\\full_statistics.json",
+      "files": 1,
+      "bytes": 2881,
+      "sha256": "ab1d721165e8087663d9c96a78900801f6171e7f30b8685654e7e22ddc5a0c5d",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task1/sample_20k_statistics.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task1\\sample_20k_statistics.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task1\\sample_20k_statistics.json",
+      "files": 1,
+      "bytes": 2231,
+      "sha256": "53beb8a619890b5880da62cf7132545c71d3d0ca5418c0e72127fd31e07401ee",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task1/sample_recovery_20k_statistics.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task1\\sample_recovery_20k_statistics.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task1\\sample_recovery_20k_statistics.json",
+      "files": 1,
+      "bytes": 2435,
+      "sha256": "b10a18542ebbf0bdd05b87736d32e8bcb0f7b5b2139f29055720a08a7f6dd0ff",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task1/sample_recovery_comparison.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task1\\sample_recovery_comparison.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task1\\sample_recovery_comparison.json",
+      "files": 1,
+      "bytes": 395,
+      "sha256": "2fa3ba1a0b99a37f112f331bd79aa219227bfc3aacab2fad0fd85db86382906c",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task1/sample_verification.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task1\\sample_verification.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task1\\sample_verification.json",
+      "files": 1,
+      "bytes": 621,
+      "sha256": "19c1b20d0d42cb88d3adcc82289a132da1e7360858913ffb4069cc827d9d96fd",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task1/source_manifest.local.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task1\\source_manifest.local.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task1\\source_manifest.local.json",
+      "files": 1,
+      "bytes": 799,
+      "sha256": "9c5af97c41d93722ff90a013d0aa0ba914851f3b0d2af485b195f5d6d585c06f",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task2/optimization_baseline.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task2\\optimization_baseline.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2\\optimization_baseline.json",
+      "files": 1,
+      "bytes": 7354,
+      "sha256": "c1de38e2fc9683f37bef1571466f754c14a0504f70c5554e24a12ca67277a833",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task2/test_results.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task2\\test_results.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2\\test_results.json",
+      "files": 1,
+      "bytes": 463,
+      "sha256": "a85fab82785a0afceb8ed74ee5669383133863b417611c03561d99f4de36ffdf",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task2/requirements_audit.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task2\\requirements_audit.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task2\\requirements_audit.json",
+      "files": 1,
+      "bytes": 4531,
+      "sha256": "8d9898e8fc73aad6697ea3a78ddab3f79205aab89998a546fb2cc507a2abe70f",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task3/rule_v1_diagnostic.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task3\\rule_v1_diagnostic.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task3\\rule_v1_diagnostic.json",
+      "files": 1,
+      "bytes": 16859,
+      "sha256": "6c9ad5b761cc391fc9f88149d0e9e9a438ffb4be773e5b7b45ead7bdb09de12b",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task3/test_results.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task3\\test_results.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task3\\test_results.json",
+      "files": 1,
+      "bytes": 476,
+      "sha256": "437134b23a4eaec13d1ce5655c4cfda1a2d6c4125cbb322f543deef6b4905910",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task3/requirements_audit.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task3\\requirements_audit.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task3\\requirements_audit.json",
+      "files": 1,
+      "bytes": 3238,
+      "sha256": "efb92db692fd059d8466316028b2f4425464ad1438b53ed2c23f4410f4d06882",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task4/profile_v1_diagnostic.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task4\\profile_v1_diagnostic.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task4\\profile_v1_diagnostic.json",
+      "files": 1,
+      "bytes": 830,
+      "sha256": "b0cf655d73f6295729b59834e95b383db51f7ab3812044d69710d7bca9f8bc34",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task4/v2_diagnostic.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task4\\v2_diagnostic.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task4\\v2_diagnostic.json",
+      "files": 1,
+      "bytes": 17098,
+      "sha256": "7313cc3093c8e7ceac290a18cca686f8361215666c1b66c4fe26dbead485980a",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task5/review_notes.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task5\\review_notes.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task5\\review_notes.json",
+      "files": 1,
+      "bytes": 937,
+      "sha256": "da87590ce8932b60d036d92cfaec3d2d4851163e9f2cecc4df5a9278908ab1ae",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/task9/v5_interrupted_diagnostic.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\task9\\v5_interrupted_diagnostic.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\task9\\v5_interrupted_diagnostic.json",
+      "files": 1,
+      "bytes": 1356,
+      "sha256": "141e89b2243897b793a3d8e3b9debd0c9faa9974ce37e941573a181052e7145e",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports/final/query_selection_verification.json",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\final\\query_selection_verification.json",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\final\\query_selection_verification.json",
+      "files": 1,
+      "bytes": 322,
+      "sha256": "f0abda21dc3e33632e27642e037987f98a761e57a71e405cb8fc7b0ff1584219",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task5_verify.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task5_verify.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task5_verify.log",
+      "files": 1,
+      "bytes": 237,
+      "sha256": "3316f639d6ff0039c8f304d50df9dc1684b12fb1491f02a9cb118f06de64c8fa",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task5.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task5.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task5.log",
+      "files": 1,
+      "bytes": 1644,
+      "sha256": "3f6b5d8c585ea090ea32e3b7bb93843f96bfcd7a545416d5f4dfbe12842d27eb",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task6.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task6.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task6.log",
+      "files": 1,
+      "bytes": 544,
+      "sha256": "af30aae982b73161b40a8f484622cbe514c264359feb223ee04be99fc95e8161",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task7_verify.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task7_verify.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task7_verify.log",
+      "files": 1,
+      "bytes": 184,
+      "sha256": "0e9209ec4722c6c1dc7981f05e9a3e8d7d8c0f6aabd74bd3c9f114ad8eaafc73",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task7.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task7.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\15fead71fe0f4ac1be4b90d48739be75-task7.log",
+      "files": 1,
+      "bytes": 843,
+      "sha256": "ca9e0825565962359e4839bedbfa7fe5a16425a199ba63203d659a6044afbfc6",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-demo_queries.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-demo_queries.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-demo_queries.log",
+      "files": 1,
+      "bytes": 395,
+      "sha256": "907f05051ab598eb35fc70b6ebd6d6713332f3e892ce5184f53f37c96ada0502",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-target_verify.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-target_verify.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-target_verify.log",
+      "files": 1,
+      "bytes": 1000,
+      "sha256": "af34a86a4c5ededd264fd3175cdea7d345bfeb97db8782561d27d4b4113c10c1",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-task9.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-task9.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\a2d5cdee5ee94bcdadea688f576e8f9b-task9.log",
+      "files": 1,
+      "bytes": 744,
+      "sha256": "09306d3c3fb24764fd9beb57849f75b69a6726990cc46b41b85fbc53beaa99be",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task5_verify.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task5_verify.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task5_verify.log",
+      "files": 1,
+      "bytes": 237,
+      "sha256": "3316f639d6ff0039c8f304d50df9dc1684b12fb1491f02a9cb118f06de64c8fa",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task5.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task5.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task5.log",
+      "files": 1,
+      "bytes": 1644,
+      "sha256": "5a4ecf6aef112c617c6076a226c0a1e7e567b729c36d9c3ab4a22892654306f7",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task6.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task6.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task6.log",
+      "files": 1,
+      "bytes": 544,
+      "sha256": "3a8fcdb76f154ffaef0ddcb2d3aeae3d785f941c66827f6cee7ed06bc787e1f4",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task7_verify.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task7_verify.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task7_verify.log",
+      "files": 1,
+      "bytes": 184,
+      "sha256": "0e9209ec4722c6c1dc7981f05e9a3e8d7d8c0f6aabd74bd3c9f114ad8eaafc73",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task7.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task7.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\aebf40d2e1914416826f5593da4c279b-task7.log",
+      "files": 1,
+      "bytes": 843,
+      "sha256": "03b67e1a342b9d0aa7372ad4cd6e937a9e7d0c62178d49e06bba37de5697025f",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task5_verify.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task5_verify.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task5_verify.log",
+      "files": 1,
+      "bytes": 185,
+      "sha256": "c0b53d5d9d41344ab05e628826c5cce165fc5bbf050ad7b8834a1dea1b39f9ae",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task5.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task5.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task5.log",
+      "files": 1,
+      "bytes": 1644,
+      "sha256": "b6593cccf306d3fa584b487f0b14026f2737f7030330bccb4fcf83d26bf5ec06",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task6.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task6.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\cfb8ecc1c42e4658a645547966856e91-task6.log",
+      "files": 1,
+      "bytes": 544,
+      "sha256": "dd1ef573a8ff9835ded365dc96b091c9af649dc88f1e25e375a75ae59721f143",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task5_verify.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task5_verify.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task5_verify.log",
+      "files": 1,
+      "bytes": 237,
+      "sha256": "5a212aba043aa0ad47c0c7d8fcae8c4658bd5169d2be27faba5203216e0aaac4",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task5.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task5.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task5.log",
+      "files": 1,
+      "bytes": 1644,
+      "sha256": "a48a8eae5326321a4cec1b5587185225604b98957e5b4b23c0d72f54cb2a83a8",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task6.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task6.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task6.log",
+      "files": 1,
+      "bytes": 544,
+      "sha256": "6baf7cb99f280fbf2364aa33b6d7969f2591cae7acaf69cd5073a28a069381a8",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task7_verify.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task7_verify.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task7_verify.log",
+      "files": 1,
+      "bytes": 184,
+      "sha256": "924244d768aca2d38bb55bd9b6d3b613111f5e3ba15361bc1cc3fac3e52cf6ab",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task7.log",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task7.log",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\reports\\pipeline\\f0c43c39857c42bebb7a27653ed83cab-task7.log",
+      "files": 1,
+      "bytes": 843,
+      "sha256": "b7f8cf62a3e1e7e6582ff6691c71d2129ce1f24e3fc3c552ed307b3b8eba67da",
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "src\\extract\\__pycache__",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\src\\extract\\__pycache__",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\src\\extract\\__pycache__",
+      "files": 9,
+      "bytes": 262039,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "src\\load\\__pycache__",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\src\\load\\__pycache__",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\src\\load\\__pycache__",
+      "files": 1,
+      "bytes": 37973,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "src\\pipeline\\__pycache__",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\src\\pipeline\\__pycache__",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\src\\pipeline\\__pycache__",
+      "files": 1,
+      "bytes": 12956,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "src\\quality\\__pycache__",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\src\\quality\\__pycache__",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\src\\quality\\__pycache__",
+      "files": 23,
+      "bytes": 256187,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "src\\transform\\__pycache__",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\src\\transform\\__pycache__",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\src\\transform\\__pycache__",
+      "files": 8,
+      "bytes": 255414,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": "tests\\unit\\__pycache__",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\tests\\unit\\__pycache__",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\tests\\unit\\__pycache__",
+      "files": 14,
+      "bytes": 271711,
+      "sha256": null,
+      "status": "moved_and_checked"
+    },
+    {
+      "relative_path": ".codex_tmp",
+      "source": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\.codex_tmp",
+      "archived_path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project_archive_20261019\\.codex_tmp",
+      "files": 1,
+      "bytes": 7349,
+      "sha256": null,
+      "status": "moved_and_checked"
+    }
+  ],
+  "restore": "Move selected entries from archived_path back to source only after checking no destination exists. Current data was not replaced. Archive is on the same volume, so this does not free disk space."
+}
