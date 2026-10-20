@@ -1,0 +1,69 @@
+{
+  "observed_at": "2026-10-19T12:24:37.393222+00:00",
+  "status": "candidate_drafts_ready_NOT_completed_HUMAN_annotation",
+  "prepared_by": "Codex project assistant",
+  "packets": {
+    "movies": {
+      "pairs": 120,
+      "candidate_counts": {
+        "unresolved": 49,
+        "different_work": 57,
+        "same_work": 14
+      },
+      "human_completed": 0,
+      "all_human_identity_time_fields_blank": true,
+      "json": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\review_draft_v1\\movies.review.json",
+        "sha256": "842acd3df47aca2cab6b7430549b25be91c8a2fec260294a94686def22cfc0c5"
+      },
+      "evidence_markdown": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\review_draft_v1\\movies.review.md",
+        "sha256": "79c34c15099d71283757de164134ec20065833d5948d118de643c644bd73abb9"
+      }
+    },
+    "people": {
+      "pairs": 120,
+      "candidate_counts": {
+        "same_person": 59,
+        "unresolved": 4,
+        "different_person": 57
+      },
+      "human_completed": 0,
+      "all_human_identity_time_fields_blank": true,
+      "json": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\review_draft_v1\\people.review.json",
+        "sha256": "1eba78ea5b83aaa476a6771b42447e18b495db440ad3b1fd9551d370651bfa07"
+      },
+      "evidence_markdown": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\review_draft_v1\\people.review.md",
+        "sha256": "4c8d63efedd427186b331776c769eec2190d5cdb8c23f1a0fe35a7a721e15b44"
+      }
+    }
+  },
+  "original_blind_packets_preserved": {
+    "movies": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\annotation_v2\\movies.labels.json",
+      "sha256": "91d8d9bc4333c8072509267a9f1585e09ed2aff6fcc43e2e6f1161fac492f0cb",
+      "evaluation_binding": {
+        "registry_sha256": "c2c3369e631a7c74ffb140024db6f92f5a2ec04687aba03f1725d4c60bf73659",
+        "model_fingerprint": "548034723d6be05286b8df748a883387af89f4bcb48d65bf8c1e46e87a0e7af8"
+      }
+    },
+    "people": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\annotation_v2\\people.labels.json",
+      "sha256": "d85c129fbfa3bac54de219442614dc0df549635162040a93ce4aa44af0b906eb",
+      "evaluation_binding": {
+        "registry_sha256": "c1a1d8aa4fe67475032dd11024667f747802e6d068e193d3cc08130ae7071aa5",
+        "model_fingerprint": "bfb720af7c6a0c4aefbc69e9945db2ae3622381882b7c850f6ccf9a8c6a1f7ff"
+      }
+    }
+  },
+  "human_labels_generated": 0,
+  "independent_human_requirement_satisfied": false,
+  "metrics": {
+    "precision": null,
+    "recall": null,
+    "f1": null
+  },
+  "scope": "Source-reviewed candidates for actual human checking. Generated evidence and per-pair judgments stay local. Candidate-visible review must not be reported as independent blind annotation."
+}

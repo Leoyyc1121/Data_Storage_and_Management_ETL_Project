@@ -1,0 +1,26 @@
+{
+  "observed_at": "2026-10-19T12:45:25.562062+00:00",
+  "status": "passed_source_annotation_integrity",
+  "packets": {
+    "movies": {
+      "total": 120,
+      "label_counts": {
+        "unresolved": 49,
+        "different_work": 57,
+        "same_work": 14
+      }
+    },
+    "people": {
+      "total": 120,
+      "label_counts": {
+        "same_person": 59,
+        "unresolved": 4,
+        "different_person": 57
+      }
+    }
+  },
+  "raw_record_hashes_checked": 523,
+  "annotation_author_and_time_fields_absent": true,
+  "independent_human_evaluation": false,
+  "scope": "Integrity, complete annotation states and traceable raw evidence; not independently validated accuracy."
+}

@@ -1,0 +1,43 @@
+{
+  "observed_at": "2026-10-19T12:46:43.504436+00:00",
+  "status": "ready_under_user_scope_with_disclosed_limitations",
+  "checks": {
+    "engineering_tests": true,
+    "registered_full_target_integrity": true,
+    "five_actual_work_groups": true,
+    "executable_queries": true,
+    "actual_idempotency_and_fixed_recovery": true,
+    "registered_isolated_rebuild": true,
+    "source_annotations": true
+  },
+  "scope_change": "User explicitly requests source-evidence annotation instead of the original independent-human labeling requirement; no annotation name/time fields are required.",
+  "independent_human_evaluation": false,
+  "strict_assignment_acceptance": false,
+  "engineering_tests": 280,
+  "source_annotation_counts": {
+    "movies": {
+      "total": 120,
+      "label_counts": {
+        "unresolved": 49,
+        "different_work": 57,
+        "same_work": 14
+      }
+    },
+    "people": {
+      "total": 120,
+      "label_counts": {
+        "same_person": 59,
+        "unresolved": 4,
+        "different_person": 57
+      }
+    }
+  },
+  "disclosed_limitations": [
+    "Not independent HUMAN evaluation; original course requirement remains unsatisfied.",
+    "53 source pairs abstain for insufficient evidence, not forced guesses.",
+    "Live HTML success remains zero; permitted alternative sources and access failures retained.",
+    "Historical original compressed checksum/exact download time remain unavailable; homonym evidence has declared scope limitations.",
+    "ZIP contains code, configuration, report, SQL, tests and aggregate evidence. Large/third-party raw or derived data, pair annotations and environment remain local with registered checksums and restoration instructions."
+  ],
+  "replay_scope": "This packaging verifies current local annotation sources and existing engineering evidence. It does not claim a new full 35 GB ETL rebuild or a new independent accuracy measurement."
+}

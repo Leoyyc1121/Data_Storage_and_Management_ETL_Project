@@ -1,0 +1,53 @@
+{
+  "observed_at": "2026-10-19T12:41:25.513542+00:00",
+  "status": "compared_to_source_assisted_reference_not_independent_accuracy",
+  "packets": {
+    "movies": {
+      "total_pairs": 120,
+      "reference_determinate": 71,
+      "reference_unresolved": 49,
+      "model_unmapped_or_non_single_work": 64,
+      "compared_pairs": 7,
+      "comparison_coverage": 0.058333333333333334,
+      "provisional_person_sides": 0,
+      "reference_agreement": {
+        "tp": 0,
+        "fp": 0,
+        "fn": 0,
+        "tn": 7,
+        "precision": null,
+        "recall": null,
+        "f1": null,
+        "zero_denominator_policy": "Undefined precision/recall is NULL, not perfect. F1 NULL when a component is undefined; F1=0 when both defined and zero."
+      }
+    },
+    "people": {
+      "total_pairs": 120,
+      "reference_determinate": 116,
+      "reference_unresolved": 4,
+      "model_unmapped_or_non_single_work": 0,
+      "compared_pairs": 116,
+      "comparison_coverage": 0.9666666666666667,
+      "provisional_person_sides": 9,
+      "reference_agreement": {
+        "tp": 57,
+        "fp": 0,
+        "fn": 2,
+        "tn": 57,
+        "precision": 1.0,
+        "recall": 0.9661016949152542,
+        "f1": 0.9827586206896551,
+        "zero_denominator_policy": "Undefined precision/recall is NULL, not perfect. F1 NULL when a component is undefined; F1=0 when both defined and zero."
+      }
+    }
+  },
+  "independent_human_evaluation": false,
+  "scope": "Diagnostic agreement on source-assisted judgments only. Shared source identifiers, repeated original credits and source overlap can inflate agreement; not independent accuracy or full-dataset performance. Unmapped/non-single-work cases are explicit model abstentions, not true negatives.",
+  "target_registration": "reports/task9/load_statistics.json",
+  "target_input_fingerprint": "b211b9d7ff0a4fa104f14c84fc681349b6d2b23f42610a21cd2b531a6a7e3741",
+  "annotation_hashes": {
+    "movies": "e584d70a64aacbf2cd9691d94d72a74aa115a3ea1101c8334bbb089a51a35059",
+    "people": "31a2a8a8918887cf98cac5e1b1fdeb7738e5be4d5f661f3a402c05cd6a89479d"
+  },
+  "annotation_verification": "passed_source_annotation_integrity"
+}

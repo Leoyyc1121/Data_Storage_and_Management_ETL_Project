@@ -1,0 +1,60 @@
+{
+  "observed_at": "2026-10-19T12:38:30.650359+00:00",
+  "status": "completed_source_evidence_annotations",
+  "protocol": "source-evidence-annotations-v1",
+  "packets": {
+    "movies": {
+      "pairs": 120,
+      "label_counts": {
+        "unresolved": 49,
+        "different_work": 57,
+        "same_work": 14
+      },
+      "determinate": 71,
+      "annotations": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\source_annotations_v1\\movies.annotations.json",
+        "sha256": "e584d70a64aacbf2cd9691d94d72a74aa115a3ea1101c8334bbb089a51a35059"
+      },
+      "evidence_cards": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\source_annotations_v1\\movies.annotations.md",
+        "sha256": "ae0b889d301275eb6f67b03e5229cf1c07833e68e8e2d05f4c1ac2ba43781cfe"
+      }
+    },
+    "people": {
+      "pairs": 120,
+      "label_counts": {
+        "same_person": 59,
+        "unresolved": 4,
+        "different_person": 57
+      },
+      "determinate": 116,
+      "annotations": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\source_annotations_v1\\people.annotations.json",
+        "sha256": "31a2a8a8918887cf98cac5e1b1fdeb7738e5be4d5f661f3a402c05cd6a89479d"
+      },
+      "evidence_cards": {
+        "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\source_annotations_v1\\people.annotations.md",
+        "sha256": "fb7e15bc6a10974fdf7797beee71aadf10a85c0ae66c95145694ad63a9a592e9"
+      }
+    }
+  },
+  "annotation_author_and_time_required": false,
+  "human_metadata_fields_present": false,
+  "independent_human_evaluation": false,
+  "independent_accuracy_metrics": null,
+  "evidence": {
+    "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\source_annotations_v1\\evidence.json",
+    "sha256": "2211725ad0771935152b44a5b809333b409c3a774bc9d3a7f268256300968fcb"
+  },
+  "input_drafts": {
+    "movies": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\review_draft_v1\\movies.review.json",
+      "sha256": "842acd3df47aca2cab6b7430549b25be91c8a2fec260294a94686def22cfc0c5"
+    },
+    "people": {
+      "path": "D:\\My projects\\Data_Storage_and_Management_ETL_Project\\data\\evaluation\\review_draft_v1\\people.review.json",
+      "sha256": "1eba78ea5b83aaa476a6771b42447e18b495db440ad3b1fd9551d370651bfa07"
+    }
+  },
+  "scope": "User-selected source-assisted annotation deliverable. Does not satisfy the original independent HUMAN evaluation requirement. No changes to production ETL mappings."
+}

@@ -1,10 +1,10 @@
 {
-  "observed_at": "2026-10-19T11:16:03.262049+00:00",
+  "observed_at": "2026-10-19T12:45:20.140283+00:00",
   "status": "passed",
-  "tests_run": 245,
+  "tests_run": 280,
   "failures": 0,
   "errors": 0,
   "skipped": 0,
-  "duration_seconds": 89.312,
-  "scope": "Current ETL plus raw-evidence failure replay, atomic-publication recovery, isolated SQLite ATTACH path authorization and network rejection; NOT HUMAN accuracy."
+  "duration_seconds": 50.169,
+  "scope": "Full engineering regression, source-evidence annotations without human identity/time, explicit abstention and model-unmapped coverage, read-only source comparison, version preservation and delivery ZIP checksums. NOT independent human accuracy."
 }

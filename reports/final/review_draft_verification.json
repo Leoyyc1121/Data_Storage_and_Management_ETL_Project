@@ -1,0 +1,29 @@
+{
+  "observed_at": "2026-10-19T12:28:04.412626+00:00",
+  "status": "passed_draft_boundary_checks",
+  "packets": [
+    {
+      "kind": "movies",
+      "candidates": 120,
+      "human_confirmed": 0,
+      "all_human_fields_blank": true,
+      "original_formal_labels_unchanged": true
+    },
+    {
+      "kind": "people",
+      "candidates": 120,
+      "human_confirmed": 0,
+      "all_human_fields_blank": true,
+      "original_formal_labels_unchanged": true
+    }
+  ],
+  "retained_raw_record_hashes_checked": 523,
+  "all_source_bytes_match": true,
+  "tracked_data_files": [
+    "data/raw/.gitkeep"
+  ],
+  "official_metrics_changed": false,
+  "production_etl_changed": false,
+  "independent_human_requirement_satisfied": false,
+  "scope": "Candidate packet shape, original source byte hashes, blank actual-human metadata and unchanged formal blind packets; not a certificate of source factual accuracy or human labeling."
+}
